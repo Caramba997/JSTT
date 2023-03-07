@@ -1,0 +1,174 @@
+{
+  "results": [
+    {
+      "timeframe": "<=2010-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 8729
+    },
+    {
+      "timeframe": "2011-01-01..2011-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 11682
+    },
+    {
+      "timeframe": "2012-01-01..2012-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 19376
+    },
+    {
+      "timeframe": "2013-01-01..2013-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 27040
+    },
+    {
+      "timeframe": "2014-01-01..2014-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 36021
+    },
+    {
+      "timeframe": "2015-01-01..2015-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 44916
+    },
+    {
+      "timeframe": "2016-01-01..2016-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 50553
+    },
+    {
+      "timeframe": "2017-01-01..2017-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 54977
+    },
+    {
+      "timeframe": "2018-01-01..2018-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 52650
+    },
+    {
+      "timeframe": "2019-01-01..2019-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 45404
+    },
+    {
+      "timeframe": "2020-01-01..2020-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 46937
+    },
+    {
+      "timeframe": "2021-01-01..2021-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 37722
+    },
+    {
+      "timeframe": "2022-01-01..2022-12-31",
+      "language": "javascript",
+      "valid": true,
+      "total": 29660
+    },
+    {
+      "timeframe": ">=2023-01-01",
+      "language": "javascript",
+      "valid": true,
+      "total": 2886
+    },
+    {
+      "timeframe": "<=2010-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 38
+    },
+    {
+      "timeframe": "2011-01-01..2011-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 80
+    },
+    {
+      "timeframe": "2012-01-01..2012-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 184
+    },
+    {
+      "timeframe": "2013-01-01..2013-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 466
+    },
+    {
+      "timeframe": "2014-01-01..2014-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 838
+    },
+    {
+      "timeframe": "2015-01-01..2015-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 2142
+    },
+    {
+      "timeframe": "2016-01-01..2016-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 5674
+    },
+    {
+      "timeframe": "2017-01-01..2017-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 9780
+    },
+    {
+      "timeframe": "2018-01-01..2018-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 13240
+    },
+    {
+      "timeframe": "2019-01-01..2019-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 17432
+    },
+    {
+      "timeframe": "2020-01-01..2020-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 23340
+    },
+    {
+      "timeframe": "2021-01-01..2021-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 24402
+    },
+    {
+      "timeframe": "2022-01-01..2022-12-31",
+      "language": "typescript",
+      "valid": true,
+      "total": 22389
+    },
+    {
+      "timeframe": ">=2023-01-01",
+      "language": "typescript",
+      "valid": true,
+      "total": 2221
+    }
+  ],
+  "valid": true,
+  "total": 590779
+}
