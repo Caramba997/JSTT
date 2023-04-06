@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Testability</title>
+    <meta name="author" content="Finn Carstensen">
+    <meta name="description" content="Finn Carstensen">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+    <script src="jquery.min.js" defer></script>
+    <script src="bootstrap.bundle.min.js" defer></script>
+    <script src="api.js" defer></script>
+    <script src="repos.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/ui/index">Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <button data-a="save" type="button" class="btn btn-primary btn-sm">Save</button>
+          </li>
+          <li class="nav-item mx-1">
+            <button data-a="check-npm" type="button" class="btn btn-primary btn-sm">Check NPM</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div data-e="error-load" class="alert alert-danger" style="display:none;" role="alert">
+      Error retrieving results. Check if query param is valid, e.g. ?path=repos/random-github_1678208516419.json
+    </div>
+    <div data-e="error" class="alert alert-danger" style="display:none;" role="alert">
+      Error saving data
+    </div>
+    <div data-e="success" class="alert alert-success" style="display:none;" role="alert">
+      Successfully saved
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Stats</h3>
+        <div data-e="stats" class="d-flex flex-row flex-wrap">
+          <div class="p-2">File: <span data-e="stats-name">?</span></div>
+          <div class="p-2">Total: <span data-e="stats-total">?</span></div>
+          <div class="p-2">JavaScript: <span data-e="stats-js">?</span></div>
+          <div class="p-2">TypeScript: <span data-e="stats-ts">?</span></div>
+          <div class="p-2">Organization: <span data-e="stats-org">?</span></div>
+          <div class="p-2">Individual: <span data-e="stats-individual">?</span></div>
+          <div class="p-2">Max Stars: <span data-e="stats-maxstars">?</span></div>
+          <div class="p-2">Min Stars: <span data-e="stats-minstars">?</span></div>
+          <div class="p-2">Total PRs: <span data-e="stats-prs">?</span></div>
+          <div class="p-2">Total Commits: <span data-e="stats-prs">?</span></div>
+          <div class="p-2">NPM: <span data-e="stats-npm">?</span></div>
+          <div class="p-2">Frontend: <span data-e="stats-frontend">?</span></div>
+          <div class="p-2">Backend: <span data-e="stats-backend">?</span></div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <table class="table table-striped" data-e="repo-list">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Language</th>
+          <th scope="col">Stars</th>
+          <th scope="col">Created at</th>
+          <th scope="col">Modified at</th>
+          <th scope="col">GitHub</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <template data-t="repo-list-item">
+      <tr data-index="" data-id="">
+        <th scope="row" data-e="repo-index"></th>
+        <td><a data-e="repo-name" href=""></a></td>
+        <td data-e="repo-language"></td>
+        <td data-e="repo-stars"></td>
+        <td data-e="repo-created"></td>
+        <td data-e="repo-modified"></td>
+        <td>
+          <a data-e="repo-git" href="" target="_blank">
+            <i class="fa-solid fa-globe"></i>
+          </a>
+        </td>
+      </tr>
+    </template>
+  </body>
+</html>

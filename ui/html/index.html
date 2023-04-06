@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Testability</title>
+    <meta name="author" content="Finn Carstensen">
+    <meta name="description" content="Finn Carstensen">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+    <script src="jquery.min.js" defer></script>
+    <script src="bootstrap.bundle.min.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/ui/index">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ui/repos">Repos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="accordion m-2" id="create-project">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#create-project-form" aria-expanded="false" aria-controls="create-project-form">
+            Create new project
+          </button>
+        </h2>
+        <div id="create-project-form" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#create-project">
+          <div class="accordion-body">
+            <form>
+              <div class="row g-3 align-items-center mb-1">
+                <div class="col-auto">
+                  <label for="project-name" class="form-label">Name</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" class="form-control" id="project-name">
+                </div>
+                <div class="col-auto">
+                  <span class="form-text">
+                    A unique identifier for the project
+                  </span>
+                </div>
+              </div>
+              <div class="row g-3 align-items-center mb-1">
+                <div class="col-auto">
+                  <label for="project-size" class="form-label">Size</label>
+                </div>
+                <div class="col-auto">
+                  <input type="number" class="form-control" id="project-size">
+                </div>
+                <div class="col-auto">
+                  <span class="form-text">
+                    The size of the dataset
+                  </span>
+                </div>
+              </div>
+              <div class="row g-3 align-items-center mb-1">
+                <div class="col-auto">
+                  <label for="project-languages" class="form-label">Languages</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" class="form-control" id="project-languages">
+                </div>
+                <div class="col-auto">
+                  <span class="form-text">
+                    Comma seperated list of languages
+                  </span>
+                </div>
+              </div>
+              <div class="row g-3 align-items-center mb-1">
+                <div class="col-auto">
+                  <label for="project-query" class="form-label">Query additions</label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" class="form-control" id="project-query">
+                </div>
+                <div class="col-auto">
+                  <span class="form-text">
+                    (Optional) Additional terms to add to the search query (e.g. "stars:>=5")
+                  </span>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="table table-striped" data-e="project-list">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Languages</th>
+          <th scope="col">Stars</th>
+          <th scope="col">Created at</th>
+          <th scope="col">Modified at</th>
+          <th scope="col">GitHub</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <template data-t="project-list-item">
+      <tr data-index="" data-id="">
+        <th scope="row" data-e="repo-index"></th>
+        <td><a data-e="repo-name" href=""></a></td>
+        <td data-e="repo-language"></td>
+        <td data-e="repo-stars"></td>
+        <td data-e="repo-created"></td>
+        <td data-e="repo-modified"></td>
+        <td>
+          <a data-e="repo-git" href="" target="_blank">
+            <i class="fa-solid fa-globe"></i>
+          </a>
+        </td>
+      </tr>
+    </template>
+  </body>
+</html>

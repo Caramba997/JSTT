@@ -2,8 +2,8 @@ const { GitHub } = require('../lib/github.js');
 const fs = require('fs');
 
 const settings = {
-  keywords: ['test AND refactor'], //['benchmark'], //, ['performance'], 'performance AND testability', 'performance AND refactor'],
-  filename: 'npm_fast_1676134807344.json'
+  keywords: ['refactor'], //['benchmark'], //, ['performance'], 'performance AND testability', 'performance AND refactor'],
+  filename: 'random-github_1678208516419.json'
 };
 
 const gitHub = new GitHub();
@@ -11,13 +11,15 @@ const gitHub = new GitHub();
 (async () => {
   console.log(`Start fetching PRs for repositories defined in ${settings.filename}`);
   const startTime = Date.now();
-  const path = `${process.cwd()}/results/npm/${settings.filename}`;
+  const path = `${process.cwd()}/results/repos/${settings.filename}`;
   const data = fs.readFileSync(path, 'utf8');
-  const json = JSON.parse(data);
+  // const json = JSON.parse(data);
+  const json = JSON.parse(data).repos;
   const filenames = [];
   for (let i = 0; i < json.length; i++) {
-    if (i >= 5) break;
-    const filename = await getPRs(json[i].repository_url);
+    // if (i >= 5) break;
+    // const filename = await getPRs(json[i].repository_url);
+    const filename = await getPRs(json[i].html_url);
     filenames.push(filename);
   }
   fs.writeFileSync(`${process.cwd()}/results/pr_meta/filenames/${settings.filename}`, JSON.stringify(filenames));
