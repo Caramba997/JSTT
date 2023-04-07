@@ -15,19 +15,23 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="navbar-brand ps-3">JS Testability</div>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/ui/index">Home</a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" href="/ui/repos">Repos</a>
+            <a class="nav-link" href="/ui/index">Home</a>
           </li>
         </ul>
       </div>
     </nav>
+    <div data-e="error" class="alert alert-danger" style="display:none;" role="alert">
+      Error
+    </div>
+    <div data-e="success" class="alert alert-success" style="display:none;" role="alert">
+      Success
+    </div>
   </body>
 </html>

@@ -11,27 +11,36 @@
     <link rel="stylesheet" href="all.css">
     <script src="jquery.min.js" defer></script>
     <script src="bootstrap.bundle.min.js" defer></script>
+    <script src="api.js" defer></script>
+    <script src="index.js" defer></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="navbar-brand ps-3">JS Testability</div>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="/ui/index">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/ui/repos">Repos</a>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="/ui/packages">Packages</a>
           </li>
         </ul>
       </div>
     </nav>
+    <div data-e="error" class="alert alert-danger" style="display:none;" role="alert">
+      Error
+    </div>
+    <div data-e="success" class="alert alert-success" style="display:none;" role="alert">
+      Success
+    </div>
     <div class="accordion m-2" id="create-project">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#create-project-form" aria-expanded="false" aria-controls="create-project-form">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#create-project-form" aria-expanded="false" aria-controls="create-project-form">
             Create new project
           </button>
         </h2>
@@ -43,7 +52,7 @@
                   <label for="project-name" class="form-label">Name</label>
                 </div>
                 <div class="col-auto">
-                  <input type="text" class="form-control" id="project-name">
+                  <input type="text" class="form-control" name="project-name" value="New Project">
                 </div>
                 <div class="col-auto">
                   <span class="form-text">
@@ -56,7 +65,7 @@
                   <label for="project-size" class="form-label">Size</label>
                 </div>
                 <div class="col-auto">
-                  <input type="number" class="form-control" id="project-size">
+                  <input type="number" class="form-control" name="project-size" value="384">
                 </div>
                 <div class="col-auto">
                   <span class="form-text">
@@ -69,7 +78,7 @@
                   <label for="project-languages" class="form-label">Languages</label>
                 </div>
                 <div class="col-auto">
-                  <input type="text" class="form-control" id="project-languages">
+                  <input type="text" class="form-control" name="project-languages" value="JavaScript, TypeScript">
                 </div>
                 <div class="col-auto">
                   <span class="form-text">
@@ -82,7 +91,7 @@
                   <label for="project-query" class="form-label">Query additions</label>
                 </div>
                 <div class="col-auto">
-                  <input type="text" class="form-control" id="project-query">
+                  <input type="text" class="form-control" name="project-query">
                 </div>
                 <div class="col-auto">
                   <span class="form-text">
@@ -90,7 +99,7 @@
                   </span>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">Create</button>
+              <button data-a="create-project" type="submit" class="btn btn-primary">Create</button>
             </form>
           </div>
         </div>
@@ -101,28 +110,26 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Name</th>
+          <th scope="col">Size</th>
           <th scope="col">Languages</th>
-          <th scope="col">Stars</th>
-          <th scope="col">Created at</th>
-          <th scope="col">Modified at</th>
-          <th scope="col">GitHub</th>
+          <th scope="col">Query</th>
+          <th scope="col" data-bs-toggle="tooltip" data-bs-placement="top" title="Randoms"><i class="fa-solid fa-shuffle"></i></th>
+          <th scope="col" data-bs-toggle="tooltip" data-bs-placement="top" title="Counts"><i class="fa-solid fa-calendar-days"></i></th>
+          <th scope="col" data-bs-toggle="tooltip" data-bs-placement="top" title="Repos"><i class="fa-solid fa-database"></i></th>
         </tr>
       </thead>
       <tbody></tbody>
     </table>
     <template data-t="project-list-item">
       <tr data-index="" data-id="">
-        <th scope="row" data-e="repo-index"></th>
-        <td><a data-e="repo-name" href=""></a></td>
-        <td data-e="repo-language"></td>
-        <td data-e="repo-stars"></td>
-        <td data-e="repo-created"></td>
-        <td data-e="repo-modified"></td>
-        <td>
-          <a data-e="repo-git" href="" target="_blank">
-            <i class="fa-solid fa-globe"></i>
-          </a>
-        </td>
+        <th scope="row" data-e="project-index"></th>
+        <td><a data-e="project-name" href=""></a></td>
+        <td data-e="project-size"></td>
+        <td data-e="project-languages"></td>
+        <td data-e="project-query"></td>
+        <td><i data-e="project-randoms" class="fa-solid fa-check" style="display: none;"></i></td>
+        <td><i data-e="project-counts" class="fa-solid fa-check" style="display: none;"></i></td>
+        <td><i data-e="project-repos" class="fa-solid fa-check" style="display: none;"></i></td>
       </tr>
     </template>
   </body>

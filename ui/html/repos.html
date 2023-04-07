@@ -16,49 +16,103 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="navbar-brand ps-3">JS Testability</div>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto align-items-center">
           <li class="nav-item">
             <a class="nav-link" href="/ui/index">Home</a>
           </li>
-          <li class="nav-item mx-1">
-            <button data-a="save" type="button" class="btn btn-primary btn-sm">Save</button>
+          <li class="nav-item">
+            <a data-e="project-link" class="nav-link" href="/ui/project">Project</a>
           </li>
           <li class="nav-item mx-1">
-            <button data-a="check-npm" type="button" class="btn btn-primary btn-sm">Check NPM</button>
+            <button data-a="calc-stats" type="button" class="btn btn-outline-primary btn-sm" disabled>Calc stats</button>
+          </li>
+          <li class="nav-item mx-1">
+            <button data-a="check-npm" type="button" class="btn btn-outline-primary btn-sm" disabled>Check NPM</button>
+          </li>
+          <li class="nav-item mx-1">
+            <button data-a="count-commits" type="button" class="btn btn-outline-primary btn-sm" disabled>Count Commits</button>
+          </li>
+          <li class="nav-item mx-1">
+            <button data-a="count-prs" type="button" class="btn btn-outline-primary btn-sm" disabled>Count PRs</button>
+          </li>
+          <li class="nav-item mx-1">
+            <button data-a="calc-deps" type="button" class="btn btn-outline-primary btn-sm" disabled>Calc dependencies</button>
           </li>
         </ul>
       </div>
     </nav>
-    <div data-e="error-load" class="alert alert-danger" style="display:none;" role="alert">
-      Error retrieving results. Check if query param is valid, e.g. ?path=repos/random-github_1678208516419.json
-    </div>
     <div data-e="error" class="alert alert-danger" style="display:none;" role="alert">
-      Error saving data
+      Error
     </div>
     <div data-e="success" class="alert alert-success" style="display:none;" role="alert">
-      Successfully saved
+      Success
     </div>
-    <div class="card">
-      <div class="card-body">
-        <h3 class="card-title">Stats</h3>
-        <div data-e="stats" class="d-flex flex-row flex-wrap">
-          <div class="p-2">File: <span data-e="stats-name">?</span></div>
-          <div class="p-2">Total: <span data-e="stats-total">?</span></div>
-          <div class="p-2">JavaScript: <span data-e="stats-js">?</span></div>
-          <div class="p-2">TypeScript: <span data-e="stats-ts">?</span></div>
-          <div class="p-2">Organization: <span data-e="stats-org">?</span></div>
-          <div class="p-2">Individual: <span data-e="stats-individual">?</span></div>
-          <div class="p-2">Max Stars: <span data-e="stats-maxstars">?</span></div>
-          <div class="p-2">Min Stars: <span data-e="stats-minstars">?</span></div>
-          <div class="p-2">Total PRs: <span data-e="stats-prs">?</span></div>
-          <div class="p-2">Total Commits: <span data-e="stats-prs">?</span></div>
-          <div class="p-2">NPM: <span data-e="stats-npm">?</span></div>
-          <div class="p-2">Frontend: <span data-e="stats-frontend">?</span></div>
-          <div class="p-2">Backend: <span data-e="stats-backend">?</span></div>
+
+    <div class="accordion m-2" id="sections">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stats-content" aria-expanded="false" aria-controls="stats-content">
+            Stats
+          </button>
+        </h2>
+        <div id="stats-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <div data-e="stats" class="d-flex flex-column flex-wrap">
+              <div>Project: <span data-e="stats-name">?</span></div>
+              <div>Total: <span data-e="stats-total">?</span></div>
+              <div>JavaScript: <span data-e="stats-js">?</span></div>
+              <div>TypeScript: <span data-e="stats-ts">?</span></div>
+              <div>Organization: <span data-e="stats-org">?</span></div>
+              <div>Individual: <span data-e="stats-individual">?</span></div>
+              <div>Max Stars: <span data-e="stats-maxstars">?</span></div>
+              <div>Min Stars: <span data-e="stats-minstars">?</span></div>
+              <div>NPM: <span data-e="stats-npm">?</span></div>
+              <div>Total PRs: <span data-e="stats-prs">?</span></div>
+              <div>Total Commits: <span data-e="stats-commits">?</span></div>
+              <div>Frontend: <span data-e="stats-frontend">?</span></div>
+              <div>Backend: <span data-e="stats-backend">?</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deps-content" aria-expanded="false" aria-controls="deps-content">
+            Dependencies
+          </button>
+        </h2>
+        <div id="deps-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <p>Only showing dependencies with a total of 2 or more</p>
+            <table class="table table-striped" data-e="deps">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Production</th>
+                  <th scope="col">Development</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">For Testing</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <template data-t="deps-item">
+              <tr data-index="" data-id="">
+                <th scope="row" data-e="deps-index"></th>
+                <td data-e="deps-name"></td>
+                <td data-e="deps-prod"></td>
+                <td data-e="deps-dev"></td>
+                <td data-e="deps-total"></td>
+                <td data-e="deps-test"></td>
+              </tr>
+            </template>
+          </div>
         </div>
       </div>
     </div>
@@ -70,8 +124,10 @@
           <th scope="col">Name</th>
           <th scope="col">Language</th>
           <th scope="col">Stars</th>
-          <th scope="col">Created at</th>
-          <th scope="col">Modified at</th>
+          <th scope="col">Commits</th>
+          <th scope="col">PRs</th>
+          <th scope="col">NPM</th>
+          <th scope="col">Deps</th>
           <th scope="col">GitHub</th>
         </tr>
       </thead>
@@ -83,8 +139,13 @@
         <td><a data-e="repo-name" href=""></a></td>
         <td data-e="repo-language"></td>
         <td data-e="repo-stars"></td>
-        <td data-e="repo-created"></td>
-        <td data-e="repo-modified"></td>
+        <td data-e="repo-commits"></td>
+        <td data-e="repo-prs"></td>
+        <td>
+          <i data-e="repo-npm-approved" class="fa-solid fa-check" style="display: none;"></i>
+          <i data-e="repo-npm-pending" class="fa-solid fa-question" style="display: none;"></i>
+        </td>
+        <td data-e="repo-deps" data-bs-toggle="tooltip" data-bs-placement="left" title=""></td>
         <td>
           <a data-e="repo-git" href="" target="_blank">
             <i class="fa-solid fa-globe"></i>
@@ -92,5 +153,29 @@
         </td>
       </tr>
     </template>
+    <div data-e="progress-modal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Progress <span data-e="progress-type"></span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="progress">
+              <div data-e="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;"></div>
+            </div>
+            <div class="text-center">
+              <span data-e="progress-current"></span>/<span data-e="progress-total"></span>
+            </div>
+            <div class="text-center">
+              <span data-e="progress-time">0:00</span> remaining
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-a="stop">Stop</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

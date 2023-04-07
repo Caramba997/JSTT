@@ -2,9 +2,15 @@ class API {
   constructor() {
     this.url = 'http://localhost:3000';
     this.routes = {
-      dir: '/api/dir',
-      results: '/api/results',
-      checknpm: '/api/checknpm'
+      checknpm: '/api/checknpm',
+      project: '/api/project',
+      projects: '/api/projects',
+      randoms: '/api/randoms',
+      counts: '/api/counts',
+      repos: '/api/repos',
+      dependencies: '/api/dependencies',
+      countcommits: '/api/countcommits',
+      countprs: '/api/countprs'
     };
   }
 
@@ -59,7 +65,7 @@ class API {
    * @param {String} endpoint A valid endpoint from API.routes
    * @param {Function} onSuccess A callback function for success with one parameter that holds the JSON result
    * @param {Function} onError A callback function for error with one parameter that holds the error
-   * @returns undefined
+   * @returns Result or null
    */
   async post(endpoint, data, onSuccess, onError) {
     const route = this.routes[endpoint];
@@ -87,6 +93,43 @@ class API {
     })
     .catch((err) => {
       if (onError) onError(err);
+    });
+  }
+
+  /**
+   * Do a POST request to the API
+   * @param {String} endpoint A valid endpoint from API.routes
+   * @returns Result or null
+   */
+  async postPromise(endpoint, data) {
+    return new Promise((resolve, reject) => {
+      const route = this.routes[endpoint];
+      if (!route) {
+        console.error('[API] Post: Unknown endpoint');
+        reject(null);
+        return;
+      }
+      fetch(this.url + route, {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Origin': location.origin,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then((response) => {
+        if (!response.ok) {
+          reject(null);
+        }
+        return response.json();
+      })
+      .then((result) => {
+        resolve(result);
+      })
+      .catch((err) => {
+        reject(null);
+      });
     });
   }
 }

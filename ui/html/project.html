@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Testability</title>
+    <meta name="author" content="Finn Carstensen">
+    <meta name="description" content="Finn Carstensen">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+    <script src="jquery.min.js" defer></script>
+    <script src="bootstrap.bundle.min.js" defer></script>
+    <script src="api.js" defer></script>
+    <script src="project.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="navbar-brand ps-3">JS Testability</div>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/ui/index">Home</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h2 class="m-3" data-e="project-name"></h2>
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex flex-row">
+          <div class="pe-2">ID: </div>
+          <div data-e="project-id"></div>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="pe-2">Size: </div>
+          <div data-e="project-size"></div>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="pe-2">Languages: </div>
+          <div data-e="project-languages"></div>
+        </div>
+        <div class="d-flex flex-row">
+          <div class="pe-2">Query: </div>
+          <div data-e="project-query"></div>
+        </div>
+      </div>
+    </div>
+    <div data-e="error" class="alert alert-danger" style="display:none;" role="alert">
+      Error
+    </div>
+    <div data-e="success" class="alert alert-success" style="display:none;" role="alert">
+      Success
+    </div>
+    <div class="accordion m-2" id="sections">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#randoms-content" aria-expanded="false" aria-controls="randoms-content">
+            Randoms
+          </button>
+        </h2>
+        <div id="randoms-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <button class="btn btn-primary" type="button" data-a="create-randoms">Create</button>
+            <div class="text-wrap" data-e="randoms"></div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#counts-content" aria-expanded="false" aria-controls="counts-content">
+            Counts
+          </button>
+        </h2>
+        <div id="counts-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <button class="btn btn-primary" type="button" data-a="create-counts">Create</button>
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-row">
+                  <div class="pe-2">Total: </div>
+                  <div data-e="counts-stats-total"></div>
+                </div>
+                <div class="d-flex flex-row">
+                  <div class="pe-2">Valid: </div>
+                  <div data-e="counts-stats-valid"></div>
+                </div>
+              </div>
+            </div>
+            <table class="table table-striped" data-e="counts">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Timeframe</th>
+                  <th scope="col">Language</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <template data-t="counts-item">
+              <tr data-index="" data-id="">
+                <th scope="row" data-e="counts-index"></th>
+                <td data-e="counts-timeframe"></td>
+                <td data-e="counts-language"></td>
+                <td data-e="counts-total"></td>
+              </tr>
+            </template>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#repos-content" aria-expanded="false" aria-controls="repos-content">
+            Repos
+          </button>
+        </h2>
+        <div id="repos-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <button class="btn btn-primary" type="button" data-a="create-repos">Create</button>
+            <a class="btn btn-primary" data-a="open-repos" style="display: none;">Open</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
