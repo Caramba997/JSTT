@@ -4,6 +4,7 @@ const root = require('app-root-path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const { GitHub } = require('../lib/github.js');
+const { Random } = require('../lib/random.js');
 const { Files } = require('../lib/files.js');
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(function logger(req, res, next) {
 });
 
 const gitHub = new GitHub();
+const random = new Random();
 const files = new Files();
 
 function success(res, data) {
@@ -83,10 +85,11 @@ app.post('/api/project', async (req, res) => {
   project.has_repos = false;
   try {
     fs.mkdirSync(files.path('project', '', [id]));
-    files.write('project', '', project, [id]);
+    files.write('project', 'project.json', project, [id]);
     return success(res, project);
   }
   catch (e) {
+    console.log(e);
     return error(res, 500, 'Something went wrong');
   }
 });
@@ -103,6 +106,25 @@ app.get('/api/randoms', async (req, res) => {
   }
 });
 
+app.post('/api/randoms', async (req, res) => {
+  const id = req.body.id,
+        number = req.body.number,
+        max = req.body.max;
+  if (!id || !number || !max) return error(res, 400, 'Param missing');
+  try {
+    const randoms = await random.get(number, 1, max);
+    files.write('project', 'randoms.txt', randoms, [id]);
+    const project = files.json('project', 'project.json', [id]);
+    project.has_randoms = true;
+    files.write('project', 'project.json', project, [id]);
+    return success(res, randoms);
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
 app.get('/api/counts', async (req, res) => {
   const id = req.query.id;
   if (!id) return error(res, 400, 'Id missing');
@@ -115,10 +137,54 @@ app.get('/api/counts', async (req, res) => {
   }
 });
 
+app.post('/api/counts', async (req, res) => {
+  const id = req.body.id,
+        data = req.body.data;
+  if (!id || !data) return error(res, 400, 'Param missing');
+  try {
+    files.write('project', 'counts.json', data, [id]);
+    const project = files.json('project', 'project.json', [id]);
+    project.has_counts = true;
+    files.write('project', 'project.json', project, [id]);
+    return success(res, 'Successfully saved counts');
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/totalrepos', async (req, res) => {
+  const query = req.body.query;
+  if (!query) return error(res, 400, 'Param missing');
+  try {
+    const response = await gitHub.getTotalRepositories(query);
+    return success(res, response);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/searchrepo', async (req, res) => {
+  const query = req.body.query,
+        index = req.body.index;
+  if (!query || !index) return error(res, 400, 'Param missing');
+  try {
+    const response = await gitHub.getRepositoryBySearch(query, index);
+    return success(res, response);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
 app.get('/api/repos', async (req, res) => {
   const id = req.query.id;
   if (!id) return error(res, 400, 'Id missing');
   try {
+    const exists = files.exists('project', 'repos.json', [id]);
+    if (!exists) return error(res, 404, 'Repos not existent');
     const repos = files.json('project', 'repos.json', [id]);
     return success(res, repos);
   }
@@ -133,7 +199,27 @@ app.post('/api/repos', async (req, res) => {
   if (!id || !data) return error(res, 400, 'Param missing');
   try {
     files.write('project', 'repos.json', data, [id]);
+    const project = files.json('project', 'project.json', [id]);
+    if (project.size === data.repos.length) {
+      project.has_counts = true;
+      files.write('project', 'project.json', project, [id]);
+    }
     return success(res, 'Saved changes');
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.get('/api/exists', async (req, res) => {
+  const id = req.query.id,
+        file = req.query.file;
+  if (!id || !file ) return error(res, 400, 'Param missing');
+  try {
+    const exists = files.exists('project', file, [id]);
+    return success(res, {
+      exists: exists
+    });
   }
   catch (e) {
     return error(res, 500, 'Something went wrong');

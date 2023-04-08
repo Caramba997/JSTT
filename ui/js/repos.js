@@ -12,7 +12,7 @@
     return new bootstrap.Tooltip(tooltipTriggerEl);
   });
   
-  let data, status, depData;
+  let data, depData;
 
   function buildPage() {
     const tbody = $('[data-e="repo-list"] tbody'),
@@ -83,61 +83,35 @@
 
   api.get('repos', {
     id: id
-  }, (response) => {
+  }, async (response) => {
     data = response.data;
     $('#navbarSupportedContent [data-a]').prop('disabled', false);
     $('[data-e="project-link"]').attr('href', `/ui/project?id=${id}`);
-    api.get('dependencies', {
-      id: id
-    }, (response) => {
-      depData = response.data;
-      buildPage();
-    }, (error) => {
-      console.warn(error);
-      buildPage();
+    const hasDependencies = await api.getPromise('exists', {
+      id: id,
+      file: 'dependencies.json'
     });
+    if (hasDependencies.data.exists) {
+      api.get('dependencies', {
+        id: id
+      }, (response) => {
+        depData = response.data;
+        buildPage();
+      }, (error) => {
+        console.warn(error);
+        buildPage();
+      });
+    }
+    else {
+      buildPage();
+    }
   }, (error) => {
     console.warn(error);
     $('[data-e="error-load"]').show();
   });
 
-  const progressModalElement = document.querySelector('[data-e="progress-modal"]'),
-        progressModal = new bootstrap.Modal(progressModalElement, {
-          backdrop: 'static',
-          keyboard: false
-        });
-  $('[data-a="stop"]').on('click', () => {
-    status = 0;
-    buildPage();
-    progressModal.hide();
-  });
-  let progressStart, progressStartIndex;
-  function setProgress(current, total) {
-    const currentProgress = $(progressModalElement).find('[data-e="progress-current"]'),
-          progressBar = $(progressModalElement).find('[data-e="progress-bar"]'),
-          progressTime = $(progressModalElement).find('[data-e="progress-time"]');
-    currentProgress.text(current);
-    progressBar.width(`${current / total * 100}%`);
-    if (current - progressStartIndex === 0) {
-      progressTime.text('?:??');
-    }
-    else {
-      const now = Date.now(),
-            currentTime = now - progressStart,
-            remainingTime = current < total ? currentTime / (current - progressStartIndex) * (total - current) / 1000 : 0,
-            remainingMins = Math.floor(remainingTime / 60),
-            remainingSecs = Math.round(remainingTime % 60);
-      progressTime.text(`${remainingMins}:${remainingSecs >= 10 ? remainingSecs : `0${remainingSecs}`}`);
-    }
-  }
-
   $('[data-a="calc-stats"]').on('click', async () => {
-    status = 1;
-    progressModal.show();
-    progressStart = Date.now();
-    progressStartIndex = 0;
-    $(progressModalElement).find('[data-e="progress-type"]').text('Calc stats');
-    $(progressModalElement).find('[data-e="progress-total"]').text(data.repos.length);
+    progress.init('Calc stats', data.repos.length);
     const stats = {
             name: id,
             total: data.repos.length,
@@ -149,7 +123,7 @@
             minstars: 100000000
           };
     for (let i = 0; i < data.repos.length; i++) {
-      setProgress(i, data.repos.length);
+      progress.setProgress(i, data.repos.length);
       const repo = data.repos[i];
       if (repo.language === 'JavaScript') stats.js++;
       if (repo.language === 'TypeScript') stats.ts++;
@@ -158,30 +132,25 @@
       stats.maxstars = Math.max(stats.maxstars, repo.stargazers_count);
       stats.minstars = Math.min(stats.minstars, repo.stargazers_count);
     }
-    if (status === 0) return;
+    if (progress.status === 0) return;
     data.stats = stats;
     await api.postPromise('repos', {
       id: id,
       data: data
     });
     buildPage();
-    progressModal.hide();
+    progress.end();
   });
 
   $('[data-a="check-npm"]').on('click', async () => {
-    status = 1;
-    progressModal.show();
-    progressStart = Date.now();
-    progressStartIndex = 0;
-    $(progressModalElement).find('[data-e="progress-type"]').text('Check NPM');
-    $(progressModalElement).find('[data-e="progress-total"]').text(data.repos.length);
+    progress.init('Check NPM', data.repos.length, buildPage);
     let totalNpm = 0;
     for (let i = 0; i < data.repos.length && status === 1; i++) {
-      setProgress(i, data.repos.length);
+      progress.setProgress(i, data.repos.length);
       const repo = data.repos[i];
       if (repo.is_npm !== undefined) {
         if (repo.is_npm) totalNpm++;
-        progressStartIndex++;
+        progress.setStartIndex(i + 1);
         continue;
       }
       const response = await api.postPromise('checknpm', {
@@ -202,35 +171,29 @@
         setTimeout(() => {
           alert.hide();
         }, 5000);
-        status = 0;
-        progressModal.hide();
+        progress.end();
         break;
       }
     }
-    if (status === 0) return;
+    if (progress.status === 0) return;
     data.stats.npm = totalNpm;
     await api.postPromise('repos', {
       id: id,
       data: data
     });
     buildPage();
-    progressModal.hide();
+    progress.end();
   });
 
   $('[data-a="count-commits"]').on('click', async () => {
-    status = 1;
-    progressModal.show();
-    progressStart = Date.now();
-    progressStartIndex = 0;
-    $(progressModalElement).find('[data-e="progress-type"]').text('Count commits');
-    $(progressModalElement).find('[data-e="progress-total"]').text(data.repos.length);
+    progress.init('Count commits', data.repos.length, buildPage);
     let totalCommits = 0;
-    for (let i = 0; i < data.repos.length && status === 1; i++) {
-      setProgress(i, data.repos.length);
+    for (let i = 0; i < data.repos.length && progress.status === 1; i++) {
+      progress.setProgress(i, data.repos.length);
       const repo = data.repos[i];
       if (repo.total_commits !== undefined) {
         totalCommits += repo.total_commits;
-        progressStartIndex++;
+        progress.setStartIndex(i + 1);
         continue;
       }
       const response = await api.postPromise('countcommits', {
@@ -251,35 +214,29 @@
         setTimeout(() => {
           alert.hide();
         }, 5000);
-        status = 0;
-        progressModal.hide();
+        progress.end();
         break;
       }
     }
-    if (status === 0) return;
+    if (progress.status === 0) return;
     data.stats.commits = totalCommits;
     await api.postPromise('repos', {
       id: id,
       data: data
     });
     buildPage();
-    progressModal.hide();
+    progress.end();
   });
 
   $('[data-a="count-prs"]').on('click', async () => {
-    status = 1;
-    progressModal.show();
-    progressStart = Date.now();
-    progressStartIndex = 0;
-    $(progressModalElement).find('[data-e="progress-type"]').text('Count PRs');
-    $(progressModalElement).find('[data-e="progress-total"]').text(data.repos.length);
+    progress.init('Count PRs', data.repos.length, buildPage);
     let totalPRs = 0;
-    for (let i = 0; i < data.repos.length && status === 1; i++) {
-      setProgress(i, data.repos.length);
+    for (let i = 0; i < data.repos.length && progress.status === 1; i++) {
+      progress.setProgress(i, data.repos.length);
       const repo = data.repos[i];
       if (repo.total_prs !== undefined) {
         totalPRs += repo.total_prs;
-        progressStartIndex++;
+        progress.setStartIndex(i + 1);
         continue;
       }
       const response = await api.postPromise('countprs', {
@@ -300,30 +257,24 @@
         setTimeout(() => {
           alert.hide();
         }, 5000);
-        status = 0;
-        progressModal.hide();
+        progress.end();
         break;
       }
     }
-    if (status === 0) return;
+    if (progress.status === 0) return;
     data.stats.prs = totalPRs;
     await api.postPromise('repos', {
       id: id,
       data: data
     });
     buildPage();
-    progressModal.hide();
+    progress.end();
   });
 
   $('[data-a="calc-deps"]').on('click', async () => {
-    status = 1;
-    progressModal.show();
-    progressStart = Date.now();
-    progressStartIndex = 0;
-    $(progressModalElement).find('[data-e="progress-type"]').text('Calc dependencies');
-    $(progressModalElement).find('[data-e="progress-total"]').text(data.repos.length);
+    progress.init('Calc dependencies', data.repos.length);
     let dependencies = {};
-    for (let i = 0; i < data.repos.length && status === 1; i++) {
+    for (let i = 0; i < data.repos.length && progress.status === 1; i++) {
       setProgress(i, data.repos.length);
       const repo = data.repos[i];
       if (repo.package_json === undefined || repo.multiple_package_json) continue;
@@ -360,7 +311,7 @@
         });
       }
     }
-    if (status === 0) return;
+    if (progress.status === 0) return;
     const tempDeps = Array.from(Object.entries(dependencies)).sort((a, b) => {
       const totalDiff = b[1].total - a[1].total;
       if (totalDiff !== 0) return totalDiff;
@@ -376,6 +327,6 @@
     });
     depData = dependencies;
     buildPage();
-    progressModal.hide();
+    progress.end();
   });
 })();

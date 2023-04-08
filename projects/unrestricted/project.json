@@ -1,0 +1,14 @@
+{
+	"name": "Unrestricted",
+	"size": "384",
+	"languages": [
+		"JavaScript",
+		"TypeScript"
+	],
+	"query": "",
+	"id": "unrestricted",
+	"full_query": "language:{{language}}+created:{{dates}}",
+	"has_randoms": true,
+	"has_counts": true,
+	"has_repos": false
+}

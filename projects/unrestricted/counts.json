@@ -1,0 +1,222 @@
+{
+	"valid": true,
+	"total": 28104566,
+	"results": [
+		{
+			"timeframe": "2007-01-01..2007-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 0
+		},
+		{
+			"timeframe": "2008-01-01..2008-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 1842
+		},
+		{
+			"timeframe": "2009-01-01..2009-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 7197
+		},
+		{
+			"timeframe": "2010-01-01..2010-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 20076
+		},
+		{
+			"timeframe": "2011-01-01..2011-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 51038
+		},
+		{
+			"timeframe": "2012-01-01..2012-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 126185
+		},
+		{
+			"timeframe": "2013-01-01..2013-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 253393
+		},
+		{
+			"timeframe": "2014-01-01..2014-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 411614
+		},
+		{
+			"timeframe": "2015-01-01..2015-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 635754
+		},
+		{
+			"timeframe": "2016-01-01..2016-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 1002934
+		},
+		{
+			"timeframe": "2017-01-01..2017-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 1447273
+		},
+		{
+			"timeframe": "2018-01-01..2018-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 1910509
+		},
+		{
+			"timeframe": "2019-01-01..2019-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 2233148
+		},
+		{
+			"timeframe": "2020-01-01..2020-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 3556965
+		},
+		{
+			"timeframe": "2021-01-01..2021-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 4764967
+		},
+		{
+			"timeframe": "2022-01-01..2022-04-30",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 1761455
+		},
+		{
+			"timeframe": "2022-05-01..2022-08-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 1910752
+		},
+		{
+			"timeframe": "2022-09-01..2022-12-31",
+			"language": "JavaScript",
+			"valid": true,
+			"total": 1978122
+		},
+		{
+			"timeframe": "2023-01-01..2023-04-30",
+			"language": "JavaScript",
+			"valid": false,
+			"total": 1829915
+		},
+		{
+			"timeframe": "2007-01-01..2007-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 0
+		},
+		{
+			"timeframe": "2008-01-01..2008-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 3
+		},
+		{
+			"timeframe": "2009-01-01..2009-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 9
+		},
+		{
+			"timeframe": "2010-01-01..2010-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 49
+		},
+		{
+			"timeframe": "2011-01-01..2011-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 132
+		},
+		{
+			"timeframe": "2012-01-01..2012-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 316
+		},
+		{
+			"timeframe": "2013-01-01..2013-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 1573
+		},
+		{
+			"timeframe": "2014-01-01..2014-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 4130
+		},
+		{
+			"timeframe": "2015-01-01..2015-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 7371
+		},
+		{
+			"timeframe": "2016-01-01..2016-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 44562
+		},
+		{
+			"timeframe": "2017-01-01..2017-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 160462
+		},
+		{
+			"timeframe": "2018-01-01..2018-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 281901
+		},
+		{
+			"timeframe": "2019-01-01..2019-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 376431
+		},
+		{
+			"timeframe": "2020-01-01..2020-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 624571
+		},
+		{
+			"timeframe": "2021-01-01..2021-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 890487
+		},
+		{
+			"timeframe": "2022-01-01..2022-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 1331605
+		},
+		{
+			"timeframe": "2023-01-01..2023-12-31",
+			"language": "TypeScript",
+			"valid": true,
+			"total": 477825
+		}
+	]
+}
