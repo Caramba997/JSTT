@@ -44,9 +44,27 @@
     project = response.data;
     $('[data-e="project-name"]').text(project.name);
     $('[data-e="project-id"]').text(project.id);
+    $('[data-e="project-type"]').text(project.type);
     $('[data-e="project-size"]').text(project.size);
     $('[data-e="project-languages"]').text(project.languages.join(', '));
     $('[data-e="project-query"]').text(project.query);
+  
+    if (project.type === 'github') {
+      if (project.has_counts) {
+        api.get('counts', {
+          id: id
+        }, (response) => {
+          counts = response.data;
+          buildCounts();
+        }, (error) => {
+          console.warn(error);
+          $('[data-e="error-load"]').show();
+        });
+      }
+    }
+    else {
+      $('#counts-content').closest('.accordion-item').remove();
+    }
 
     if (project.has_randoms) {
       api.get('randoms', {
@@ -54,18 +72,6 @@
       }, (response) => {
         randoms = response.data;
         buildRandoms();
-      }, (error) => {
-        console.warn(error);
-        $('[data-e="error-load"]').show();
-      });
-    }
-  
-    if (project.has_counts) {
-      api.get('counts', {
-        id: id
-      }, (response) => {
-        counts = response.data;
-        buildCounts();
       }, (error) => {
         console.warn(error);
         $('[data-e="error-load"]').show();
@@ -84,39 +90,72 @@
     $('[data-e="error-load"]').show();
   });
 
-  $('[data-a="create-randoms"]').on('click', () => {
-    if (!counts) {
-      const alert = $('[data-e="error"]');
-      alert.html('Counts need to be calculated first').show();
-      setTimeout(() => {
-        alert.hide();
-      }, 3000);
-      return;
+  $('[data-a="create-randoms"]').on('click', async () => {
+    if (project.type === 'github') {
+      if (!counts) {
+        const alert = $('[data-e="error"]');
+        alert.html('Counts need to be calculated first').show();
+        setTimeout(() => {
+          alert.hide();
+        }, 3000);
+        return;
+      }
+      progress.init('Create randoms', 1);
+      api.post('randoms', {
+        id: id,
+        number: project.size,
+        max: counts.total
+      }, (response) => {
+        randoms = response.data;
+        project.has_randoms = true;
+        buildRandoms();
+        const alert = $('[data-e="success"]');
+        alert.html(response.msg).show();
+        setTimeout(() => {
+          alert.hide();
+        }, 3000);
+        progress.setProgress(1, 1);
+        progress.end();
+      }, (err) => {
+        const alert = $('[data-e="error"]');
+        alert.html(err.statusText).show();
+        setTimeout(() => {
+          alert.hide();
+        }, 3000);
+        progress.end();
+      });
     }
-    progress.init('Create randoms', 1);
-    api.post('randoms', {
-      id: id,
-      number: project.size,
-      max: counts.total
-    }, (response) => {
-      randoms = response.data;
-      project.has_randoms = true;
-      buildRandoms();
-      const alert = $('[data-e="success"]');
-      alert.html(response.msg).show();
-      setTimeout(() => {
-        alert.hide();
-      }, 3000);
-      progress.setProgress(1, 1);
-      progress.end();
-    }, (err) => {
-      const alert = $('[data-e="error"]');
-      alert.html(err.statusText).show();
-      setTimeout(() => {
-        alert.hide();
-      }, 3000);
-      progress.end();
-    });
+    else if (project.type === 'npm') {
+      progress.init('Create randoms', 2);
+      const total = await api.getPromise('npmtotal');
+      console.log(total.data.total);
+      progress.setProgress(1, 2);
+      api.post('randoms', {
+        id: id,
+        number: project.size * 5,
+        max: total.data.total,
+        unordered: true
+      }, (response) => {
+        randoms = response.data;
+        project.has_randoms = true;
+        project.total = total.data.total;
+        buildRandoms();
+        const alert = $('[data-e="success"]');
+        alert.html(response.msg).show();
+        setTimeout(() => {
+          alert.hide();
+        }, 3000);
+        progress.setProgress(2, 2);
+        progress.end();
+      }, (err) => {
+        const alert = $('[data-e="error"]');
+        alert.html(err.statusText).show();
+        setTimeout(() => {
+          alert.hide();
+        }, 3000);
+        progress.end();
+      });
+    }
   });
 
   $('[data-a="create-counts"]').on('click', async () => {
@@ -312,7 +351,9 @@
                 query: query,
                 response_total: response.data.total_count,
                 response: response.data,
-                count: count_obj
+                count: count_obj,
+                random: random,
+                index: random - count_obj.start_count + 1
               });
             }
             else {
@@ -329,7 +370,9 @@
             result.errors.push({
               query: query,
               response: e,
-              count: count_obj
+              count: count_obj,
+              random: random,
+              index: random - count_obj.start_count + 1
             });
             await api.postPromise('repos', {
               id: id,

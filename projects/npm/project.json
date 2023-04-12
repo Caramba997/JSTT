@@ -1,15 +1,17 @@
 {
-	"type": "github",
-	"name": "Unrestricted",
+	"type": "npm",
+	"name": "NPM",
 	"size": "384",
 	"languages": [
 		"JavaScript",
-		"TypeScript"
+		"TypeScript",
+		"HTML"
 	],
 	"query": "",
-	"id": "unrestricted",
+	"id": "npm",
 	"full_query": "language:{{language}}+created:{{dates}}",
 	"has_randoms": true,
-	"has_counts": true,
-	"has_repos": true
+	"has_counts": false,
+	"has_repos": false,
+	"total": 3154474
 }

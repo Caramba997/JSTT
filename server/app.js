@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const { GitHub } = require('../lib/github.js');
 const { Random } = require('../lib/random.js');
 const { Files } = require('../lib/files.js');
+const { NPM } = require('../lib/npm.js');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -23,6 +24,7 @@ app.use(function logger(req, res, next) {
 const gitHub = new GitHub();
 const random = new Random();
 const files = new Files();
+const npm = new NPM();
 
 function success(res, data) {
   return res.send({
@@ -109,13 +111,21 @@ app.get('/api/randoms', async (req, res) => {
 app.post('/api/randoms', async (req, res) => {
   const id = req.body.id,
         number = req.body.number,
-        max = req.body.max;
+        max = req.body.max,
+        unordered = req.body.unordered;
   if (!id || !number || !max) return error(res, 400, 'Param missing');
   try {
-    const randoms = await random.get(number, 1, max);
+    let randoms;
+    if (unordered) {
+      randoms = await random.getUnordered(number, 1, max);
+    }
+    else {
+      randoms = await random.get(number, 1, max);
+    }
     files.write('project', 'randoms.txt', randoms, [id]);
     const project = files.json('project', 'project.json', [id]);
     project.has_randoms = true;
+    project.total = max;
     files.write('project', 'project.json', project, [id]);
     return success(res, randoms);
   }
@@ -175,6 +185,58 @@ app.post('/api/searchrepo', async (req, res) => {
     return success(res, response);
   }
   catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.get('/api/repo', async (req, res) => {
+  const id = req.query.id,
+        repo = decodeURIComponent(req.query.repo);
+  if (!id || !repo) return error(res, 400, 'Param missing');
+  try {
+    const exists = files.exists('project', 'repos.json', [id]);
+    if (!exists) return error(res, 404, 'repos.json not existent');
+    const repos = files.json('project', 'repos.json', [id]);
+    let result = null;
+    for (let i = 0; i < repos.repos.length; i++) {
+      const current = repos.repos[i];
+      if (current.full_name === repo) {
+        result = repos.repos[i];
+        break;
+      }
+    }
+    if (result === null) return error(res, 404, 'Repo not existent');
+    return success(res, result);
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/repo', async (req, res) => {
+  const id = req.body.id,
+        data = req.body.data;
+  if (!id || !data) return error(res, 400, 'Param missing');
+  try {
+    const exists = files.exists('project', 'repos.json', [id]);
+    if (!exists) return error(res, 404, 'repos.json not existent');
+    const repos = files.json('project', 'repos.json', [id]);
+    let found = false;
+    for (let i = 0; i < repos.repos.length; i++) {
+      const current = repos.repos[i];
+      if (current.full_name === data.full_name) {
+        repos.repos[i] = data;
+        found = true;
+        break;
+      }
+    }
+    if (found === false) return error(res, 404, 'Repo not existent');
+    files.write('project', 'repos.json', repos, [id]);
+    return success(res, 'Saved changes');
+  }
+  catch (e) {
+    console.log(e);
     return error(res, 500, 'Something went wrong');
   }
 });
@@ -263,9 +325,8 @@ app.post('/api/checknpm', async (req, res) => {
       }
       data.is_npm = true;
       const package_json = await gitHub.getFile(data.name, data.owner.login, response.data.items[0].path),
-            decoded = (package_json.data.encoding !== 'utf-8') ? Buffer.from(package_json.data.content, package_json.data.encoding).toString('utf-8') : package_json.data.content;
+            decoded = (package_json.data.encoding !== 'utf-8') ? Buffer.from(package_json.data.content, package_json.data.encoding).toString('utf-8').replace(/\,(?=\s*?[\}\]])/g, '') : package_json.data.content;
       data.package_json = JSON.parse(decoded);
-      if (data.package_json_url) delete data.package_json_url;
     }
     else {
       data.is_npm = false;
@@ -304,6 +365,53 @@ app.post('/api/countprs', async (req, res) => {
   catch (e) {
     console.log(e);
     return error(res, 500, 'Error getting results');
+  }
+});
+
+app.post('/api/downloadrepo', async (req, res) => {
+  const id = req.body.id,
+        repo = req.body.repo;
+  if (!id || !repo) return error(res, 400, 'Param missing');
+  try {
+    const formattedName = files.safeFormat(repo);
+    const response = await gitHub.downloadGitRepo(repo, files.path('files', '', [id, formattedName]));
+    if (response === false) return error(res, 500, 'Error on downloading repo');
+    return success(res, {
+      localFolder: formattedName
+    });
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/checktests', async (req, res) => {
+  const id = req.body.id,
+        repo = req.body.repo;
+  if (!id || !repo) return error(res, 400, 'Param missing');
+  try {
+    const formattedName = files.safeFormat(repo);
+    const result = files.hasTests(files.path('files', '', [id, formattedName]));
+    if (result === false) return success(res, { has_tests: false });
+    return success(res, {
+      has_tests: true, 
+      test_occurences: result
+    });
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.get('/api/npmtotal', async (req, res) => {
+  try {
+    const total = await npm.getTotal();
+    return success(res, { total: total });
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
   }
 });
 

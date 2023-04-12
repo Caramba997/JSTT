@@ -144,7 +144,13 @@
 				}
 			},
 			"total_commits": 18,
-			"total_prs": 1
+			"total_prs": 1,
+			"local_folder": "nparashuram_seamcarving",
+			"has_tests": false,
+			"test_occurences": {
+				"dirs": [],
+				"files": []
+			}
 		},
 		{
 			"id": 506402,
@@ -276,7 +282,17 @@
 			},
 			"multiple_package_json": true,
 			"total_commits": 240,
-			"total_prs": 79
+			"total_prs": 79,
+			"local_folder": "petruisfan_node_supervisor",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/petruisfan_node_supervisor/test"
+				],
+				"files": [
+					"./projects/version_1/files/petruisfan_node_supervisor/test/supervisor.test.js"
+				]
+			}
 		},
 		{
 			"id": 1182492,

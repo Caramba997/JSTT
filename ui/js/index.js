@@ -18,6 +18,7 @@
       html.data('id', project.id);
       html.find('[data-e="project-index"]').text(i + 1);
       html.find('[data-e="project-name"]').text(project.name).attr('href', `/ui/project?id=${project.id}`);
+      html.find('[data-e="project-type"]').text(project.type);
       html.find('[data-e="project-size"]').text(project.size);
       html.find('[data-e="project-languages"]').text(project.languages.join(', '));
       html.find('[data-e="project-query"]').text(project.query);
@@ -40,7 +41,7 @@
   $('[data-a="create-project"]').on('click', (e) => {
     e.preventDefault();
     const project = {};
-    $(e.target).closest('form').find('input').each(function() {
+    $(e.target).closest('form').find('input, select').each(function() {
       const property = this.name.replace('project-', '');
       project[property] = this.value;
     });

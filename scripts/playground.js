@@ -1,19 +1,23 @@
-// const date =  require('date-and-time');
-
-// let d1 = date.parse('2023-03-01', 'YYYY-MM-DD', true),
-//     d2 = date.addMilliseconds(date.addDays(date.parse('2023-03-31', 'YYYY-MM-DD', true), 1), -1);
-//     console.log(d1.toISOString(), d2.toISOString());
-// console.log(date.subtract(d2, d1).toMilliseconds() / 1000 / 60 / 60 / 24);
-
-// const arr = ["a", "b", "c", "d", "e"];
-// arr.splice(arr.indexOf("c"), 1, "x", "y");
-// console.log(arr);
-
 (async() => {
   const { GitHub } = require('../lib/github.js');
+  const { Files } = require('../lib/files.js');
+  const { Format } = require('../lib/format.js');
+  const { Metrics } = require('../lib/metrics.js');
+  const { NPM } = require('../lib/npm.js');
   
-  const gitHub = new GitHub();
-  
-  const response = await gitHub.getTotalPRs('petruisfan/node-supervisor');
-  console.log(response);
+  // const metrics = new Metrics();
+  // metrics.complexity('./projects/version_1/files/nparashuram_seamcarving/main.js');
+
+  // const { FileTypes } = require('../lib/format.js');
+  // console.log(FileTypes);
+  // const files = new Files();
+  // console.log(files.hasTests('./projects/version_1/files/petruisfan_node_supervisor/'));
+
+  // const gitHub = new GitHub();
+  // const files = new Files();
+  // const response = await gitHub.getRepositoryBySearch('language:TypeScript+created:2023-03-10T08:21:45..2023-03-10T11:30:02+pushed:>2022-04-11', 710);
+  // files.write('project', 'missing.json', response, ['active_projects']);
+
+  const npm = new NPM();
+  const total = npm.getTotal();
 })();

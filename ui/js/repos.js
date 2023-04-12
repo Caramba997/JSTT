@@ -25,7 +25,7 @@
       html.data('index', i);
       html.data('id', repo.full_name);
       html.find('[data-e="repo-index"]').text(i + 1);
-      html.find('[data-e="repo-name"]').text(repo.full_name).attr('href', `/ui/repo?name=${repo.full_name}`);
+      html.find('[data-e="repo-name"]').text(repo.full_name).attr('href', `/ui/repo?id=${id}&repo=${repo.full_name}`);
       html.find('[data-e="repo-language"]').text(repo.language);
       html.find('[data-e="repo-stars"]').text(repo.stargazers_count);
       if (repo.total_commits !== undefined) html.find('[data-e="repo-commits"]').text(repo.total_commits);
@@ -38,6 +38,7 @@
           html.find('[data-e="repo-npm-approved"]').show();
         }
       }
+
       let depCount = 0,
           deps = [];
       if (repo.package_json !== undefined && !repo.multiple_package_json) {
@@ -55,6 +56,7 @@
         }
         html.find('[data-e="repo-deps"]').text(depCount).attr('title', deps.join('\n'));
       }
+      if (repo.local_folder !== undefined) html.find('[data-e="repo-downloaded"]').show();
       html.find('a[data-e="repo-git"]').attr('href', repo.html_url);
       tbody.append(html);
     }
@@ -145,7 +147,7 @@
   $('[data-a="check-npm"]').on('click', async () => {
     progress.init('Check NPM', data.repos.length, buildPage);
     let totalNpm = 0;
-    for (let i = 0; i < data.repos.length && status === 1; i++) {
+    for (let i = 0; i < data.repos.length && progress.status === 1; i++) {
       progress.setProgress(i, data.repos.length);
       const repo = data.repos[i];
       if (repo.is_npm !== undefined) {
@@ -275,7 +277,7 @@
     progress.init('Calc dependencies', data.repos.length);
     let dependencies = {};
     for (let i = 0; i < data.repos.length && progress.status === 1; i++) {
-      setProgress(i, data.repos.length);
+      progress.setProgress(i, data.repos.length);
       const repo = data.repos[i];
       if (repo.package_json === undefined || repo.multiple_package_json) continue;
       const deps = repo.package_json.dependencies,

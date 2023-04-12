@@ -13,6 +13,7 @@
     <script src="bootstrap.bundle.min.js" defer></script>
     <script src="api.js" defer></script>
     <script src="progress.js" defer></script>
+    <script src="repo.js" defer></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
@@ -25,6 +26,21 @@
           <li class="nav-item">
             <a class="nav-link" href="/ui/index">Home</a>
           </li>
+          <li class="nav-item">
+            <a data-e="project-link" class="nav-link" href="/ui/project">Project</a>
+          </li>
+          <li class="nav-item">
+            <a data-e="repos-link" class="nav-link" href="/ui/repos">Repos</a>
+          </li>
+          <li class="nav-item">
+            <a data-e="github-link" class="nav-link" href="/ui/repos" target="_blank"><i class="fa-solid fa-globe"></i></a>
+          </li>
+          <li class="nav-item mx-1">
+            <button data-a="download" type="button" class="btn btn-outline-primary btn-sm" disabled>Download</button>
+          </li>
+          <li class="nav-item mx-1">
+            <button data-a="check-tests" type="button" class="btn btn-outline-primary btn-sm" disabled>Check tests</button>
+          </li>
         </ul>
       </div>
     </nav>
@@ -34,6 +50,43 @@
     <div data-e="success" class="alert alert-success" style="display:none;" role="alert">
       Success
     </div>
+    <div class="accordion m-2" id="sections">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stats-content" aria-expanded="false" aria-controls="stats-content">
+            Info
+          </button>
+        </h2>
+        <div id="stats-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <div data-e="info" class="d-flex flex-column flex-wrap">
+              <div>Name: <span data-e="info-name">?</span></div>
+              <div>Owner: <span data-e="info-owner">?</span></div>
+              <div>Language: <span data-e="info-language">?</span></div>
+              <div>Stars: <span data-e="info-stars">?</span></div>
+              <div>Commits: <span data-e="info-commits">?</span></div>
+              <div>PRs: <span data-e="info-prs">?</span></div>
+              <div>IS NPM: <span data-e="info-npm">?</span></div>
+              <div>Dependencies: <span data-e="info-deps">?</span></div>
+              <div>Has tests: <span data-e="info-tests">?</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deps-content" aria-expanded="false" aria-controls="deps-content">
+            Metrics
+          </button>
+        </h2>
+        <div id="deps-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
     <div data-e="progress-modal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

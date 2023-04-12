@@ -1,3 +1,6 @@
+# Project specific
+/projects/*/files
+
 # Logs
 logs
 *.log

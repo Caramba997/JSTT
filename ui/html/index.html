@@ -21,7 +21,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto align-items-center">
           <li class="nav-item active">
             <a class="nav-link" href="/ui/index">Home</a>
           </li>
@@ -47,6 +47,22 @@
         <div id="create-project-form" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#create-project">
           <div class="accordion-body">
             <form>
+              <div class="row g-3 align-items-center mb-1">
+                <div class="col-auto">
+                  <label for="project-type" class="form-label">Type</label>
+                </div>
+                <div class="col-auto">
+                  <select class="form-control" name="project-type">
+                    <option value="github">GitHub</option>
+                    <option value="npm">NPM</option>
+                  </select>
+                </div>
+                <div class="col-auto">
+                  <span class="form-text">
+                    Select the initial data source
+                  </span>
+                </div>
+              </div>
               <div class="row g-3 align-items-center mb-1">
                 <div class="col-auto">
                   <label for="project-name" class="form-label">Name</label>
@@ -110,6 +126,7 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Name</th>
+          <th scope="col">Type</th>
           <th scope="col">Size</th>
           <th scope="col">Languages</th>
           <th scope="col">Query</th>
@@ -124,6 +141,7 @@
       <tr data-index="" data-id="">
         <th scope="row" data-e="project-index"></th>
         <td><a data-e="project-name" href=""></a></td>
+        <td data-e="project-type"></td>
         <td data-e="project-size"></td>
         <td data-e="project-languages"></td>
         <td data-e="project-query"></td>

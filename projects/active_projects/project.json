@@ -1,0 +1,15 @@
+{
+	"type": "github",
+	"name": "Active Projects",
+	"size": "384",
+	"languages": [
+		"JavaScript",
+		"TypeScript"
+	],
+	"query": "pushed:>2022-04-11",
+	"id": "active_projects",
+	"full_query": "language:{{language}}+created:{{dates}}+pushed:>2022-04-11",
+	"has_randoms": true,
+	"has_counts": true,
+	"has_repos": true
+}

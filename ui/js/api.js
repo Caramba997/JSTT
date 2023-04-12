@@ -7,13 +7,17 @@ class API {
       projects: '/api/projects',
       randoms: '/api/randoms',
       counts: '/api/counts',
+      repo: '/api/repo',
       repos: '/api/repos',
       dependencies: '/api/dependencies',
       countcommits: '/api/countcommits',
       countprs: '/api/countprs',
       totalrepos: '/api/totalrepos',
       searchrepo: '/api/searchrepo',
-      exists: '/api/exists'
+      exists: '/api/exists',
+      downloadrepo: '/api/downloadrepo',
+      checktests: '/api/checktests',
+      npmtotal: '/api/npmtotal'
     };
   }
 
