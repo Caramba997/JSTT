@@ -17,7 +17,8 @@ class API {
       exists: '/api/exists',
       downloadrepo: '/api/downloadrepo',
       checktests: '/api/checktests',
-      npmtotal: '/api/npmtotal'
+      npmtotal: '/api/npmtotal',
+      npmall: '/api/npmall'
     };
   }
 

@@ -19,5 +19,7 @@
   // files.write('project', 'missing.json', response, ['active_projects']);
 
   const npm = new NPM();
-  const total = npm.getTotal();
+  const files = new Files();
+  const all = await npm.getAllDocs(files.path('project', 'all.json', ['npm']));
+  // files.write('project', 'all.json', JSON.stringify(all), ['npm']);
 })();

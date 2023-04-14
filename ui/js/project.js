@@ -245,156 +245,304 @@
   });
 
   $('[data-a="create-repos"]').on('click', async () => {
-    if (!counts || !randoms) {
-      const alert = $('[data-e="error"]');
-      alert.html('Counts and randoms need to be calculated first').show();
-      setTimeout(() => {
-        alert.hide();
-      }, 3000);
-      return;
-    }
-    const settings = {
-      input_date_format: 'YYYY-MM-DD',
-      date_format: 'YYYY-MM-DDTHH:mm:ss',
-      gitHubLimit: 1000
-    };
-    const randomArr = randoms.split(',');
-    const newCounts = [];
-    let total = 0;
-    progress.init('Retrieve repos', randomArr.length);
-    for (let i = 0; i < counts.results.length; i++) {
-      const current = counts.results[i],
-            dates = current.timeframe.split('..');
-      newCounts.push({
-        start_date: date.parse(dates[0], settings.input_date_format, true),
-        end_date: date.addMilliseconds(date.addDays(date.parse(dates[1], settings.input_date_format, true), 1), -1),
-        start_count: total + 1,
-        end_count: total + current.total,
-        range_count: current.total,
-        language: current.language
-      });
-      total += current.total;
-    }
-    let result = {
-      repos: [],
-      errors: []
-    };
-    // Download already processed repos
-    const reposExist = await api.getPromise('exists', {
-            id: id,
-            file: 'repos.json'
-          }),
-          repoResponse = reposExist.data.exists ? await api.getPromise('repos', {
-            id: id
-          }) : null,
-          completedRepos = repoResponse ? repoResponse.data.repos.length + repoResponse.data.errors.length : 0;
-    if (completedRepos > 0) {
-      progress.setStartIndex(completedRepos);
-      result = repoResponse.data;
-    }
-    for (let i = completedRepos; i < randomArr.length && progress.status === 1; i++) {
-      progress.setProgress(i, randomArr.length);
-      const random = randomArr[i];
-      for (let k = 0; k < newCounts.length && progress.status === 1; k++) {
-        const current = newCounts[k];
-        if (random <= current.end_count) {
-          const defineQuery = async (count_obj, number) => {
-            if (count_obj.range_count <= settings.gitHubLimit || number < count_obj.start_count + settings.gitHubLimit) {
-              return count_obj;
-            }
-            else {
-              const splitSeconds = date.subtract(count_obj.end_date, count_obj.start_date).toSeconds() / 2,
-                    firstEndDate = date.addSeconds(count_obj.start_date, splitSeconds),
-                    secondStartDate = date.addSeconds(count_obj.start_date, splitSeconds + 1),
-                    dates = `${date.format(count_obj.start_date, settings.date_format, true)}..${date.format(firstEndDate, settings.date_format, true)}`,
-                    query = project.full_query.replace('{{language}}', count_obj.language).replace('{{dates}}', dates),
-                    responseRaw = await api.postPromise('totalrepos', {
-                      query: query
-                    }),
-                    response = responseRaw.data,
-                    firstCount = {
-                      start_date: count_obj.start_date,
-                      end_date: date.addMilliseconds(date.addSeconds(firstEndDate, 1), -1),
-                      start_count: count_obj.start_count,
-                      end_count: count_obj.start_count + response.total - 1,
-                      range_count: response.total,
-                      language: count_obj.language
-                    },
-                    secondCount = {
-                      start_date: secondStartDate,
-                      end_date: count_obj.end_date,
-                      start_count: count_obj.start_count + response.total,
-                      end_count: count_obj.end_count,
-                      range_count: count_obj.end_count - (count_obj.start_count + response.total - 1),
-                      language: count_obj.language
-                    };
-              newCounts.splice(newCounts.indexOf(count_obj), 1, firstCount, secondCount);
-              if (number <= firstCount.end_count) {
-                return defineQuery(firstCount, number);
+    if (project.type === 'github') {
+      if (!counts || !randoms) {
+        const alert = $('[data-e="error"]');
+        alert.html('Counts and randoms need to be calculated first').show();
+        setTimeout(() => {
+          alert.hide();
+        }, 3000);
+        return;
+      }
+      const settings = {
+        input_date_format: 'YYYY-MM-DD',
+        date_format: 'YYYY-MM-DDTHH:mm:ss',
+        gitHubLimit: 1000
+      };
+      const randomArr = randoms.split(',');
+      const newCounts = [];
+      let total = 0;
+      progress.init('Retrieve repos', randomArr.length);
+      for (let i = 0; i < counts.results.length; i++) {
+        const current = counts.results[i],
+              dates = current.timeframe.split('..');
+        newCounts.push({
+          start_date: date.parse(dates[0], settings.input_date_format, true),
+          end_date: date.addMilliseconds(date.addDays(date.parse(dates[1], settings.input_date_format, true), 1), -1),
+          start_count: total + 1,
+          end_count: total + current.total,
+          range_count: current.total,
+          language: current.language
+        });
+        total += current.total;
+      }
+      let result = {
+        repos: [],
+        errors: []
+      };
+      // Download already processed repos
+      const reposExist = await api.getPromise('exists', {
+              id: id,
+              file: 'repos.json'
+            }),
+            repoResponse = reposExist.data.exists ? await api.getPromise('repos', {
+              id: id
+            }) : null,
+            completedRepos = repoResponse ? repoResponse.data.repos.length + repoResponse.data.errors.length : 0;
+      if (completedRepos > 0) {
+        progress.setStartIndex(completedRepos);
+        result = repoResponse.data;
+      }
+      for (let i = completedRepos; i < randomArr.length && progress.status === 1; i++) {
+        progress.setProgress(i, randomArr.length);
+        const random = randomArr[i];
+        for (let k = 0; k < newCounts.length && progress.status === 1; k++) {
+          const current = newCounts[k];
+          if (random <= current.end_count) {
+            const defineQuery = async (count_obj, number) => {
+              if (count_obj.range_count <= settings.gitHubLimit || number < count_obj.start_count + settings.gitHubLimit) {
+                return count_obj;
               }
               else {
-                return defineQuery(secondCount, number);
+                const splitSeconds = date.subtract(count_obj.end_date, count_obj.start_date).toSeconds() / 2,
+                      firstEndDate = date.addSeconds(count_obj.start_date, splitSeconds),
+                      secondStartDate = date.addSeconds(count_obj.start_date, splitSeconds + 1),
+                      dates = `${date.format(count_obj.start_date, settings.date_format, true)}..${date.format(firstEndDate, settings.date_format, true)}`,
+                      query = project.full_query.replace('{{language}}', count_obj.language).replace('{{dates}}', dates),
+                      responseRaw = await api.postPromise('totalrepos', {
+                        query: query
+                      }),
+                      response = responseRaw.data,
+                      firstCount = {
+                        start_date: count_obj.start_date,
+                        end_date: date.addMilliseconds(date.addSeconds(firstEndDate, 1), -1),
+                        start_count: count_obj.start_count,
+                        end_count: count_obj.start_count + response.total - 1,
+                        range_count: response.total,
+                        language: count_obj.language
+                      },
+                      secondCount = {
+                        start_date: secondStartDate,
+                        end_date: count_obj.end_date,
+                        start_count: count_obj.start_count + response.total,
+                        end_count: count_obj.end_count,
+                        range_count: count_obj.end_count - (count_obj.start_count + response.total - 1),
+                        language: count_obj.language
+                      };
+                newCounts.splice(newCounts.indexOf(count_obj), 1, firstCount, secondCount);
+                if (number <= firstCount.end_count) {
+                  return defineQuery(firstCount, number);
+                }
+                else {
+                  return defineQuery(secondCount, number);
+                }
               }
             }
-          }
-          const count_obj = await defineQuery(current, random),
-                dates = `${date.format(count_obj.start_date, settings.date_format, true)}..${date.format(count_obj.end_date, settings.date_format, true)}`,
-                query = project.full_query.replace('{{language}}', count_obj.language).replace('{{dates}}', dates);
-          try {
-            const response = await api.postPromise('searchrepo', {
-              query: query,
-              index: random - count_obj.start_count + 1
-            });
-            if (response.data.items.length !== 1) {
-              console.error(`[Error] Repository not found for query "${query}"`);
+            const count_obj = await defineQuery(current, random),
+                  dates = `${date.format(count_obj.start_date, settings.date_format, true)}..${date.format(count_obj.end_date, settings.date_format, true)}`,
+                  query = project.full_query.replace('{{language}}', count_obj.language).replace('{{dates}}', dates);
+            try {
+              const response = await api.postPromise('searchrepo', {
+                query: query,
+                index: random - count_obj.start_count + 1
+              });
+              if (response.data.items.length !== 1) {
+                console.error(`[Error] Repository not found for query "${query}"`);
+                result.errors.push({
+                  query: query,
+                  response_total: response.data.total_count,
+                  response: response.data,
+                  count: count_obj,
+                  random: random,
+                  index: random - count_obj.start_count + 1
+                });
+              }
+              else {
+                console.log(`#${i + 1}: ${random} -> ${response.data.items[0].full_name}`);
+                result.repos.push(response.data.items[0]);
+              }
+              await api.postPromise('repos', {
+                id: id,
+                data: result
+              });
+            }
+            catch (e) {
+              console.error(`[Error] Problem with GitHub API for query "${query}"`);
               result.errors.push({
                 query: query,
-                response_total: response.data.total_count,
-                response: response.data,
+                response: e,
                 count: count_obj,
                 random: random,
                 index: random - count_obj.start_count + 1
               });
+              await api.postPromise('repos', {
+                id: id,
+                data: result
+              });
             }
-            else {
-              console.log(`#${i + 1}: ${random} -> ${response.data.items[0].full_name}`);
-              result.repos.push(response.data.items[0]);
-            }
-            await api.postPromise('repos', {
-              id: id,
-              data: result
-            });
+            break;
           }
-          catch (e) {
-            console.error(`[Error] Problem with GitHub API for query "${query}"`);
-            result.errors.push({
-              query: query,
-              response: e,
-              count: count_obj,
-              random: random,
-              index: random - count_obj.start_count + 1
-            });
-            await api.postPromise('repos', {
-              id: id,
-              data: result
-            });
-          }
-          break;
         }
       }
+      repos = result;
+      await api.postPromise('repos', {
+        id: id,
+        data: repos
+      });
+      const createButton = $('[data-a="create-repos"]'),
+            openButton = $('[data-a="open-repos"]');
+      createButton.hide();
+      openButton.attr('href', `/ui/repos?id=${id}`);
+      openButton.show();
+      project.has_repos = true;
+      progress.end();
     }
-    repos = result;
-    await api.postPromise('repos', {
-      id: id,
-      data: repos
-    });
-    const createButton = $('[data-a="create-repos"]'),
-          openButton = $('[data-a="open-repos"]');
-    createButton.hide();
-    openButton.attr('href', `/ui/repos?id=${id}`);
-    openButton.show();
-    project.has_repos = true;
-    progress.end();
+    else if (project.type === 'npm') {
+      if (!randoms) {
+        const alert = $('[data-e="error"]');
+        alert.html('Randoms need to be calculated first').show();
+        setTimeout(() => {
+          alert.hide();
+        }, 3000);
+        return;
+      }
+      const randomArr = randoms.split(',');
+      let total = 0;
+      progress.init('Retrieve repos', randomArr.length);
+      for (let i = 0; i < counts.results.length; i++) {
+        const current = counts.results[i],
+              dates = current.timeframe.split('..');
+        newCounts.push({
+          start_date: date.parse(dates[0], settings.input_date_format, true),
+          end_date: date.addMilliseconds(date.addDays(date.parse(dates[1], settings.input_date_format, true), 1), -1),
+          start_count: total + 1,
+          end_count: total + current.total,
+          range_count: current.total,
+          language: current.language
+        });
+        total += current.total;
+      }
+      let result = {
+        repos: [],
+        errors: []
+      };
+      // Download already processed repos
+      const reposExist = await api.getPromise('exists', {
+              id: id,
+              file: 'repos.json'
+            }),
+            repoResponse = reposExist.data.exists ? await api.getPromise('repos', {
+              id: id
+            }) : null,
+            completedRepos = repoResponse ? repoResponse.data.repos.length + repoResponse.data.errors.length : 0;
+      if (completedRepos > 0) {
+        progress.setStartIndex(completedRepos);
+        result = repoResponse.data;
+      }
+      for (let i = completedRepos; i < randomArr.length && progress.status === 1; i++) {
+        progress.setProgress(i, randomArr.length);
+        const random = randomArr[i];
+        for (let k = 0; k < newCounts.length && progress.status === 1; k++) {
+          const current = newCounts[k];
+          if (random <= current.end_count) {
+            const defineQuery = async (count_obj, number) => {
+              if (count_obj.range_count <= settings.gitHubLimit || number < count_obj.start_count + settings.gitHubLimit) {
+                return count_obj;
+              }
+              else {
+                const splitSeconds = date.subtract(count_obj.end_date, count_obj.start_date).toSeconds() / 2,
+                      firstEndDate = date.addSeconds(count_obj.start_date, splitSeconds),
+                      secondStartDate = date.addSeconds(count_obj.start_date, splitSeconds + 1),
+                      dates = `${date.format(count_obj.start_date, settings.date_format, true)}..${date.format(firstEndDate, settings.date_format, true)}`,
+                      query = project.full_query.replace('{{language}}', count_obj.language).replace('{{dates}}', dates),
+                      responseRaw = await api.postPromise('totalrepos', {
+                        query: query
+                      }),
+                      response = responseRaw.data,
+                      firstCount = {
+                        start_date: count_obj.start_date,
+                        end_date: date.addMilliseconds(date.addSeconds(firstEndDate, 1), -1),
+                        start_count: count_obj.start_count,
+                        end_count: count_obj.start_count + response.total - 1,
+                        range_count: response.total,
+                        language: count_obj.language
+                      },
+                      secondCount = {
+                        start_date: secondStartDate,
+                        end_date: count_obj.end_date,
+                        start_count: count_obj.start_count + response.total,
+                        end_count: count_obj.end_count,
+                        range_count: count_obj.end_count - (count_obj.start_count + response.total - 1),
+                        language: count_obj.language
+                      };
+                newCounts.splice(newCounts.indexOf(count_obj), 1, firstCount, secondCount);
+                if (number <= firstCount.end_count) {
+                  return defineQuery(firstCount, number);
+                }
+                else {
+                  return defineQuery(secondCount, number);
+                }
+              }
+            }
+            const count_obj = await defineQuery(current, random),
+                  dates = `${date.format(count_obj.start_date, settings.date_format, true)}..${date.format(count_obj.end_date, settings.date_format, true)}`,
+                  query = project.full_query.replace('{{language}}', count_obj.language).replace('{{dates}}', dates);
+            try {
+              const response = await api.postPromise('searchrepo', {
+                query: query,
+                index: random - count_obj.start_count + 1
+              });
+              if (response.data.items.length !== 1) {
+                console.error(`[Error] Repository not found for query "${query}"`);
+                result.errors.push({
+                  query: query,
+                  response_total: response.data.total_count,
+                  response: response.data,
+                  count: count_obj,
+                  random: random,
+                  index: random - count_obj.start_count + 1
+                });
+              }
+              else {
+                console.log(`#${i + 1}: ${random} -> ${response.data.items[0].full_name}`);
+                result.repos.push(response.data.items[0]);
+              }
+              await api.postPromise('repos', {
+                id: id,
+                data: result
+              });
+            }
+            catch (e) {
+              console.error(`[Error] Problem with GitHub API for query "${query}"`);
+              result.errors.push({
+                query: query,
+                response: e,
+                count: count_obj,
+                random: random,
+                index: random - count_obj.start_count + 1
+              });
+              await api.postPromise('repos', {
+                id: id,
+                data: result
+              });
+            }
+            break;
+          }
+        }
+      }
+      repos = result;
+      await api.postPromise('repos', {
+        id: id,
+        data: repos
+      });
+      const createButton = $('[data-a="create-repos"]'),
+            openButton = $('[data-a="open-repos"]');
+      createButton.hide();
+      openButton.attr('href', `/ui/repos?id=${id}`);
+      openButton.show();
+      project.has_repos = true;
+      progress.end();
+    }
   });
 
 })();

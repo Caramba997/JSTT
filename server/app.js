@@ -274,11 +274,12 @@ app.post('/api/repos', async (req, res) => {
 });
 
 app.get('/api/exists', async (req, res) => {
-  const id = req.query.id,
-        file = req.query.file;
-  if (!id || !file ) return error(res, 400, 'Param missing');
+  const type = req.query.type,
+        file = req.query.file,
+        vars = req.query.vars ? req.query.vars.split(',') : undefined;
+  if (!type || !file) return error(res, 400, 'Param missing');
   try {
-    const exists = files.exists('project', file, [id]);
+    const exists = files.exists(type, file, vars);
     return success(res, {
       exists: exists
     });
@@ -336,6 +337,39 @@ app.post('/api/checknpm', async (req, res) => {
   catch (e) {
     console.log(e);
     return error(res, 500, 'Error getting results');
+  }
+});
+
+app.get('/api/npmall', async (req, res) => {
+  const includeContent = req.query.includeContent;
+  try {
+    const exists = files.exists('knowledge', 'npmall.json');
+    if (!exists) {
+      return success(res, { fetched: false });
+    }
+    const npmall = files.raw('knowledge', 'npmall.json');
+    if (includeContent) {
+      return success(res, { fetched: true, data: npmall });
+    }
+    else {
+      return success(res, { fetched: true });
+    }
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/npmall', async (req, res) => {
+  try {
+    fs.writeFileSync(files.path('knowledge', 'npmall.json'), '');
+    const response = await npm.getAllDocs(files.path('knowledge', 'npmall.json'));
+    if (response) return success(res, { success: true });
+    return error(res, 500, 'Error getting all packages');
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
   }
 });
 
