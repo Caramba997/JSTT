@@ -348,11 +348,12 @@ app.get('/api/npmall', async (req, res) => {
       return success(res, { fetched: false });
     }
     const npmall = files.raw('knowledge', 'npmall.json');
+    const minified = npmall.includes('"names":');
     if (includeContent) {
-      return success(res, { fetched: true, data: npmall });
+      return success(res, { fetched: true, minified: minified, data: npmall });
     }
     else {
-      return success(res, { fetched: true });
+      return success(res, { fetched: true, minified: minified });
     }
   }
   catch (e) {
@@ -366,6 +367,25 @@ app.post('/api/npmall', async (req, res) => {
     const response = await npm.getAllDocs(files.path('knowledge', 'npmall.json'));
     if (response) return success(res, { success: true });
     return error(res, 500, 'Error getting all packages');
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/npmminify', async (req, res) => {
+  try {
+    const npmall = files.json('knowledge', 'npmall.json');
+    const minified = {
+      total: npmall.total_rows,
+      names: []
+    };
+    for (let i = 0; i < npmall.rows.length; i++) {
+      minified.names.push(npmall.rows[i].id);
+    }
+    files.writeMin('knowledge', 'npmall.min.json', minified);
+    return success(res, { success: true });
   }
   catch (e) {
     console.log(e);

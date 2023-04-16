@@ -3,7 +3,12 @@
   api.get('npmall', undefined, async (response) => {
     if (response.data.fetched) {
       $('[data-a="all-create"]').hide();
+      $('[data-a="all-minify"]').show();
       $('[data-e="all-exists"]').html('<i class="fa-solid fa-check"></i>');
+      if (response.data.minified) {
+        $('[data-a="all-minify"]').hide();
+        $('[data-e="all-minified"]').html('<i class="fa-solid fa-check"></i>');
+      }
     }
   }, (error) => {
     console.warn(error);
@@ -20,7 +25,24 @@
     }
     else {
       $('[data-a="all-create"]').hide();
+      $('[data-a="all-minify"]').show();
       $('[data-e="all-exists"]').html('<i class="fa-solid fa-check"></i>');
+    }
+    progress.setProgress(100, 100);
+    progress.end();
+  });
+
+  $('[data-a="all-minify"]').on('click', async () => {
+    progress.init('Extract package names (progress in server log)', 100);
+    const response = await api.postPromise('npmminify', {});
+    if (!response || !response.data.success) {
+      const alert = $('[data-e="error"]');
+      alert.html('Error fetching all packages').show();
+      progress.end();
+    }
+    else {
+      $('[data-a="all-minify"]').hide();
+      $('[data-e="all-minified"]').html('<i class="fa-solid fa-check"></i>');
     }
     progress.setProgress(100, 100);
     progress.end();

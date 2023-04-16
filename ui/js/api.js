@@ -18,7 +18,8 @@ class API {
       downloadrepo: '/api/downloadrepo',
       checktests: '/api/checktests',
       npmtotal: '/api/npmtotal',
-      npmall: '/api/npmall'
+      npmall: '/api/npmall',
+      npmminify: '/api/npmminify'
     };
   }
 
