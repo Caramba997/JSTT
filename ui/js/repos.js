@@ -90,8 +90,9 @@
     $('#navbarSupportedContent [data-a]').prop('disabled', false);
     $('[data-e="project-link"]').attr('href', `/ui/project?id=${id}`);
     const hasDependencies = await api.getPromise('exists', {
-      id: id,
-      file: 'dependencies.json'
+      type: 'project',
+      file: 'dependencies.json',
+      vars: id
     });
     if (hasDependencies.data.exists) {
       api.get('dependencies', {

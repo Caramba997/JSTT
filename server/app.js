@@ -80,6 +80,7 @@ app.post('/api/project', async (req, res) => {
   if (!project || !name) return error(res, 400, 'Data missing');
   if (files.exists('project', '', [id])) return error(res, 400, 'Name already exists');
   project.id = id;
+  project.size = parseInt(project.size);
   project.languages = project.languages.replace(/\s/g, '').split(',');
   project.full_query = gitHub.createFullQuery(project.query);
   project.has_randoms = false;
@@ -185,6 +186,21 @@ app.post('/api/searchrepo', async (req, res) => {
     return success(res, response);
   }
   catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.get('/api/githubrepo', async (req, res) => {
+  const owner = req.query.owner,
+        repo = req.query.repo;
+  if (owner === undefined || repo === undefined) return error(res, 400, 'Param missing');
+  try {
+    const data = await gitHub.getRepository(owner, repo);
+    if (!data) return success(res, { success: false });
+    return success(res, { success: true, data: data });
+  }
+  catch (e) {
+    console.log(e);
     return error(res, 500, 'Something went wrong');
   }
 });
@@ -314,29 +330,55 @@ app.post('/api/dependencies', async (req, res) => {
   }
 });
 
+app.get('/api/npmpackage', async (req, res) => {
+  let name = req.query.name;
+  if (!name) return error(res, 400, 'Package name missing');
+  name = decodeURIComponent(name);
+  try {
+    const package = await npm.get(name);
+    if (package === null) return success(res, { success: false });
+    return success(res, {
+      success: true, 
+      data: package
+    });
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
 app.post('/api/checknpm', async (req, res) => {
   const data = req.body.data;
   if (!data) return error(res, 400, 'Data param missing');
   try {
-    const response = await gitHub.getFileInRepo(data.full_name, 'package', 'json');
-    if (response.data.total_count > 0) {
-      if (response.data.total_count > 1) {
-        data.multiple_package_json = true;
-        console.warn(`Warning: Multiple occurences of package.json found in ${data.full_name}`);
+    const package_json = await gitHub.getFile(data.owner.login, data.name, 'package.json');
+    if (package_json === null) {
+      const response = await gitHub.searchFileInRepo(data.full_name, 'package', 'json');
+      if (response.data.total_count > 0) {
+        data.is_npm = true;
+        if (response.data.total_count > 1) {
+          data.multiple_package_json = true;
+          console.warn(`Warning: Multiple occurences of package.json found in ${data.full_name}`);
+        }
+        const package_json2 = await gitHub.getFile(data.owner.login, data.name, response.data.items[0].path),
+              decoded2 = (package_json2.data.encoding !== 'utf-8') ? Buffer.from(package_json2.data.content, package_json2.data.encoding).toString('utf-8').replace(/\,(?=\s*?[\}\]])/g, '') : package_json2.data.content;
+        data.package_json = JSON.parse(decoded2);
       }
-      data.is_npm = true;
-      const package_json = await gitHub.getFile(data.name, data.owner.login, response.data.items[0].path),
-            decoded = (package_json.data.encoding !== 'utf-8') ? Buffer.from(package_json.data.content, package_json.data.encoding).toString('utf-8').replace(/\,(?=\s*?[\}\]])/g, '') : package_json.data.content;
-      data.package_json = JSON.parse(decoded);
+      else {
+        data.is_npm = false;
+      }
     }
     else {
-      data.is_npm = false;
+      const decoded = (package_json.data.encoding !== 'utf-8') ? Buffer.from(package_json.data.content, package_json.data.encoding).toString('utf-8').replace(/\,(?=\s*?[\}\]])/g, '') : package_json.data.content;
+      data.is_npm = true;
+      data.package_json = JSON.parse(decoded);
     }
     return success(res, data);
   }
   catch (e) {
     console.log(e);
-    return error(res, 500, 'Error getting results');
+    data.is_npm = false;
+    return success(res, data);
   }
 });
 
@@ -350,7 +392,7 @@ app.get('/api/npmall', async (req, res) => {
     const npmall = files.raw('knowledge', 'npmall.json');
     const minified = npmall.includes('"names":');
     if (includeContent) {
-      return success(res, { fetched: true, minified: minified, data: npmall });
+      return success(res, { fetched: true, minified: minified, data: JSON.parse(npmall) });
     }
     else {
       return success(res, { fetched: true, minified: minified });

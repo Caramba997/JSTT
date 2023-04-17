@@ -1,0 +1,2822 @@
+{
+	"eslint": {
+		"prod": 2,
+		"dev": 127,
+		"total": 129
+	},
+	"typescript": {
+		"prod": 6,
+		"dev": 122,
+		"total": 128
+	},
+	"prettier": {
+		"prod": 2,
+		"dev": 83,
+		"total": 85
+	},
+	"jest": {
+		"prod": 1,
+		"dev": 74,
+		"total": 75
+	},
+	"@types/node": {
+		"prod": 5,
+		"dev": 59,
+		"total": 64
+	},
+	"mocha": {
+		"prod": 1,
+		"dev": 63,
+		"total": 64
+	},
+	"husky": {
+		"prod": 1,
+		"dev": 58,
+		"total": 59
+	},
+	"@types/jest": {
+		"prod": 3,
+		"dev": 53,
+		"total": 56
+	},
+	"eslint-config-prettier": {
+		"prod": 3,
+		"dev": 50,
+		"total": 53
+	},
+	"@typescript-eslint/eslint-plugin": {
+		"prod": 2,
+		"dev": 49,
+		"total": 51
+	},
+	"rimraf": {
+		"prod": 5,
+		"dev": 46,
+		"total": 51
+	},
+	"@typescript-eslint/parser": {
+		"prod": 2,
+		"dev": 48,
+		"total": 50
+	},
+	"webpack": {
+		"prod": 1,
+		"dev": 48,
+		"total": 49
+	},
+	"eslint-plugin-import": {
+		"prod": 3,
+		"dev": 45,
+		"total": 48
+	},
+	"@babel/core": {
+		"prod": 1,
+		"dev": 45,
+		"total": 46
+	},
+	"ts-jest": {
+		"prod": 1,
+		"dev": 43,
+		"total": 44
+	},
+	"chai": {
+		"prod": 0,
+		"dev": 42,
+		"total": 42
+	},
+	"@babel/preset-env": {
+		"prod": 2,
+		"dev": 39,
+		"total": 41
+	},
+	"react": {
+		"prod": 4,
+		"dev": 36,
+		"total": 40
+	},
+	"eslint-plugin-prettier": {
+		"prod": 3,
+		"dev": 36,
+		"total": 39
+	},
+	"lerna": {
+		"prod": 1,
+		"dev": 37,
+		"total": 38
+	},
+	"lint-staged": {
+		"prod": 1,
+		"dev": 35,
+		"total": 36
+	},
+	"ts-node": {
+		"prod": 3,
+		"dev": 33,
+		"total": 36
+	},
+	"eslint-plugin-react": {
+		"prod": 1,
+		"dev": 33,
+		"total": 34
+	},
+	"react-dom": {
+		"prod": 4,
+		"dev": 28,
+		"total": 32
+	},
+	"babel-loader": {
+		"prod": 1,
+		"dev": 30,
+		"total": 31
+	},
+	"@types/react": {
+		"prod": 3,
+		"dev": 21,
+		"total": 24
+	},
+	"lodash": {
+		"prod": 16,
+		"dev": 8,
+		"total": 24
+	},
+	"webpack-cli": {
+		"prod": 2,
+		"dev": 22,
+		"total": 24
+	},
+	"@babel/cli": {
+		"prod": 0,
+		"dev": 23,
+		"total": 23
+	},
+	"babel-eslint": {
+		"prod": 1,
+		"dev": 21,
+		"total": 22
+	},
+	"eslint-plugin-jsx-a11y": {
+		"prod": 1,
+		"dev": 18,
+		"total": 19
+	},
+	"npm-run-all": {
+		"prod": 2,
+		"dev": 17,
+		"total": 19
+	},
+	"rollup": {
+		"prod": 0,
+		"dev": 19,
+		"total": 19
+	},
+	"chalk": {
+		"prod": 12,
+		"dev": 6,
+		"total": 18
+	},
+	"babel-cli": {
+		"prod": 0,
+		"dev": 17,
+		"total": 17
+	},
+	"babel-core": {
+		"prod": 0,
+		"dev": 17,
+		"total": 17
+	},
+	"babel-jest": {
+		"prod": 0,
+		"dev": 17,
+		"total": 17
+	},
+	"cross-env": {
+		"prod": 0,
+		"dev": 17,
+		"total": 17
+	},
+	"express": {
+		"prod": 11,
+		"dev": 6,
+		"total": 17
+	},
+	"sinon": {
+		"prod": 2,
+		"dev": 15,
+		"total": 17
+	},
+	"tslint": {
+		"prod": 0,
+		"dev": 17,
+		"total": 17
+	},
+	"commander": {
+		"prod": 14,
+		"dev": 2,
+		"total": 16
+	},
+	"glob": {
+		"prod": 7,
+		"dev": 9,
+		"total": 16
+	},
+	"karma": {
+		"prod": 1,
+		"dev": 15,
+		"total": 16
+	},
+	"nyc": {
+		"prod": 0,
+		"dev": 16,
+		"total": 16
+	},
+	"tslib": {
+		"prod": 7,
+		"dev": 9,
+		"total": 16
+	},
+	"@commitlint/config-conventional": {
+		"prod": 1,
+		"dev": 14,
+		"total": 15
+	},
+	"axios": {
+		"prod": 12,
+		"dev": 3,
+		"total": 15
+	},
+	"fs-extra": {
+		"prod": 3,
+		"dev": 12,
+		"total": 15
+	},
+	"gulp": {
+		"prod": 3,
+		"dev": 12,
+		"total": 15
+	},
+	"karma-chrome-launcher": {
+		"prod": 1,
+		"dev": 14,
+		"total": 15
+	},
+	"shelljs": {
+		"prod": 2,
+		"dev": 13,
+		"total": 15
+	},
+	"@commitlint/cli": {
+		"prod": 1,
+		"dev": 13,
+		"total": 14
+	},
+	"babel-preset-es2015": {
+		"prod": 0,
+		"dev": 14,
+		"total": 14
+	},
+	"webpack-dev-server": {
+		"prod": 1,
+		"dev": 13,
+		"total": 14
+	},
+	"@babel/preset-react": {
+		"prod": 0,
+		"dev": 13,
+		"total": 13
+	},
+	"@types/mocha": {
+		"prod": 1,
+		"dev": 12,
+		"total": 13
+	},
+	"@types/react-dom": {
+		"prod": 2,
+		"dev": 11,
+		"total": 13
+	},
+	"css-loader": {
+		"prod": 1,
+		"dev": 12,
+		"total": 13
+	},
+	"eslint-config-airbnb": {
+		"prod": 0,
+		"dev": 13,
+		"total": 13
+	},
+	"eslint-config-airbnb-base": {
+		"prod": 0,
+		"dev": 13,
+		"total": 13
+	},
+	"rxjs": {
+		"prod": 4,
+		"dev": 9,
+		"total": 13
+	},
+	"source-map-support": {
+		"prod": 1,
+		"dev": 12,
+		"total": 13
+	},
+	"ts-loader": {
+		"prod": 0,
+		"dev": 13,
+		"total": 13
+	},
+	"vite": {
+		"prod": 1,
+		"dev": 12,
+		"total": 13
+	},
+	"vue": {
+		"prod": 2,
+		"dev": 11,
+		"total": 13
+	},
+	"browserify": {
+		"prod": 1,
+		"dev": 11,
+		"total": 12
+	},
+	"grunt": {
+		"prod": 0,
+		"dev": 12,
+		"total": 12
+	},
+	"style-loader": {
+		"prod": 1,
+		"dev": 11,
+		"total": 12
+	},
+	"yargs": {
+		"prod": 4,
+		"dev": 8,
+		"total": 12
+	},
+	"ava": {
+		"prod": 0,
+		"dev": 11,
+		"total": 11
+	},
+	"eslint-plugin-react-hooks": {
+		"prod": 1,
+		"dev": 10,
+		"total": 11
+	},
+	"@angular/common": {
+		"prod": 3,
+		"dev": 7,
+		"total": 10
+	},
+	"@angular/compiler": {
+		"prod": 3,
+		"dev": 7,
+		"total": 10
+	},
+	"@angular/core": {
+		"prod": 3,
+		"dev": 7,
+		"total": 10
+	},
+	"@changesets/cli": {
+		"prod": 1,
+		"dev": 9,
+		"total": 10
+	},
+	"@types/fs-extra": {
+		"prod": 0,
+		"dev": 10,
+		"total": 10
+	},
+	"@types/lodash": {
+		"prod": 2,
+		"dev": 8,
+		"total": 10
+	},
+	"babel-preset-env": {
+		"prod": 0,
+		"dev": 10,
+		"total": 10
+	},
+	"eslint-plugin-jest": {
+		"prod": 0,
+		"dev": 10,
+		"total": 10
+	},
+	"karma-jasmine": {
+		"prod": 1,
+		"dev": 9,
+		"total": 10
+	},
+	"node-sass": {
+		"prod": 3,
+		"dev": 7,
+		"total": 10
+	},
+	"prop-types": {
+		"prod": 5,
+		"dev": 5,
+		"total": 10
+	},
+	"request": {
+		"prod": 9,
+		"dev": 1,
+		"total": 10
+	},
+	"sass": {
+		"prod": 3,
+		"dev": 7,
+		"total": 10
+	},
+	"tape": {
+		"prod": 0,
+		"dev": 10,
+		"total": 10
+	},
+	"typedoc": {
+		"prod": 1,
+		"dev": 9,
+		"total": 10
+	},
+	"webpack-merge": {
+		"prod": 1,
+		"dev": 9,
+		"total": 10
+	},
+	"zone.js": {
+		"prod": 3,
+		"dev": 7,
+		"total": 10
+	},
+	"@angular/compiler-cli": {
+		"prod": 0,
+		"dev": 9,
+		"total": 9
+	},
+	"@babel/plugin-proposal-class-properties": {
+		"prod": 0,
+		"dev": 9,
+		"total": 9
+	},
+	"@babel/register": {
+		"prod": 0,
+		"dev": 9,
+		"total": 9
+	},
+	"@changesets/changelog-github": {
+		"prod": 1,
+		"dev": 8,
+		"total": 9
+	},
+	"@types/chai": {
+		"prod": 0,
+		"dev": 9,
+		"total": 9
+	},
+	"chai-as-promised": {
+		"prod": 0,
+		"dev": 9,
+		"total": 9
+	},
+	"codecov": {
+		"prod": 0,
+		"dev": 9,
+		"total": 9
+	},
+	"coveralls": {
+		"prod": 1,
+		"dev": 8,
+		"total": 9
+	},
+	"cz-conventional-changelog": {
+		"prod": 0,
+		"dev": 9,
+		"total": 9
+	},
+	"del": {
+		"prod": 4,
+		"dev": 5,
+		"total": 9
+	},
+	"dotenv": {
+		"prod": 4,
+		"dev": 5,
+		"total": 9
+	},
+	"html-webpack-plugin": {
+		"prod": 1,
+		"dev": 8,
+		"total": 9
+	},
+	"jasmine-core": {
+		"prod": 1,
+		"dev": 8,
+		"total": 9
+	},
+	"jsdom": {
+		"prod": 1,
+		"dev": 8,
+		"total": 9
+	},
+	"karma-firefox-launcher": {
+		"prod": 1,
+		"dev": 8,
+		"total": 9
+	},
+	"node-fetch": {
+		"prod": 8,
+		"dev": 1,
+		"total": 9
+	},
+	"vitest": {
+		"prod": 1,
+		"dev": 8,
+		"total": 9
+	},
+	"@angular/platform-browser": {
+		"prod": 3,
+		"dev": 5,
+		"total": 8
+	},
+	"@angular/platform-browser-dynamic": {
+		"prod": 3,
+		"dev": 5,
+		"total": 8
+	},
+	"@babel/plugin-transform-runtime": {
+		"prod": 1,
+		"dev": 7,
+		"total": 8
+	},
+	"@octokit/rest": {
+		"prod": 2,
+		"dev": 6,
+		"total": 8
+	},
+	"@swc/core": {
+		"prod": 1,
+		"dev": 7,
+		"total": 8
+	},
+	"concurrently": {
+		"prod": 0,
+		"dev": 8,
+		"total": 8
+	},
+	"debug": {
+		"prod": 8,
+		"dev": 0,
+		"total": 8
+	},
+	"jest-environment-jsdom": {
+		"prod": 0,
+		"dev": 8,
+		"total": 8
+	},
+	"minimist": {
+		"prod": 2,
+		"dev": 6,
+		"total": 8
+	},
+	"@angular/animations": {
+		"prod": 3,
+		"dev": 4,
+		"total": 7
+	},
+	"@angular/router": {
+		"prod": 3,
+		"dev": 4,
+		"total": 7
+	},
+	"@rollup/plugin-node-resolve": {
+		"prod": 0,
+		"dev": 7,
+		"total": 7
+	},
+	"@testing-library/jest-dom": {
+		"prod": 3,
+		"dev": 4,
+		"total": 7
+	},
+	"@testing-library/react": {
+		"prod": 3,
+		"dev": 4,
+		"total": 7
+	},
+	"@types/jasmine": {
+		"prod": 0,
+		"dev": 7,
+		"total": 7
+	},
+	"babel-preset-react": {
+		"prod": 0,
+		"dev": 7,
+		"total": 7
+	},
+	"bluebird": {
+		"prod": 7,
+		"dev": 0,
+		"total": 7
+	},
+	"core-js": {
+		"prod": 4,
+		"dev": 3,
+		"total": 7
+	},
+	"danger": {
+		"prod": 0,
+		"dev": 7,
+		"total": 7
+	},
+	"istanbul": {
+		"prod": 0,
+		"dev": 7,
+		"total": 7
+	},
+	"karma-webpack": {
+		"prod": 0,
+		"dev": 7,
+		"total": 7
+	},
+	"moment": {
+		"prod": 6,
+		"dev": 1,
+		"total": 7
+	},
+	"pretty-quick": {
+		"prod": 0,
+		"dev": 7,
+		"total": 7
+	},
+	"react-test-renderer": {
+		"prod": 0,
+		"dev": 7,
+		"total": 7
+	},
+	"stylelint": {
+		"prod": 0,
+		"dev": 7,
+		"total": 7
+	},
+	"tslint-config-prettier": {
+		"prod": 0,
+		"dev": 7,
+		"total": 7
+	},
+	"@angular/forms": {
+		"prod": 3,
+		"dev": 3,
+		"total": 6
+	},
+	"@babel/plugin-proposal-object-rest-spread": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"@babel/preset-typescript": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"@octokit/core": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"@types/rimraf": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"ajv": {
+		"prod": 2,
+		"dev": 4,
+		"total": 6
+	},
+	"async": {
+		"prod": 4,
+		"dev": 2,
+		"total": 6
+	},
+	"babelify": {
+		"prod": 1,
+		"dev": 5,
+		"total": 6
+	},
+	"d3-array": {
+		"prod": 1,
+		"dev": 5,
+		"total": 6
+	},
+	"d3-scale": {
+		"prod": 1,
+		"dev": 5,
+		"total": 6
+	},
+	"d3-selection": {
+		"prod": 1,
+		"dev": 5,
+		"total": 6
+	},
+	"d3-time": {
+		"prod": 1,
+		"dev": 5,
+		"total": 6
+	},
+	"d3-time-format": {
+		"prod": 1,
+		"dev": 5,
+		"total": 6
+	},
+	"eslint-plugin-simple-import-sort": {
+		"prod": 2,
+		"dev": 4,
+		"total": 6
+	},
+	"grunt-contrib-jshint": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"gulp-rename": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"karma-mocha": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"mkdirp": {
+		"prod": 4,
+		"dev": 2,
+		"total": 6
+	},
+	"nodemon": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"path": {
+		"prod": 2,
+		"dev": 4,
+		"total": 6
+	},
+	"react-router-dom": {
+		"prod": 4,
+		"dev": 2,
+		"total": 6
+	},
+	"remark-cli": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"rollup-plugin-commonjs": {
+		"prod": 1,
+		"dev": 5,
+		"total": 6
+	},
+	"semantic-release": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"tsdx": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"turbo": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"xo": {
+		"prod": 0,
+		"dev": 6,
+		"total": 6
+	},
+	"@angular-devkit/build-angular": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"@angular/cli": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"@babel/plugin-syntax-dynamic-import": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"@babel/runtime": {
+		"prod": 2,
+		"dev": 3,
+		"total": 5
+	},
+	"@definitelytyped/definitions-parser": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"@definitelytyped/dtslint": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"@definitelytyped/dtslint-runner": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"@definitelytyped/header-parser": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"@definitelytyped/utils": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"@types/express": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"babel-plugin-add-module-exports": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"colors": {
+		"prod": 3,
+		"dev": 2,
+		"total": 5
+	},
+	"comment-json": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"copy-webpack-plugin": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"d3-axis": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"del-cli": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"esbuild": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"eslint-plugin-jsdoc": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"eslint-plugin-node": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"grunt-contrib-clean": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"gulp-util": {
+		"prod": 3,
+		"dev": 2,
+		"total": 5
+	},
+	"jest-cli": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"jsdoc": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"jshint": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"karma-cli": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"karma-coverage": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"karma-jasmine-html-reporter": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"ng-packagr": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"nock": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"pre-commit": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"puppeteer": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"raw-loader": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"react-scripts": {
+		"prod": 3,
+		"dev": 2,
+		"total": 5
+	},
+	"remark-gfm": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"remark-validate-links": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"rollup-plugin-node-resolve": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"rollup-plugin-typescript2": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"sass-loader": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"semver": {
+		"prod": 2,
+		"dev": 3,
+		"total": 5
+	},
+	"should": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"sinon-chai": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"supertest": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"terser": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"terser-webpack-plugin": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"tsup": {
+		"prod": 1,
+		"dev": 4,
+		"total": 5
+	},
+	"uglify-js": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"underscore": {
+		"prod": 5,
+		"dev": 0,
+		"total": 5
+	},
+	"url-loader": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"uuid": {
+		"prod": 4,
+		"dev": 1,
+		"total": 5
+	},
+	"vue-template-compiler": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"w3c-xmlserializer": {
+		"prod": 0,
+		"dev": 5,
+		"total": 5
+	},
+	"xtend": {
+		"prod": 5,
+		"dev": 0,
+		"total": 5
+	},
+	"@babel/plugin-proposal-export-default-from": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"@babel/plugin-transform-modules-commonjs": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"@microsoft/api-extractor": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"@rollup/plugin-babel": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"@rollup/plugin-typescript": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"@swc/jest": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"@types/jasminewd2": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"@types/react-router-dom": {
+		"prod": 1,
+		"dev": 3,
+		"total": 4
+	},
+	"@types/webpack": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"@vitejs/plugin-vue": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"autoprefixer": {
+		"prod": 1,
+		"dev": 3,
+		"total": 4
+	},
+	"babel-plugin-transform-runtime": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"babel-polyfill": {
+		"prod": 1,
+		"dev": 3,
+		"total": 4
+	},
+	"bootstrap": {
+		"prod": 1,
+		"dev": 3,
+		"total": 4
+	},
+	"chokidar": {
+		"prod": 3,
+		"dev": 1,
+		"total": 4
+	},
+	"codelyzer": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"commitizen": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"cypress": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"enzyme": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"eslint-config-react-app": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"eslint-plugin-flowtype": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"eslint-plugin-vue": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"fast-check": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"file-loader": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"grunt-contrib-uglify": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"gulp-mocha": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"http-server": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"jasmine": {
+		"prod": 1,
+		"dev": 3,
+		"total": 4
+	},
+	"js-yaml": {
+		"prod": 3,
+		"dev": 1,
+		"total": 4
+	},
+	"karma-sourcemap-loader": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"lerna-changelog": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"mime": {
+		"prod": 4,
+		"dev": 0,
+		"total": 4
+	},
+	"nx": {
+		"prod": 1,
+		"dev": 3,
+		"total": 4
+	},
+	"patch-package": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"postcss": {
+		"prod": 1,
+		"dev": 3,
+		"total": 4
+	},
+	"protractor": {
+		"prod": 1,
+		"dev": 3,
+		"total": 4
+	},
+	"redux": {
+		"prod": 3,
+		"dev": 1,
+		"total": 4
+	},
+	"reflect-metadata": {
+		"prod": 2,
+		"dev": 2,
+		"total": 4
+	},
+	"rollup-plugin-uglify": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"size-limit": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"standard": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"styled-components": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"superagent": {
+		"prod": 1,
+		"dev": 3,
+		"total": 4
+	},
+	"through2": {
+		"prod": 4,
+		"dev": 0,
+		"total": 4
+	},
+	"vue-loader": {
+		"prod": 0,
+		"dev": 4,
+		"total": 4
+	},
+	"winston": {
+		"prod": 2,
+		"dev": 2,
+		"total": 4
+	},
+	"ws": {
+		"prod": 3,
+		"dev": 1,
+		"total": 4
+	},
+	"@angular/language-service": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@antfu/eslint-config": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@babel/eslint-parser": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@babel/node": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@babel/plugin-proposal-export-namespace-from": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@babel/plugin-proposal-optional-chaining": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@babel/polyfill": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@nrwl/nx-cloud": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@playwright/test": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"@rollup/plugin-commonjs": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@storybook/addon-actions": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@storybook/addon-links": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@storybook/react": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@swc/cli": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@testing-library/react-hooks": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@testing-library/user-event": {
+		"prod": 2,
+		"dev": 1,
+		"total": 3
+	},
+	"@types/chai-as-promised": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@types/glob": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@types/node-fetch": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@types/semver": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@types/sinon": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"@types/styled-components": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"babel-plugin-transform-class-properties": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"babel-plugin-transform-decorators-legacy": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"babel-plugin-transform-es2015-modules-commonjs": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"babel-plugin-transform-object-rest-spread": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"babel-register": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"babel-runtime": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"browserslist": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"c8": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"cheerio": {
+		"prod": 3,
+		"dev": 0,
+		"total": 3
+	},
+	"cli-color": {
+		"prod": 3,
+		"dev": 0,
+		"total": 3
+	},
+	"conventional-changelog-cli": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"cpx": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"cssnano": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"dedent": {
+		"prod": 3,
+		"dev": 0,
+		"total": 3
+	},
+	"es6-promise": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"eslint-config-standard": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"eslint-plugin-mocha": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"eslint-plugin-promise": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"eslint-plugin-standard": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"esm": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"ethers": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"figlet": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"flow-bin": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"fs": {
+		"prod": 2,
+		"dev": 1,
+		"total": 3
+	},
+	"grunt-contrib-nodeunit": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"grunt-contrib-watch": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"gulp-babel": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"gulp-header": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"handlebars": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"is-ci": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"jasmine-spec-reporter": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"jest-canvas-mock": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"jest-styled-components": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"jquery": {
+		"prod": 2,
+		"dev": 1,
+		"total": 3
+	},
+	"json-loader": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"json5": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"karma-coverage-istanbul-reporter": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"karma-mocha-reporter": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"less": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"less-loader": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"load-grunt-tasks": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"marked": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"npm-check-updates": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"process": {
+		"prod": 2,
+		"dev": 1,
+		"total": 3
+	},
+	"q": {
+		"prod": 3,
+		"dev": 0,
+		"total": 3
+	},
+	"react-bootstrap": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"readline-sync": {
+		"prod": 2,
+		"dev": 1,
+		"total": 3
+	},
+	"reconnecting-websocket": {
+		"prod": 2,
+		"dev": 1,
+		"total": 3
+	},
+	"replace-in-file": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"rollup-plugin-babel": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"rollup-plugin-cleanup": {
+		"prod": 1,
+		"dev": 2,
+		"total": 3
+	},
+	"rollup-plugin-dts": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"rollup-plugin-sourcemaps": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"rollup-plugin-terser": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"run-sequence": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"shx": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"standard-version": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"stylelint-config-standard": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"tap": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"ts-mocha": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"tsconfig-paths-webpack-plugin": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"typedoc-plugin-markdown": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"uglifyjs-webpack-plugin": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"validator": {
+		"prod": 3,
+		"dev": 0,
+		"total": 3
+	},
+	"verdaccio": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"vite-plugin-banner": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"vue-router": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"vue-tsc": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"webpack-dev-middleware": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"webpack-hot-middleware": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"webpack-node-externals": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@angular-devkit/core": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@angular/cdk": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@angular/http": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@angular/material": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@aws-cdk/aws-lambda": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@aws-cdk/core": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@babel/generator": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@babel/plugin-external-helpers": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@babel/plugin-proposal-nullish-coalescing-operator": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@babel/plugin-syntax-flow": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@babel/plugin-transform-arrow-functions": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@babel/preset-flow": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@babel/types": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@ethersproject/address": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@ipsme/msgcache-dedup": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"@ipsme/msgenv-broadcastchannel": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"@knev/bitlogr": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"@lerna/project": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@nrwl/eslint-plugin-nx": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@nrwl/jest": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@nrwl/js": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@nrwl/linter": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@nrwl/node": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@nrwl/workspace": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@rollup/pluginutils": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@stdlib/bench": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@stdlib/random-base-randu": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@storybook/addon-essentials": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@swc-node/jest": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@tsconfig/recommended": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@typechain/ethers-v5": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@typechain/hardhat": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/ace": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/benchmark": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/cordova": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/dedent": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@types/estree": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@types/inquirer": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/luxon": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/mdast": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@types/mime": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/minimatch": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/prettier": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/puppeteer": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/readable-stream": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@types/request": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@types/uuid": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@types/webpack-dev-server": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/ws": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@types/yargs": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@vitejs/plugin-react": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"@vitest/coverage-c8": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"@wdio/mocha-framework": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"ace-builds": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"all-contributors-cli": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"angular": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"arangojs": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"async-promise-queue": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"aws-sdk": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"babel-plugin-istanbul": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"babel-plugin-transform-object-assign": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"babel-preset-airbnb": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"babel-preset-es2017": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"babel-preset-stage-0": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"babel-preset-stage-3": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"benny": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"body-parser": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"bowser": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"builtin-modules": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"chai-http": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"child_process": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"chromatic": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"classnames": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"clsx": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"co": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"commitlint": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"cookie-parser": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"copyfiles": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"cross-spawn": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"crypto": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"cz-customizable": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"d3": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"deepmerge": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"depcheck": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"dgeni": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"dgeni-packages": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"documentation": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"downlevel-dts": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"dtslint": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"enzyme-adapter-react-16": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"enzyme-to-json": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-config-airbnb-typescript": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-config-google": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-config-standard-react": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-import-resolver-typescript": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-plugin-babel": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-plugin-deprecation": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"eslint-plugin-filenames": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-plugin-n": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-plugin-prefer-arrow": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-plugin-react-native": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-plugin-sort-destructure-keys": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"eslint-plugin-tsdoc": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"execa": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"font-awesome": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"general-number": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"gh-pages": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"globby": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"graphql": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"grunt-cli": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"grunt-contrib-concat": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"grunt-jscs": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"grunt-mocha-test": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"gts": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"gulp-clean-css": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"gulp-concat": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"gulp-each": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"gulp-eslint": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"gulp-load-plugins": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"gulp-plumber": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"gulp-postcss": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"gulp-replace": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"gulp-sass": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"hardhat": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"html-loader": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"i18next": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"i18next-browser-languagedetector": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"inquirer": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"jest-junit": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"jshint-stylish": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"karma-chai": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"karma-env-preprocessor": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"karma-junit-reporter": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"karma-phantomjs-launcher": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"karma-sinon-chai": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"latest-version": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"listr": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"live-server": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"lodash.clonedeep": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"lodash.debounce": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"lodash.throttle": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"log4js": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"madge": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"markdown-it": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"memory-fs": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"minify": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"modernizr": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"mongodb": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"morgan": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"mqtt": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"mssql": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"ncp": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"ndjson": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"normalize.css": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"np": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"npm": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"nwb": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"open": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"optimist": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"ora": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"pepjs": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"plop": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"postcss-import": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"postcss-loader": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"prettier-plugin-organize-imports": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"prismjs": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"proxyquire": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"qs": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"react-is": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"react-redux": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"react-refresh": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"regenerator-runtime": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"release-it": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"save-svg-as-png": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"smoothscroll-polyfill": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"socket.io": {
+		"prod": 2,
+		"dev": 0,
+		"total": 2
+	},
+	"sort-package-json": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"source-map": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"strip-json-comments": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"stylelint-config-prettier": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"stylelint-config-standard-scss": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"stylus": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"svg-inline-loader": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"taffydb": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"tap-min": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"tap-spec": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"tmp": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"ts-morph": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"ts-patch": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"tsc-watch": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"tsconfig-paths": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"tsd": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"tslint-react": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"typechain": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"typedoc-plugin-missing-exports": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"unbuild": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"unminified-webpack-plugin": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"upath": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"url": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"url-parse": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"val-loader": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"validate-commit-msg": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"vite-plugin-dts": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"vows": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"vue-class-component": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"vue-hot-reload-api": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"vue-html-loader": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"vue-property-decorator": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"vue-style-loader": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"watchify": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"whatwg-fetch": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	},
+	"xml2js": {
+		"prod": 1,
+		"dev": 1,
+		"total": 2
+	}
+}

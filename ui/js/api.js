@@ -19,7 +19,9 @@ class API {
       checktests: '/api/checktests',
       npmtotal: '/api/npmtotal',
       npmall: '/api/npmall',
-      npmminify: '/api/npmminify'
+      npmminify: '/api/npmminify',
+      npmpackage: '/api/npmpackage',
+      githubrepo: '/api/githubrepo'
     };
   }
 

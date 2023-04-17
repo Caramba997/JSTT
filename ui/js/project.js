@@ -132,7 +132,7 @@
       progress.setProgress(1, 2);
       api.post('randoms', {
         id: id,
-        number: project.size * 5,
+        number: project.size * 10,
         max: total.data.total,
         unordered: true
       }, (response) => {
@@ -282,8 +282,9 @@
       };
       // Download already processed repos
       const reposExist = await api.getPromise('exists', {
-              id: id,
-              file: 'repos.json'
+              type: 'project',
+              file: 'repos.json',
+              vars: id
             }),
             repoResponse = reposExist.data.exists ? await api.getPromise('repos', {
               id: id
@@ -389,13 +390,6 @@
         id: id,
         data: repos
       });
-      const createButton = $('[data-a="create-repos"]'),
-            openButton = $('[data-a="open-repos"]');
-      createButton.hide();
-      openButton.attr('href', `/ui/repos?id=${id}`);
-      openButton.show();
-      project.has_repos = true;
-      progress.end();
     }
     else if (project.type === 'npm') {
       if (!randoms) {
@@ -407,142 +401,133 @@
         return;
       }
       const randomArr = randoms.split(',');
-      let total = 0;
-      progress.init('Retrieve repos', randomArr.length);
-      for (let i = 0; i < counts.results.length; i++) {
-        const current = counts.results[i],
-              dates = current.timeframe.split('..');
-        newCounts.push({
-          start_date: date.parse(dates[0], settings.input_date_format, true),
-          end_date: date.addMilliseconds(date.addDays(date.parse(dates[1], settings.input_date_format, true), 1), -1),
-          start_count: total + 1,
-          end_count: total + current.total,
-          range_count: current.total,
-          language: current.language
-        });
-        total += current.total;
+      progress.init('Retrieve repos', project.size);
+      const npmall = await api.getPromise('npmall', {
+        includeContent: true
+      });
+      if (!npmall.data.fetched || !npmall.data.minified) {
+        const alert = $('[data-e="error"]');
+        alert.html('All NPM package data need to be fetched first').show();
+        setTimeout(() => {
+          alert.hide();
+        }, 3000);
+        progress.end();
+        return;
       }
       let result = {
         repos: [],
-        errors: []
+        skipped: 0,
+        skipReasons: {
+          1: {
+            reason: 'Not found on NPM',
+            total: 0
+          },
+          2: {
+            reason: 'No git repo connected',
+            total: 0
+          },
+          3: {
+            reason: 'Repo is other than GitHub',
+            total: 0
+          },
+          4: {
+            reason: 'Repo does not exist (anymore)',
+            total: 0
+          },
+          5: {
+            reason: 'Repo language not of interest',
+            total: 0,
+            languages: {}
+          }
+        },
+        valid: false
       };
       // Download already processed repos
       const reposExist = await api.getPromise('exists', {
-              id: id,
-              file: 'repos.json'
+              type: 'project',
+              file: 'repos.json',
+              vars: id
             }),
             repoResponse = reposExist.data.exists ? await api.getPromise('repos', {
               id: id
             }) : null,
-            completedRepos = repoResponse ? repoResponse.data.repos.length + repoResponse.data.errors.length : 0;
+            completedRepos = repoResponse ? repoResponse.data.repos.length : 0,
+            lastIndex = repoResponse ? completedRepos + repoResponse.data.skipped : 0;
       if (completedRepos > 0) {
         progress.setStartIndex(completedRepos);
         result = repoResponse.data;
       }
-      for (let i = completedRepos; i < randomArr.length && progress.status === 1; i++) {
-        progress.setProgress(i, randomArr.length);
+      for (let i = lastIndex, c = completedRepos; i < randomArr.length && c < project.size && progress.status === 1; i++) {
+        progress.setProgress(c, project.size);
         const random = randomArr[i];
-        for (let k = 0; k < newCounts.length && progress.status === 1; k++) {
-          const current = newCounts[k];
-          if (random <= current.end_count) {
-            const defineQuery = async (count_obj, number) => {
-              if (count_obj.range_count <= settings.gitHubLimit || number < count_obj.start_count + settings.gitHubLimit) {
-                return count_obj;
-              }
-              else {
-                const splitSeconds = date.subtract(count_obj.end_date, count_obj.start_date).toSeconds() / 2,
-                      firstEndDate = date.addSeconds(count_obj.start_date, splitSeconds),
-                      secondStartDate = date.addSeconds(count_obj.start_date, splitSeconds + 1),
-                      dates = `${date.format(count_obj.start_date, settings.date_format, true)}..${date.format(firstEndDate, settings.date_format, true)}`,
-                      query = project.full_query.replace('{{language}}', count_obj.language).replace('{{dates}}', dates),
-                      responseRaw = await api.postPromise('totalrepos', {
-                        query: query
-                      }),
-                      response = responseRaw.data,
-                      firstCount = {
-                        start_date: count_obj.start_date,
-                        end_date: date.addMilliseconds(date.addSeconds(firstEndDate, 1), -1),
-                        start_count: count_obj.start_count,
-                        end_count: count_obj.start_count + response.total - 1,
-                        range_count: response.total,
-                        language: count_obj.language
-                      },
-                      secondCount = {
-                        start_date: secondStartDate,
-                        end_date: count_obj.end_date,
-                        start_count: count_obj.start_count + response.total,
-                        end_count: count_obj.end_count,
-                        range_count: count_obj.end_count - (count_obj.start_count + response.total - 1),
-                        language: count_obj.language
-                      };
-                newCounts.splice(newCounts.indexOf(count_obj), 1, firstCount, secondCount);
-                if (number <= firstCount.end_count) {
-                  return defineQuery(firstCount, number);
-                }
-                else {
-                  return defineQuery(secondCount, number);
-                }
-              }
-            }
-            const count_obj = await defineQuery(current, random),
-                  dates = `${date.format(count_obj.start_date, settings.date_format, true)}..${date.format(count_obj.end_date, settings.date_format, true)}`,
-                  query = project.full_query.replace('{{language}}', count_obj.language).replace('{{dates}}', dates);
-            try {
-              const response = await api.postPromise('searchrepo', {
-                query: query,
-                index: random - count_obj.start_count + 1
-              });
-              if (response.data.items.length !== 1) {
-                console.error(`[Error] Repository not found for query "${query}"`);
-                result.errors.push({
-                  query: query,
-                  response_total: response.data.total_count,
-                  response: response.data,
-                  count: count_obj,
-                  random: random,
-                  index: random - count_obj.start_count + 1
-                });
-              }
-              else {
-                console.log(`#${i + 1}: ${random} -> ${response.data.items[0].full_name}`);
-                result.repos.push(response.data.items[0]);
-              }
-              await api.postPromise('repos', {
-                id: id,
-                data: result
-              });
-            }
-            catch (e) {
-              console.error(`[Error] Problem with GitHub API for query "${query}"`);
-              result.errors.push({
-                query: query,
-                response: e,
-                count: count_obj,
-                random: random,
-                index: random - count_obj.start_count + 1
-              });
-              await api.postPromise('repos', {
-                id: id,
-                data: result
-              });
-            }
-            break;
-          }
+        const npmName = npmall.data.data.names[random];
+        let npmResponse = await api.getPromise('npmpackage', {
+          name: encodeURIComponent(npmName)
+        });
+        if (npmResponse === null || !npmResponse.data.success) {
+          result.skipped++;
+          result.skipReasons[1].total++;
+          continue;
         }
+        const npmPackage = npmResponse.data.data;
+        if (!npmPackage.repository || npmPackage.repository.type !== 'git' || !npmPackage.repository.url) {
+          result.skipped++;
+          result.skipReasons[2].total++;
+          continue;
+        }
+        const repoName = npmPackage.repository.url.match(/(?<=github\.com\/)[^\.]+\/[^\.]+/);
+        if (!repoName) {
+          result.skipped++;
+          result.skipReasons[3].total++;
+          continue;
+        }
+        const [ owner, repo ] = repoName[0].split('/');
+        const repoResponse = await api.getPromise('githubrepo', {
+          owner: owner,
+          repo: repo
+        });
+        if (!repoResponse || !repoResponse.data.success) {
+          result.skipped++;
+          result.skipReasons[4].total++;
+          continue;
+        }
+        const repoData = repoResponse.data.data;
+        if (!project.languages.includes(repoData.language)) {
+          result.skipped++;
+          result.skipReasons[5].total++;
+          result.skipReasons[5].languages[repoData.language] = result.skipReasons[5].languages[repoData.language] || 0;
+          result.skipReasons[5].languages[repoData.language]++;
+          continue;
+        }
+        repoData.npm_package_data = npmPackage;
+        result.repos.push(repoData);
+        c++;
+        console.log(`${(c/(i+1)*100).toFixed(2)}% successfull repos ${c}/${i+1}`);
+        await api.postPromise('repos', {
+          id: id,
+          data: result
+        });
+      }
+      if (result.repos.length === project.size) {
+        console.log("Successfully fetched repos");
+        result.valid = true;
+      }
+      else {
+        console.log("Number of randoms was not enough, try again with bigger set of randoms");
       }
       repos = result;
       await api.postPromise('repos', {
         id: id,
         data: repos
       });
-      const createButton = $('[data-a="create-repos"]'),
-            openButton = $('[data-a="open-repos"]');
-      createButton.hide();
-      openButton.attr('href', `/ui/repos?id=${id}`);
-      openButton.show();
-      project.has_repos = true;
-      progress.end();
     }
+    const createButton = $('[data-a="create-repos"]'),
+          openButton = $('[data-a="open-repos"]');
+    createButton.hide();
+    openButton.attr('href', `/ui/repos?id=${id}`);
+    openButton.show();
+    project.has_repos = true;
+    progress.end();
   });
 
 })();

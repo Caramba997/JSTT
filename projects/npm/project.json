@@ -1,17 +1,16 @@
 {
 	"type": "npm",
 	"name": "NPM",
-	"size": "384",
+	"size": 384,
 	"languages": [
 		"JavaScript",
-		"TypeScript",
-		"HTML"
+		"TypeScript"
 	],
 	"query": "",
 	"id": "npm",
 	"full_query": "language:{{language}}+created:{{dates}}",
 	"has_randoms": true,
-	"has_counts": false,
-	"has_repos": false,
+	"has_counts": true,
+	"has_repos": true,
 	"total": 3154474
 }
