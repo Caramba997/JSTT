@@ -41,6 +41,9 @@
           <li class="nav-item mx-1">
             <button data-a="check-tests" type="button" class="btn btn-outline-primary btn-sm" disabled>Check tests</button>
           </li>
+          <li class="nav-item mx-1">
+            <button data-a="calc-metrics" type="button" class="btn btn-outline-primary btn-sm" disabled>Calc metrics</button>
+          </li>
         </ul>
       </div>
     </nav>
@@ -81,7 +84,34 @@
         </h2>
         <div id="deps-content" class="accordion-collapse collapse" data-bs-parent="#sections">
           <div class="accordion-body">
-            
+            <h3>Source</h3>
+            <table data-e="metrics-source" class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Metric</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Average</th>
+                  <th scope="col">Median</th>
+                  <th scope="col">Min</th>
+                  <th scope="col">Max</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <h3>Test</h3>
+            <table data-e="metrics-test" class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Total</th>
+                  <th>Average</th>
+                  <th>Median</th>
+                  <th>Min</th>
+                  <th>Max</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
           </div>
         </div>
       </div>

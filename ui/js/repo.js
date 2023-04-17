@@ -15,7 +15,7 @@
     return new bootstrap.Tooltip(tooltipTriggerEl);
   });
 
-  let data;
+  let data, metrics;
 
   function buildPage() {
     $('[data-e="github-link"]').attr('href', data.html_url);
@@ -56,6 +56,23 @@
     else if (data.has_tests === false) {
       $('[data-e="info-tests"]').html('<i class="fa-solid fa-xmark"></i>')
     }
+    if (metrics) {
+      Object.entries(metrics).forEach(([category, names]) => {
+        if (category === 'test' && !data.has_tests) return;
+        const element = $(`[data-e="metrics-${category}"] tbody`);
+        element.html('');
+        Object.entries(names).forEach(([name, values]) => {
+          let cells = `<tr data-name="${name}"><td scope="row">${name}</td>`;
+          Object.entries(values).forEach(([type, value]) => {
+            const valueS = value !== null ? `${value}`.split('.') : '?',
+                  valueF = valueS.length === 2 ? `${value.toFixed(2)}`.replace(/\.0+|(?<=\.[1-9])0+|(?<=\.[1-9]{2})0+/, '') : `${value}`;
+            cells += `<td data-type="${type}">${valueF}</td>`;
+          });
+          cells += '</tr>';
+          element.append(cells);
+        });
+      });
+    }
   }
 
   api.get('repo', {
@@ -64,7 +81,24 @@
   }, async (response) => {
     data = response.data;
     $('#navbarSupportedContent [data-a]').prop('disabled', false);
-    buildPage();
+    console.log(data);
+    if (data.has_metrics) {
+      api.get('metrics', {
+        id: id,
+        repo: encodeURIComponent(repo)
+      }, async (response) => {
+        metrics = response.data;
+        console.log(metrics);
+        buildPage();
+      }, (error) => {
+        console.warn(error);
+        buildPage();
+        $('[data-e="error-load"]').show();
+      });
+    }
+    else {
+      buildPage();
+    }
   }, (error) => {
     console.warn(error);
     $('[data-e="error-load"]').show();
@@ -99,9 +133,31 @@
       id: id,
       repo: repo
     });
-    console.log(response.data);
     data.has_tests = response.data.has_tests;
     if (response.data.has_tests) data.test_occurences = response.data.test_occurences;
+    await api.postPromise('repo', {
+      id: id,
+      data: data
+    });
+    progress.setProgress(1, 1);
+    buildPage();
+    progress.end();
+  });
+
+  $('[data-a="calc-metrics"]').on('click', async () => {
+    progress.init('Calc metrics', 1);
+    const response = await api.postPromise('calcmetrics', {
+      id: id,
+      repo: repo
+    });
+    console.log(response.data);
+    metrics = response.data;
+    await api.postPromise('metrics', {
+      id: id,
+      repo: repo,
+      data: metrics
+    });
+    data.has_metrics = true;
     await api.postPromise('repo', {
       id: id,
       data: data

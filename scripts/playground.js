@@ -8,9 +8,13 @@
   const npm = new NPM();
   const files = new Files();
   const gitHub = new GitHub();
-  
-  // const metrics = new Metrics();
-  // metrics.complexity('./projects/version_1/files/nparashuram_seamcarving/main.js');
+  const metrics = new Metrics();
+
+  const comp = metrics.complexity('./projects/version_1/files/nparashuram_seamcarving/main.js');
+  console.log(comp);
+
+  // const dirs = files.getFilePaths('./projects/version_1/files/petruisfan_node_supervisor/');
+  // console.log(dirs);
 
   // const { FileTypes } = require('../lib/format.js');
   // console.log(FileTypes);
@@ -38,7 +42,7 @@
   // }
 
   // const file = await gitHub.getFile('herbowicz', 'create-react-app', 'package.json');
-  const package_json2 = await gitHub.getFile(data.name, data.owner.login, response.data.items[0].path),
-              decoded2 = (package_json2.data.encoding !== 'utf-8') ? Buffer.from(package_json2.data.content, package_json2.data.encoding).toString('utf-8').replace(/\,(?=\s*?[\}\]])/g, '') : package_json2.data.content;
-  console.log(file);
+  // const package_json2 = await gitHub.getFile(data.name, data.owner.login, response.data.items[0].path),
+  //             decoded2 = (package_json2.data.encoding !== 'utf-8') ? Buffer.from(package_json2.data.content, package_json2.data.encoding).toString('utf-8').replace(/\,(?=\s*?[\}\]])/g, '') : package_json2.data.content;
+  // console.log(file);
 })();

@@ -7,6 +7,7 @@ const { GitHub } = require('../lib/github.js');
 const { Random } = require('../lib/random.js');
 const { Files } = require('../lib/files.js');
 const { NPM } = require('../lib/npm.js');
+const { Metrics } = require('../lib/metrics.js');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -25,6 +26,7 @@ const gitHub = new GitHub();
 const random = new Random();
 const files = new Files();
 const npm = new NPM();
+const metrics = new Metrics();
 
 function success(res, data) {
   return res.send({
@@ -507,6 +509,76 @@ app.get('/api/npmtotal', async (req, res) => {
     return success(res, { total: total });
   }
   catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.get('/api/metrics', async (req, res) => {
+  const id = req.query.id;
+  let repo = req.query.repo;
+  if (!id) return error(res, 400, 'Param missing');
+  try {
+    const exists = files.exists('project', 'metrics.json', [id]);
+    let result;
+    if (repo) repo = decodeURIComponent(repo);
+    if (exists) {
+      const data = files.json('project', 'metrics.json', [id]);
+      if (repo) {
+        result = data.repos[repo] || {};
+      }
+      else {
+        result = data;
+      }
+    }
+    else {
+      if (repo) {
+        result = {};
+      }
+      else {
+        result = { repos: {} };
+      }
+    }
+    return success(res, result);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/metrics', async (req, res) => {
+  const id = req.body.id,
+        repo = req.body.repo,
+        data = req.body.data;
+  if (!id || !repo || !data) return error(res, 400, 'Param missing');
+  try {
+    const exists = files.exists('project', 'metrics.json', [id]);
+    let content;
+    if (exists) {
+      content = files.json('project', 'metrics.json', [id]);
+    }
+    else {
+      content = { repos: {} };
+    }
+    content.repos[repo] = data;
+    files.write('project', 'metrics.json', content, [id]);
+    return success(res, 'Saved changes');
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/calcmetrics', async (req, res) => {
+  const id = req.body.id,
+        repo = req.body.repo;
+  if (!id || !repo) return error(res, 400, 'Param missing');
+  try {
+    const formattedName = files.safeFormat(repo);
+    const report = metrics.complexityRepo(files.path('files', '', [id, formattedName]));
+    return success(res, report);
+  }
+  catch (e) {
+    console.log(e);
     return error(res, 500, 'Something went wrong');
   }
 });

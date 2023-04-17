@@ -21,7 +21,9 @@ class API {
       npmall: '/api/npmall',
       npmminify: '/api/npmminify',
       npmpackage: '/api/npmpackage',
-      githubrepo: '/api/githubrepo'
+      githubrepo: '/api/githubrepo',
+      metrics: '/api/metrics',
+      calcmetrics: '/api/calcmetrics'
     };
   }
 
