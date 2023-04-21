@@ -335,7 +335,16 @@
 				"devDependencies": {
 					"nodeunit": "~0.9.0"
 				}
-			}
+			},
+			"has_metrics": true,
+			"has_frontend": false,
+			"has_backend": false,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [
+				"nodeunit"
+			]
 		},
 		{
 			"id": 1182492,
@@ -88450,6 +88459,8 @@
 		"minstars": 5,
 		"npm": 296,
 		"commits": 58803,
-		"prs": 17599
+		"prs": 17599,
+		"frontend": 0,
+		"backend": 0
 	}
 }

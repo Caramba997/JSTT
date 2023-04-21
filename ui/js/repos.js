@@ -19,6 +19,7 @@
           template = $($('[data-t="repo-list-item"]').html()),
           stats = data.stats || {};
     tbody.html('');
+    let doneRepos = 0;
     for (let i = 0; i < data.repos.length; i++) {
       const repo = data.repos[i],
             html = template.clone(true);
@@ -57,6 +58,10 @@
         html.find('[data-e="repo-deps"]').text(depCount).attr('title', deps.join('\n'));
       }
       if (repo.local_folder !== undefined) html.find('[data-e="repo-downloaded"]').show();
+      if (repo.is_done) {
+        doneRepos++;
+        html.css('background-color', 'lightgreen');
+      }
       html.find('a[data-e="repo-git"]').attr('href', repo.html_url);
       tbody.append(html);
     }
@@ -81,6 +86,7 @@
     Array.from(Object.entries(stats)).forEach(([key, value]) => {
       $(`[data-e="stats-${key}"]`).text(value);
     });
+    $(`[data-e="stats-done"]`).text(`${Math.round(doneRepos / data.stats.total * 100)}% (${doneRepos}/${data.stats.total})`)
   }
 
   api.get('repos', {
@@ -123,7 +129,9 @@
             org: 0,
             individual: 0,
             maxstars: 0,
-            minstars: 100000000
+            minstars: 100000000,
+            frontend: 0,
+            backend: 0
           };
     for (let i = 0; i < data.repos.length; i++) {
       progress.setProgress(i, data.repos.length);
@@ -134,9 +142,18 @@
       if (repo.owner.type === 'User') stats.individual++;
       stats.maxstars = Math.max(stats.maxstars, repo.stargazers_count);
       stats.minstars = Math.min(stats.minstars, repo.stargazers_count);
+      if (repo.is_frontend) stats.frontend++;
+      if (repo.is_backend) stats.backend++;
     }
     if (progress.status === 0) return;
-    data.stats = stats;
+    if (data.stats === undefined) {
+      data.stats = stats;
+    }
+    else {
+      Object.entries(stats).forEach(([key, value]) => {
+        data.stats[key] = value;
+      });
+    }
     await api.postPromise('repos', {
       id: id,
       data: data

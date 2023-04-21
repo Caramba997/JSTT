@@ -17,12 +17,14 @@
 
   let data, metrics;
 
-  function buildPage() {
+  async function buildPage() {
     $('[data-e="github-link"]').attr('href', data.html_url);
     $('[data-e="info-name"]').text(data.name);
     $('[data-e="info-owner"]').text(data.owner.login);
     $('[data-e="info-language"]').text(data.language);
     $('[data-e="info-stars"]').text(data.stargazers_count);
+    $('[data-e="info-created"]').text(data.created_at);
+    $('[data-e="info-modified"]').text(data.updated_at);
     if (data.total_commits) $('[data-e="info-commits"]').text(data.total_commits);
     if (data.total_prs) $('[data-e="info-prs"]').text(data.total_prs);
     if (data.is_npm) {
@@ -50,13 +52,17 @@
       }
       $('[data-e="info-deps"]').text(depCount).attr('title', deps.join('\n'));
     }
-    if (data.hast_tests === true) {
+    if (data.has_tests === true) {
       $('[data-e="info-tests"]').html('<i class="fa-solid fa-check"></i>').attr('title', `${data.test_occurences.dirs.join('\n')}\n\n${data.test_occurences.files.join('\n')}`);
     }
     else if (data.has_tests === false) {
       $('[data-e="info-tests"]').html('<i class="fa-solid fa-xmark"></i>')
     }
+    if (data.is_done === true) {
+      $('[data-a="done"]').removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
+    }
     if (metrics) {
+      $('#manual button').prop('disabled', false);
       Object.entries(metrics).forEach(([category, names]) => {
         if (category === 'test' && !data.has_tests) return;
         const element = $(`[data-e="metrics-${category}"] tbody`);
@@ -65,12 +71,43 @@
           let cells = `<tr data-name="${name}"><td scope="row">${name}</td>`;
           Object.entries(values).forEach(([type, value]) => {
             const valueS = value !== null ? `${value}`.split('.') : '?',
-                  valueF = valueS.length === 2 ? `${value.toFixed(2)}`.replace(/\.0+|(?<=\.[1-9])0+|(?<=\.[1-9]{2})0+/, '') : `${value}`;
+                  valueF = valueS.length === 2 ? `${value.toFixed(3)}`.replace(/(\.0+|(?<=\.[1-9])0+|(?<=\.[0-9][1-9])0+)$/, '') : `${value}`;
             cells += `<td data-type="${type}">${valueF}</td>`;
           });
           cells += '</tr>';
           element.append(cells);
         });
+      });
+      forms.fromJson($('[data-e="manual-test"]'), metrics.test);
+      let frameworks = await api.getPromise('frameworks');
+      if (frameworks) frameworks = frameworks.data.frameworks.sort();
+      if (frameworks.length > 0) {
+        const selectElem = $('[data-e="frameworks"]'),
+              template = $($('[data-t="frameworks-item"]').html());
+        selectElem.html('');
+        frameworks.forEach((category) => {
+          const html = template.clone(true);
+          html.val(category);
+          html.text(category);
+          selectElem.append(html);
+        });
+      }
+    }
+    else {
+      $('#manual button').prop('disabled', true);
+    }
+    forms.fromJson($('[data-e="manual-classification"]'), data);
+    let categories = await api.getPromise('categories');
+    if (categories) categories = categories.data.categories.sort();
+    if (categories.length > 0) {
+      const selectElem = $('[data-e="categories"]'),
+            template = $($('[data-t="categories-item"]').html());
+      selectElem.html('');
+      categories.forEach((category) => {
+        const html = template.clone(true);
+        html.val(category);
+        html.text(category);
+        selectElem.append(html);
       });
     }
   }
@@ -81,14 +118,12 @@
   }, async (response) => {
     data = response.data;
     $('#navbarSupportedContent [data-a]').prop('disabled', false);
-    console.log(data);
     if (data.has_metrics) {
       api.get('metrics', {
         id: id,
         repo: encodeURIComponent(repo)
       }, async (response) => {
         metrics = response.data;
-        console.log(metrics);
         buildPage();
       }, (error) => {
         console.warn(error);
@@ -102,6 +137,18 @@
   }, (error) => {
     console.warn(error);
     $('[data-e="error-load"]').show();
+  });
+
+  const categorySelector = $('[data-e="categories"]');
+  categorySelector.on('change', () => {
+    const value = categorySelector.val();
+    const input = $('input[name="categories"]');
+    if (!input.val().includes(value)) {
+      let text = input.val();
+      if (text !== '') text += ',';
+      text += value;
+      input.val(text);
+    }
   });
 
   $('[data-a="download"]').on('click', async () => {
@@ -118,7 +165,6 @@
       }, 5000);
     }
     data.local_folder = response.data.localFolder;
-    console.log(data);
     await api.postPromise('repo', {
       id: id,
       data: data
@@ -150,7 +196,6 @@
       id: id,
       repo: repo
     });
-    console.log(response.data);
     metrics = response.data;
     await api.postPromise('metrics', {
       id: id,
@@ -164,6 +209,64 @@
     });
     progress.setProgress(1, 1);
     buildPage();
+    progress.end();
+  });
+
+  $('[data-a="coverage-extract"]').on('click', async () => {
+    progress.init('Extract metrics from report', 2);
+    const coverage = await api.postPromise('calccoverage', {
+      id: id,
+      repo: repo
+    });
+    Object.entries(coverage.data).forEach(([key, value]) => {
+      metrics.test[key] = value;
+    });
+    progress.setProgress(1, 2);
+    await api.postPromise('metrics', {
+      id: id,
+      repo: repo,
+      data: metrics
+    });
+    progress.setProgress(2, 2);
+    buildPage();
+    progress.end();
+  });
+
+  $('[data-a="save-manual"]').on('click', async () => {
+    progress.init('Save manual data', 2);
+    data = forms.toJson($('[data-e="manual-classification"]'), data);
+    await api.postPromise('repo', {
+      id: id,
+      data: data
+    });
+    progress.setProgress(1, 2);
+    metrics.test = forms.toJson($('[data-e="manual-test"]'), metrics.test);
+    const metricsResponse = await api.postPromise('metrics', {
+      id: id,
+      repo: repo,
+      data: metrics
+    });
+    metrics = metricsResponse.data;
+    progress.setProgress(2, 2);
+    buildPage();
+    progress.end();
+  });
+
+  $('[data-a="done"]').on('click', async () => {
+    progress.init('Toggle todo state', 1);
+    if (data.is_done === true) {
+      delete data.is_done;
+      $('[data-a="done"]').removeClass('btn-success').addClass('btn-danger').text('TODO');
+    }
+    else {
+      data.is_done = true;
+      $('[data-a="done"]').removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
+    }
+    await api.postPromise('repo', {
+      id: id,
+      data: data
+    });
+    progress.setProgress(1, 1);
     progress.end();
   });
 })();

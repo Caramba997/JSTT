@@ -251,6 +251,40 @@ app.post('/api/repo', async (req, res) => {
     }
     if (found === false) return error(res, 404, 'Repo not existent');
     files.write('project', 'repos.json', repos, [id]);
+    if (data.categories !== undefined && data.categories.length > 0) {
+      let newCategories;
+      if (files.exists('knowledge', 'categories.json')) {
+        newCategories = files.json('knowledge', 'categories.json');
+      }
+      else {
+        newCategories = { categories: [] };
+      }
+      let changed = false;
+      data.categories.forEach((category) => {
+        if (!newCategories.categories.includes(category)) {
+          newCategories.categories.push(category);
+          changed = true;
+        }
+      });
+      if (changed) files.write('knowledge', 'categories.json', newCategories);
+    }
+    if (data.test_frameworks !== undefined && data.test_frameworks.length > 0) {
+      let newFrameworks;
+      if (files.exists('knowledge', 'testframeworks.json')) {
+        newFrameworks = files.json('knowledge', 'testframeworks.json');
+      }
+      else {
+        newFrameworks = { frameworks: [] };
+      }
+      let changed = false;
+      data.test_frameworks.forEach((framework) => {
+        if (!newFrameworks.frameworks.includes(framework)) {
+          newFrameworks.frameworks.push(framework);
+          changed = true;
+        }
+      });
+      if (changed) files.write('knowledge', 'testframeworks.json', newFrameworks);
+    }
     return success(res, 'Saved changes');
   }
   catch (e) {
@@ -559,9 +593,16 @@ app.post('/api/metrics', async (req, res) => {
     else {
       content = { repos: {} };
     }
+    if (data.test.notcM !== undefined && data.test.notcM !== '' && /^\d+(,\d+)*$/.test(data.test.notcM)) {
+      const arr = data.test.notcM.split(',');
+      for (let i = 0; i < arr.length; i++) {
+        arr[i] = Number(arr[i]);
+      }
+      data.test.notcM = metrics.valuesFromArr(arr, 'notcM');
+    }
     content.repos[repo] = data;
     files.write('project', 'metrics.json', content, [id]);
-    return success(res, 'Saved changes');
+    return success(res, data);
   }
   catch (e) {
     return error(res, 500, 'Something went wrong');
@@ -576,6 +617,52 @@ app.post('/api/calcmetrics', async (req, res) => {
     const formattedName = files.safeFormat(repo);
     const report = metrics.complexityRepo(files.path('files', '', [id, formattedName]));
     return success(res, report);
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.get('/api/categories', async (req, res) => {
+  try {
+    const exists = files.exists('knowledge', 'categories.json');
+    if (!exists) {
+      return success(res, { categories: [] });
+    }
+    const categories = files.json('knowledge', 'categories.json');
+    return success(res, categories);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.get('/api/frameworks', async (req, res) => {
+  try {
+    const exists = files.exists('knowledge', 'testframeworks.json');
+    if (!exists) {
+      return success(res, { frameworks: [] });
+    }
+    const frameworks = files.json('knowledge', 'testframeworks.json');
+    return success(res, frameworks);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/calccoverage', async (req, res) => {
+  const id = req.body.id,
+        repo = req.body.repo;
+  if (!id || !repo) return error(res, 400, 'Param missing');
+  try {
+    const formattedName = files.safeFormat(repo);
+    const exists = files.exists('files', 'coverage-summary.json', [id, formattedName]);
+    if (!exists) return error(res, 404, 'Coverage report does not exist, create it first')
+    const report = files.json('files', 'coverage-summary.json', [id, formattedName]);
+    const coverage = metrics.coverageFromSummary(report);
+    return success(res, coverage);
   }
   catch (e) {
     console.log(e);

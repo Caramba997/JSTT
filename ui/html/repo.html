@@ -12,6 +12,7 @@
     <script src="jquery.min.js" defer></script>
     <script src="bootstrap.bundle.min.js" defer></script>
     <script src="api.js" defer></script>
+    <script src="forms.js" defer></script>
     <script src="progress.js" defer></script>
     <script src="repo.js" defer></script>
   </head>
@@ -44,6 +45,9 @@
           <li class="nav-item mx-1">
             <button data-a="calc-metrics" type="button" class="btn btn-outline-primary btn-sm" disabled>Calc metrics</button>
           </li>
+          <li class="nav-item mx-1">
+            <button data-a="done" type="button" class="btn btn-danger btn-sm" disabled>TODO</button>
+          </li>
         </ul>
       </div>
     </nav>
@@ -72,6 +76,8 @@
               <div>IS NPM: <span data-e="info-npm">?</span></div>
               <div>Dependencies: <span data-e="info-deps">?</span></div>
               <div>Has tests: <span data-e="info-tests">?</span></div>
+              <div>Created: <span data-e="info-created">?</span></div>
+              <div>Last modified: <span data-e="info-modified">?</span></div>
             </div>
           </div>
         </div>
@@ -112,6 +118,116 @@
               </thead>
               <tbody></tbody>
             </table>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manual" aria-expanded="false" aria-controls="manual">
+            Manual data collection
+          </button>
+        </h2>
+        <div id="manual" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <h3>Classification</h3>
+            <table data-e="manual-classification" class="table table-striped">
+              <colgroup>
+                 <col span="1" style="width: 30%;">
+                 <col span="1" style="width: 70%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">Attribute</th>
+                  <th scope="col">Input</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">Is NPM</td>
+                  <td><input type="checkbox" name="is_npm" class="form-check-input"></td>
+                </tr>
+                <tr>
+                  <td scope="row">package.json</td>
+                  <td><textarea name="package_json" data-type="json" rows="10" class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                  <td scope="row">Has Tests</td>
+                  <td><input type="checkbox" name="has_tests" class="form-check-input"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Has Frontend</td>
+                  <td><input type="checkbox" name="has_frontend" class="form-check-input"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Has Backend</td>
+                  <td><input type="checkbox" name="has_backend" class="form-check-input"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Categories</td>
+                  <td>
+                    <input type="text" data-type="array" name="categories" class="form-control">
+                    <div class="d-flex flex-row align-items-center mt-2">
+                      <label class="form-label me-2 flex-grow-0" style="min-width:fit-content;">Available options</label>
+                      <select data-e="categories" class="form-select bg-light flex-grow-1"></select>
+                    </div>
+                    <template data-t="categories-item">
+                      <option value="?">?</option>
+                    </template>
+                  </td>
+                </tr>
+                <tr>
+                  <td scope="row">Test framework</td>
+                  <td>
+                    <input type="text" data-type="array" name="test_frameworks" class="form-control">
+                    <div class="d-flex flex-row align-items-center mt-2">
+                      <label class="form-label me-2 flex-grow-0" style="min-width:fit-content;">Available options</label>
+                      <select data-e="frameworks" class="form-select bg-light flex-grow-1"></select>
+                    </div>
+                    <template data-t="frameworks-item">
+                      <option value="?">?</option>
+                    </template>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <h3>Metrics</h3>
+            <div class="card">
+              <div class="card-body">
+                <code class="me-2 p-1" data-e="coverage-cmd" style="background-color:lightgrey;">npm install</code>
+                <h5 class="mt-3">Coverage</h5>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="me-2">1.</div>
+                  <code class="me-2 p-1" data-e="coverage-cmd" style="background-color:lightgrey;">nyc --reporter=json-summary --report-dir=./ npm run test</code>
+                  <div class="me-2">2.</div>
+                  <button data-a="coverage-extract" type="button" class="btn btn-primary btn-sm me-2">Extract metrics</button>
+                </div>
+                <h5 class="mt-3">Test stats</h5>
+                <div class="d-flex flex-row align-items-center">
+                  <code class="me-2 p-1" data-e="coverage-cmd" style="background-color:lightgrey;">npm run test</code>
+                </div>
+                <table data-e="manual-test" class="table table-striped">
+                  <colgroup>
+                     <col span="1" style="width: 30%;">
+                     <col span="1" style="width: 70%;">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">Metric</th>
+                      <th scope="col">Data</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">Number of Test cases (Insert numbers for each test file separated by commas)</td>
+                      <td><textarea name="notcM" rows="7" class="form-control"></textarea></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-2">
+              <button data-a="save-manual" type="button" class="btn btn-primary">Save</button>
+            </div>
           </div>
         </div>
       </div>

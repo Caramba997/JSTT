@@ -4,14 +4,50 @@
   const { Format } = require('../lib/format.js');
   const { Metrics } = require('../lib/metrics.js');
   const { NPM } = require('../lib/npm.js');
+  const ast = require('abstract-syntax-tree');
+  const fs = require('fs');
 
   const npm = new NPM();
   const files = new Files();
   const gitHub = new GitHub();
   const metrics = new Metrics();
 
-  const comp = metrics.complexity('./projects/version_1/files/nparashuram_seamcarving/main.js');
-  console.log(comp);
+  files.clean(files.path('files', '', ['version_1', 'petruisfan_node_supervisor']));
+  // const source = fs.readFileSync('./lib/ast.js').toString();
+  // const tree = ast.parse(metrics.clean(source));
+  // ast.traverse(tree, {
+  //   enter (node) {
+  //     console.log(node.type);
+  //   },
+  // });
+  // const tree = ast.parse(source);
+  // files.write('project', 'ast.json', tree, ['version_1']);
+  // let currentLevel = 0,
+  //     maxLevel = 0;
+  // const blockTypes = ['BlockStatement', 'ClassBody', 'FunctionBody'];
+  // ast.traverse(tree, {
+  //   enter (node) {
+  //     console.log(node.type);
+  //     if (blockTypes.includes(node.type)) currentLevel++;
+  //     maxLevel = Math.max(currentLevel, maxLevel);
+  //   },
+  //   leave (node) {
+  //     if (blockTypes.includes(node.type)) currentLevel--;
+  //   }
+  // });
+  // console.log(maxLevel);
+
+  // const comp = metrics.complexity('./projects/version_1/files/nparashuram_seamcarving/main.js');
+  // console.log(comp);
+
+  // const data = files.json('project', 'metrics-__projects_version_1_files_petruisfan_node_supervisor_lib_supervisor_js.json', ['version_1']);
+  // let total = 0,
+  //     sum = 0;
+  // data.methods.forEach((method) => {
+  //   total++;
+  //   sum += method.sloc.logical;
+  // });
+  // console.log(sum / total, data.aggregateAverage.sloc.logical);
 
   // const dirs = files.getFilePaths('./projects/version_1/files/petruisfan_node_supervisor/');
   // console.log(dirs);

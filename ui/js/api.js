@@ -23,7 +23,10 @@ class API {
       npmpackage: '/api/npmpackage',
       githubrepo: '/api/githubrepo',
       metrics: '/api/metrics',
-      calcmetrics: '/api/calcmetrics'
+      calcmetrics: '/api/calcmetrics',
+      categories: '/api/categories',
+      frameworks: '/api/frameworks',
+      calccoverage: '/api/calccoverage'
     };
   }
 

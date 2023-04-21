@@ -53,8 +53,16 @@ class Progress {
 
   end() {
     this.status = 0;
-    this.modal.hide();
-    if (this.onStop) this.onStop();
+    if (Date.now() - this.start < 1000) {
+      setTimeout(() => {
+        this.modal.hide();
+        if (this.onStop) this.onStop();
+      }, 1000 - (Date.now() - this.start));
+    }
+    else {
+      this.modal.hide();
+      if (this.onStop) this.onStop();
+    }
   }
 }
 window.progress = new Progress();
