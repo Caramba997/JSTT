@@ -26,7 +26,9 @@ class API {
       calcmetrics: '/api/calcmetrics',
       categories: '/api/categories',
       frameworks: '/api/frameworks',
-      calccoverage: '/api/calccoverage'
+      metricdefs: '/api/metricdefs',
+      calccoverage: '/api/calccoverage',
+      clean: '/api/clean'
     };
   }
 

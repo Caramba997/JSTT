@@ -2,6 +2,9 @@
 	"repos": {
 		"nparashuram/seamcarving": {
 			"source": {
+				"noM": {
+					"total": 3
+				},
 				"locM": {
 					"total": 369,
 					"avg": 123,
@@ -100,7 +103,7 @@
 					"min": 1,
 					"max": 6
 				},
-				"noFpM": {
+				"nofM": {
 					"total": 26,
 					"avg": 8.666666666666666,
 					"med": 12,
@@ -127,6 +130,9 @@
 					"med": 47,
 					"min": 4,
 					"max": 69
+				},
+				"noF": {
+					"total": 26
 				},
 				"locF": {
 					"total": 567,
@@ -214,6 +220,9 @@
 				}
 			},
 			"test": {
+				"noM": {
+					"total": null
+				},
 				"locM": {
 					"total": null,
 					"avg": null,
@@ -312,7 +321,7 @@
 					"min": null,
 					"max": null
 				},
-				"noFpM": {
+				"nofM": {
 					"total": null,
 					"avg": null,
 					"med": null,
@@ -339,6 +348,9 @@
 					"med": null,
 					"min": null,
 					"max": null
+				},
+				"noF": {
+					"total": null
 				},
 				"locF": {
 					"total": null,
@@ -423,7 +435,8 @@
 					"med": null,
 					"min": null,
 					"max": null
-				}
+				},
+				"notcM": ""
 			}
 		},
 		"petruisfan/node-supervisor": {
@@ -532,7 +545,7 @@
 				"noF": {
 					"total": 34
 				},
-				"noFpM": {
+				"nofM": {
 					"total": 34,
 					"avg": 17,
 					"med": 17,
@@ -743,7 +756,7 @@
 				"noF": {
 					"total": 12
 				},
-				"noFpM": {
+				"nofM": {
 					"total": 12,
 					"avg": 4,
 					"med": 2,
@@ -882,6 +895,882 @@
 					"med": 7,
 					"min": 7,
 					"max": 7
+				}
+			}
+		},
+		"wbotelhos/capty": {
+			"source": {
+				"noM": {
+					"total": 3
+				},
+				"locM": {
+					"total": 167,
+					"avg": 55.666666666666664,
+					"med": 16,
+					"min": 13,
+					"max": 138
+				},
+				"loccM": {
+					"total": 50,
+					"avg": 16.666666666666668,
+					"med": 16,
+					"min": 11,
+					"max": 23
+				},
+				"loclM": {
+					"total": 5835,
+					"avg": 1945,
+					"med": 109,
+					"min": 109,
+					"max": 5617
+				},
+				"ccM": {
+					"total": 2269,
+					"avg": 756.3333333333334,
+					"med": 22,
+					"min": 22,
+					"max": 2225
+				},
+				"hbugsM": {
+					"total": 96.077,
+					"avg": 32.025666666666666,
+					"med": 0.986,
+					"min": 0.983,
+					"max": 94.108
+				},
+				"hdiffM": {
+					"total": 382.181,
+					"avg": 127.39366666666666,
+					"med": 25.846,
+					"min": 25.519,
+					"max": 330.816
+				},
+				"heffortM": {
+					"total": 93549439.11400001,
+					"avg": 31183146.371333335,
+					"med": 76247.787,
+					"min": 75453.545,
+					"max": 93397737.782
+				},
+				"hlengthM": {
+					"total": 28278,
+					"avg": 9426,
+					"med": 448,
+					"min": 448,
+					"max": 27382
+				},
+				"htimeM": {
+					"total": 5197191.062,
+					"avg": 1732397.0206666666,
+					"med": 4235.988,
+					"min": 4191.864,
+					"max": 5188763.21
+				},
+				"hvocabM": {
+					"total": 1463,
+					"avg": 487.6666666666667,
+					"med": 97,
+					"min": 96,
+					"max": 1270
+				},
+				"hvolM": {
+					"total": 288232.02300000004,
+					"avg": 96077.34100000001,
+					"med": 2956.761,
+					"min": 2950.063,
+					"max": 282325.199
+				},
+				"paramM": {
+					"total": 695,
+					"avg": 231.66666666666666,
+					"med": 4,
+					"min": 4,
+					"max": 687
+				},
+				"maintainM": {
+					"total": 289.27599999999995,
+					"avg": 96.42533333333331,
+					"med": 100.942,
+					"min": 87.357,
+					"max": 100.977
+				},
+				"dpM": {
+					"total": 18,
+					"avg": 6,
+					"med": 5,
+					"min": 4,
+					"max": 9
+				},
+				"nofM": {
+					"total": 483,
+					"avg": 161,
+					"med": 9,
+					"min": 9,
+					"max": 465
+				},
+				"ecM": {
+					"total": 0,
+					"avg": 0,
+					"med": 0,
+					"min": 0,
+					"max": 0
+				},
+				"acM": {
+					"total": 0,
+					"avg": 0,
+					"med": 0,
+					"min": 0,
+					"max": 0
+				},
+				"mcM": {
+					"total": 1569,
+					"avg": 523,
+					"med": 43,
+					"min": 43,
+					"max": 1483
+				},
+				"noF": {
+					"total": 483
+				},
+				"locF": {
+					"total": 703,
+					"avg": 1.455486542443064,
+					"med": 1,
+					"min": 1,
+					"max": 114
+				},
+				"loclF": {
+					"total": 5829,
+					"avg": 12.06832298136646,
+					"med": 4,
+					"min": 0,
+					"max": 686
+				},
+				"ccF": {
+					"total": 2266,
+					"avg": 4.691511387163561,
+					"med": 2,
+					"min": 1,
+					"max": 51
+				},
+				"hbugsF": {
+					"total": 52.94200000000003,
+					"avg": 0.10961076604554872,
+					"med": 0.029,
+					"min": 0,
+					"max": 6.956
+				},
+				"hdiffF": {
+					"total": 4142.059000000001,
+					"avg": 8.575691511387166,
+					"med": 4.375,
+					"min": 0,
+					"max": 71.474
+				},
+				"heffortF": {
+					"total": 3627555.089000002,
+					"avg": 7510.466022774332,
+					"med": 374.629,
+					"min": 0,
+					"max": 432158.287
+				},
+				"hlengthF": {
+					"total": 28265,
+					"avg": 58.519668737060044,
+					"med": 22,
+					"min": 0,
+					"max": 2284
+				},
+				"htimeF": {
+					"total": 201530.82100000003,
+					"avg": 417.2480766045549,
+					"med": 20.813,
+					"min": 0,
+					"max": 24008.794
+				},
+				"hvocabF": {
+					"total": 10680,
+					"avg": 22.111801242236027,
+					"med": 14,
+					"min": 0,
+					"max": 563
+				},
+				"hvolF": {
+					"total": 158793.10199999993,
+					"avg": 328.76418633540356,
+					"med": 85.952,
+					"min": 0,
+					"max": 20868.888
+				},
+				"paramF": {
+					"total": 695,
+					"avg": 1.4389233954451346,
+					"med": 1,
+					"min": 0,
+					"max": 6
+				},
+				"dpF": {
+					"total": 748,
+					"avg": 1.6733780760626398,
+					"med": 1,
+					"min": 1,
+					"max": 9
+				}
+			},
+			"test": {
+				"noM": {
+					"total": null
+				},
+				"locM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"loccM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"loclM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"ccM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"hbugsM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"hdiffM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"heffortM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"hlengthM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"htimeM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"hvocabM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"hvolM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"paramM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"maintainM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"dpM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"nofM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"ecM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"acM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"mcM": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"noF": {
+					"total": null
+				},
+				"locF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"loclF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"ccF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"hbugsF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"hdiffF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"heffortF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"hlengthF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"htimeF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"hvocabF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"hvolF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"paramF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				},
+				"dpF": {
+					"total": null,
+					"avg": null,
+					"med": null,
+					"min": null,
+					"max": null
+				}
+			}
+		},
+		"mhevery/angular-demo-slides": {
+			"source": {
+				"noM": {
+					"total": 12
+				},
+				"locM": {
+					"total": 17936,
+					"avg": 1494.6666666666667,
+					"med": 61.5,
+					"min": 2,
+					"max": 9860
+				},
+				"loccM": {
+					"total": 6574,
+					"avg": 547.8333333333334,
+					"med": 16.5,
+					"min": 1,
+					"max": 5016
+				},
+				"loclM": {
+					"total": 10792,
+					"avg": 899.3333333333334,
+					"med": 34,
+					"min": 0,
+					"max": 5108
+				},
+				"ccM": {
+					"total": 3538,
+					"avg": 294.8333333333333,
+					"med": 10.5,
+					"min": 1,
+					"max": 1835
+				},
+				"hbugsM": {
+					"total": 155.978,
+					"avg": 12.998166666666668,
+					"med": 0.367,
+					"min": 0,
+					"max": 77.577
+				},
+				"hdiffM": {
+					"total": 623.8119999999999,
+					"avg": 51.984333333333325,
+					"med": 17.307499999999997,
+					"min": 0,
+					"max": 246.665
+				},
+				"heffortM": {
+					"total": 96844460.442,
+					"avg": 8070371.7035,
+					"med": 21810.3175,
+					"min": 0,
+					"max": 57407037.803
+				},
+				"hlengthM": {
+					"total": 45844,
+					"avg": 3820.3333333333335,
+					"med": 183.5,
+					"min": 0,
+					"max": 22540
+				},
+				"htimeM": {
+					"total": 5380247.803,
+					"avg": 448353.9835833334,
+					"med": 1211.684,
+					"min": 0,
+					"max": 3189279.878
+				},
+				"hvocabM": {
+					"total": 3743,
+					"avg": 311.9166666666667,
+					"med": 63,
+					"min": 0,
+					"max": 1598
+				},
+				"hvolM": {
+					"total": 467938.3410000001,
+					"avg": 38994.861750000004,
+					"med": 1101.7705,
+					"min": 0,
+					"max": 232732.385
+				},
+				"paramM": {
+					"total": 1546,
+					"avg": 128.83333333333334,
+					"med": 6,
+					"min": 0,
+					"max": 799
+				},
+				"maintainM": {
+					"total": 1384.483,
+					"avg": 115.37358333333333,
+					"med": 105.25200000000001,
+					"min": 89.193,
+					"max": 171
+				},
+				"dpM": {
+					"total": 48,
+					"avg": 4,
+					"med": 3.5,
+					"min": 0,
+					"max": 11
+				},
+				"nofM": {
+					"total": 1084,
+					"avg": 90.33333333333333,
+					"med": 3.5,
+					"min": 0,
+					"max": 587
+				},
+				"ecM": {
+					"total": 5,
+					"avg": 0.35714285714285715,
+					"med": 0,
+					"min": 0,
+					"max": 5
+				},
+				"acM": {
+					"total": 0,
+					"avg": 0,
+					"med": 0,
+					"min": 0,
+					"max": 0
+				},
+				"mcM": {
+					"total": 3322,
+					"avg": 276.8333333333333,
+					"med": 10.5,
+					"min": 0,
+					"max": 1667
+				},
+				"noF": {
+					"total": 1084
+				},
+				"locF": {
+					"total": 35133,
+					"avg": 32.41051660516605,
+					"med": 7,
+					"min": 1,
+					"max": 9836
+				},
+				"loclF": {
+					"total": 10719,
+					"avg": 9.888376383763838,
+					"med": 5,
+					"min": 0,
+					"max": 705
+				},
+				"ccF": {
+					"total": 3526,
+					"avg": 3.2527675276752768,
+					"med": 2,
+					"min": 1,
+					"max": 64
+				},
+				"hbugsF": {
+					"total": 81.30100000000022,
+					"avg": 0.07500092250922528,
+					"med": 0.024,
+					"min": 0,
+					"max": 7.34
+				},
+				"hdiffF": {
+					"total": 7114.964999999992,
+					"avg": 6.56362084870848,
+					"med": 3.9545000000000003,
+					"min": 0,
+					"max": 67.026
+				},
+				"heffortF": {
+					"total": 4467642.364000002,
+					"avg": 4121.441295202953,
+					"med": 286.505,
+					"min": 0,
+					"max": 435655.554
+				},
+				"hlengthF": {
+					"total": 45585,
+					"avg": 42.05258302583026,
+					"med": 19,
+					"min": 0,
+					"max": 2331
+				},
+				"htimeF": {
+					"total": 248202.3269999995,
+					"avg": 228.968936346863,
+					"med": 15.917,
+					"min": 0,
+					"max": 24203.086
+				},
+				"hvocabF": {
+					"total": 19874,
+					"avg": 18.333948339483396,
+					"med": 13,
+					"min": 0,
+					"max": 698
+				},
+				"hvolF": {
+					"total": 243803.22400000054,
+					"avg": 224.91072324723297,
+					"med": 71.699,
+					"min": 0,
+					"max": 22021.151
+				},
+				"paramF": {
+					"total": 1546,
+					"avg": 1.4261992619926198,
+					"med": 1,
+					"min": 0,
+					"max": 8
+				},
+				"dpF": {
+					"total": 1841,
+					"avg": 2.1481913652275377,
+					"med": 2,
+					"min": 1,
+					"max": 11
+				}
+			},
+			"test": {
+				"noM": {
+					"total": 11
+				},
+				"locM": {
+					"total": 21324,
+					"avg": 1938.5454545454545,
+					"med": 177,
+					"min": 2,
+					"max": 17852
+				},
+				"loccM": {
+					"total": 7037,
+					"avg": 639.7272727272727,
+					"med": 2,
+					"min": 0,
+					"max": 6290
+				},
+				"loclM": {
+					"total": 13471,
+					"avg": 1224.6363636363637,
+					"med": 156,
+					"min": 0,
+					"max": 11066
+				},
+				"ccM": {
+					"total": 4352,
+					"avg": 395.6363636363636,
+					"med": 39,
+					"min": 1,
+					"max": 3677
+				},
+				"hbugsM": {
+					"total": 215.58699999999996,
+					"avg": 19.598818181818178,
+					"med": 1.502,
+					"min": 0,
+					"max": 182.452
+				},
+				"hdiffM": {
+					"total": 608.367,
+					"avg": 55.306090909090905,
+					"med": 30.927,
+					"min": 0,
+					"max": 275.4
+				},
+				"heffortM": {
+					"total": 163190419.248,
+					"avg": 14835492.65890909,
+					"med": 139387.061,
+					"min": 0,
+					"max": 150741983.271
+				},
+				"hlengthM": {
+					"total": 59527,
+					"avg": 5411.545454545455,
+					"med": 626,
+					"min": 0,
+					"max": 47910
+				},
+				"htimeM": {
+					"total": 9066134.403,
+					"avg": 824194.0366363637,
+					"med": 7743.726,
+					"min": 0,
+					"max": 8374554.626
+				},
+				"hvocabM": {
+					"total": 4083,
+					"avg": 371.1818181818182,
+					"med": 147,
+					"min": 0,
+					"max": 2749
+				},
+				"hvolM": {
+					"total": 646762.244,
+					"avg": 58796.56763636363,
+					"med": 4506.995,
+					"min": 0,
+					"max": 547356.955
+				},
+				"paramM": {
+					"total": 1913,
+					"avg": 173.9090909090909,
+					"med": 12,
+					"min": 0,
+					"max": 1629
+				},
+				"maintainM": {
+					"total": 1378.188,
+					"avg": 125.28981818181819,
+					"med": 113.079,
+					"min": 88.494,
+					"max": 171
+				},
+				"dpM": {
+					"total": 36,
+					"avg": 3.6,
+					"med": 3.5,
+					"min": 0,
+					"max": 11
+				},
+				"nofM": {
+					"total": 1566,
+					"avg": 142.36363636363637,
+					"med": 12,
+					"min": 0,
+					"max": 1215
+				},
+				"ecM": {
+					"total": 0,
+					"avg": 0,
+					"med": 0,
+					"min": 0,
+					"max": 0
+				},
+				"acM": {
+					"total": 0,
+					"avg": 0,
+					"med": 0,
+					"min": 0,
+					"max": 0
+				},
+				"mcM": {
+					"total": 4020,
+					"avg": 402,
+					"med": 39,
+					"min": 0,
+					"max": 3444
+				},
+				"noF": {
+					"total": 1566
+				},
+				"locF": {
+					"total": 39385,
+					"avg": 25.150063856960408,
+					"med": 6,
+					"min": 1,
+					"max": 11587
+				},
+				"loclF": {
+					"total": 12917,
+					"avg": 8.248403575989784,
+					"med": 3,
+					"min": 0,
+					"max": 857
+				},
+				"ccF": {
+					"total": 4339,
+					"avg": 2.7707535121328224,
+					"med": 1,
+					"min": 1,
+					"max": 64
+				},
+				"hbugsF": {
+					"total": 99.48000000000019,
+					"avg": 0.0635249042145595,
+					"med": 0.019,
+					"min": 0,
+					"max": 10.284
+				},
+				"hdiffF": {
+					"total": 8999.080999999982,
+					"avg": 5.746539591315442,
+					"med": 3.056,
+					"min": 0,
+					"max": 67.026
+				},
+				"heffortF": {
+					"total": 5300884.009999975,
+					"avg": 3384.9834035759736,
+					"med": 178.5025,
+					"min": 0,
+					"max": 740081.594
+				},
+				"hlengthF": {
+					"total": 57109,
+					"avg": 36.46807151979566,
+					"med": 16,
+					"min": 0,
+					"max": 3224
+				},
+				"htimeF": {
+					"total": 294493.54399999994,
+					"avg": 188.05462579821196,
+					"med": 9.917,
+					"min": 0,
+					"max": 41115.644
+				},
+				"hvocabF": {
+					"total": 25443,
+					"avg": 16.24712643678161,
+					"med": 11,
+					"min": 0,
+					"max": 760
+				},
+				"hvolF": {
+					"total": 298290.38399999944,
+					"avg": 190.47917241379275,
+					"med": 56.473,
+					"min": 0,
+					"max": 30853.214
+				},
+				"paramF": {
+					"total": 1913,
+					"avg": 1.2215836526181354,
+					"med": 1,
+					"min": 0,
+					"max": 6
+				},
+				"dpF": {
+					"total": 2600,
+					"avg": 1.9696969696969697,
+					"med": 1,
+					"min": 1,
+					"max": 11
 				}
 			}
 		}

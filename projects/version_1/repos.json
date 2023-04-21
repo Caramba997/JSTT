@@ -151,7 +151,15 @@
 					"grunt-contrib-connect": "~0.3.0"
 				}
 			},
-			"has_metrics": true
+			"has_metrics": true,
+			"has_frontend": true,
+			"has_backend": false,
+			"categories": [
+				"Creativity",
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"is_done": true
 		},
 		{
 			"id": 506402,
@@ -344,7 +352,8 @@
 			],
 			"test_frameworks": [
 				"nodeunit"
-			]
+			],
+			"is_done": true
 		},
 		{
 			"id": 1182492,
@@ -461,7 +470,18 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 22,
-			"total_prs": 1
+			"total_prs": 1,
+			"local_folder": "wbotelhos_capty",
+			"has_tests": false,
+			"has_metrics": true,
+			"has_frontend": true,
+			"has_backend": false,
+			"categories": [
+				"Plugin",
+				"Websites"
+			],
+			"test_frameworks": [],
+			"is_done": true
 		},
 		{
 			"id": 1413193,
@@ -572,7 +592,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 23,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "mhevery_angular_demo_slides",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/mhevery_angular_demo_slides/test",
+					"./projects/version_1/files/mhevery_angular_demo_slides/test/lib/jstestdriver"
+				],
+				"files": []
+			},
+			"has_metrics": true,
+			"has_frontend": true,
+			"has_backend": true,
+			"categories": [
+				"Demonstration",
+				"Websites"
+			],
+			"test_frameworks": []
 		},
 		{
 			"id": 1957399,

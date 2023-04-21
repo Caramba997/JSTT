@@ -9,13 +9,7 @@
   $('[data-e="project-link"]').attr('href', `/ui/project?id=${id}`);
   $('[data-e="repos-link"]').attr('href', `/ui/repos?id=${id}`);
 
-  // Init tooltips
-  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
-
-  let data, metrics;
+  let data, metrics, definitions;
 
   async function buildPage() {
     $('[data-e="github-link"]').attr('href', data.html_url);
@@ -63,12 +57,20 @@
     }
     if (metrics) {
       $('#manual button').prop('disabled', false);
+      if (!definitions) {
+        const defResponse = await api.getPromise('metricdefs');
+        definitions = defResponse.data;
+      }
       Object.entries(metrics).forEach(([category, names]) => {
         if (category === 'test' && !data.has_tests) return;
         const element = $(`[data-e="metrics-${category}"] tbody`);
         element.html('');
         Object.entries(names).forEach(([name, values]) => {
-          let cells = `<tr data-name="${name}"><td scope="row">${name}</td>`;
+          const metric = name.match(/[a-z]+/)[0],
+                scope = name.match(/[A-Z]/)[0] === 'M' ? 'Module' : 'Function';
+          const def = definitions[metric] || { name: '?', description: '?'},
+                tooltip = `<b>${def.name}</b><br><em>Scope: ${scope}</em><br>${def.description}`;
+          let cells = `<tr data-name="${name}"><td scope="row" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="${tooltip}">${name}</td>`;
           Object.entries(values).forEach(([type, value]) => {
             const valueS = value !== null ? `${value}`.split('.') : '?',
                   valueF = valueS.length === 2 ? `${value.toFixed(3)}`.replace(/(\.0+|(?<=\.[1-9])0+|(?<=\.[0-9][1-9])0+)$/, '') : `${value}`;
@@ -110,6 +112,15 @@
         selectElem.append(html);
       });
     }
+    // Create path to local directory
+    const path = `D:/Projekte/Master/GitHub-Data-Collector/projects/${id}/files/${data.local_folder || ''}`;
+    $('[data-e="local-directory"]').text(path);
+
+    // Init tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
   }
 
   api.get('repo', {
@@ -169,6 +180,23 @@
       id: id,
       data: data
     });
+    progress.setProgress(1, 1);
+    progress.end();
+  });
+
+  $('[data-a="clean"]').on('click', async () => {
+    progress.init('Clean repo', 1);
+    const response = await api.postPromise('clean', {
+      id: id,
+      repo: repo
+    });
+    if (!response) {
+      const alert = $('[data-e="error"]');
+      alert.html('Error cleaning repo').show();
+      setTimeout(() => {
+        alert.hide();
+      }, 5000);
+    }
     progress.setProgress(1, 1);
     progress.end();
   });

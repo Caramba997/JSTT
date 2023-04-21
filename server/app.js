@@ -652,6 +652,20 @@ app.get('/api/frameworks', async (req, res) => {
   }
 });
 
+app.get('/api/metricdefs', async (req, res) => {
+  try {
+    const exists = files.exists('knowledge', 'metrics.json');
+    if (!exists) {
+      return success(res, { metrics: {} });
+    }
+    const metrics = files.json('knowledge', 'metrics.json');
+    return success(res, metrics);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
 app.post('/api/calccoverage', async (req, res) => {
   const id = req.body.id,
         repo = req.body.repo;
@@ -663,6 +677,21 @@ app.post('/api/calccoverage', async (req, res) => {
     const report = files.json('files', 'coverage-summary.json', [id, formattedName]);
     const coverage = metrics.coverageFromSummary(report);
     return success(res, coverage);
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/clean', async (req, res) => {
+  const id = req.body.id,
+        repo = req.body.repo;
+  if (!id || !repo) return error(res, 400, 'Param missing');
+  try {
+    const formattedName = files.safeFormat(repo);
+    files.clean(files.path('files', '', [id, formattedName]));
+    return success(res, 'Cleaned files');
   }
   catch (e) {
     console.log(e);

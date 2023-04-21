@@ -1,0 +1,98 @@
+{
+  "loc": {
+    "name": "Lines of Code",
+    "description": "Physical lines of code"
+  },
+  "locc": {
+    "name": "Lines of Code Comments",
+    "description": "Lines of code comments"
+  },
+  "locl": {
+    "name": "Logical Lines of Code",
+    "description": "Logical lines of code"
+  },
+  "cc": {
+    "name": "Cyclomatic Complexity",
+    "description": "Cyclomatic complexity"
+  },
+  "hbugs": {
+    "name": "Halstead Bugs",
+    "description": "Halstead bugs metric"
+  },
+  "hdiff": {
+    "name": "Halstead Difficulty",
+    "description": "Halstead difficulty metric"
+  },
+  "heffort": {
+    "name": "Halstead Effort",
+    "description": "Halstead effort metric"
+  },
+  "hlength": {
+    "name": "Halstead Length",
+    "description": "Halstead length metric"
+  },
+  "htime": {
+    "name": "Halstead Difficulty",
+    "description": "Halstead difficulty metric"
+  },
+  "hvocab": {
+    "name": "Halstead Vocabulary",
+    "description": "Halstead vocabulary metric"
+  },
+  "hvol": {
+    "name": "Halstead Volume",
+    "description": "Halstead volume metric"
+  },
+  "param": {
+    "name": "Number of Parameters",
+    "description": "Number of parameters"
+  },
+  "maintain": {
+    "name": "Maintainability Index",
+    "description": "Maintainability index"
+  },
+  "dp": {
+    "name": "Nesting Depth",
+    "description": "Number of nested blocks"
+  },
+  "nof": {
+    "name": "Number of Function",
+    "description": "Number of functions per module"
+  },
+  "ec": {
+    "name": "Efferent Coupling",
+    "description": "(Import coupling) Number of imports"
+  },
+  "ac": {
+    "name": "Afferent Coupling",
+    "description": "(Export coupling) Number of usages across project"
+  },
+  "mc": {
+    "name": "Method Calls",
+    "description": "Number of method calls in module"
+  },
+  "no": {
+    "name": "Number",
+    "description": "Number of modules/functions"
+  },
+  "lcov": {
+    "name": "Line Coverage",
+    "description": "Line coverage of test suite in percent"
+  },
+  "scov": {
+    "name": "Statement Coverage",
+    "description": "Statement coverage of test suite in percent"
+  },
+  "fcov": {
+    "name": "Function Coverage",
+    "description": "Function coverage of test suite in percent"
+  },
+  "bcov": {
+    "name": "Branch Coverage",
+    "description": "Branch coverage of test suite in percent"
+  },
+  "notc": {
+    "name": "Number of Test Cases",
+    "description": "Number of test cases per test file"
+  }
+}

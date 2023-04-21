@@ -12,10 +12,10 @@ class Forms {
       const input = $(elem);
       if (input.prop('tagName') === 'TEXTAREA') {
         if (input.data('type') === 'json') {
-          json[input.attr('name')] = JSON.parse(input.val());
+          if (input.val() !== '') json[input.attr('name')] = JSON.parse(input.val());
         }
         else {
-          json[input.attr('name')] = input.val();
+          if (input.val() !== '') json[input.attr('name')] = input.val();
         }
       }
       else {
@@ -35,7 +35,7 @@ class Forms {
             break;
           }
           case 'number': {
-            json[input.attr('name')] = Number(input.val());
+            if (input.val() !== '') json[input.attr('name')] = Number(input.val());
             break;
           }
           default: {
