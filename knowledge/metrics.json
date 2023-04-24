@@ -94,5 +94,9 @@
   "notc": {
     "name": "Number of Test Cases",
     "description": "Number of test cases per test file"
+  },
+  "locr": {
+    "name": "Code ratio",
+    "description": "Ratio of test code to source code (loc test / loc source)"
   }
 }

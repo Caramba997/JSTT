@@ -609,7 +609,15 @@
 				"Demonstration",
 				"Websites"
 			],
-			"test_frameworks": []
+			"test_frameworks": [
+				"jasmine"
+			],
+			"dependencies": [
+				"angular",
+				"jquery",
+				"showdown",
+				"syntaxhighlighter"
+			]
 		},
 		{
 			"id": 1957399,

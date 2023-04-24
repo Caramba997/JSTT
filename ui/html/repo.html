@@ -191,6 +191,19 @@
                     </template>
                   </td>
                 </tr>
+                <tr>
+                  <td scope="row">Dependencies (Non-NPM)</td>
+                  <td>
+                    <input type="text" data-type="array" name="dependencies" class="form-control">
+                    <div class="d-flex flex-row align-items-center mt-2">
+                      <label class="form-label me-2 flex-grow-0" style="min-width:fit-content;">Available options</label>
+                      <select data-e="dependencies" class="form-select bg-light flex-grow-1"></select>
+                    </div>
+                    <template data-t="dependencies-item">
+                      <option value="?">?</option>
+                    </template>
+                  </td>
+                </tr>
               </tbody>
             </table>
             <h3>Metrics</h3>

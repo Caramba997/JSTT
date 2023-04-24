@@ -27,7 +27,7 @@ class Progress {
     this.start = Date.now();
     this.startIndex = 0;
     this.typeElement.text(title);
-    this.totalElement.text(total);
+    this.totalElement.text(`${total}`);
     this.onStop = onStop ? onStop : null;
   }
 

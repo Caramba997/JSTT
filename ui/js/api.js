@@ -26,6 +26,7 @@ class API {
       calcmetrics: '/api/calcmetrics',
       categories: '/api/categories',
       frameworks: '/api/frameworks',
+      knowndependencies: '/api/knowndependencies',
       metricdefs: '/api/metricdefs',
       calccoverage: '/api/calccoverage',
       clean: '/api/clean'

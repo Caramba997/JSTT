@@ -285,6 +285,23 @@ app.post('/api/repo', async (req, res) => {
       });
       if (changed) files.write('knowledge', 'testframeworks.json', newFrameworks);
     }
+    if (data.dependencies !== undefined && data.dependencies.length > 0) {
+      let newDependencies;
+      if (files.exists('knowledge', 'dependencies.json')) {
+        newDependencies = files.json('knowledge', 'dependencies.json');
+      }
+      else {
+        newDependencies = { dependencies: [] };
+      }
+      let changed = false;
+      data.dependencies.forEach((dependency) => {
+        if (!newDependencies.dependencies.includes(dependency)) {
+          newDependencies.dependencies.push(dependency);
+          changed = true;
+        }
+      });
+      if (changed) files.write('knowledge', 'dependencies.json', newDependencies);
+    }
     return success(res, 'Saved changes');
   }
   catch (e) {
@@ -646,6 +663,20 @@ app.get('/api/frameworks', async (req, res) => {
     }
     const frameworks = files.json('knowledge', 'testframeworks.json');
     return success(res, frameworks);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.get('/api/knowndependencies', async (req, res) => {
+  try {
+    const exists = files.exists('knowledge', 'dependencies.json');
+    if (!exists) {
+      return success(res, { dependencies: [] });
+    }
+    const dependencies = files.json('knowledge', 'dependencies.json');
+    return success(res, dependencies);
   }
   catch (e) {
     return error(res, 500, 'Something went wrong');

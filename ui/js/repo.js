@@ -19,15 +19,18 @@
     $('[data-e="info-stars"]').text(data.stargazers_count);
     $('[data-e="info-created"]').text(data.created_at);
     $('[data-e="info-modified"]').text(data.updated_at);
-    if (data.total_commits) $('[data-e="info-commits"]').text(data.total_commits);
-    if (data.total_prs) $('[data-e="info-prs"]').text(data.total_prs);
-    if (data.is_npm) {
+    if (data.total_commits !== undefined) $('[data-e="info-commits"]').text(data.total_commits);
+    if (data.total_prs !== undefined) $('[data-e="info-prs"]').text(data.total_prs);
+    if (data.is_npm === true) {
       if (data.multiple_package_json) {
         $('[data-e="info-npm"]').text('TODO: Select from multiple package.json');
       }
       else {
         $('[data-e="info-npm"]').html('<i class="fa-solid fa-check"></i>');
       }
+    }
+    else if (data.is_npm === false) {
+      $('[data-e="info-npm"]').html('<i class="fa-solid fa-xmark"></i>');
     }
     let depCount = 0,
         deps = [];
@@ -44,8 +47,12 @@
           deps.push(dep);
         });
       }
-      $('[data-e="info-deps"]').text(depCount).attr('title', deps.join('\n'));
     }
+    else if (!data.is_npm && data.dependencies !== undefined) {
+      depCount = data.dependencies.length;
+      deps = data.dependencies;
+    }
+    $('[data-e="info-deps"]').text(depCount).attr('title', deps.join('\n'));
     if (data.has_tests === true) {
       $('[data-e="info-tests"]').html('<i class="fa-solid fa-check"></i>').attr('title', `${data.test_occurences.dirs.join('\n')}\n\n${data.test_occurences.files.join('\n')}`);
     }
@@ -100,17 +107,34 @@
     }
     forms.fromJson($('[data-e="manual-classification"]'), data);
     let categories = await api.getPromise('categories');
-    if (categories) categories = categories.data.categories.sort();
-    if (categories.length > 0) {
-      const selectElem = $('[data-e="categories"]'),
-            template = $($('[data-t="categories-item"]').html());
-      selectElem.html('');
-      categories.forEach((category) => {
-        const html = template.clone(true);
-        html.val(category);
-        html.text(category);
-        selectElem.append(html);
-      });
+    if (categories) {
+      categories = categories.data.categories.sort();
+      if (categories.length > 0) {
+        const selectElem = $('[data-e="categories"]'),
+              template = $($('[data-t="categories-item"]').html());
+        selectElem.html('');
+        categories.forEach((category) => {
+          const html = template.clone(true);
+          html.val(category);
+          html.text(category);
+          selectElem.append(html);
+        });
+      }
+    }
+    let dependencies = await api.getPromise('knowndependencies');
+    if (dependencies) {
+      dependencies = dependencies.data.dependencies.sort();
+      if (dependencies.length > 0) {
+        const selectElem = $('[data-e="dependencies"]'),
+              template = $($('[data-t="dependencies-item"]').html());
+        selectElem.html('');
+        dependencies.forEach((dependency) => {
+          const html = template.clone(true);
+          html.val(dependency);
+          html.text(dependency);
+          selectElem.append(html);
+        });
+      }
     }
     // Create path to local directory
     const path = `D:/Projekte/Master/GitHub-Data-Collector/projects/${id}/files/${data.local_folder || ''}`;
@@ -224,7 +248,12 @@
       id: id,
       repo: repo
     });
-    metrics = response.data;
+    const responseMetrics = response.data;
+    Object.entries(responseMetrics).forEach(([name, mtrcs]) => {
+      Object.entries(mtrcs).forEach(([metric, values]) => {
+        metrics[name][metric] = values;
+      });
+    });
     await api.postPromise('metrics', {
       id: id,
       repo: repo,
