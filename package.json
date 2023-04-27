@@ -33,6 +33,7 @@
     "json-format": "^1.0.1",
     "npm-api": "^1.0.1",
     "octokit": "^2.0.14",
+    "spearman-rho": "^1.0.6",
     "typhonjs-escomplex": "^0.1.0"
   },
   "devDependencies": {

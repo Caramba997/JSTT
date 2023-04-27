@@ -610,12 +610,14 @@ app.post('/api/metrics', async (req, res) => {
     else {
       content = { repos: {} };
     }
-    if (data.test.notcM !== undefined && data.test.notcM !== '' && /^\d+(,\d+)*$/.test(data.test.notcM)) {
-      const arr = data.test.notcM.split(',');
-      for (let i = 0; i < arr.length; i++) {
-        arr[i] = Number(arr[i]);
+    if (data.test.notcM !== undefined && data.test.notcM instanceof Array) {
+      if (data.test.notcM.length === 0) {
+        delete data.test.notcM;
       }
-      data.test.notcM = metrics.valuesFromArr(arr, 'notcM');
+      else {
+        const arr = data.test.notcM.map(value => Number(value));
+        data.test.notcM = metrics.valuesFromArr(arr, 'notcM');
+      }
     }
     content.repos[repo] = data;
     files.write('project', 'metrics.json', content, [id]);

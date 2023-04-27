@@ -79,15 +79,41 @@
                 tooltip = `<b>${def.name}</b><br><em>Scope: ${scope}</em><br>${def.description}`;
           let cells = `<tr data-name="${name}"><td scope="row" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="${tooltip}">${name}</td>`;
           Object.entries(values).forEach(([type, value]) => {
-            const valueS = value !== null ? `${value}`.split('.') : '?',
-                  valueF = valueS.length === 2 ? `${value.toFixed(3)}`.replace(/(\.0+|(?<=\.[1-9])0+|(?<=\.[0-9][1-9])0+)$/, '') : `${value}`;
-            cells += `<td data-type="${type}">${valueF}</td>`;
+            const formatValue = (val) => {
+              const valueS = val !== null ? `${val}`.split('.') : '?';
+              return valueS.length === 2 ? `${val.toFixed(3)}`.replace(/(\.0+|(?<=\.[1-9])0+|(?<=\.[0-9][1-9])0+)$/, '') : `${val}`;
+            };
+            if (value instanceof Array) {
+              const arr = value.map(formatValue);
+              cells += `<td data-type="${type}"><textarea rows="1" cols="50" class="form-control">${arr.join(', ')}</textarea></td>`;
+            }
+            else {
+              cells += `<td data-type="${type}">${formatValue(value)}</td>`;
+            }
           });
           cells += '</tr>';
           element.append(cells);
         });
       });
-      forms.fromJson($('[data-e="manual-test"]'), metrics.test);
+      // Insert values into manual metric elements
+      const manualMetricElements = $('[data-e="manual-test"] [data-name]');
+      manualMetricElements.each((index, elem) => {
+        elem = $(elem);
+        const metric = elem.data('name'),
+              data = metrics.test[metric];
+        if (!data) return;
+        Object.entries(data).forEach(([key, value]) => {
+          const dataElem = elem.find(`[data-value="${key}"]`);
+          if (dataElem.length === 0) return;
+          const valueF = value instanceof Array ? value.join(',') : value;
+          if (['INPUT', 'SELECT', 'TEXTAREA'].includes(dataElem.prop("tagName"))) {
+            dataElem.val(valueF);
+          }
+          else {
+            dataElem.text(valueF);
+          }
+        })
+      });
       let frameworks = await api.getPromise('frameworks');
       if (frameworks) frameworks = frameworks.data.frameworks.sort();
       if (frameworks.length > 0) {
@@ -307,6 +333,11 @@
     progress.setProgress(2, 2);
     buildPage();
     progress.end();
+  });
+
+  // Set attribute when a manual metric input element changed
+  $('[data-e="manual-test"] [name]').on('change keyup paste', (e) => {
+    $(e.target).data('form-skip', 'set');
   });
 
   $('[data-a="done"]').on('click', async () => {

@@ -103,6 +103,7 @@
                   <th scope="col">Median</th>
                   <th scope="col">Min</th>
                   <th scope="col">Max</th>
+                  <th scope="col">Values</th>
                 </tr>
               </thead>
               <tbody></tbody>
@@ -111,12 +112,13 @@
             <table data-e="metrics-test" class="table table-striped">
               <thead>
                 <tr>
-                  <th>Metric</th>
-                  <th>Total</th>
-                  <th>Average</th>
-                  <th>Median</th>
-                  <th>Min</th>
-                  <th>Max</th>
+                  <th scope="col">Metric</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Average</th>
+                  <th scope="col">Median</th>
+                  <th scope="col">Min</th>
+                  <th scope="col">Max</th>
+                  <th scope="col">Values</th>
                 </tr>
               </thead>
               <tbody></tbody>
@@ -226,18 +228,33 @@
                 <table data-e="manual-test" class="table table-striped">
                   <colgroup>
                      <col span="1" style="width: 30%;">
-                     <col span="1" style="width: 70%;">
+                     <col span="1" style="width: 5%;">
+                     <col span="1" style="width: 5%;">
+                     <col span="1" style="width: 5%;">
+                     <col span="1" style="width: 5%;">
+                     <col span="1" style="width: 5%;">
+                     <col span="1" style="width: 45%;">
                   </colgroup>
                   <thead>
                     <tr>
                       <th scope="col">Metric</th>
-                      <th scope="col">Data</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Average</th>
+                      <th scope="col">Median</th>
+                      <th scope="col">Min</th>
+                      <th scope="col">Max</th>
+                      <th scope="col">Values</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr data-name="notcM">
                       <td scope="row">Number of Test cases (Insert numbers for each test file separated by commas)</td>
-                      <td><textarea name="notcM" rows="7" class="form-control"></textarea></td>
+                      <td data-value="total"></td>
+                      <td data-value="avg"></td>
+                      <td data-value="med"></td>
+                      <td data-value="min"></td>
+                      <td data-value="max"></td>
+                      <td><textarea data-value="values" data-type="array" rows="1" cols="65" class="form-control" name="notcM" data-form-skip="skip"></textarea></td>
                     </tr>
                   </tbody>
                 </table>

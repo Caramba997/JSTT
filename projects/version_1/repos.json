@@ -159,7 +159,8 @@
 				"Demonstration"
 			],
 			"test_frameworks": [],
-			"is_done": true
+			"is_done": true,
+			"dependencies": []
 		},
 		{
 			"id": 506402,
@@ -353,7 +354,8 @@
 			"test_frameworks": [
 				"nodeunit"
 			],
-			"is_done": true
+			"is_done": true,
+			"dependencies": []
 		},
 		{
 			"id": 1182492,

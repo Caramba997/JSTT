@@ -10,9 +10,14 @@ class Forms {
     const inputs = element.find('[name]');
     inputs.each((index, elem) => {
       const input = $(elem);
+      if (input.data('form-skip') === 'skip') return;
       if (input.prop('tagName') === 'TEXTAREA') {
         if (input.data('type') === 'json') {
           if (input.val() !== '') json[input.attr('name')] = JSON.parse(input.val());
+        }
+        else if (input.data('type') === 'array') {
+          const arr = input.val() !== '' ? input.val().split(',').map(value => value.trim()) : [];
+          json[input.attr('name')] = arr;
         }
         else {
           if (input.val() !== '') json[input.attr('name')] = input.val();
@@ -22,7 +27,7 @@ class Forms {
         switch (input.attr('type')) {
           case 'text': {
             if (input.data('type') === 'array') {
-              const arr = input.val() !== '' ? input.val().split(',') : [];
+              const arr = input.val() !== '' ? input.val().split(',').map(value => value.trim()) : [];
               json[input.attr('name')] = arr;
             }
             else {
