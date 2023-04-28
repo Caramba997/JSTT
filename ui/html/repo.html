@@ -9,6 +9,7 @@
     <meta name="description" content="Finn Carstensen">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="custom.css">
     <script src="jquery.min.js" defer></script>
     <script src="bootstrap.bundle.min.js" defer></script>
     <script src="api.js" defer></script>
@@ -152,12 +153,28 @@
                   <td><input type="checkbox" name="is_npm" class="form-check-input"></td>
                 </tr>
                 <tr>
-                  <td scope="row">package.json</td>
+                  <td scope="row">package.json <span data-e="multiple-package-json" class="bg-warning" style="display: none;">TODO: Select the main package.json from multiple possibilities across the project</span></td>
                   <td><textarea name="package_json" data-type="json" rows="10" class="form-control"></textarea></td>
                 </tr>
                 <tr>
                   <td scope="row">Has Tests</td>
                   <td><input type="checkbox" name="has_tests" class="form-check-input"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Has failing Tests</td>
+                  <td><input type="checkbox" name="has_failing_tests" class="form-check-input"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Has UI Tests</td>
+                  <td><input type="checkbox" name="has_ui_tests" class="form-check-input"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Has Performance Tests</td>
+                  <td><input type="checkbox" name="has_performance_tests" class="form-check-input"></td>
+                </tr>
+                <tr>
+                  <td scope="row">Test run impossible</td>
+                  <td><input type="checkbox" name="test_run_impossible" class="form-check-input"></td>
                 </tr>
                 <tr>
                   <td scope="row">Has Frontend</td>
@@ -211,14 +228,28 @@
             <h3>Metrics</h3>
             <div class="card">
               <div class="card-body">
+                <div class="me-2">Folder:</div>
                 <code class="p-1" data-e="local-directory" style="background-color:lightgrey;">D:Projekte/Master/GitHub-Data-Collector/projects</code>
                 <br><br>
+                <div class="me-2">NPM Setup:</div>
                 <code class="me-2 p-1" data-e="coverage-cmd" style="background-color:lightgrey;">npm install</code>
+                <br><br>
                 <h5 class="mt-3">Coverage</h5>
                 <div class="d-flex flex-row align-items-center">
                   <div class="me-2">1.</div>
                   <code class="me-2 p-1" data-e="coverage-cmd" style="background-color:lightgrey;">nyc --reporter=json-summary --report-dir=./ npm run test</code>
                   <div class="me-2">2.</div>
+                  <button data-a="coverage-extract" type="button" class="btn btn-primary btn-sm me-2">Extract metrics</button>
+                </div>
+                <h6 class="mt-2">or for browser</h6>
+                <div class="d-flex flex-row flex-wrap align-items-center">
+                  <div class="me-2">1. Instrument code</div>
+                  <code class="me-2 p-1" data-e="coverage-cmd" style="background-color:lightgrey;">nyc instrument [source_folder] ./instrumented</code>
+                  <div class="me-2">2. Run tests in browser</div>
+                  <div class="me-2">3. Copy __coverage__ to .nyc_output/coverage.json</div>
+                  <div class="me-2">4. Run reporter</div>
+                  <code class="me-2 p-1" data-e="coverage-cmd" style="background-color:lightgrey;">nyc report --reporter=json-summary --report-dir=./ --cwd=./</code>
+                  <div class="me-2">5.</div>
                   <button data-a="coverage-extract" type="button" class="btn btn-primary btn-sm me-2">Extract metrics</button>
                 </div>
                 <h5 class="mt-3">Test stats</h5>

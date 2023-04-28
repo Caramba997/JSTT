@@ -5,12 +5,6 @@
     $('[data-e="error"]').text('Error retrieving results. Check if query param is valid, e.g. ?id=version_1').show();
     return;
   }
-
-  // Init tooltips
-  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
   
   let data, depData;
 
@@ -39,10 +33,11 @@
           html.find('[data-e="repo-npm-approved"]').show();
         }
       }
-
-      let depCount = 0,
+      let hasDeps = false,
+          depCount = 0,
           deps = [];
       if (repo.package_json !== undefined && !repo.multiple_package_json) {
+        hasDeps = true;
         if (repo.package_json.dependencies) {
           Object.keys(repo.package_json.dependencies).forEach((dep) => {
             depCount++;
@@ -55,7 +50,14 @@
             deps.push(dep);
           });
         }
-        html.find('[data-e="repo-deps"]').text(depCount).attr('title', deps.join('\n'));
+      }
+      if (repo.dependencies !== undefined) {
+        hasDeps = true;
+        depCount += repo.dependencies.length;
+        deps.push(...repo.dependencies);
+      }
+      if (hasDeps) {
+        html.find('[data-e="repo-deps"]').text(depCount).attr('title', deps.join('<br>'));
       }
       if (repo.local_folder !== undefined) html.find('[data-e="repo-downloaded"]').show();
       if (repo.is_done) {
@@ -87,6 +89,12 @@
       $(`[data-e="stats-${key}"]`).text(value);
     });
     $(`[data-e="stats-done"]`).text(`${Math.round(doneRepos / data.stats.total * 100)}% (${doneRepos}/${data.stats.total})`)
+
+    // Init tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
   }
 
   api.get('repos', {

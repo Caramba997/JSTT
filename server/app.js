@@ -575,7 +575,7 @@ app.get('/api/metrics', async (req, res) => {
     if (exists) {
       const data = files.json('project', 'metrics.json', [id]);
       if (repo) {
-        result = data.repos[repo] || {};
+        result = data.repos[repo] || { source: {}, test: {} };
       }
       else {
         result = data;

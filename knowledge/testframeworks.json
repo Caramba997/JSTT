@@ -1,6 +1,13 @@
 {
 	"frameworks": [
 		"nodeunit",
-		"jasmine"
+		"jasmine",
+		"qunitjs",
+		"selenium",
+		"wd",
+		"assert",
+		"should",
+		"mocha",
+		"chai"
 	]
 }

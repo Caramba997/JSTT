@@ -3,6 +3,9 @@
 		"angular",
 		"jquery",
 		"showdown",
-		"syntaxhighlighter"
+		"syntaxhighlighter",
+		"mocha",
+		"chai",
+		"jasmine"
 	]
 }

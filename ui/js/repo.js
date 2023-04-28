@@ -19,6 +19,8 @@
     $('[data-e="info-stars"]').text(data.stargazers_count);
     $('[data-e="info-created"]').text(data.created_at);
     $('[data-e="info-modified"]').text(data.updated_at);
+    if (data.local_folder !== undefined) $('[data-a="download"]').addClass('bg-success-subtle');
+    if (data.multiple_package_json) $('[data-e="multiple-package-json"]').show();
     if (data.total_commits !== undefined) $('[data-e="info-commits"]').text(data.total_commits);
     if (data.total_prs !== undefined) $('[data-e="info-prs"]').text(data.total_prs);
     if (data.is_npm === true) {
@@ -119,7 +121,7 @@
       if (frameworks.length > 0) {
         const selectElem = $('[data-e="frameworks"]'),
               template = $($('[data-t="frameworks-item"]').html());
-        selectElem.html('');
+        selectElem.html('<option>...</option>');
         frameworks.forEach((category) => {
           const html = template.clone(true);
           html.val(category);
@@ -138,7 +140,7 @@
       if (categories.length > 0) {
         const selectElem = $('[data-e="categories"]'),
               template = $($('[data-t="categories-item"]').html());
-        selectElem.html('');
+        selectElem.html('<option>...</option>');
         categories.forEach((category) => {
           const html = template.clone(true);
           html.val(category);
@@ -153,7 +155,7 @@
       if (dependencies.length > 0) {
         const selectElem = $('[data-e="dependencies"]'),
               template = $($('[data-t="dependencies-item"]').html());
-        selectElem.html('');
+        selectElem.html('<option>...</option>');
         dependencies.forEach((dependency) => {
           const html = template.clone(true);
           html.val(dependency);
@@ -179,31 +181,28 @@
   }, async (response) => {
     data = response.data;
     $('#navbarSupportedContent [data-a]').prop('disabled', false);
-    if (data.has_metrics) {
-      api.get('metrics', {
-        id: id,
-        repo: encodeURIComponent(repo)
-      }, async (response) => {
-        metrics = response.data;
-        buildPage();
-      }, (error) => {
-        console.warn(error);
-        buildPage();
-        $('[data-e="error-load"]').show();
-      });
-    }
-    else {
+    api.get('metrics', {
+      id: id,
+      repo: encodeURIComponent(repo)
+    }, (response) => {
+      metrics = response.data;
       buildPage();
-    }
+    }, (error) => {
+      console.warn(error);
+      buildPage();
+      $('[data-e="error-load"]').show();
+    });
   }, (error) => {
     console.warn(error);
     $('[data-e="error-load"]').show();
   });
 
-  const categorySelector = $('[data-e="categories"]');
-  categorySelector.on('change', () => {
-    const value = categorySelector.val();
-    const input = $('input[name="categories"]');
+  const knowledgeSelectors = $('[data-e="categories"], [data-e="frameworks"], [data-e="dependencies"]');
+  knowledgeSelectors.on('change', (e) => {
+    const element = $(e.target);
+    const value = element.val();
+    if (!value || value === '...') return;
+    const input = element.closest('td').find('input');
     if (!input.val().includes(value)) {
       let text = input.val();
       if (text !== '') text += ',';
@@ -230,6 +229,7 @@
       id: id,
       data: data
     });
+    $('[data-a="download"]').addClass('bg-success-subtle');
     progress.setProgress(1, 1);
     progress.end();
   });
@@ -338,6 +338,11 @@
   // Set attribute when a manual metric input element changed
   $('[data-e="manual-test"] [name]').on('change keyup paste', (e) => {
     $(e.target).data('form-skip', 'set');
+  });
+
+  // Copy code to clipboard
+  $('code').on('click', (e) => {
+    navigator.clipboard.writeText($(e.target).text());
   });
 
   $('[data-a="done"]').on('click', async () => {
