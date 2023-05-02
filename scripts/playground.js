@@ -7,7 +7,9 @@
   const ast = require('abstract-syntax-tree');
   const fs = require('fs');
   const escomplex = require('typhonjs-escomplex');
-  const babelParser = require("@babel/parser");
+  const Parser = require('@babel/parser');
+  const Traverse = require('@babel/traverse');
+  const Types = require('@babel/types');
 
   const npm = new NPM();
   const files = new Files();
@@ -19,22 +21,14 @@
   // const result = escomplex.analyzeModule(code);
   // fs.writeFileSync('./projects/version_1/complex.json', JSON.stringify(result));
 
-  // const code = fs.readFileSync('./projects/version_1/files/ForbesLindesay_throat/test/typescript-example.ts').toString();
-  const code = fs.readFileSync('./projects/version_1/files/ForbesLindesay_throat/index.d.ts', { encoding: 'utf8', flag: 'r' }).toString();
-  const tree = babelParser.parse(code, {
-    sourceType: 'unambiguous',
-    plugins: [
-      [
-        'typescript',
-        {
-          'dts': true
-        }
-      ],
-      'jsx',
-      'estree'
-    ]
-  });
-  console.log(ast.count(tree, 'CallExpression'));
+  const code = fs.readFileSync('./projects/version_1/files/petruisfan_node_supervisor/lib/supervisor.js').toString();
+  // const code = fs.readFileSync('./lib/files.js', { encoding: 'utf8', flag: 'r' }).toString();
+  const tree = metrics.parse(code, './projects/version_1/files/petruisfan_node_supervisor/lib/supervisor.js');
+  fs.writeFileSync('./projects/version_1/ast.json', JSON.stringify(tree, null, 2));
+  console.log(metrics.imports(['./projects/version_1/files/petruisfan_node_supervisor/lib/supervisor.js']));
+  // console.log(metrics.depth(tree), metrics.calls(tree));
+  // metrics.complexityRepo('./projects/version_1/files/ForbesLindesay_throat/')
+  // console.log(ast.count(tree, 'CallExpression'));
   // const parsed = babelParser.parse(code, {
   //   sourceType: 'unambiguous',
   //   plugins: [

@@ -8,6 +8,10 @@
 		"assert",
 		"should",
 		"mocha",
-		"chai"
+		"chai",
+		"jest",
+		"istanbul",
+		"sauce-test",
+		"testit"
 	]
 }

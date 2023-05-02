@@ -1932,7 +1932,23 @@
 					"./projects/version_1/files/ForbesLindesay_throat/test/typescript.test.js"
 				]
 			},
-			"has_metrics": true
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"has_performance_tests": true,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"categories": [
+				"Concurrency"
+			],
+			"test_frameworks": [
+				"jest",
+				"istanbul",
+				"sauce-test",
+				"testit"
+			],
+			"dependencies": []
 		},
 		{
 			"id": 3402721,
