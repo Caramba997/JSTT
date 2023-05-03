@@ -64,6 +64,11 @@
     if (data.is_done === true) {
       $('[data-a="done"]').removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
     }
+    if (data.has_performance_tests) {
+      $('[data-e="performance-section"]').show();
+      forms.fromJson($('[data-e="performance"]'), data.performance_test_occurences);
+      if (data.has_performance_metrics) $('[data-a="calc-perf-metrics"').addClass('bg-success-subtle');
+    }
     if (metrics) {
       $('#manual button').prop('disabled', false);
       if (!definitions) {
@@ -127,6 +132,33 @@
           html.val(category);
           html.text(category);
           selectElem.append(html);
+        });
+      }
+      if (metrics.performance) {
+        $(`[data-e="performance-test-metrics"]`).show();
+        const element = $('[data-e="metrics-performance"] tbody');
+        element.html('');
+        Object.entries(metrics.performance).forEach(([name, values]) => {
+          const metric = name.match(/[a-z]+/)[0],
+                scope = name.match(/[A-Z]/)[0] === 'M' ? 'Module' : 'Function';
+          const def = definitions[metric] || { name: '?', description: '?'},
+                tooltip = `<b>${def.name}</b><br><em>Scope: ${scope}</em><br>${def.description}`;
+          let cells = `<tr data-name="${name}"><td scope="row" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="${tooltip}">${name}</td>`;
+          Object.entries(values).forEach(([type, value]) => {
+            const formatValue = (val) => {
+              const valueS = val !== null ? `${val}`.split('.') : '?';
+              return valueS.length === 2 ? `${val.toFixed(3)}`.replace(/(\.0+|(?<=\.[1-9])0+|(?<=\.[0-9][1-9])0+)$/, '') : `${val}`;
+            };
+            if (value instanceof Array) {
+              const arr = value.map(formatValue);
+              cells += `<td data-type="${type}"><textarea rows="1" cols="50" class="form-control">${arr.join(', ')}</textarea></td>`;
+            }
+            else {
+              cells += `<td data-type="${type}">${formatValue(value)}</td>`;
+            }
+          });
+          cells += '</tr>';
+          element.append(cells);
         });
       }
     }
@@ -259,6 +291,8 @@
     });
     data.has_tests = response.data.has_tests;
     if (response.data.has_tests) data.test_occurences = response.data.test_occurences;
+    data.has_performance_tests = response.data.has_performance_tests;
+    if (response.data.has_performance_tests) data.performance_test_occurences = response.data.performance_test_occurences;
     await api.postPromise('repo', {
       id: id,
       data: data
@@ -295,6 +329,33 @@
     progress.end();
   });
 
+  $('[data-a="calc-perf-metrics"]').on('click', async () => {
+    progress.init('Calc performance metrics', 1);
+    const response = await api.postPromise('calcperfmetrics', {
+      id: id,
+      repo: repo,
+      paths: data.performance_test_occurences
+    });
+    const responseMetrics = response.data;
+    metrics.performance = metrics.performance || {};
+    Object.entries(responseMetrics).forEach(([metric, values]) => {
+      metrics.performance[metric] = values;
+    });
+    await api.postPromise('metrics', {
+      id: id,
+      repo: repo,
+      data: metrics
+    });
+    data.has_performance_metrics = true;
+    await api.postPromise('repo', {
+      id: id,
+      data: data
+    });
+    progress.setProgress(1, 1);
+    buildPage();
+    progress.end();
+  });
+
   $('[data-a="coverage-extract"]').on('click', async () => {
     progress.init('Extract metrics from report', 2);
     const coverage = await api.postPromise('calccoverage', {
@@ -303,6 +364,27 @@
     });
     Object.entries(coverage.data).forEach(([key, value]) => {
       metrics.test[key] = value;
+    });
+    progress.setProgress(1, 2);
+    await api.postPromise('metrics', {
+      id: id,
+      repo: repo,
+      data: metrics
+    });
+    progress.setProgress(2, 2);
+    buildPage();
+    progress.end();
+  });
+
+  $('[data-a="coverage-extract-perf"]').on('click', async () => {
+    progress.init('Extract metrics from report (performance tests)', 2);
+    const coverage = await api.postPromise('calccoverage', {
+      id: id,
+      repo: repo
+    });
+    metrics.performance = metrics.performance || {};
+    Object.entries(coverage.data).forEach(([key, value]) => {
+      metrics.performance[key] = value;
     });
     progress.setProgress(1, 2);
     await api.postPromise('metrics', {
@@ -335,8 +417,20 @@
     progress.end();
   });
 
+  $('[data-a="save-perf"]').on('click', async () => {
+    progress.init('Save manual data', 1);
+    data.performance_test_occurences = forms.toJson($('[data-e="performance"]'), data.performance_test_occurences);
+    await api.postPromise('repo', {
+      id: id,
+      data: data
+    });
+    progress.setProgress(1, 1);
+    buildPage();
+    progress.end();
+  });
+
   // Set attribute when a manual metric input element changed
-  $('[data-e="manual-test"] [name]').on('change keyup paste', (e) => {
+  $('[data-e="manual-test"] [name], [data-e="performance"] [name]').on('change keyup paste', (e) => {
     $(e.target).data('form-skip', 'set');
   });
 

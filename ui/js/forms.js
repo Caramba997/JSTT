@@ -16,7 +16,7 @@ class Forms {
           if (input.val() !== '') json[input.attr('name')] = JSON.parse(input.val());
         }
         else if (input.data('type') === 'array') {
-          const arr = input.val() !== '' ? input.val().split(',').map(value => value.trim()) : [];
+          const arr = input.val() !== '' ? input.val().replace(/\R/g, '').split(',').map(value => value.trim()) : [];
           json[input.attr('name')] = arr;
         }
         else {
@@ -64,8 +64,11 @@ class Forms {
       const value = data[input.attr('name')];
       if (value === undefined) return;
       if (input.prop('tagName') === 'TEXTAREA') {
-        if (input.data('type') === 'json' || value instanceof Object) {
+        if (input.data('type') === 'json' || (value instanceof Object && !(value instanceof Array))) {
           input.val(JSON.stringify(value, null, 2));
+        }
+        else if (input.data('type') === 'array'|| value instanceof Array) {
+          input.val(value.join(',\n'));
         }
         else {
           input.val(value);

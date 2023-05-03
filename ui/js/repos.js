@@ -20,7 +20,8 @@
       html.data('index', i);
       html.data('id', repo.full_name);
       html.find('[data-e="repo-index"]').text(i + 1);
-      html.find('[data-e="repo-name"]').text(repo.full_name).attr('href', `/ui/repo?id=${id}&repo=${repo.full_name}`);
+      const repoNameElement = html.find('[data-e="repo-name"]')
+      repoNameElement.text(repo.full_name).attr('href', `/ui/repo?id=${id}&repo=${repo.full_name}`);
       html.find('[data-e="repo-language"]').text(repo.language);
       html.find('[data-e="repo-stars"]').text(repo.stargazers_count);
       if (repo.total_commits !== undefined) html.find('[data-e="repo-commits"]').text(repo.total_commits);
@@ -63,6 +64,10 @@
       if (repo.is_done) {
         doneRepos++;
         html.css('background-color', 'lightgreen');
+        const repoStatsHtml = `Tests: ${repo.has_tests ? '<i class="fa-solid fa-check" style=""></i>' : '<i class="fa-solid fa-xmark" style=""></i>'}<br>
+        UI Tests: ${repo.has_ui_tests ? '<i class="fa-solid fa-check" style=""></i>' : '<i class="fa-solid fa-xmark" style=""></i>'}<br>
+        Perf Tests: ${repo.has_performance_tests ? '<i class="fa-solid fa-check" style=""></i>' : '<i class="fa-solid fa-xmark" style=""></i>'}`;
+        repoNameElement.attr('title', repoStatsHtml);
       }
       html.find('a[data-e="repo-git"]').attr('href', repo.html_url);
       tbody.append(html);

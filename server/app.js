@@ -540,13 +540,22 @@ app.post('/api/checktests', async (req, res) => {
         repo = req.body.repo;
   if (!id || !repo) return error(res, 400, 'Param missing');
   try {
+    const result = {
+      has_tests: false,
+      has_performance_tests: false
+    };
     const formattedName = files.safeFormat(repo);
-    const result = files.hasTests(files.path('files', '', [id, formattedName]));
-    if (result === false) return success(res, { has_tests: false });
-    return success(res, {
-      has_tests: true, 
-      test_occurences: result
-    });
+    const testResponse = files.hasTests(files.path('files', '', [id, formattedName]));
+    if (testResponse !== false) {
+      result.has_tests = true;
+      result.test_occurences = testResponse;
+    }
+    const perfTestResponse = files.hasPerformanceTests(files.path('files', '', [id, formattedName]));
+    if (perfTestResponse !== false) {
+      result.has_performance_tests = true;
+      result.performance_test_occurences = perfTestResponse;
+    }
+    return success(res, result);
   }
   catch (e) {
     console.log(e);
@@ -635,6 +644,21 @@ app.post('/api/calcmetrics', async (req, res) => {
   try {
     const formattedName = files.safeFormat(repo);
     const report = metrics.complexityRepo(files.path('files', '', [id, formattedName]));
+    return success(res, report);
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/calcperfmetrics', async (req, res) => {
+  const id = req.body.id,
+        repo = req.body.repo,
+        paths = req.body.paths;
+  if (!id || !repo || !paths) return error(res, 400, 'Param missing');
+  try {
+    const report = metrics.complexityRepoPerf(paths);
     return success(res, report);
   }
   catch (e) {

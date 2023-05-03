@@ -1948,7 +1948,15 @@
 				"sauce-test",
 				"testit"
 			],
-			"dependencies": []
+			"dependencies": [],
+			"performance_test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/ForbesLindesay_throat/perf.js"
+				]
+			},
+			"has_performance_metrics": true,
+			"is_done": true
 		},
 		{
 			"id": 3402721,

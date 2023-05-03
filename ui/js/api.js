@@ -29,7 +29,8 @@ class API {
       knowndependencies: '/api/knowndependencies',
       metricdefs: '/api/metricdefs',
       calccoverage: '/api/calccoverage',
-      clean: '/api/clean'
+      clean: '/api/clean',
+      calcperfmetrics: '/api/calcperfmetrics'
     };
   }
 

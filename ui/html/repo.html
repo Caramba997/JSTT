@@ -124,6 +124,23 @@
               </thead>
               <tbody></tbody>
             </table>
+            <div data-e="performance-test-metrics" style="display:none;">
+              <h3>Performance Tests</h3>
+              <table data-e="metrics-performance" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Metric</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Average</th>
+                    <th scope="col">Median</th>
+                    <th scope="col">Min</th>
+                    <th scope="col">Max</th>
+                    <th scope="col">Values</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -297,6 +314,72 @@
           </div>
         </div>
       </div>
+
+      <div class="accordion-item" data-e="performance-section" style="display: none;">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#performance" aria-expanded="false" aria-controls="performance">
+            Performance testing
+          </button>
+        </h2>
+        <div id="performance" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <table data-e="performance" class="table table-striped">
+              <colgroup>
+                 <col span="1" style="width: 30%;">
+                 <col span="1" style="width: 70%;">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">Attribute</th>
+                  <th scope="col">Input</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">Directories</td>
+                  <td><textarea name="dirs" data-type="array" rows="10" class="form-control"></textarea></td>
+                </tr>
+                <tr>
+                  <td scope="row">Files</td>
+                  <td><textarea name="files" data-type="array" rows="10" class="form-control"></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-grid gap-2 col-6 mx-auto mt-2">
+              <button data-a="save-perf" type="button" class="btn btn-primary">Save</button>
+            </div>
+            <h3>Metrics</h3>
+            <div class="card">
+              <div class="card-body">
+                <button data-a="calc-perf-metrics" type="button" class="btn btn-primary btn-sm me-2">Calc performance test metrics</button>
+                <br><br>
+                <div class="me-2">Folder:</div>
+                <code class="p-1" data-e="local-directory" style="background-color:lightgrey;">D:Projekte/Master/GitHub-Data-Collector/projects</code>
+                <br><br>
+                <h5 class="mt-3">Coverage <span class="bg-warning px-2">! Remove old .nyc_output folder if existing !</span></h5>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="me-2">1.</div>
+                  <code class="me-2 p-1" data-e="coverage-cmd" style="background-color:lightgrey;">nyc --reporter=json-summary --report-dir=./ npm run bench</code>
+                  <div class="me-2">2.</div>
+                  <button data-a="coverage-extract-perf" type="button" class="btn btn-primary btn-sm me-2">Extract metrics</button>
+                </div>
+                <h6 class="mt-2">or for browser</h6>
+                <div class="d-flex flex-row flex-wrap align-items-center">
+                  <div class="me-2">1. Instrument code</div>
+                  <code class="me-2 p-1" data-e="coverage-cmd" style="background-color:lightgrey;">nyc instrument [source_folder] ./instrumented</code>
+                  <div class="me-2">2. Run tests in browser</div>
+                  <div class="me-2">3. Copy __coverage__ to .nyc_output/coverage.json</div>
+                  <div class="me-2">4. Run reporter</div>
+                  <code class="me-2 p-1" data-e="coverage-cmd" style="background-color:lightgrey;">nyc report --reporter=json-summary --report-dir=./ --cwd=./</code>
+                  <div class="me-2">5.</div>
+                  <button data-a="coverage-extract-perf" type="button" class="btn btn-primary btn-sm me-2">Extract metrics</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     <br>
     <div data-e="progress-modal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
