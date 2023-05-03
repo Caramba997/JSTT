@@ -1933,7 +1933,7 @@
 				]
 			},
 			"has_metrics": true,
-			"has_failing_tests": false,
+			"has_failing_tests": true,
 			"has_ui_tests": false,
 			"has_performance_tests": true,
 			"test_run_impossible": false,
@@ -2077,7 +2077,23 @@
 					"jade": ">= 0.0.1",
 					"socket.io": "0.8.7"
 				}
-			}
+			},
+			"local_folder": "Sly777_Chat_Tutorial_with_Node_js__Socket_io_and_Express",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"categories": [
+				"Demonstration",
+				"Social Networks"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 3274943,
@@ -2222,7 +2238,25 @@
 				"dependencies": {
 					"jquery": "^3.3.1"
 				}
-			}
+			},
+			"local_folder": "megasmack_jquery_deorphan_js",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"categories": [
+				"Plugin",
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [
+				"jquery"
+			],
+			"is_done": true
 		},
 		{
 			"id": 3754501,
@@ -2333,7 +2367,23 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 141,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "rtyler_Hubboard",
+			"has_tests": true,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": true,
+			"has_frontend": true,
+			"has_backend": true,
+			"categories": [
+				"Websites",
+				"Productivity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 4689678,
@@ -2520,7 +2570,30 @@
 					"//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
 					"version": "4.12.0"
 				}
-			}
+			},
+			"local_folder": "npm_init_package_json",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/npm_init_package_json/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [
+				"tap"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 4723501,
@@ -2653,7 +2726,23 @@
 					"vec2d": "~0.3.0",
 					"pend": "~1.1.3"
 				}
-			}
+			},
+			"local_folder": "andrewrk_chem",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"categories": [
+				"Games",
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 4485970,
@@ -2800,7 +2889,22 @@
 					"xml2js": "~0.2.6",
 					"grunt-release": "~0.6.0"
 				}
-			}
+			},
+			"local_folder": "intel_webapps_sweetspot",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"categories": [
+				"Games"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 4833447,
@@ -2911,7 +3015,23 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 1,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "shaneriley_jquery_conf_2012",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"categories": [
+				"Demonstration",
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 5292562,
@@ -3028,7 +3148,23 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 5,
-			"total_prs": 1
+			"total_prs": 1,
+			"local_folder": "html5rocks_slides_html5rocks_com",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"categories": [
+				"Websites",
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 5992633,
@@ -3139,7 +3275,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 7,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "ethanmuller_sass_color_function_generator_thing",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"categories": [
+				"Demonstration",
+				"Development",
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 5921293,
@@ -3250,7 +3403,21 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 2,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "nyuichi_lisp_jsx",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"categories": [
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 7143131,
@@ -3361,7 +3528,23 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 16,
-			"total_prs": 3
+			"total_prs": 3,
+			"local_folder": "chengyin_albumcolors",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"categories": [
+				"Creativity",
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 6067338,
@@ -3508,7 +3691,33 @@
 					"qunitjs": "~1.12.0",
 					"jquery-browser": "~1.10.2"
 				}
-			}
+			},
+			"local_folder": "hoho_jquery_bem",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/hoho_jquery_bem/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": true,
+			"test_run_impossible": true,
+			"has_frontend": true,
+			"has_backend": false,
+			"categories": [
+				"Plugin",
+				"Websites"
+			],
+			"test_frameworks": [
+				"qunitjs"
+			],
+			"dependencies": [
+				"jquery"
+			],
+			"is_done": true
 		},
 		{
 			"id": 7266969,

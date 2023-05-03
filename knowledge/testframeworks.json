@@ -12,6 +12,7 @@
 		"jest",
 		"istanbul",
 		"sauce-test",
-		"testit"
+		"testit",
+		"tap"
 	]
 }

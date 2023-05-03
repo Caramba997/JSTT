@@ -21,11 +21,11 @@
   // const result = escomplex.analyzeModule(code);
   // fs.writeFileSync('./projects/version_1/complex.json', JSON.stringify(result));
 
-  const code = fs.readFileSync('./projects/version_1/files/petruisfan_node_supervisor/lib/supervisor.js').toString();
+  const code = fs.readFileSync('./projects/version_1/files/nyuichi_lisp_jsx/lisp.jsx').toString();
   // const code = fs.readFileSync('./lib/files.js', { encoding: 'utf8', flag: 'r' }).toString();
-  const tree = metrics.parse(code, './projects/version_1/files/petruisfan_node_supervisor/lib/supervisor.js');
-  fs.writeFileSync('./projects/version_1/ast.json', JSON.stringify(tree, null, 2));
-  console.log(metrics.imports(['./projects/version_1/files/petruisfan_node_supervisor/lib/supervisor.js']));
+  const tree = metrics.parse(code, './projects/version_1/files/nyuichi_lisp_jsx/lisp.jsx');
+  // fs.writeFileSync('./projects/version_1/ast.json', JSON.stringify(tree, null, 2));
+  // console.log(metrics.imports(['./projects/version_1/files/petruisfan_node_supervisor/lib/supervisor.js']));
   // console.log(metrics.depth(tree), metrics.calls(tree));
   // metrics.complexityRepo('./projects/version_1/files/ForbesLindesay_throat/')
   // console.log(ast.count(tree, 'CallExpression'));

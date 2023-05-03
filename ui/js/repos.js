@@ -14,6 +14,7 @@
           stats = data.stats || {};
     tbody.html('');
     let doneRepos = 0;
+    let nextRepo = null;
     for (let i = 0; i < data.repos.length; i++) {
       const repo = data.repos[i],
             html = template.clone(true);
@@ -69,9 +70,13 @@
         Perf Tests: ${repo.has_performance_tests ? '<i class="fa-solid fa-check" style=""></i>' : '<i class="fa-solid fa-xmark" style=""></i>'}`;
         repoNameElement.attr('title', repoStatsHtml);
       }
+      else if (nextRepo === null) {
+        nextRepo = html;
+      }
       html.find('a[data-e="repo-git"]').attr('href', repo.html_url);
       tbody.append(html);
     }
+    if (nextRepo) nextRepo[0].scrollIntoView({ behavior: 'instant', block: 'center' });
     if (depData) {
       const dbody = $('[data-e="deps"] tbody'),
             dtemplate = $($('[data-t="deps-item"]').html());

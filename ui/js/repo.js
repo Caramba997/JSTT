@@ -56,7 +56,9 @@
     }
     $('[data-e="info-deps"]').text(depCount).attr('title', deps.join('\n'));
     if (data.has_tests === true) {
-      $('[data-e="info-tests"]').html('<i class="fa-solid fa-check"></i>').attr('title', `${data.test_occurences.dirs.join('\n')}\n\n${data.test_occurences.files.join('\n')}`);
+      const hasTestsElement = $('[data-e="info-tests"]');
+      hasTestsElement.html('<i class="fa-solid fa-check"></i>');
+      if (data.test_occurences) hasTestsElement.attr('title', `${data.test_occurences.dirs.join('\n')}\n\n${data.test_occurences.files.join('\n')}`);
     }
     else if (data.has_tests === false) {
       $('[data-e="info-tests"]').html('<i class="fa-solid fa-xmark"></i>')
