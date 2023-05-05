@@ -29,6 +29,7 @@ class Progress {
     this.typeElement.text(title);
     this.totalElement.text(`${total}`);
     this.onStop = onStop ? onStop : null;
+    this.setProgress(0, total);
   }
 
   setStartIndex(index) {

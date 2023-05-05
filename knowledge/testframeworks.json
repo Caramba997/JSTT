@@ -13,6 +13,9 @@
 		"istanbul",
 		"sauce-test",
 		"testit",
-		"tap"
+		"tap",
+		"casperjs",
+		"karma",
+		"tape"
 	]
 }

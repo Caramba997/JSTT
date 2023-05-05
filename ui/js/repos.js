@@ -14,6 +14,8 @@
           stats = data.stats || {};
     tbody.html('');
     let doneRepos = 0;
+    let haveTests = 0,
+        haveNoTests = 0;
     let nextRepo = null;
     for (let i = 0; i < data.repos.length; i++) {
       const repo = data.repos[i],
@@ -73,6 +75,12 @@
       else if (nextRepo === null) {
         nextRepo = html;
       }
+      if (repo.has_tests === true) {
+        haveTests++;
+      }
+      else if (repo.has_tests === false) {
+        haveNoTests++;
+      }
       html.find('a[data-e="repo-git"]').attr('href', repo.html_url);
       tbody.append(html);
     }
@@ -98,7 +106,8 @@
     Array.from(Object.entries(stats)).forEach(([key, value]) => {
       $(`[data-e="stats-${key}"]`).text(value);
     });
-    $(`[data-e="stats-done"]`).text(`${Math.round(doneRepos / data.stats.total * 100)}% (${doneRepos}/${data.stats.total})`)
+    $(`[data-e="stats-done"]`).text(`${Math.round(doneRepos / data.stats.total * 100)}% (${doneRepos}/${data.stats.total})`);
+    $(`[data-e="stats-tests"]`).text(`${Math.round(haveTests / (haveTests + haveNoTests) * 100)}% (${haveTests}/${haveTests + haveNoTests})`);
 
     // Init tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
