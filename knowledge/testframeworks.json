@@ -16,6 +16,21 @@
 		"tap",
 		"casperjs",
 		"karma",
-		"tape"
+		"tape",
+		"tinytest",
+		"ava",
+		"codecov",
+		"nyc",
+		"cypress",
+		"supertest",
+		"sinon",
+		"coveralls",
+		"mockery",
+		"webdriverio",
+		"react-addons-test-utils",
+		"lerna",
+		"react-scripts",
+		"truffle",
+		"nock"
 	]
 }

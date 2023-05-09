@@ -629,7 +629,7 @@ app.post('/api/metrics', async (req, res) => {
       }
     }
     content.repos[repo] = data;
-    files.write('project', 'metrics.json', content, [id]);
+    files.write('project', 'metrics.json', content, [id], true);
     return success(res, data);
   }
   catch (e) {

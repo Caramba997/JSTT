@@ -11595,7 +11595,24 @@
 				]
 			},
 			"has_performance_tests": false,
-			"has_metrics": true
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": true,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Server"
+			],
+			"test_frameworks": [
+				"tinytest"
+			],
+			"dependencies": [
+				"qs"
+			],
+			"is_done": true
 		},
 		{
 			"id": 28228126,
@@ -11720,7 +11737,34 @@
 				},
 				"author": "",
 				"license": "MIT"
-			}
+			},
+			"local_folder": "mizchi_mz_match",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/mizchi_mz_match/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Utility"
+			],
+			"test_frameworks": [
+				"assert"
+			],
+			"dependencies": [
+				"assert"
+			],
+			"is_done": true
 		},
 		{
 			"id": 28357809,
@@ -11856,7 +11900,24 @@
 					"url": "https://github.com/bevacqua/correcthorse/issues"
 				},
 				"homepage": "https://github.com/bevacqua/correcthorse"
-			}
+			},
+			"local_folder": "bevacqua_correcthorse",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Security"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 44264661,
@@ -12027,7 +12088,24 @@
 				"lint-staged": {
 					"*/**": "yarn lint"
 				}
-			}
+			},
+			"local_folder": "FaridSafi_react_native_google_places_autocomplete",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 30422991,
@@ -12182,7 +12260,24 @@
 					"fsevents": "^1.1.3",
 					"jquery": "^3.5.0"
 				}
-			}
+			},
+			"local_folder": "pim_book_programmers_introduction_to_mathematics",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 30699902,
@@ -12336,7 +12431,24 @@
 					"winston": "^3.2.1",
 					"ws": "7.2.1"
 				}
-			}
+			},
+			"local_folder": "taigaio_taiga_events",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Productivity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 31618003,
@@ -12476,7 +12588,32 @@
 					"jshint": "^2.6.0",
 					"tape": "^3.5.0"
 				}
-			}
+			},
+			"local_folder": "bevacqua_fuzzysearch",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/bevacqua_fuzzysearch/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Utility"
+			],
+			"test_frameworks": [
+				"tape"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 31797641,
@@ -12587,7 +12724,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 13,
-			"total_prs": 1
+			"total_prs": 1,
+			"local_folder": "bilbof_Deutsch_app",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 32953753,
@@ -12711,7 +12865,24 @@
 				"license": "MIT",
 				"repository": "git@github.com:darobin/quasi.git",
 				"main": "./index.js"
-			}
+			},
+			"local_folder": "darobin_quasi",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Multimedia"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 34534630,
@@ -12863,7 +13034,24 @@
 					"release": "sanctuary-release",
 					"test": "npm run lint && sanctuary-test && npm run doctest"
 				}
-			}
+			},
+			"local_folder": "davidchambers_transcribe",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Documentation"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 34336300,
@@ -13032,7 +13220,32 @@
 					"eslint-plugin-import": "^1.9.2",
 					"rimraf": "^2.5.2"
 				}
-			}
+			},
+			"local_folder": "andrepolischuk_typographic_numbers",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/andrepolischuk_typographic_numbers/test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Utility"
+			],
+			"test_frameworks": [
+				"ava"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 34788674,
@@ -13188,7 +13401,24 @@
 					"build": "gulp sass js"
 				},
 				"license": "MIT"
-			}
+			},
+			"local_folder": "certsimple_rosetta_stone",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 34944064,
@@ -13299,7 +13529,25 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 56,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "lo_th_sed",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Multimedia",
+				"Creativity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 35731134,
@@ -13416,7 +13664,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 23,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "VincentLoy_chuck_facts_ipsum",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Games"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 35574681,
@@ -13557,7 +13822,25 @@
 					"express": "^4.11.1",
 					"websocket": "^1.0.22"
 				}
-			}
+			},
+			"local_folder": "deepwather_plexWatchWeb_2_0",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Multimedia"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 36491438,
@@ -13722,7 +14005,38 @@
 				"directories": {
 					"test": "test"
 				}
-			}
+			},
+			"local_folder": "css_modules_css_selector_tokenizer",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/css_modules_css_selector_tokenizer/test"
+				],
+				"files": [
+					"./projects/version_1/files/css_modules_css_selector_tokenizer/test/test-cases-values.js",
+					"./projects/version_1/files/css_modules_css_selector_tokenizer/test/test-cases.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development",
+				"Utility"
+			],
+			"test_frameworks": [
+				"codecov",
+				"mocha",
+				"nyc"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 36900586,
@@ -13855,7 +14169,24 @@
 				"dependencies": {
 					"node-static": "^0.7.6"
 				}
-			}
+			},
+			"local_folder": "AlexeyGrishin_live_reload_mithril_demo",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 37479155,
@@ -13966,7 +14297,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 22,
-			"total_prs": 3
+			"total_prs": 3,
+			"local_folder": "benjamingr_favicon_bug",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 37594780,
@@ -14083,7 +14431,24 @@
 					"nightmare": "1.8.2"
 				},
 				"private": true
-			}
+			},
+			"local_folder": "lewagon_nightmare_boilerplate",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Testing"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 38379538,
@@ -14194,7 +14559,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 1,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "yaopengfei_webCAD",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Creativity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 40841624,
@@ -14314,6 +14696,7 @@
 			"total_commits": 904,
 			"total_prs": 808,
 			"is_npm": true,
+			"local_folder": "focus_trap_focus_trap",
 			"package_json": {
 				"name": "focus-trap",
 				"version": "7.4.0",
@@ -14412,7 +14795,33 @@
 					"start-server-and-test": "^2.0.0",
 					"typescript": "^5.0.4"
 				}
-			}
+			},
+			"has_tests": true,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": true,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [
+				"cypress"
+			],
+			"dependencies": [],
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/focus_trap_focus_trap/cypress"
+				],
+				"files": [
+					"./projects/version_1/files/focus_trap_focus_trap/cypress.config.js"
+				]
+			},
+			"is_done": true
 		},
 		{
 			"id": 40725300,
@@ -14663,7 +15072,34 @@
 				"excludeFiles": [
 					"./services/translations.js"
 				]
-			}
+			},
+			"local_folder": "BreakOutEvent_breakout_frontend",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/BreakOutEvent_breakout_frontend/test",
+					"./projects/version_1/files/BreakOutEvent_breakout_frontend/test/specs"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": true,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Games"
+			],
+			"test_frameworks": [
+				"mocha",
+				"webdriverio"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 43146195,
@@ -14774,7 +15210,25 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 142,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "ckx000_GBF",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Plugin",
+				"Games"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 43213162,
@@ -14891,7 +15345,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 17,
-			"total_prs": 2
+			"total_prs": 2,
+			"local_folder": "vtst_google_apps_scripts",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": true,
+			"not_english": false,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 43399578,
@@ -15021,7 +15492,24 @@
 				"devDependencies": {
 					
 				}
-			}
+			},
+			"local_folder": "sfeinste_dash_hipchat_doorbell",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Data Transfer"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 44657877,
@@ -15162,7 +15650,24 @@
 					"stylus": "^0.54.7",
 					"uglify-js": "^3.6.0"
 				}
-			}
+			},
+			"local_folder": "pakastin_nodegarden",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Games"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 46194792,
@@ -15306,7 +15811,25 @@
 						"stage-0"
 					]
 				}
-			}
+			},
+			"local_folder": "eanplatter_react_starter",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development",
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 45193724,
@@ -15480,7 +16003,30 @@
 				"lint-staged": {
 					"*.md": "textlint --rulesdir ./node_modules/textlint-checker-for-vuejs-jp-docs/rules/textlint-rule-vue-jp-docs -f pretty-error"
 				}
-			}
+			},
+			"local_folder": "vuejs_jp_vuejs_org",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"performance_test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/vuejs_jp_vuejs_org/src/perf"
+				],
+				"files": []
+			},
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Documentation"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 45276457,
@@ -15613,7 +16159,39 @@
 					"lodash": "^3.10.0",
 					"yeoman-generator": "^0.20.1"
 				}
-			}
+			},
+			"local_folder": "hharnisc_generate_service",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/hharnisc_generate_service/app/templates/service/integration-test",
+					"./projects/version_1/files/hharnisc_generate_service/app/templates/service/test"
+				],
+				"files": [
+					"./projects/version_1/files/hharnisc_generate_service/app/templates/service/integration-test/test.js",
+					"./projects/version_1/files/hharnisc_generate_service/app/templates/service/test/test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": true,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Server"
+			],
+			"test_frameworks": [
+				"mocha",
+				"supertest",
+				"sinon",
+				"chai"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 46187099,
@@ -15724,7 +16302,25 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 17,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "Mueat_shardUpload",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Websites",
+				"Data Transfer"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 46190605,
@@ -15887,7 +16483,39 @@
 					"should": "7.1.x"
 				},
 				"license": "MIT"
-			}
+			},
+			"local_folder": "gregl83_expect_cookies",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/gregl83_expect_cookies/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Testing"
+			],
+			"test_frameworks": [
+				"coveralls",
+				"istanbul",
+				"mocha",
+				"mockery",
+				"should",
+				"sinon",
+				"supertest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 46723790,
@@ -16058,7 +16686,25 @@
 						"plugin/no-unsupported-browser-features": true
 					}
 				}
-			}
+			},
+			"local_folder": "freaktechnik_notification_sounds",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Browser Extension"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 47783743,
@@ -16261,7 +16907,50 @@
 				"eslintConfig": {
 					"extends": "react-app"
 				}
-			}
+			},
+			"local_folder": "redradix_redux_base_app",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/communication/tests",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/entities/tests",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/legacy-entities/tests",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/legacy-ui/tests"
+				],
+				"files": [
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/communication/tests/actions.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/communication/tests/reducer.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/communication/tests/selectors.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/entities/tests/actions.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/entities/tests/reducer.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/entities/tests/selectors.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/legacy-entities/tests/actions.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/legacy-entities/tests/reducer.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/legacy-entities/tests/selectors.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/legacy-ui/tests/actions.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/legacy-ui/tests/reducer.spec.js",
+					"./projects/version_1/files/redradix_redux_base_app/src/modules/legacy-ui/tests/selectors.spec.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development",
+				"Websites"
+			],
+			"test_frameworks": [
+				"mocha",
+				"react-addons-test-utils"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 48301719,
@@ -16394,7 +17083,41 @@
 					"lerna": "^5.5.0",
 					"prettier": "^2.7.1"
 				}
-			}
+			},
+			"local_folder": "laat_mvn_dl",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-download/test",
+					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-filename/test",
+					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-name-parser/test",
+					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-url/test"
+				],
+				"files": [
+					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-download/test/test.js",
+					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-filename/test/test.js",
+					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-name-parser/test/test.js",
+					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-url/test/test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development",
+				"Monorepo"
+			],
+			"test_frameworks": [
+				"lerna"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 49222640,
@@ -16537,7 +17260,24 @@
 					"redis": "^2.6.3",
 					"sequelize": "^3.27.0"
 				}
-			}
+			},
+			"local_folder": "fairviewhs_silent_auction",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 50081919,
@@ -16681,7 +17421,32 @@
 				"devDependencies": {
 					"mocha": "*"
 				}
-			}
+			},
+			"local_folder": "hanqingnan_alidayu_node",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/hanqingnan_alidayu_node/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Data Transfer"
+			],
+			"test_frameworks": [
+				"mocha"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 51036998,
@@ -16798,7 +17563,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 5942,
-			"total_prs": 39
+			"total_prs": 39,
+			"local_folder": "18F_fedramp_data",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Security"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 50961337,
@@ -16985,7 +17767,25 @@
 					"prod": "grunt",
 					"test": "echo \"Error: no test specified\" && exit 1"
 				}
-			}
+			},
+			"local_folder": "arturmamedov_withFront",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 51670829,
@@ -17138,7 +17938,24 @@
 					"socket.io": "*",
 					"stylus": "0.42.3"
 				}
-			}
+			},
+			"local_folder": "gaessaki_RedSnap",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Social Networks"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 52402744,
@@ -17544,7 +18361,45 @@
 						"prettier-standard"
 					]
 				}
-			}
+			},
+			"local_folder": "digidem_mapeo_desktop",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/digidem_mapeo_desktop/test"
+				],
+				"files": [
+					"./projects/version_1/files/digidem_mapeo_desktop/src/renderer/components/MapFilter/lib/data_analysis/statistics.test.js",
+					"./projects/version_1/files/digidem_mapeo_desktop/src/renderer/components/MapFilter/lib/data_analysis/value_types.test.js",
+					"./projects/version_1/files/digidem_mapeo_desktop/src/renderer/components/MapFilter/utils/flat_object_entries.test.js",
+					"./projects/version_1/files/digidem_mapeo_desktop/src/renderer/components/MapFilter/utils/get_set.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"performance_test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/digidem_mapeo_desktop/.storybook/__mocks__/perf_hooks.js"
+				]
+			},
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": true,
+			"test_run_impossible": true,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Productivity"
+			],
+			"test_frameworks": [
+				"jest",
+				"tape"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 53189093,
@@ -17698,7 +18553,24 @@
 					"uglify-loader": "^1.3.0",
 					"webpack-dev-server": "^1.14.1"
 				}
-			}
+			},
+			"local_folder": "DawnyWu_react_share_buttons",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 53227128,
@@ -17855,7 +18727,24 @@
 					"webpack-dashboard": "^0.2.0",
 					"webpack-dev-server": "2.1.0-beta.10"
 				}
-			}
+			},
+			"local_folder": "kirjavascript_noobpack",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 53863398,
@@ -17995,7 +18884,24 @@
 					"url": "https://github.com/Dafrok/fuck-ie/issues"
 				},
 				"homepage": "https://github.com/Dafrok/fuck-ie#readme"
-			}
+			},
+			"local_folder": "Dafrok_fuck_ie",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 60017584,
@@ -18185,7 +19091,25 @@
 					"moment": "^2.29.1",
 					"github-api": "^3.4.0"
 				}
-			}
+			},
+			"local_folder": "Naramsim_GithubOriginalStreak",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Browser Extension",
+				"Productivity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 61451162,
@@ -18341,7 +19265,25 @@
 						"transform-object-rest-spread"
 					]
 				}
-			}
+			},
+			"local_folder": "ryardley_rxjs_as_redux",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration",
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 76792230,
@@ -18494,7 +19436,25 @@
 					"start": "watchify ./src/index.jsx --extension=jsx -v -t babelify -o bundle.js",
 					"zip": "npm run build && node zip"
 				}
-			}
+			},
+			"local_folder": "hharnisc_tabbie",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Browser Extension",
+				"Productivity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 63194792,
@@ -18660,7 +19620,40 @@
 					"sinon": "^4.3.0",
 					"standard": "^10.0.3"
 				}
-			}
+			},
+			"local_folder": "mustardamus_lehm",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/mustardamus_lehm/test"
+				],
+				"files": [
+					"./projects/version_1/files/mustardamus_lehm/test/config_spec.js",
+					"./projects/version_1/files/mustardamus_lehm/test/generator_spec.js",
+					"./projects/version_1/files/mustardamus_lehm/test/handlebars_spec.js",
+					"./projects/version_1/files/mustardamus_lehm/test/parser_spec.js",
+					"./projects/version_1/files/mustardamus_lehm/test/prompt_spec.js",
+					"./projects/version_1/files/mustardamus_lehm/test/templates_spec.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [
+				"mocha",
+				"sinon"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 64556037,
@@ -18915,7 +19908,36 @@
 				"jest": {
 					"testEnvironment": "node"
 				}
-			}
+			},
+			"local_folder": "mukeshsoni_frolic",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/mukeshsoni_frolic/app/compilers/elm-compiler/tests",
+					"./projects/version_1/files/mukeshsoni_frolic/app/compilers/purescript-compiler/temp/test"
+				],
+				"files": [
+					"./projects/version_1/files/mukeshsoni_frolic/app/compilers/elm-compiler/tests/helper_tests.js",
+					"./projects/version_1/files/mukeshsoni_frolic/app/compilers/elm-compiler/tests/parser.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [
+				"jest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 65300909,
@@ -19082,7 +20104,24 @@
 				"dependencies": {
 					"webpack-bundle-size-analyzer": "^2.0.2"
 				}
-			}
+			},
+			"local_folder": "MrToph_L_System",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Algorithms"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 65120398,
@@ -19214,7 +20253,25 @@
 					"ts-loader": "^0.8.2",
 					"webpack": "^1.13.1"
 				}
-			}
+			},
+			"local_folder": "overthink_pixitest",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration",
+				"Creativity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 65852679,
@@ -19395,7 +20452,24 @@
 					"build": "grunt default",
 					"test": "cd sample && npm start"
 				}
-			}
+			},
+			"local_folder": "rse_graphql_tools_sequelize",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Database"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 69594225,
@@ -19726,7 +20800,40 @@
 					"npm": ">=4.x",
 					"yarn": ">=0.21.3"
 				}
-			}
+			},
+			"local_folder": "axynos_STARK",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/axynos_STARK/test"
+				],
+				"files": [
+					"./projects/version_1/files/axynos_STARK/test/actions/counter.spec.js",
+					"./projects/version_1/files/axynos_STARK/test/components/Counter.spec.js",
+					"./projects/version_1/files/axynos_STARK/test/containers/CounterPage.spec.js",
+					"./projects/version_1/files/axynos_STARK/test/e2e/e2e.spec.js",
+					"./projects/version_1/files/axynos_STARK/test/reducers/counter.spec.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": true,
+			"test_run_impossible": true,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Multimedia"
+			],
+			"test_frameworks": [
+				"react-addons-test-utils",
+				"jest",
+				"sinon"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 69609211,
@@ -19837,7 +20944,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 103,
-			"total_prs": 7
+			"total_prs": 7,
+			"local_folder": "sbtron_BabylonJS_glTFLoader",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Multimedia"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 70390701,
@@ -19959,7 +21083,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 7,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "ZetaoYang_RSA",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Security"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 71247742,
@@ -20083,23 +21224,57 @@
 			"is_npm": true,
 			"multiple_package_json": true,
 			"package_json": {
-				"name": "service",
-				"version": "0.0.0",
+				"name": "toilet",
+				"version": "0.0.1",
 				"private": true,
 				"scripts": {
-					"start": "node ./bin/www"
+					"start": "node node_modules/react-native/local-cli/cli.js start",
+					"test": "jest"
 				},
 				"dependencies": {
-					"body-parser": "~1.15.1",
-					"cookie-parser": "~1.4.3",
-					"debug": "~4.1.1",
-					"ejs": "~2.4.1",
-					"express": "~4.13.4",
-					"express-session": "^1.14.1",
-					"morgan": "~1.9.1",
-					"serve-favicon": "~2.3.0"
+					"react": "15.3.2",
+					"react-native": "0.35.0",
+					"react-native-easy-toast": "^1.0.2",
+					"react-native-elements": "^0.6.2",
+					"react-native-modal": "^0.4.0",
+					"react-native-tab-navigator": "^0.3.3"
+				},
+				"jest": {
+					"preset": "jest-react-native"
+				},
+				"devDependencies": {
+					"babel-jest": "16.0.0",
+					"babel-preset-react-native": "1.9.0",
+					"jest": "16.0.1",
+					"jest-react-native": "16.0.0",
+					"react-test-renderer": "15.3.2"
 				}
-			}
+			},
+			"local_folder": "liumingmusic_react_native_full_example",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/liumingmusic_react_native_full_example/toilet/__tests__"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": true,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [
+				"jest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 73145872,
@@ -20216,7 +21391,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 4,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "hss01248_wxapp_devFrame",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 72912661,
@@ -20327,7 +21519,25 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 207,
-			"total_prs": 4
+			"total_prs": 4,
+			"local_folder": "mathsnz_NZGrapher",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration",
+				"Statistics"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 77306605,
@@ -20484,7 +21694,24 @@
 					"rusha": "^0.8.5",
 					"utf-8": "^1.0.0"
 				}
-			}
+			},
+			"local_folder": "rsimmons_plinth",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Creativity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 77246093,
@@ -20647,7 +21874,24 @@
 					"webpack": "^4.43.0",
 					"webpack-cli": "^3.3.12"
 				}
-			}
+			},
+			"local_folder": "pheroMona13_kamaDatepicker",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 79635405,
@@ -20758,7 +22002,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 55,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "ChristophWurst_twofactor_duo",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Security"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 80396695,
@@ -20934,7 +22195,38 @@
 				},
 				"license": "MIT",
 				"types": "./src/index.d.ts"
-			}
+			},
+			"local_folder": "LancerComet_lens_js",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/LancerComet_lens_js/test",
+					"./projects/version_1/files/LancerComet_lens_js/test/specs"
+				],
+				"files": [
+					"./projects/version_1/files/LancerComet_lens_js/test/specs/test.spec.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": true,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [
+				"chai",
+				"karma",
+				"mocha",
+				"sinon"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 82022247,
@@ -21099,7 +22391,52 @@
 					"url": "https://github.com/DripEmail/drip-nodejs/issues"
 				},
 				"homepage": "https://github.com/DripEmail/drip-nodejs#readme"
-			}
+			},
+			"local_folder": "DripEmail_drip_nodejs",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec"
+				],
+				"files": [
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/accounts_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/broadcasts_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/campaigns_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/client_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/conversions_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/custom_fields_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/events_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/forms_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/orders_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/shopper_activity_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/subscribers_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/subscriptions_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/tags_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/user_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/webhooks_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/workflows_spec.js",
+					"./projects/version_1/files/DripEmail_drip_nodejs/spec/lib/workflow_triggers_spec.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Server",
+				"Data Transfer"
+			],
+			"test_frameworks": [
+				"jasmine",
+				"sinon"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 82063465,
@@ -21271,7 +22608,33 @@
 						"react"
 					]
 				}
-			}
+			},
+			"local_folder": "agrishun_react_log_stream",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/agrishun_react_log_stream/tests"
+				],
+				"files": [
+					"./projects/version_1/files/agrishun_react_log_stream/tests/LogStream.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": true,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Server"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 84040218,
@@ -21386,7 +22749,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 5,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "yangyueyul_wechat_swiper_tab",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Social Networks"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 85324613,
@@ -21502,7 +22882,26 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 6,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "Big_Silver_Drag_and_Drop",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [
+				"jquery"
+			],
+			"is_done": true
 		},
 		{
 			"id": 85987011,
@@ -21631,7 +23030,25 @@
 					"fs-extra": "^2.0.0",
 					"klaw-sync": "^1.1.2"
 				}
-			}
+			},
+			"local_folder": "dwarcher_amazon_rekognition_example",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Server",
+				"Data Transfer"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 92894014,
@@ -21809,7 +23226,32 @@
 					"logo": "https://opencollective.com/opencollective/logo.txt"
 				},
 				"snyk": true
-			}
+			},
+			"local_folder": "cagataycali_url_shortener",
+			"has_tests": false,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/cagataycali_url_shortener/public/noty/test"
+				],
+				"files": [
+					"./projects/version_1/files/cagataycali_url_shortener/public/noty/test/unit/init.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 87843332,
@@ -21965,7 +23407,33 @@
 					"rpio": "^0.9.16",
 					"yql": "^1.0.2"
 				}
-			}
+			},
+			"local_folder": "S_I_T_Carepalito",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/S_I_T_Carepalito/cara/src/App.test.js",
+					"./projects/version_1/files/S_I_T_Carepalito/utiles/testServo.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": true,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"AI"
+			],
+			"test_frameworks": [
+				"react-scripts"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 88578066,
@@ -22076,7 +23544,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 5,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "chenpeng2_node_api",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Server"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 89916251,
@@ -22224,7 +23709,32 @@
 				"jest": {
 					"preset": "react-native"
 				}
-			}
+			},
+			"local_folder": "ctlabvn_react_native_starter_kit",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/ctlabvn_react_native_starter_kit/__tests__"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": true,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [
+				"jest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 91165768,
@@ -22389,7 +23899,24 @@
 					"url": "https://github.com/jghaanstra/com.xiaomi-miio/issues"
 				},
 				"homepage": "https://github.com/jghaanstra/com.xiaomi-miio#readme"
-			}
+			},
+			"local_folder": "jghaanstra_com_xiaomi_miio",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Smart Home"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 95873034,
@@ -22606,7 +24133,37 @@
 					"url-join": "^2.0.2",
 					"uuid": "^3.1.0"
 				}
-			}
+			},
+			"local_folder": "eleven_labs_codelabs",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/eleven_labs_codelabs/test"
+				],
+				"files": [
+					"./projects/version_1/files/eleven_labs_codelabs/test/containers/Home.test.jsx",
+					"./projects/version_1/files/eleven_labs_codelabs/test/reducers/reducer.test.js",
+					"./projects/version_1/files/eleven_labs_codelabs/test/services/componentFactory.test.jsx"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": false,
+			"test_run_impossible": true,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Demonstration",
+				"Development"
+			],
+			"test_frameworks": [
+				"jest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 95796622,
@@ -22799,7 +24356,35 @@
 					"debounce": "^1.0.2",
 					"xtend": "^4.0.1"
 				}
-			}
+			},
+			"local_folder": "mapbox_scroll_restorer",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/mapbox_scroll_restorer/test"
+				],
+				"files": [
+					"./projects/version_1/files/mapbox_scroll_restorer/test/get_window.test.js",
+					"./projects/version_1/files/mapbox_scroll_restorer/test/index.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": true,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [
+				"jest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 95507926,
@@ -22939,7 +24524,24 @@
 				"devDependencies": {
 					"nodemon": "^1.11.0"
 				}
-			}
+			},
+			"local_folder": "imjaroiswebdev_node_api_rest",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Server"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 98181698,
@@ -23103,7 +24705,24 @@
 					"probe-image-size": "^3.1.0",
 					"valid-url": "^1.0.9"
 				}
-			}
+			},
+			"local_folder": "moigonzalez_parrotify_cli",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 99177245,
@@ -23253,7 +24872,32 @@
 					"jest": "^24.9.0",
 					"prettier": "^1.5.3"
 				}
-			}
+			},
+			"local_folder": "humanmade_cf_to_tf",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/humanmade_cf_to_tf/tests"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Data Transfer"
+			],
+			"test_frameworks": [
+				"jest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 99131170,
@@ -23424,7 +25068,37 @@
 				"dependencies": {
 					"ramda": "^0.23.0"
 				}
-			}
+			},
+			"local_folder": "sidferreira_ignite_web_boilerplate",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/sidferreira_ignite_web_boilerplate/test"
+				],
+				"files": [
+					"./projects/version_1/files/sidferreira_ignite_web_boilerplate/test/generators-integration.test.js",
+					"./projects/version_1/files/sidferreira_ignite_web_boilerplate/test/interface.test.js",
+					"./projects/version_1/files/sidferreira_ignite_web_boilerplate/test/react-native-version.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": true,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development",
+				"Websites"
+			],
+			"test_frameworks": [
+				"jest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 100946766,
@@ -23579,7 +25253,35 @@
 				],
 				"author": "Sky.Sun",
 				"license": "MIT"
-			}
+			},
+			"local_folder": "eshengsky_lajax",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/eshengsky_lajax/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Development",
+				"Websites"
+			],
+			"test_frameworks": [
+				"mocha",
+				"chai",
+				"sinon"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 101432051,
@@ -23703,7 +25405,25 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 44,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "jrswab_Unfollow_Twitter_Users",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Social Networks",
+				"Browser Extension"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 102253495,
@@ -23823,7 +25543,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 13,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "bibhuticoder_snake_io",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Games"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 103821427,
@@ -23954,7 +25691,26 @@
 				},
 				"author": "",
 				"license": "ISC"
-			}
+			},
+			"local_folder": "timneutkens_next_magento2_graphql",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Data Transfer",
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 103735117,
@@ -24090,7 +25846,25 @@
 				"engines": {
 					"node": ">=8"
 				}
-			}
+			},
+			"local_folder": "mpj_fff_graphql_example",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Data Transfer",
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 107443709,
@@ -24258,7 +26032,42 @@
 				"workspaces": [
 					"packages/*"
 				]
-			}
+			},
+			"local_folder": "modosc_global_jsdom",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/modosc_global_jsdom/packages/global-jsdom/test"
+				],
+				"files": [
+					"./projects/version_1/files/modosc_global_jsdom/packages/global-jsdom/test/jsdom.test.cjs",
+					"./projects/version_1/files/modosc_global_jsdom/packages/global-jsdom/test/jsdom.test.js",
+					"./projects/version_1/files/modosc_global_jsdom/packages/global-jsdom/test/jsdom.test.mjs",
+					"./projects/version_1/files/modosc_global_jsdom/packages/global-jsdom-examples/mocha/test-commonjs.js",
+					"./projects/version_1/files/modosc_global_jsdom/packages/global-jsdom-examples/mocha/test-esm.js",
+					"./projects/version_1/files/modosc_global_jsdom/packages/global-jsdom-examples/module/test-module.js",
+					"./projects/version_1/files/modosc_global_jsdom/packages/global-jsdom-examples/node/test-commonjs.js",
+					"./projects/version_1/files/modosc_global_jsdom/packages/global-jsdom-examples/node/test-esm.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Testing"
+			],
+			"test_frameworks": [
+				"chai",
+				"mocha"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 108065259,
@@ -24408,7 +26217,37 @@
 					"search",
 					"replace"
 				]
-			}
+			},
+			"local_folder": "raphamorim_node_replace",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/raphamorim_node_replace/test",
+					"./projects/version_1/files/raphamorim_node_replace/test/test_files",
+					"./projects/version_1/files/raphamorim_node_replace/test/test_files/test_paths"
+				],
+				"files": [
+					"./projects/version_1/files/raphamorim_node_replace/testfunc.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Utility",
+				"Files"
+			],
+			"test_frameworks": [
+				"tape"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 110287375,
@@ -24525,7 +26364,25 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 9,
-			"total_prs": 1
+			"total_prs": 1,
+			"local_folder": "VojtechVitek_sock_proxy",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Social Networks",
+				"Data Transfer"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 111410181,
@@ -24696,7 +26553,34 @@
 					"morgan": "^1.10.0",
 					"nunjucks": "^3.2.2"
 				}
-			}
+			},
+			"local_folder": "heiseonline_embetty_server",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/heiseonline_embetty_server/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Server",
+				"Privacy"
+			],
+			"test_frameworks": [
+				"mocha",
+				"supertest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 113192542,
@@ -24866,7 +26750,24 @@
 					"dependency-check": "^3.1.0",
 					"standard": "^13.0.2"
 				}
-			}
+			},
+			"local_folder": "millette_dat_shell",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Data Transfer"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 114477356,
@@ -25020,7 +26921,37 @@
 					"test": "jasmine-node test",
 					"prepublish": "npm prune"
 				}
-			}
+			},
+			"local_folder": "igalarza_address_scrapper",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/igalarza_address_scrapper/test"
+				],
+				"files": [
+					"./projects/version_1/files/igalarza_address_scrapper/test/database/mongodb.spec.js",
+					"./projects/version_1/files/igalarza_address_scrapper/test/model/address.spec.js",
+					"./projects/version_1/files/igalarza_address_scrapper/test/txexplorer.spec.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Crypto"
+			],
+			"test_frameworks": [
+				"jasmine",
+				"istanbul"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 115760506,
@@ -25131,7 +27062,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 3,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "HACHIMIam_Paypal_checkout_vuejs_sailsjs",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Payment"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 124232617,
@@ -25287,7 +27235,32 @@
 				"peerDependencies": {
 					
 				}
-			}
+			},
+			"local_folder": "prscX_react_native_lock_screen",
+			"has_tests": false,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/prscX_react_native_lock_screen/Example/__tests__"
+				],
+				"files": [
+					"./projects/version_1/files/prscX_react_native_lock_screen/Example/__tests__/App-test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Mobile"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 124823433,
@@ -25482,7 +27455,37 @@
 					"npm-run-all": "^4.1.5",
 					"rimraf": "^4.0.7"
 				}
-			}
+			},
+			"local_folder": "timkpaine_jupyterlab_iframe",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/timkpaine_jupyterlab_iframe/js/tests",
+					"./projects/version_1/files/timkpaine_jupyterlab_iframe/jupyterlab_iframe/tests"
+				],
+				"files": [
+					"./projects/version_1/files/timkpaine_jupyterlab_iframe/js/tests/activate.test.js",
+					"./projects/version_1/files/timkpaine_jupyterlab_iframe/js/tests/export.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Productivity",
+				"Websites"
+			],
+			"test_frameworks": [
+				"jest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 127328736,
@@ -25672,7 +27675,24 @@
 					"last 2 versions",
 					"not ie <= 8"
 				]
-			}
+			},
+			"local_folder": "mayunbaba2_BaiduPCS_Go_Web",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 127530467,
@@ -25792,7 +27812,7 @@
 			"score": 1,
 			"total_commits": 40,
 			"total_prs": 0,
-			"is_npm": true,
+			"is_npm": false,
 			"package_json": {
 				"name": "jquery.selectBoxIt",
 				"title": "jquery Selectboxit",
@@ -25835,7 +27855,33 @@
 					"Twitter Bootstrap",
 					"Twitter Bootstrap Select Box"
 				]
-			}
+			},
+			"local_folder": "mohamedebrahim96_Quiz_App",
+			"has_tests": false,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/mohamedebrahim96_Quiz_App/app/src/test",
+					"./projects/version_1/files/mohamedebrahim96_Quiz_App/files/last version/quizes/admin/layout/gfranko-jquery.selectBoxIt.js-87a92f3/test",
+					"./projects/version_1/files/mohamedebrahim96_Quiz_App/files/last version/quizes/admin/layout/gfranko-jquery.selectBoxIt.js-87a92f3/test/spec"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Mobile",
+				"Games"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 130860965,
@@ -26001,7 +28047,24 @@
 					"format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
 					"fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
 				}
-			}
+			},
+			"local_folder": "bradfrost_gatsby_style_guide_guide",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Documentation"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 129122096,
@@ -26138,7 +28201,24 @@
 					"ask-sdk-core": "^2.0.0",
 					"ask-sdk-model": "^1.0.0"
 				}
-			}
+			},
+			"local_folder": "alexa_samples_skill_sample_nodejs_berry_bash",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Games"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 130244429,
@@ -26277,7 +28357,24 @@
 				"peerDependencies": {
 					"three": ">=0.111.0"
 				}
-			}
+			},
+			"local_folder": "johh_three_gltf_loader",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Data Transfer"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 132106939,
@@ -26438,7 +28535,30 @@
 					"ncp": "^2.0.0",
 					"rimraf": "^2.6.2"
 				}
-			}
+			},
+			"local_folder": "xiabingwu_dragm",
+			"has_tests": false,
+			"test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/xiabingwu_dragm/examples/src/App.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 133691175,
@@ -26663,7 +28783,33 @@
 						"protobuf/schema.proto"
 					]
 				}
-			}
+			},
+			"local_folder": "AraBlocks_ara_identity",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/AraBlocks_ara_identity/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Security"
+			],
+			"test_frameworks": [
+				"ava",
+				"truffle"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 136242280,
@@ -26842,7 +28988,33 @@
 						"url": "https://feross.org/support"
 					}
 				]
-			}
+			},
+			"local_folder": "feross_simple_sha256",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/feross_simple_sha256/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Algorithms",
+				"Security"
+			],
+			"test_frameworks": [
+				"tape"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 135883762,
@@ -26953,7 +29125,25 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 2,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "webXLing_uploadOss",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Websites",
+				"Data Transfer"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 139257557,
@@ -27070,7 +29260,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 11,
-			"total_prs": 2
+			"total_prs": 2,
+			"local_folder": "saurabhgour_react_native_progress_circle_without_library",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 138875604,
@@ -35177,7 +37384,37 @@
 						}
 					}
 				}
-			}
+			},
+			"local_folder": "cudbg_pae",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/cudbg_pae/js/test",
+					"./projects/version_1/files/cudbg_pae/python/test"
+				],
+				"files": [
+					"./projects/version_1/files/cudbg_pae/js/test/index.spec.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Science",
+				"Algorithms"
+			],
+			"test_frameworks": [
+				"chai",
+				"mocha"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 141376345,
@@ -35296,7 +37533,7 @@
 			"score": 1,
 			"total_commits": 139,
 			"total_prs": 218,
-			"is_npm": true,
+			"is_npm": false,
 			"multiple_package_json": true,
 			"package_json": {
 				"name": "@vuepress/plugin-notification",
@@ -35325,7 +37562,286 @@
 					"url": "https://github.com/vuejs/vuepress/issues"
 				},
 				"homepage": "https://github.com/vuejs/vuepress/packages/@vuepress/plugin-notification#readme"
-			}
+			},
+			"has_tests": false,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"has_performance_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Monorepo",
+				"Websites"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/yisainan_vue2/cropper-js-vue-/test",
+					"./projects/version_1/files/yisainan_vue2/cropper-js-vue-/test/e2e/specs",
+					"./projects/version_1/files/yisainan_vue2/cropper-js-vue-/test/unit/specs",
+					"./projects/version_1/files/yisainan_vue2/fresh-future-manager/static/UE/dialogs/spechars",
+					"./projects/version_1/files/yisainan_vue2/iview-admin/tests",
+					"./projects/version_1/files/yisainan_vue2/iview-admin/tests/e2e/specs",
+					"./projects/version_1/files/yisainan_vue2/koel/tests",
+					"./projects/version_1/files/yisainan_vue2/myCode/AAA/04/vue-webpack-demo/test",
+					"./projects/version_1/files/yisainan_vue2/myCode/AAA/04/vue-webpack-demo/test/e2e/specs",
+					"./projects/version_1/files/yisainan_vue2/myCode/AAA/04/vue-webpack-demo/test/unit/specs",
+					"./projects/version_1/files/yisainan_vue2/myCode/vue-music-mytest",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/e2e/specs",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/e2e/specs",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vuex/test",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vuex/test/e2e/specs",
+					"./projects/version_1/files/yisainan_vue2/vue-awesome-swiper/test",
+					"./projects/version_1/files/yisainan_vue2/vue-awesome-swiper/test/unit/specs",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/e2e/test",
+					"./projects/version_1/files/yisainan_vue2/vue-video-player/test",
+					"./projects/version_1/files/yisainan_vue2/vue-video-player/test/unit/specs",
+					"./projects/version_1/files/yisainan_vue2/vue-zhihu-daily/test",
+					"./projects/version_1/files/yisainan_vue2/vue-zhihu-daily/test/e2e/specs",
+					"./projects/version_1/files/yisainan_vue2/vue-zhihu-daily/test/unit/specs",
+					"./projects/version_1/files/yisainan_vue2/vue2-manage/test",
+					"./projects/version_1/files/yisainan_vue2/vue2-manage/test/e2e/specs",
+					"./projects/version_1/files/yisainan_vue2/vue2-manage/test/unit/specs",
+					"./projects/version_1/files/yisainan_vue2/vue2.0+node.js+MongoDB全栈打造商城/project/qilei/test",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/core/__tests__",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/markdown/__tests__",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/shared-utils/__tests__",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/test-utils",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/theme-default/__tests__",
+					"./projects/version_1/files/yisainan_vue2/vuex/test",
+					"./projects/version_1/files/yisainan_vue2/vuex/test/e2e/specs",
+					"./projects/version_1/files/yisainan_vue2/vuex/types/test"
+				],
+				"files": [
+					"./projects/version_1/files/yisainan_vue2/cropper-js-vue-/build/webpack.test.conf.js",
+					"./projects/version_1/files/yisainan_vue2/cropper-js-vue-/config/test.env.js",
+					"./projects/version_1/files/yisainan_vue2/cropper-js-vue-/test/e2e/specs/test.js",
+					"./projects/version_1/files/yisainan_vue2/cropper-js-vue-/test/unit/specs/HelloWorld.spec.js",
+					"./projects/version_1/files/yisainan_vue2/fresh-future-manager/config/test.env.js",
+					"./projects/version_1/files/yisainan_vue2/fresh-future-manager/static/UE/dialogs/spechars/spechars.js",
+					"./projects/version_1/files/yisainan_vue2/iview-admin/tests/e2e/specs/test.js",
+					"./projects/version_1/files/yisainan_vue2/iview-admin/tests/unit/HelloWorld.spec.js",
+					"./projects/version_1/files/yisainan_vue2/myCode/AAA/04/vue-webpack-demo/config/test.env.js",
+					"./projects/version_1/files/yisainan_vue2/myCode/AAA/04/vue-webpack-demo/test/e2e/specs/test.js",
+					"./projects/version_1/files/yisainan_vue2/myCode/AAA/04/vue-webpack-demo/test/unit/specs/Hello.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/helpers/test-object-option.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/ssr/ssr-basic-renderer.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/ssr/ssr-bundle-render.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/ssr/ssr-stream.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/ssr/ssr-string.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/ssr/ssr-template.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/component/component-async.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/component/component-keep-alive.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/component/component-scoped-slot.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/component/component-slot.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/component/component.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/debug.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/bind.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/class.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/cloak.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/for.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/html.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/if.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/model-checkbox.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/model-component.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/model-dynamic.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/model-file.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/model-parse.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/model-radio.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/model-select.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/model-text.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/on.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/once.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/pre.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/show.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/static-style-parser.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/style.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/directives/text.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/error-handling.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/filter/filter.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/global-api/assets.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/global-api/compile.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/global-api/config.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/global-api/extend.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/global-api/mixin.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/global-api/set-delete.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/global-api/use.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/instance/init.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/instance/methods-data.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/instance/methods-events.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/instance/methods-lifecycle.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/instance/properties.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/instance/render-proxy.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/comments.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/components.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/computed.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/data.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/delimiters.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/directives.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/el.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/errorCaptured.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/extends.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/functional.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/inheritAttrs.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/inject.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/lifecycle.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/methods.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/mixins.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/name.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/parent.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/props.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/propsData.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/render.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/renderError.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/template.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/watch.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/options/_scopeId.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/ref.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/transition/transition-group.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/transition/transition-mode.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/features/transition/transition.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/compiler/codegen.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/compiler/compiler-options.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/compiler/optimizer.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/compiler/parser.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/observer/dep.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/observer/observer.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/observer/scheduler.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/observer/watcher.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/server-compiler/optimizer.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/sfc/sfc-parser.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/util/next-tick.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/create-component.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/create-element.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/modules/attrs.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/modules/class.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/modules/directive.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/modules/dom-props.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/modules/events.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/modules/style.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/patch/children.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/patch/edge-cases.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/patch/element.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/patch/hooks.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/unit/modules/vdom/patch/hydration.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/cases/cases.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/compiler/append.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/compiler/class.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/compiler/compile.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/compiler/parser.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/compiler/props.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/compiler/style.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/compiler/v-model.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/runtime/attrs.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/runtime/class.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/runtime/components/richtext.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/runtime/events.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/runtime/framework.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/runtime/node.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/test/weex/runtime/style.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/api.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/async.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/create-map.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/create-matcher.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/custom-query.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/discrete-components.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/error-handling.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/location.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/node.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/path.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/query.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue-router/test/unit/specs/route.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vuex/test/unit/helpers.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vuex/test/unit/hot-reload.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vuex/test/unit/module/module-collection.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vuex/test/unit/module/module.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vuex/test/unit/modules.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vuex/test/unit/store.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vuex/test/unit/util.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-awesome-swiper/config/test.conf.js",
+					"./projects/version_1/files/yisainan_vue2/vue-awesome-swiper/test/unit/specs/VueAwesomeSwiper.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-dazhong/config/test.env.js",
+					"./projects/version_1/files/yisainan_vue2/vue-sell/config/test.env.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/asset.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validation-functional.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity/event.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity/inputable.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity/lifecycle.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity/progresses.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity/props.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity/render.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity/reset.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity/validate.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity/validation-result.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity-functional.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity-group-functional.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/components/validity-result-group.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/elements/component.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/elements/multi.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/elements/single.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/validation.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/validators/max.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/validators/maxlength.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/validators/min.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/validators/minlength.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/validators/pattern.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-validator/test/unit/validators/required.test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-video-player/config/test.conf.js",
+					"./projects/version_1/files/yisainan_vue2/vue-video-player/test/unit/specs/VueAwesomeSwiper.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue-zhihu-daily/test/e2e/specs/test.js",
+					"./projects/version_1/files/yisainan_vue2/vue-zhihu-daily/test/unit/specs/Hello.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vue2-manage/build/webpack.test.conf.js",
+					"./projects/version_1/files/yisainan_vue2/vue2-manage/config/test.env.js",
+					"./projects/version_1/files/yisainan_vue2/vue2-manage/test/e2e/specs/test.js",
+					"./projects/version_1/files/yisainan_vue2/vue2-manage/test/unit/specs/Hello.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/core/__tests__/plugin-api/AsyncOption.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/core/__tests__/plugin-api/Option.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/core/__tests__/plugin-api/PluginAPI.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/core/__tests__/plugin-api/PluginUtil.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/core/__tests__/prepare/Page.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/core/__tests__/prepare/prepare.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/markdown/__tests__/containers.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/markdown/__tests__/highlight.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/markdown/__tests__/highlightLines.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/markdown/__tests__/hoist.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/markdown/__tests__/lineNumers.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/markdown/__tests__/link.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/markdown/__tests__/slugify.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/markdown/__tests__/snippet.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/shared-utils/__tests__/deeplyParseHeaders.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/shared-utils/__tests__/fileToPath.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/shared-utils/__tests__/isIndexFile.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/shared-utils/__tests__/moduleResolver.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/shared-utils/__tests__/parseHeaders.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/shared-utils/__tests__/unescapeHtml.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/theme-default/__tests__/components/DropdownLink.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/packages/@vuepress/theme-default/__tests__/components/NavLink.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuepress/scripts/test.js",
+					"./projects/version_1/files/yisainan_vue2/vuex/test/unit/helpers.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuex/test/unit/hot-reload.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuex/test/unit/module/module-collection.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuex/test/unit/module/module.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuex/test/unit/modules.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuex/test/unit/store.spec.js",
+					"./projects/version_1/files/yisainan_vue2/vuex/test/unit/util.spec.js"
+				]
+			},
+			"performance_test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/yisainan_vue2/vue-analysis/vue/src/core/util/perf.js"
+				]
+			},
+			"has_metrics": true,
+			"is_done": true
 		},
 		{
 			"id": 140947884,
@@ -35484,7 +38000,35 @@
 					"rollup": "^3.8.1",
 					"static-server": "^2.2.1"
 				}
-			}
+			},
+			"local_folder": "cgwire_js_3d_model_viewer",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/cgwire_js_3d_model_viewer/tests"
+				],
+				"files": [
+					"./projects/version_1/files/cgwire_js_3d_model_viewer/tests/test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": true,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Multimedia"
+			],
+			"test_frameworks": [
+				"chai",
+				"mocha"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 141197304,
@@ -35624,7 +38168,26 @@
 					"dependency-check": "^3.1.0",
 					"standard": "^11.0.1"
 				}
-			}
+			},
+			"local_folder": "s3ththompson_howtocode_club",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Development",
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 143320760,
@@ -35737,7 +38300,25 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 3,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "wolfhong_jdk_archive",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Websites",
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 143891896,
@@ -35848,7 +38429,25 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 6,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "tigoe_TS04_Bluetooth_Meter",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Productivity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 144754740,
@@ -35999,7 +38598,36 @@
 					"build": "webpack --config settings/build.js --progress",
 					"deploy": "gh-pages -d build/app"
 				}
-			}
+			},
+			"local_folder": "monosux_open_ticket_dapp",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/monosux_open_ticket_dapp/test"
+				],
+				"files": [
+					"./projects/version_1/files/monosux_open_ticket_dapp/test/OpenEvents.test.js",
+					"./projects/version_1/files/monosux_open_ticket_dapp/test/StableToken.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": true,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Payment"
+			],
+			"test_frameworks": [
+				"jest",
+				"istanbul"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 146620801,
@@ -36179,7 +38807,24 @@
 					"eslint-plugin-react": "^7.8.2",
 					"eslint-plugin-taro": "^1.0.3"
 				}
-			}
+			},
+			"local_folder": "zuoge85_taro_dva",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 147467543,
@@ -36318,7 +38963,30 @@
 					"url": "https://github.com/TheBrainFamily/cypress-app-watcher-preprocessor/issues"
 				},
 				"homepage": "https://github.com/TheBrainFamily/cypress-app-watcher-preprocessor#readme"
-			}
+			},
+			"local_folder": "TheBrainFamily_cypress_app_watcher_preprocessor",
+			"has_tests": false,
+			"test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/TheBrainFamily_cypress_app_watcher_preprocessor/cypressPreprocessor.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Testing"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 147093514,
@@ -36478,7 +39146,26 @@
 					"webpack-cli": "^3.1.0",
 					"webpack-dev-server": "^3.1.4"
 				}
-			}
+			},
+			"local_folder": "GrapesJS_touch",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Development",
+				"Creativity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 149679146,
@@ -36611,7 +39298,24 @@
 					"url-loader": "^1.0.1"
 				},
 				"license": "ISC"
-			}
+			},
+			"local_folder": "cazala_nftmarketcap",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Crypto"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 157647409,
@@ -37492,7 +40196,24 @@
 						}
 					}
 				}
-			}
+			},
+			"local_folder": "ournetworks_2019",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 160981829,
@@ -37673,7 +40394,25 @@
 				"engines": {
 					"node": "10.14.2"
 				}
-			}
+			},
+			"local_folder": "orifmilod_iCinema",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Multimedia"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 160466578,
@@ -37784,7 +40523,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 28,
-			"total_prs": 2
+			"total_prs": 2,
+			"local_folder": "zj19941113_You_Jump_I_Jump",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Games"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 160912879,
@@ -37902,7 +40658,25 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 3,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "Chintan2108_NDVI_and_Vegetation_Health_Calculation",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Plugin",
+				"Productivity"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 162387454,
@@ -38049,7 +40823,24 @@
 				"devDependencies": {
 					"bili": "^3.4.2"
 				}
-			}
+			},
+			"local_folder": "abensur_etiquette",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Utility"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 163594108,
@@ -38224,7 +41015,24 @@
 					"eslint-plugin-import": "^2.12.0",
 					"eslint-plugin-taro": "1.2.7"
 				}
-			}
+			},
+			"local_folder": "vicvin_taro_starter_kit",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 163790723,
@@ -38353,7 +41161,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 73,
-			"total_prs": 7
+			"total_prs": 7,
+			"local_folder": "shaoxiongji_knowledge_graphs",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Science"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 169553531,
@@ -38516,7 +41341,33 @@
 					"tsd": "^0.14.0",
 					"xo": "^0.38.2"
 				}
-			}
+			},
+			"local_folder": "sindresorhus_split_on_first",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/sindresorhus_split_on_first/index.test-d.ts",
+					"./projects/version_1/files/sindresorhus_split_on_first/test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Utility"
+			],
+			"test_frameworks": [
+				"ava"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 170742334,
@@ -38653,7 +41504,24 @@
 					"not ie <= 11",
 					"not op_mini all"
 				]
-			}
+			},
+			"local_folder": "leighhalliday_use_effect_example",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 174820015,
@@ -38767,7 +41635,30 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 10,
-			"total_prs": 20
+			"total_prs": 20,
+			"local_folder": "gui66497_decoder",
+			"has_tests": false,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/gui66497_decoder/src/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": true,
+			"categories": [
+				"Smart Home"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 171874963,
@@ -38884,7 +41775,24 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 12,
-			"total_prs": 2
+			"total_prs": 2,
+			"local_folder": "57uff3r_aiohttp_rest_api",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Server"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 178254669,
@@ -39047,7 +41955,30 @@
 				"files": [
 					"dist"
 				]
-			}
+			},
+			"local_folder": "aleph_im_aleph_js",
+			"has_tests": false,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/aleph_im_aleph_js/tests"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Network"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 178520658,
@@ -39186,7 +42117,36 @@
 						"<rootDir>/tests/setup.js"
 					]
 				}
-			}
+			},
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/JasonEtco_smee_action/tests"
+				],
+				"files": [
+					"./projects/version_1/files/JasonEtco_smee_action/tests/index.test.js"
+				]
+			},
+			"local_folder": "JasonEtco_smee_action",
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Data Transfer",
+				"Development"
+			],
+			"test_frameworks": [
+				"jest",
+				"nock"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 186995123,
@@ -39304,6 +42264,7 @@
 			"total_commits": 106,
 			"total_prs": 83,
 			"is_npm": true,
+			"local_folder": "scalar_labs_scalardl_node_client_sdk",
 			"package_json": {
 				"name": "@scalar-labs/scalardl-node-client-sdk",
 				"version": "3.5.0",
@@ -39339,7 +42300,45 @@
 					"mochawesome": "^7.0.1",
 					"properties-parser": "^0.3.1"
 				}
-			}
+			},
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/scalar_labs_scalardl_node_client_sdk/test"
+				],
+				"files": [
+					"./projects/version_1/files/scalar_labs_scalardl_node_client_sdk/test/integration_test.js",
+					"./projects/version_1/files/scalar_labs_scalardl_node_client_sdk/test/integration_test_auditor.js",
+					"./projects/version_1/files/scalar_labs_scalardl_node_client_sdk/test/integration_test_auditor_binary_request.js",
+					"./projects/version_1/files/scalar_labs_scalardl_node_client_sdk/test/integration_test_binary_request.js",
+					"./projects/version_1/files/scalar_labs_scalardl_node_client_sdk/test/integration_test_file_based_properties.js"
+				]
+			},
+			"has_performance_tests": true,
+			"performance_test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/scalar_labs_scalardl_node_client_sdk/benchmark/"
+				],
+				"files": []
+			},
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": false,
+			"test_run_impossible": true,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Database"
+			],
+			"test_frameworks": [
+				"chai",
+				"mocha"
+			],
+			"dependencies": [],
+			"has_performance_metrics": true,
+			"is_done": true
 		},
 		{
 			"id": 194851173,
@@ -39468,7 +42467,24 @@
 					"crx": "^5.0.0",
 					"node-rsa": "^1.0.5"
 				}
-			}
+			},
+			"local_folder": "enolgor_ungoogled_chromium_extension_installer",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Browser Extension"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 189631495,
@@ -39643,7 +42659,40 @@
 					"socket.io": "^2.3.0"
 				},
 				"license": "MIT"
-			}
+			},
+			"local_folder": "mohamed_taman_Effective_Java_SE",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/mohamed_taman_Effective_Java_SE/test"
+				],
+				"files": [
+					"./projects/version_1/files/mohamed_taman_Effective_Java_SE/test/test-markdown-element-attributes.js",
+					"./projects/version_1/files/mohamed_taman_Effective_Java_SE/test/test-markdown-external.js",
+					"./projects/version_1/files/mohamed_taman_Effective_Java_SE/test/test-markdown-options.js",
+					"./projects/version_1/files/mohamed_taman_Effective_Java_SE/test/test-markdown-slide-attributes.js",
+					"./projects/version_1/files/mohamed_taman_Effective_Java_SE/test/test-markdown.js",
+					"./projects/version_1/files/mohamed_taman_Effective_Java_SE/test/test-pdf.js",
+					"./projects/version_1/files/mohamed_taman_Effective_Java_SE/test/test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": true,
+			"test_run_impossible": true,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [
+				"qunitjs"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 190670407,
@@ -39811,7 +42860,36 @@
 					"microbundle": "0.15.1",
 					"mocha": "10.2.0"
 				}
-			}
+			},
+			"local_folder": "ABVanton200_critical_css_inliner",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/ABVanton200_critical_css_inliner/test"
+				],
+				"files": [
+					"./projects/version_1/files/ABVanton200_critical_css_inliner/test/test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": true,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Development"
+			],
+			"test_frameworks": [
+				"assert",
+				"mocha"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 194432398,
@@ -39949,7 +43027,31 @@
 			"score": 1,
 			"is_npm": false,
 			"total_commits": 64,
-			"total_prs": 0
+			"total_prs": 0,
+			"local_folder": "lucylow_Deep_Learning_Mahjong___",
+			"has_tests": false,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/lucylow_Deep_Learning_Mahjong___/integration tests"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Games",
+				"AI"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 192576994,
@@ -40095,7 +43197,24 @@
 					"type": "git",
 					"url": "https://github.com/woltsu/Gif_Slowing_Bot"
 				}
-			}
+			},
+			"local_folder": "woltsu_Gif_Slowing_Bot",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Social Networks"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 193695852,
@@ -40237,7 +43356,32 @@
 					"url": "https://github.com/mafintosh/debugment/issues"
 				},
 				"homepage": "https://github.com/mafintosh/debugment"
-			}
+			},
+			"local_folder": "mafintosh_debugment",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/mafintosh_debugment/test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [
+				"tape"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 211183821,
@@ -40382,7 +43526,24 @@
 					"tslint-plugin-prettier": "^2.0.1",
 					"typescript": "^3.6.3"
 				}
-			}
+			},
+			"local_folder": "yyuueexxiinngg_some_scripts",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Utility"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 202365235,
@@ -40544,7 +43705,41 @@
 						"no-use-before-define": 0
 					}
 				}
-			}
+			},
+			"local_folder": "mapbox_martini",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/mapbox_martini/test"
+				],
+				"files": [
+					"./projects/version_1/files/mapbox_martini/test/test.js"
+				]
+			},
+			"has_performance_tests": true,
+			"performance_test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/mapbox_martini/bench.js"
+				]
+			},
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Algorithms"
+			],
+			"test_frameworks": [
+				"tape"
+			],
+			"dependencies": [],
+			"has_performance_metrics": true,
+			"is_done": true
 		},
 		{
 			"id": 200293386,
@@ -40695,7 +43890,24 @@
 					"@rollup/plugin-node-resolve": "^9.0.0",
 					"rollup": "^2.63.0"
 				}
-			}
+			},
+			"local_folder": "kgolid_ballots",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Algorithms"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 200358602,
@@ -40847,7 +44059,40 @@
 					"url": "git@github.com:alfateam/node-cls.git"
 				},
 				"homepage": "https://github.com/alfateam/node-cls/blob/master/README.md"
-			}
+			},
+			"local_folder": "alfateam_node_cls",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/alfateam_node_cls/tests"
+				],
+				"files": [
+					"./projects/version_1/files/alfateam_node_cls/tests/async.test.js",
+					"./projects/version_1/files/alfateam_node_cls/tests/nested.test.js",
+					"./projects/version_1/files/alfateam_node_cls/tests/start.test.js",
+					"./projects/version_1/files/alfateam_node_cls/tests/sync.test.js",
+					"./projects/version_1/files/alfateam_node_cls/tests/wrapper.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Server",
+				"Data Transfer"
+			],
+			"test_frameworks": [
+				"jest",
+				"coveralls"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 201105391,
@@ -41017,7 +44262,41 @@
 					"uuid": "^8.3.2",
 					"winston": "^3.3.3"
 				}
-			}
+			},
+			"local_folder": "benAkehurst_amazon_price_checker",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/e2e/src/app.e2e-spec.ts",
+					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/app.component.spec.ts",
+					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/home/home.page.spec.ts",
+					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/add-item/add-item.page.spec.ts",
+					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/auth/auth.page.spec.ts",
+					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/profile/profile.page.spec.ts",
+					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/single-item/single-item.page.spec.ts",
+					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/test.ts"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": true,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Shopping"
+			],
+			"test_frameworks": [
+				"jasmine",
+				"karma",
+				"istanbul"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 209597906,
@@ -41134,7 +44413,7 @@
 			"score": 1,
 			"total_commits": 80,
 			"total_prs": 37,
-			"is_npm": true,
+			"is_npm": false,
 			"multiple_package_json": true,
 			"package_json": {
 				"name": "hnvm-test",
@@ -48159,7 +51438,36 @@
 						"dev": true
 					}
 				}
-			}
+			},
+			"local_folder": "UrbanCompass_hnvm",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/UrbanCompass_hnvm/test"
+				],
+				"files": [
+					"./projects/version_1/files/UrbanCompass_hnvm/test/node-fixed-version.test.js",
+					"./projects/version_1/files/UrbanCompass_hnvm/test/node-latest-tag.test.js",
+					"./projects/version_1/files/UrbanCompass_hnvm/test/node-semver-range.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": true,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Development"
+			],
+			"test_frameworks": [
+				"jest"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 208699501,
@@ -48305,7 +51613,32 @@
 					"url": "https://github.com/ArelySkywalker/Cocktail-Search-App/issues"
 				},
 				"homepage": "https://github.com/ArelySkywalker/Cocktail-Search-App#readme"
-			}
+			},
+			"local_folder": "ArelySkywalker_Cocktail_Search_App",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1/files/ArelySkywalker_Cocktail_Search_App/client/src/App.test.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": true,
+			"test_run_impossible": true,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Social Networks"
+			],
+			"test_frameworks": [
+				"react-scripts"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 210208684,
@@ -48447,7 +51780,26 @@
 				},
 				"author": "",
 				"license": "ISC"
-			}
+			},
+			"local_folder": "bradlead_digital_rewards",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Websites",
+				"Server",
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 210828943,
@@ -48613,7 +51965,30 @@
 					"url": "https://github.com/dschear94/AudioCloud/issues"
 				},
 				"homepage": "https://github.com/dschear94/AudioCloud#readme"
-			}
+			},
+			"local_folder": "dschear94_AudioCloud",
+			"has_tests": false,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/dschear94_AudioCloud/test"
+				],
+				"files": []
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Multimedia"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 214557656,
@@ -48780,7 +52155,24 @@
 					"> 1%",
 					"last 2 versions"
 				]
-			}
+			},
+			"local_folder": "Rococolate_ast_demo",
+			"has_tests": false,
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": true,
+			"has_backend": true,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Demonstration"
+			],
+			"test_frameworks": [],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 216919499,
@@ -48971,7 +52363,38 @@
 				"engines": {
 					"node": ">=10.0"
 				}
-			}
+			},
+			"local_folder": "interop_alliance_gnap_client_js",
+			"has_tests": true,
+			"test_occurences": {
+				"dirs": [
+					"./projects/version_1/files/interop_alliance_gnap_client_js/test"
+				],
+				"files": [
+					"./projects/version_1/files/interop_alliance_gnap_client_js/test/unit/xyz-client.spec.js"
+				]
+			},
+			"has_performance_tests": false,
+			"has_metrics": true,
+			"has_failing_tests": false,
+			"has_ui_tests": false,
+			"test_run_impossible": false,
+			"has_frontend": false,
+			"has_backend": false,
+			"no_javascript": false,
+			"not_english": false,
+			"categories": [
+				"Security"
+			],
+			"test_frameworks": [
+				"chai",
+				"karma",
+				"nyc",
+				"mocha",
+				"sinon"
+			],
+			"dependencies": [],
+			"is_done": true
 		},
 		{
 			"id": 230386172,

@@ -6,6 +6,8 @@
 		"syntaxhighlighter",
 		"mocha",
 		"chai",
-		"jasmine"
+		"jasmine",
+		"qs",
+		"assert"
 	]
 }
