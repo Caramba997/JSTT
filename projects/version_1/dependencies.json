@@ -1,13 +1,13 @@
 {
 	"eslint": {
 		"prod": 2,
-		"dev": 81,
-		"total": 83
+		"dev": 80,
+		"total": 82
 	},
 	"typescript": {
 		"prod": 11,
-		"dev": 62,
-		"total": 73
+		"dev": 63,
+		"total": 74
 	},
 	"react": {
 		"prod": 53,
@@ -21,22 +21,22 @@
 	},
 	"@types/node": {
 		"prod": 5,
-		"dev": 42,
-		"total": 47
-	},
-	"jest": {
-		"prod": 0,
 		"dev": 43,
-		"total": 43
+		"total": 48
 	},
 	"prettier": {
 		"prod": 2,
-		"dev": 40,
-		"total": 42
+		"dev": 41,
+		"total": 43
 	},
 	"webpack": {
 		"prod": 5,
-		"dev": 37,
+		"dev": 38,
+		"total": 43
+	},
+	"jest": {
+		"prod": 0,
+		"dev": 42,
 		"total": 42
 	},
 	"express": {
@@ -56,8 +56,8 @@
 	},
 	"mocha": {
 		"prod": 0,
-		"dev": 28,
-		"total": 28
+		"dev": 29,
+		"total": 29
 	},
 	"@typescript-eslint/eslint-plugin": {
 		"prod": 0,
@@ -136,13 +136,13 @@
 	},
 	"husky": {
 		"prod": 0,
-		"dev": 19,
-		"total": 19
+		"dev": 20,
+		"total": 20
 	},
 	"webpack-cli": {
 		"prod": 1,
-		"dev": 18,
-		"total": 19
+		"dev": 19,
+		"total": 20
 	},
 	"babel-preset-react": {
 		"prod": 5,
@@ -189,6 +189,11 @@
 		"dev": 1,
 		"total": 15
 	},
+	"ts-node": {
+		"prod": 1,
+		"dev": 14,
+		"total": 15
+	},
 	"@testing-library/jest-dom": {
 		"prod": 10,
 		"dev": 4,
@@ -209,6 +214,11 @@
 		"dev": 1,
 		"total": 14
 	},
+	"chai": {
+		"prod": 0,
+		"dev": 14,
+		"total": 14
+	},
 	"dotenv": {
 		"prod": 9,
 		"dev": 5,
@@ -224,24 +234,19 @@
 		"dev": 13,
 		"total": 14
 	},
+	"lint-staged": {
+		"prod": 0,
+		"dev": 14,
+		"total": 14
+	},
 	"style-loader": {
 		"prod": 2,
 		"dev": 12,
 		"total": 14
 	},
-	"ts-node": {
-		"prod": 1,
-		"dev": 13,
-		"total": 14
-	},
-	"chai": {
-		"prod": 0,
-		"dev": 13,
-		"total": 13
-	},
-	"lint-staged": {
-		"prod": 0,
-		"dev": 13,
+	"rimraf": {
+		"prod": 2,
+		"dev": 11,
 		"total": 13
 	},
 	"@testing-library/user-event": {
@@ -272,11 +277,6 @@
 	"redux-thunk": {
 		"prod": 12,
 		"dev": 0,
-		"total": 12
-	},
-	"rimraf": {
-		"prod": 2,
-		"dev": 10,
 		"total": 12
 	},
 	"autoprefixer": {
@@ -334,6 +334,11 @@
 		"dev": 11,
 		"total": 11
 	},
+	"tslint": {
+		"prod": 0,
+		"dev": 11,
+		"total": 11
+	},
 	"url-loader": {
 		"prod": 2,
 		"dev": 9,
@@ -379,12 +384,12 @@
 		"dev": 0,
 		"total": 10
 	},
-	"standard": {
-		"prod": 0,
-		"dev": 10,
+	"rxjs": {
+		"prod": 9,
+		"dev": 1,
 		"total": 10
 	},
-	"tslint": {
+	"standard": {
 		"prod": 0,
 		"dev": 10,
 		"total": 10
@@ -414,14 +419,14 @@
 		"dev": 9,
 		"total": 9
 	},
+	"karma": {
+		"prod": 0,
+		"dev": 9,
+		"total": 9
+	},
 	"minimist": {
 		"prod": 6,
 		"dev": 3,
-		"total": 9
-	},
-	"node-fetch": {
-		"prod": 7,
-		"dev": 2,
 		"total": 9
 	},
 	"postcss": {
@@ -434,9 +439,9 @@
 		"dev": 4,
 		"total": 9
 	},
-	"rxjs": {
-		"prod": 9,
-		"dev": 0,
+	"ts-loader": {
+		"prod": 0,
+		"dev": 9,
 		"total": 9
 	},
 	"uuid": {
@@ -484,12 +489,17 @@
 		"dev": 0,
 		"total": 8
 	},
-	"karma": {
-		"prod": 0,
-		"dev": 8,
+	"mkdirp": {
+		"prod": 5,
+		"dev": 3,
 		"total": 8
 	},
 	"morgan": {
+		"prod": 7,
+		"dev": 1,
+		"total": 8
+	},
+	"node-fetch": {
 		"prod": 7,
 		"dev": 1,
 		"total": 8
@@ -524,11 +534,6 @@
 		"dev": 8,
 		"total": 8
 	},
-	"ts-loader": {
-		"prod": 0,
-		"dev": 8,
-		"total": 8
-	},
 	"@babel/plugin-transform-runtime": {
 		"prod": 0,
 		"dev": 7,
@@ -537,6 +542,11 @@
 	"@babel/runtime": {
 		"prod": 3,
 		"dev": 4,
+		"total": 7
+	},
+	"@types/mocha": {
+		"prod": 0,
+		"dev": 7,
 		"total": 7
 	},
 	"babel-plugin-transform-class-properties": {
@@ -569,9 +579,9 @@
 		"dev": 7,
 		"total": 7
 	},
-	"mkdirp": {
-		"prod": 5,
-		"dev": 2,
+	"karma-chrome-launcher": {
+		"prod": 0,
+		"dev": 7,
 		"total": 7
 	},
 	"nodemailer": {
@@ -615,11 +625,6 @@
 		"total": 6
 	},
 	"@commitlint/config-conventional": {
-		"prod": 0,
-		"dev": 6,
-		"total": 6
-	},
-	"@types/mocha": {
 		"prod": 0,
 		"dev": 6,
 		"total": 6
@@ -687,11 +692,6 @@
 	"inquirer": {
 		"prod": 6,
 		"dev": 0,
-		"total": 6
-	},
-	"karma-chrome-launcher": {
-		"prod": 0,
-		"dev": 6,
 		"total": 6
 	},
 	"karma-jasmine": {
@@ -1084,6 +1084,11 @@
 		"dev": 1,
 		"total": 4
 	},
+	"puppeteer": {
+		"prod": 2,
+		"dev": 2,
+		"total": 4
+	},
 	"react-native": {
 		"prod": 4,
 		"dev": 0,
@@ -1300,6 +1305,11 @@
 		"total": 3
 	},
 	"@tarojs/webpack-runner": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
+	"@types/chai": {
 		"prod": 0,
 		"dev": 3,
 		"total": 3
@@ -1529,6 +1539,11 @@
 		"dev": 3,
 		"total": 3
 	},
+	"karma-mocha": {
+		"prod": 0,
+		"dev": 3,
+		"total": 3
+	},
 	"lerna": {
 		"prod": 0,
 		"dev": 3,
@@ -1567,11 +1582,6 @@
 	"postcss-loader": {
 		"prod": 0,
 		"dev": 3,
-		"total": 3
-	},
-	"puppeteer": {
-		"prod": 2,
-		"dev": 1,
 		"total": 3
 	},
 	"qs": {
@@ -1850,11 +1860,6 @@
 		"total": 2
 	},
 	"@testing-library/cypress": {
-		"prod": 0,
-		"dev": 2,
-		"total": 2
-	},
-	"@types/chai": {
 		"prod": 0,
 		"dev": 2,
 		"total": 2
@@ -2339,17 +2344,22 @@
 		"dev": 2,
 		"total": 2
 	},
-	"karma-mocha": {
-		"prod": 0,
-		"dev": 2,
-		"total": 2
-	},
 	"karma-phantomjs-launcher": {
 		"prod": 0,
 		"dev": 2,
 		"total": 2
 	},
 	"karma-sourcemap-loader": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"karma-spec-reporter": {
+		"prod": 0,
+		"dev": 2,
+		"total": 2
+	},
+	"karma-webpack": {
 		"prod": 0,
 		"dev": 2,
 		"total": 2
@@ -2477,11 +2487,6 @@
 	"prismjs": {
 		"prod": 2,
 		"dev": 0,
-		"total": 2
-	},
-	"prompt-sync": {
-		"prod": 0,
-		"dev": 2,
 		"total": 2
 	},
 	"proxyquire": {

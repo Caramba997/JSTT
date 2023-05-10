@@ -31,6 +31,10 @@
 		"lerna",
 		"react-scripts",
 		"truffle",
-		"nock"
+		"nock",
+		"test-director",
+		"coverage-node",
+		"testing-library",
+		"hardhat"
 	]
 }

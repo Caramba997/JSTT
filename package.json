@@ -11,6 +11,7 @@
     "get-randoms": "node scripts/get-randoms.js",
     "get-random-repositories": "node scripts/get-random-repositories.js",
     "get-commits": "node scripts/get-commits.js",
+    "find-test-cases": "node scripts/find-test-cases.js",
     "playground": "node scripts/playground.js",
     "debug": "nodemon server/app.js",
     "app": "node server/app.js"
