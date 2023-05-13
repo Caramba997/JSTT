@@ -35,6 +35,10 @@
 		"test-director",
 		"coverage-node",
 		"testing-library",
-		"hardhat"
+		"hardhat",
+		"ng",
+		"nx",
+		"tsc",
+		"vite"
 	]
 }

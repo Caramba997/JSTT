@@ -1,0 +1,6 @@
+{
+  "coverageDirectory": "./",
+  "collectCoverage": true,
+  "coverageReporters": ["json-summary"],
+  "coverageThreshold": null
+}

@@ -202,6 +202,8 @@
     const path = `D:/Projekte/Master/GitHub-Data-Collector/projects/${id}/files/${data.local_folder || ''}`;
     $('[data-e="local-directory"]').text(path);
 
+    if (data.test_occurences) $('[data-e="ntc"]').attr('title', `${data.test_occurences.dirs.join('<br><br>')}<br>______<br>${data.test_occurences.files.join('<br><br>')}`);
+
     // Init tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.map(function (tooltipTriggerEl) {
