@@ -30,7 +30,9 @@ class API {
       metricdefs: '/api/metricdefs',
       calccoverage: '/api/calccoverage',
       clean: '/api/clean',
-      calcperfmetrics: '/api/calcperfmetrics'
+      calcperfmetrics: '/api/calcperfmetrics',
+      evaluation: '/api/evaluation',
+      calccorrelations: '/api/calccorrelations'
     };
   }
 

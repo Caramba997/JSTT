@@ -8,6 +8,7 @@ const { Random } = require('../lib/random.js');
 const { Files } = require('../lib/files.js');
 const { NPM } = require('../lib/npm.js');
 const { Metrics } = require('../lib/metrics.js');
+const { Correlations } = require('../lib/correlations.js');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -27,6 +28,7 @@ const random = new Random();
 const files = new Files();
 const npm = new NPM();
 const metrics = new Metrics();
+const correlations = new Correlations();
 
 function success(res, data) {
   return res.send({
@@ -332,9 +334,36 @@ app.post('/api/repos', async (req, res) => {
     files.write('project', 'repos.json', data, [id]);
     const project = files.json('project', 'project.json', [id]);
     if (project.size === data.repos.length) {
-      project.has_counts = true;
+      project.has_repos = true;
       files.write('project', 'project.json', project, [id]);
     }
+    return success(res, 'Saved changes');
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.get('/api/evaluation', async (req, res) => {
+  const id = req.query.id;
+  if (!id) return error(res, 400, 'Id missing');
+  try {
+    const exists = files.exists('project', 'evaluation.json', [id]);
+    if (!exists) return error(res, 404, 'Evaluation not existent');
+    const evaluation = files.json('project', 'evaluation.json', [id]);
+    return success(res, evaluation);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/evaluation', async (req, res) => {
+  const id = req.body.id,
+        data = req.body.data;
+  if (!id || !data) return error(res, 400, 'Param missing');
+  try {
+    files.write('project', 'evaluation.json', data, [id]);
     return success(res, 'Saved changes');
   }
   catch (e) {
@@ -660,6 +689,19 @@ app.post('/api/calcperfmetrics', async (req, res) => {
   try {
     const report = metrics.complexityRepoPerf(paths);
     return success(res, report);
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/calccorrelations', async (req, res) => {
+  const data = req.body.data;
+  if (!data) return error(res, 400, 'Param missing');
+  try {
+    const correlations = correlations.repo(data);
+    return success(res, correlations);
   }
   catch (e) {
     console.log(e);

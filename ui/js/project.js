@@ -85,6 +85,8 @@
       openButton.attr('href', `/ui/repos?id=${id}`);
       openButton.show();
     }
+
+    $('[data-a="open-evaluation"]').attr('href', `/ui/evaluation?id=${id}`);
   }, (error) => {
     console.warn(error);
     $('[data-e="error-load"]').show();
