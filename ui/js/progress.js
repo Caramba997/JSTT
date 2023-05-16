@@ -38,6 +38,7 @@ class Progress {
 
   setProgress(current, total) {
     this.currentElement.text(current);
+    this.totalElement.text(total);
     this.barElement.width(`${current / total * 100}%`);
     if (current - this.startIndex === 0) {
       this.timeElement.text('?:??');

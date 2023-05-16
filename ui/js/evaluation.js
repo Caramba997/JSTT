@@ -44,22 +44,11 @@
   });
 
   $('[data-a="calc-correlations"]').on('click', async () => {
-    progress.init('Calc correlations', 1);
-    const metrics = await api.getPromise('metrics', {
+    progress.init('Calc correlations (Progress in server log)', 1);
+    const response = await api.postPromise('calccorrelations', {
       id: id
     });
-    const repoCount = Object.keys(metrics.repos).length;
-    progress.setProgress(0, repoCount);
-    const correlations = {};
-    let current = 1;
-    Object.entries(metrics.repos).forEach(async ([repo, repoMetrics]) => {
-      const response = await api.postPromise('calccorrelations', {
-        id: id
-      });
-      correlations[repo] = response.data;
-      progress.setProgress(current++, repoCount);
-    });
-    data.correlations = correlations;
+    data.correlations = response.data;
     await api.postPromise('evaluation', {
       id: id,
       data: data

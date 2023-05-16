@@ -349,9 +349,14 @@ app.get('/api/evaluation', async (req, res) => {
   if (!id) return error(res, 400, 'Id missing');
   try {
     const exists = files.exists('project', 'evaluation.json', [id]);
-    if (!exists) return error(res, 404, 'Evaluation not existent');
-    const evaluation = files.json('project', 'evaluation.json', [id]);
-    return success(res, evaluation);
+    let result;
+    if (exists) {
+      result = files.json('project', 'evaluation.json', [id]);
+    }
+    else {
+      result = {};
+    }
+    return success(res, result);
   }
   catch (e) {
     return error(res, 500, 'Something went wrong');
@@ -697,11 +702,12 @@ app.post('/api/calcperfmetrics', async (req, res) => {
 });
 
 app.post('/api/calccorrelations', async (req, res) => {
-  const data = req.body.data;
-  if (!data) return error(res, 400, 'Param missing');
+  const id = req.body.id;
+  if (!id) return error(res, 400, 'Param missing');
   try {
-    const correlations = correlations.repo(data);
-    return success(res, correlations);
+    const data = files.json('project', 'metrics.json', [id]);
+    const correlation = await correlations.project(data);
+    return success(res, { correlation: correlation });
   }
   catch (e) {
     console.log(e);
