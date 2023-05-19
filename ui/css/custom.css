@@ -1,3 +1,21 @@
 code {
   cursor: copy;
 }
+
+.Correlations {
+  max-height: 80vh;
+  max-width: 100vw;
+  overflow: scroll;
+}
+.Correlations thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
+.Correlations tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+}

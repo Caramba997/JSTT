@@ -706,8 +706,9 @@ app.post('/api/calccorrelations', async (req, res) => {
   if (!id) return error(res, 400, 'Param missing');
   try {
     const data = files.json('project', 'metrics.json', [id]);
-    const correlation = await correlations.project(data);
-    return success(res, { correlation: correlation });
+    const repos = files.json('project', 'repos.json', [id]);
+    const correlation = await correlations.project(data, repos.repos);
+    return success(res, { correlations: correlation });
   }
   catch (e) {
     console.log(e);

@@ -17,6 +17,17 @@
   const gitHub = new GitHub();
   const metrics = new Metrics();
 
+  const data = files.json('project', 'repos.json', ['version_1_new']);
+  const newData = { repos: [] };
+  for (let i = 0; i < data.repos.length; i++) {
+    const repo = data.repos[i];
+    if (repo.has_tests) {
+      repo.is_done = false;
+      newData.repos.push(repo);
+    }
+  }
+  files.write('project', 'repos.json', newData, ['version_1_new']);
+
   // const data = files.json('project', 'metrics.json', ['version_1']);
   // Object.entries(data.repos).forEach(async ([repo, repoMetrics]) => {
   //   let misses = [];
@@ -32,15 +43,6 @@
   //     console.log(`--> ${repo}: ${misses.join(',')}\n`);
   //   }
   // });
-  
-  process.stdout.write("Hi");
-  process.stdout.write("Ho");
-  process.stdout.write("\n");
-  process.stdout.write("Du");
-  process.stdout.clearLine(0);
-  process.stdout.cursorTo(0);
-  process.stdout.write("\nkleiner");
-  process.stdout.write("\n");
   
   // const rho = new SpearmanRHO([0,1,2,3,4,5],[0,6,6,6,6,7]);
   // rho.calc()

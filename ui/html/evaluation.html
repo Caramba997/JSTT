@@ -9,6 +9,7 @@
     <meta name="description" content="Finn Carstensen">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="custom.css">
     <script src="jquery.min.js" defer></script>
     <script src="bootstrap.bundle.min.js" defer></script>
     <script src="api.js" defer></script>
@@ -35,8 +36,28 @@
         </ul>
       </div>
     </nav>
-    <div class="overflow-scroll">
-      <table data-e="correlations" class="table table-striped">
+    <div class="Correlations">
+      <table data-e="correlations-test" class="table table-striped">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <br>
+    <table data-e="correlations-test-summary" class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Test metric</th>
+          <th scope="col">Source metric</th>
+          <th scope="col">Correlation</th>
+          <th scope="col">p-Value</th>
+          <th scope="col">n</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <br><br>
+    <div class="Correlations">
+      <table data-e="correlations-perf" class="table table-striped">
         <thead></thead>
         <tbody></tbody>
       </table>

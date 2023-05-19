@@ -1,0 +1,15 @@
+{
+	"type": "github",
+	"name": "Version 1 New",
+	"size": 384,
+	"languages": [
+		"JavaScript",
+		"TypeScript"
+	],
+	"query": "stars:>=5",
+	"id": "version_1_new",
+	"full_query": "language:{{language}}+created:{{dates}}+stars:>=5",
+	"has_randoms": true,
+	"has_counts": true,
+	"has_repos": true
+}
