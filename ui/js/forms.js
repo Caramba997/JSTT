@@ -40,7 +40,12 @@ class Forms {
             break;
           }
           case 'number': {
-            if (input.val() !== '') json[input.attr('name')] = Number(input.val());
+            if (input.val() !== '') {
+              json[input.attr('name')] = Number(input.val());
+            }
+            else if (json[input.attr('name')]) {
+              delete json[input.attr('name')];
+            }
             break;
           }
           default: {

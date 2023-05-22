@@ -11,5 +11,6 @@
 	"full_query": "language:{{language}}+created:{{dates}}+stars:>=5",
 	"has_randoms": true,
 	"has_counts": true,
-	"has_repos": true
+	"has_repos": true,
+	"metric_mode": "per_module"
 }

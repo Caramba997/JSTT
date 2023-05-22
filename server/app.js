@@ -653,15 +653,6 @@ app.post('/api/metrics', async (req, res) => {
     else {
       content = { repos: {} };
     }
-    if (data.test.notcM !== undefined && data.test.notcM instanceof Array) {
-      if (data.test.notcM.length === 0) {
-        delete data.test.notcM;
-      }
-      else {
-        const arr = data.test.notcM.map(value => Number(value));
-        data.test.notcM = metrics.valuesFromArr(arr, 'notcM');
-      }
-    }
     content.repos[repo] = data;
     files.write('project', 'metrics.json', content, [id], true);
     return success(res, data);
@@ -677,7 +668,7 @@ app.post('/api/calcmetrics', async (req, res) => {
   if (!id || !repo) return error(res, 400, 'Param missing');
   try {
     const formattedName = files.safeFormat(repo);
-    const report = metrics.complexityRepo(files.path('files', '', [id, formattedName]));
+    const report = metrics.complexityRepoPerModule(files.path('files', '', [id, formattedName]));
     return success(res, report);
   }
   catch (e) {

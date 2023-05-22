@@ -159,11 +159,14 @@
 				"Demonstration"
 			],
 			"test_frameworks": [],
-			"is_done": false,
+			"is_done": true,
 			"dependencies": [],
 			"has_ui_tests": true,
 			"has_performance_tests": false,
-			"test_run_impossible": false
+			"test_run_impossible": false,
+			"has_failing_tests": false,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 506402,
@@ -46386,5 +46389,17 @@
 			"dependencies": [],
 			"is_done": false
 		}
-	]
+	],
+	"stats": {
+		"name": "version_1_new",
+		"total": 148,
+		"js": 110,
+		"ts": 38,
+		"org": 48,
+		"individual": 100,
+		"maxstars": 34429,
+		"minstars": 5,
+		"frontend": 0,
+		"backend": 0
+	}
 }

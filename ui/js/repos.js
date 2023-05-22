@@ -15,7 +15,11 @@
     tbody.html('');
     let doneRepos = 0;
     let haveTests = 0,
-        haveNoTests = 0;
+        haveNoTests = 0,
+        haveUiTests = 0,
+        havePerfTests = 0,
+        haveFrontend = 0,
+        haveBackend = 0;
     let nextRepo = null;
     for (let i = 0; i < data.repos.length; i++) {
       const repo = data.repos[i],
@@ -77,6 +81,10 @@
       }
       if (repo.has_tests === true) {
         haveTests++;
+        if (repo.has_ui_tests) haveUiTests++;
+        if (repo.has_performance_tests) havePerfTests++;
+        if (repo.has_frontend) haveFrontend++;
+        if (repo.has_backend) haveBackend++;
       }
       else if (repo.has_tests === false) {
         haveNoTests++;
@@ -108,6 +116,10 @@
     });
     $(`[data-e="stats-done"]`).text(`${Math.round(doneRepos / data.stats.total * 100)}% (${doneRepos}/${data.stats.total})`);
     $(`[data-e="stats-tests"]`).text(`${Math.round(haveTests / (haveTests + haveNoTests) * 100)}% (${haveTests}/${haveTests + haveNoTests})`);
+    $(`[data-e="stats-ui-tests"]`).text(`${Math.round(haveUiTests / data.stats.total * 100)}% (${haveUiTests}/${data.stats.total})`);
+    $(`[data-e="stats-perf-tests"]`).text(`${Math.round(havePerfTests / data.stats.total * 100)}% (${havePerfTests}/${data.stats.total})`);
+    $(`[data-e="stats-frontend"]`).text(haveFrontend);
+    $(`[data-e="stats-backend"]`).text(haveBackend);
 
     // Init tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));

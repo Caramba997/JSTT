@@ -77,39 +77,72 @@
         const defResponse = await api.getPromise('metricdefs');
         definitions = defResponse.data;
       }
-      Object.entries(metrics).forEach(([category, names]) => {
+      Object.entries(metrics).forEach(([category, mtrcs]) => {
         if (category === 'test' && !data.has_tests) return;
-        const element = $(`[data-e="metrics-${category}"] tbody`);
-        element.html('');
-        Object.entries(names).forEach(([name, values]) => {
-          const metric = name.match(/[a-z]+/)[0],
-                scope = name.match(/[A-Z]/)[0] === 'M' ? 'Module' : 'Function';
-          const def = definitions[metric] || { name: '?', description: '?'},
-                tooltip = `<b>${def.name}</b><br><em>Scope: ${scope}</em><br>${def.description}`;
-          let cells = `<tr data-name="${name}"><td scope="row" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="${tooltip}">${name}</td>`;
-          Object.entries(values).forEach(([type, value]) => {
-            const formatValue = (val) => {
-              const valueS = val !== null ? `${val}`.split('.') : '?';
-              return valueS.length === 2 ? `${val.toFixed(3)}`.replace(/(\.0+|(?<=\.[1-9])0+|(?<=\.[0-9][1-9])0+)$/, '') : `${val}`;
-            };
-            if (value instanceof Array) {
-              const arr = value.map(formatValue);
-              cells += `<td data-type="${type}"><textarea rows="1" cols="50" class="form-control">${arr.join(', ')}</textarea></td>`;
-            }
-            else {
-              cells += `<td data-type="${type}">${formatValue(value)}</td>`;
-            }
-          });
-          cells += '</tr>';
-          element.append(cells);
-        });
+        const element = $(`[data-e="${category}-metrics-json"]`);
+        element.val(JSON.stringify(mtrcs, null, 2));
       });
+      function addConnectionRows(tbody, data) {
+        let html = '';
+        let hasOther = false;
+        Object.entries(data).forEach(([testPath, sourcePath]) => {
+          if (testPath === 'OTHER') {
+            html += `<tr><td>${testPath}</td><td><input name="${testPath}" class="form-control" type="text" data-type="array" value="${sourcePath || ''}"><select class="form-select"></select></td></tr>`;
+            hasOther = true;
+          }
+          else {
+            html += `<tr><td>${testPath}</td><td><input name="${testPath}" class="form-control" type="text" value="${sourcePath || ''}"><select class="form-select"></select></td></tr>`;
+          }
+        });
+        if (!hasOther) html += '<tr><td>OTHER</td><td><input name="OTHER" class="form-control" type="text"><select class="form-select"></select></td></tr>';
+        tbody.html(html);
+      }
+      function initSelects(tbody, sourceData) {
+        let selectHtml = '';
+        Object.keys(sourceData).forEach(path => {
+          selectHtml += `<option value="${path}">${path}</option>`;
+        });
+        tbody.find('select').html(selectHtml).on('change', (e) => {
+          const input = $(e.target).closest('tr').find('input');
+          if (input.attr('name') === 'OTHER') {
+            if (input.val().includes(e.target.value)) return;
+            if (input.val()) input.val(input.val() + ',');
+            input.val(input.val() + e.target.value);
+          }
+          else {
+            $(e.target).closest('tr').find('input').val(e.target.value);
+          }
+        });
+      }
+      if (metrics.test && metrics.test != {}) {
+        const tbody = $('[data-e="connections-test"] tbody');
+        addConnectionRows(tbody, metrics.testConnections);
+        initSelects(tbody, metrics.source);
+
+        // NTC
+        let ntcHtml = '';
+        Object.entries(metrics.test).forEach(([path, mtrcs]) => {
+          if (mtrcs.notcM !== undefined) {
+            ntcHtml += `<tr><td>${path}</td><td><input name="${path}" type="number" value="${mtrcs.notcM}" class="form-control"></td></tr>`
+          }
+          else {
+            ntcHtml += `<tr><td>${path}</td><td><input name="${path}" type="number" class="form-control"></td></tr>`
+          }
+        });
+        if (ntcHtml !== '') $('[data-e="manual-test"] tbody').html(ntcHtml);
+      }
+      if (metrics.performance) {
+        $('[data-e="performance-test-connections"]').show();
+        const tbody = $('[data-e="connections-performance"] tbody')
+        addConnectionRows(tbody, metrics.performanceConnections);
+        initSelects(tbody, metrics.source);
+      }
       // Insert values into manual metric elements
       const manualMetricElements = $('[data-e="manual-test"] [data-name]');
       manualMetricElements.each((index, elem) => {
         elem = $(elem);
         const metric = elem.data('name'),
-              data = metrics.test[metric];
+              data = metrics.test && metrics.test[metric];
         if (!data) return;
         Object.entries(data).forEach(([key, value]) => {
           const dataElem = elem.find(`[data-value="${key}"]`);
@@ -202,8 +235,6 @@
     const path = `D:/Projekte/Master/GitHub-Data-Collector/projects/${id}/files/${data.local_folder || ''}`;
     $('[data-e="local-directory"]').text(path);
 
-    if (data.test_occurences) $('[data-e="ntc"]').attr('title', `${data.test_occurences.dirs.join('<br><br>')}<br>______<br>${data.test_occurences.files.join('<br><br>')}`);
-
     // Init tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -270,23 +301,6 @@
     progress.end();
   });
 
-  $('[data-a="clean"]').on('click', async () => {
-    progress.init('Clean repo', 1);
-    const response = await api.postPromise('clean', {
-      id: id,
-      repo: repo
-    });
-    if (!response) {
-      const alert = $('[data-e="error"]');
-      alert.html('Error cleaning repo').show();
-      setTimeout(() => {
-        alert.hide();
-      }, 5000);
-    }
-    progress.setProgress(1, 1);
-    progress.end();
-  });
-
   $('[data-a="check-tests"]').on('click', async () => {
     progress.init('Check tests', 1);
     const response = await api.postPromise('checktests', {
@@ -313,9 +327,10 @@
       repo: repo
     });
     const responseMetrics = response.data;
-    Object.entries(responseMetrics).forEach(([name, mtrcs]) => {
-      Object.entries(mtrcs).forEach(([metric, values]) => {
-        metrics[name][metric] = values;
+    console.log(responseMetrics);
+    Object.entries(responseMetrics).forEach(([type, paths]) => {
+      Object.entries(paths).forEach(([path, mtrcs]) => {
+        metrics[type][path] = mtrcs;
       });
     });
     await api.postPromise('metrics', {
@@ -366,8 +381,33 @@
       id: id,
       repo: repo
     });
-    Object.entries(coverage.data).forEach(([key, value]) => {
-      metrics.test[key] = value;
+    Object.entries(coverage.data).forEach(([path, coverageMetrics]) => {
+      const pathFixed = path.replace(/\\/g, '/').replace(/.*(?=\/projects)/, '.');
+      let testConnection = null;
+      Object.entries(metrics.testConnections).forEach(([testPath, sourcePath]) => {
+        if (testPath === 'OTHER') {
+          if (sourcePath.includes(pathFixed)) {
+            const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
+            const otherPath = pathFixed.replace(moduleName, `OTHER-${moduleName}`)
+            testConnection = metrics.test[otherPath];
+          }
+        }
+        else {
+          if (sourcePath === pathFixed) testConnection = metrics.test[testPath];
+        }
+      });
+      if (!testConnection) {
+        const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
+        const otherPath = pathFixed.replace(moduleName, `OTHER-${moduleName}`)
+        testConnection = metrics.test[otherPath] = testConnection = metrics.test[otherPath] || {};
+        testConnection = metrics.test[otherPath];
+        metrics.testConnections.OTHER = metrics.testConnections.OTHER || [];
+        metrics.testConnections.OTHER.push(pathFixed);
+      }
+      testConnection.lcovM = coverageMetrics.lines.pct;
+      testConnection.fcovM = coverageMetrics.functions.pct;
+      testConnection.scovM = coverageMetrics.statements.pct;
+      testConnection.bcovM = coverageMetrics.branches.pct;
     });
     progress.setProgress(1, 2);
     await api.postPromise('metrics', {
@@ -387,8 +427,22 @@
       repo: repo
     });
     metrics.performance = metrics.performance || {};
-    Object.entries(coverage.data).forEach(([key, value]) => {
-      metrics.performance[key] = value;
+    Object.entries(coverage.data).forEach(([path, coverageMetrics]) => {
+      const pathFixed = path.replace(/\\/g, '/').replace(/.*(?=\/projects)/, '.');
+      let testConnection = null;
+      Object.entries(metrics.performanceConnections).forEach(([testPath, sourcePath]) => {
+        if (sourcePath === pathFixed) testConnection = metrics.test[testPath];
+      });
+      if (!testConnection) {
+        const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
+        const otherPath = pathFixed.replace(moduleName, `OTHER-${moduleName}`)
+        testConnection = metrics.performance[otherPath] = testConnection = metrics.performance[otherPath] || {};
+        testConnection = metrics.performance[otherPath];
+      }
+      testConnection.lcovM = coverageMetrics.lines.pct;
+      testConnection.fcovM = coverageMetrics.functions.pct;
+      testConnection.scovM = coverageMetrics.statements.pct;
+      testConnection.bcovM = coverageMetrics.branches.pct;
     });
     progress.setProgress(1, 2);
     await api.postPromise('metrics', {
@@ -401,6 +455,21 @@
     progress.end();
   });
 
+  $('[data-a="save-connections"]').on('click', async () => {
+    progress.init('Save connection data', 1);
+    forms.toJson($('[data-e="connections-test"]'), metrics.testConnections);
+    forms.toJson($('[data-e="connections-performance"]'), metrics.performanceConnections);
+    const metricsResponse = await api.postPromise('metrics', {
+      id: id,
+      repo: repo,
+      data: metrics
+    });
+    metrics = metricsResponse.data;
+    progress.setProgress(1, 1);
+    buildPage();
+    progress.end();
+  });
+
   $('[data-a="save-manual"]').on('click', async () => {
     progress.init('Save manual data', 2);
     data = forms.toJson($('[data-e="manual-classification"]'), data);
@@ -409,7 +478,15 @@
       data: data
     });
     progress.setProgress(1, 2);
-    metrics.test = forms.toJson($('[data-e="manual-test"]'), metrics.test);
+    document.querySelectorAll('[data-e="manual-test"] input').forEach((input) => {
+      if (input.value !== '') {
+        metrics.test[input.name].notcM = Number(input.value);
+      }
+      else if (metrics.test[input.name].notcM) {
+        delete metrics.test[input.name].notcM;
+      }
+    });
+    metrics.test = forms.toJson($('[data-e="manual-test"] input'), metrics.test);
     const metricsResponse = await api.postPromise('metrics', {
       id: id,
       repo: repo,
