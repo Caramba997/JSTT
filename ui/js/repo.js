@@ -87,22 +87,23 @@
         let hasOther = false;
         Object.entries(data).forEach(([testPath, sourcePath]) => {
           if (testPath === 'OTHER') {
-            html += `<tr><td>${testPath}</td><td><input name="${testPath}" class="form-control" type="text" data-type="array" value="${sourcePath || ''}"><select class="form-select"></select></td></tr>`;
+            html += `<tr><td>${testPath}</td><td><input name="${testPath}" class="form-control" type="text" data-type="array" value="${sourcePath || ''}" data-form-skip="skip"><select class="form-select"></select></td></tr>`;
             hasOther = true;
           }
           else {
-            html += `<tr><td>${testPath}</td><td><input name="${testPath}" class="form-control" type="text" value="${sourcePath || ''}"><select class="form-select"></select></td></tr>`;
+            html += `<tr><td>${testPath}</td><td><input name="${testPath}" class="form-control" type="text" value="${sourcePath || ''}" data-form-skip="skip"><select class="form-select"></select></td></tr>`;
           }
         });
-        if (!hasOther) html += '<tr><td>OTHER</td><td><input name="OTHER" class="form-control" type="text"><select class="form-select"></select></td></tr>';
+        if (!hasOther) html += '<tr><td>OTHER</td><td><input name="OTHER" class="form-control" type="text" data-form-skip="skip"><select class="form-select"></select></td></tr>';
         tbody.html(html);
       }
       function initSelects(tbody, sourceData) {
-        let selectHtml = '';
+        let selectHtml = '<option value="...">...</option>';
         Object.keys(sourceData).forEach(path => {
           selectHtml += `<option value="${path}">${path}</option>`;
         });
         tbody.find('select').html(selectHtml).on('change', (e) => {
+          if (e.target.value === '...') return;
           const input = $(e.target).closest('tr').find('input');
           if (input.attr('name') === 'OTHER') {
             if (input.val().includes(e.target.value)) return;
@@ -110,8 +111,9 @@
             input.val(input.val() + e.target.value);
           }
           else {
-            $(e.target).closest('tr').find('input').val(e.target.value);
+            input.val(e.target.value);
           }
+          input.data('form-skip', 'set');
         });
       }
       if (metrics.test && metrics.test != {}) {
@@ -123,10 +125,10 @@
         let ntcHtml = '';
         Object.entries(metrics.test).forEach(([path, mtrcs]) => {
           if (mtrcs.notcM !== undefined) {
-            ntcHtml += `<tr><td>${path}</td><td><input name="${path}" type="number" value="${mtrcs.notcM}" class="form-control"></td></tr>`
+            ntcHtml += `<tr><td>${path}</td><td><input name="${path}" type="number" value="${mtrcs.notcM}" class="form-control" data-form-skip="skip"></td></tr>`
           }
           else {
-            ntcHtml += `<tr><td>${path}</td><td><input name="${path}" type="number" class="form-control"></td></tr>`
+            ntcHtml += `<tr><td>${path}</td><td><input name="${path}" type="number" class="form-control" data-form-skip="skip"></td></tr>`
           }
         });
         if (ntcHtml !== '') $('[data-e="manual-test"] tbody').html(ntcHtml);
@@ -234,6 +236,13 @@
     // Create path to local directory
     const path = `D:/Projekte/Master/GitHub-Data-Collector/projects/${id}/files/${data.local_folder || ''}`;
     $('[data-e="local-directory"]').text(path);
+    const oldPath = `D:/Projekte/Master/GitHub-Data-Collector/projects/${id.replace('_new', '')}/files/${data.local_folder || ''}`;
+    $('[data-e="local-directory-old"]').text(oldPath);
+
+    // Set attribute when a manual metric input element changed
+    $('[data-e="manual-test"] [name], [data-e="performance"] [name], [data-e="connections-test"] [name], [data-e="connections-performance"] [name]').on('change keyup paste', (e) => {
+      $(e.target).data('form-skip', 'set');
+    });
 
     // Init tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -327,7 +336,6 @@
       repo: repo
     });
     const responseMetrics = response.data;
-    console.log(responseMetrics);
     Object.entries(responseMetrics).forEach(([type, paths]) => {
       Object.entries(paths).forEach(([path, mtrcs]) => {
         metrics[type][path] = mtrcs;
@@ -356,9 +364,11 @@
       paths: data.performance_test_occurences
     });
     const responseMetrics = response.data;
-    metrics.performance = metrics.performance || {};
-    Object.entries(responseMetrics).forEach(([metric, values]) => {
-      metrics.performance[metric] = values;
+    Object.entries(responseMetrics).forEach(([type, paths]) => {
+      metrics[type] = metrics[type] || {};
+      Object.entries(paths).forEach(([path, mtrcs]) => {
+        metrics[type][path] = mtrcs;
+      });
     });
     await api.postPromise('metrics', {
       id: id,
@@ -388,26 +398,40 @@
         if (testPath === 'OTHER') {
           if (sourcePath.includes(pathFixed)) {
             const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
-            const otherPath = pathFixed.replace(moduleName, `OTHER-${moduleName}`)
-            testConnection = metrics.test[otherPath];
+            const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.[jt]sx?)`), `OTHER-${moduleName}`);
+            if (testConnection === null) {
+              testConnection = [ metrics.test[otherPath] ];
+            }
+            else {
+              testConnection.push(metrics.test[otherPath]);
+            }
           }
         }
         else {
-          if (sourcePath === pathFixed) testConnection = metrics.test[testPath];
+          if (sourcePath === pathFixed) {
+            if (testConnection === null) {
+              testConnection = [ metrics.test[testPath] ];
+            }
+            else {
+              testConnection.push(metrics.test[testPath]);
+            }
+          }
         }
       });
       if (!testConnection) {
         const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
-        const otherPath = pathFixed.replace(moduleName, `OTHER-${moduleName}`)
-        testConnection = metrics.test[otherPath] = testConnection = metrics.test[otherPath] || {};
-        testConnection = metrics.test[otherPath];
+        const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.[jt]sx?)`), `OTHER-${moduleName}`)
+        metrics.test[otherPath] = metrics.test[otherPath] || {};
+        testConnection = [ metrics.test[otherPath] ];
         metrics.testConnections.OTHER = metrics.testConnections.OTHER || [];
         metrics.testConnections.OTHER.push(pathFixed);
       }
-      testConnection.lcovM = coverageMetrics.lines.pct;
-      testConnection.fcovM = coverageMetrics.functions.pct;
-      testConnection.scovM = coverageMetrics.statements.pct;
-      testConnection.bcovM = coverageMetrics.branches.pct;
+      testConnection.forEach((connection) => {
+        connection.lcovM = coverageMetrics.lines.pct;
+        connection.fcovM = coverageMetrics.functions.pct;
+        connection.scovM = coverageMetrics.statements.pct;
+        connection.bcovM = coverageMetrics.branches.pct;
+      });
     });
     progress.setProgress(1, 2);
     await api.postPromise('metrics', {
@@ -426,23 +450,49 @@
       id: id,
       repo: repo
     });
+
     metrics.performance = metrics.performance || {};
     Object.entries(coverage.data).forEach(([path, coverageMetrics]) => {
       const pathFixed = path.replace(/\\/g, '/').replace(/.*(?=\/projects)/, '.');
       let testConnection = null;
       Object.entries(metrics.performanceConnections).forEach(([testPath, sourcePath]) => {
-        if (sourcePath === pathFixed) testConnection = metrics.test[testPath];
+        if (testPath === 'OTHER') {
+          if (sourcePath.includes(pathFixed)) {
+            const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
+            const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.[jt]sx?)`), `OTHER-${moduleName}`);
+            if (testConnection === null) {
+              testConnection = [ metrics.performance[otherPath] ];
+            }
+            else {
+              testConnection.push(metrics.performance[otherPath]);
+            }
+          }
+        }
+        else {
+          if (sourcePath === pathFixed) {
+            if (testConnection === null) {
+              testConnection = [ metrics.performance[testPath] ];
+            }
+            else {
+              testConnection.push(metrics.performance[testPath]);
+            }
+          }
+        }
       });
       if (!testConnection) {
         const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
-        const otherPath = pathFixed.replace(moduleName, `OTHER-${moduleName}`)
-        testConnection = metrics.performance[otherPath] = testConnection = metrics.performance[otherPath] || {};
-        testConnection = metrics.performance[otherPath];
+        const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.[jt]sx?)`), `OTHER-${moduleName}`)
+        metrics.performance[otherPath] = metrics.performance[otherPath] || {};
+        testConnection = [ metrics.performance[otherPath] ];
+        metrics.performanceConnections.OTHER = metrics.performanceConnections.OTHER || [];
+        metrics.performanceConnections.OTHER.push(pathFixed);
       }
-      testConnection.lcovM = coverageMetrics.lines.pct;
-      testConnection.fcovM = coverageMetrics.functions.pct;
-      testConnection.scovM = coverageMetrics.statements.pct;
-      testConnection.bcovM = coverageMetrics.branches.pct;
+      testConnection.forEach((connection) => {
+        connection.lcovM = coverageMetrics.lines.pct;
+        connection.fcovM = coverageMetrics.functions.pct;
+        connection.scovM = coverageMetrics.statements.pct;
+        connection.bcovM = coverageMetrics.branches.pct;
+      });
     });
     progress.setProgress(1, 2);
     await api.postPromise('metrics', {
@@ -508,11 +558,6 @@
     progress.setProgress(1, 1);
     buildPage();
     progress.end();
-  });
-
-  // Set attribute when a manual metric input element changed
-  $('[data-e="manual-test"] [name], [data-e="performance"] [name]').on('change keyup paste', (e) => {
-    $(e.target).data('form-skip', 'set');
   });
 
   // Copy code to clipboard

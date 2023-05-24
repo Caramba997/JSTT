@@ -36,6 +36,7 @@
     "fastest-levenshtein": "^1.0.16",
     "find-imports": "^1.1.0",
     "github-api": "^3.4.0",
+    "jasmine": "^5.0.0",
     "js-beautify": "^1.14.7",
     "json-format": "^1.0.1",
     "npm-api": "^1.0.1",
@@ -45,6 +46,8 @@
     "typhonjs-escomplex": "^0.1.0"
   },
   "devDependencies": {
+    "jasmine-browser-runner": "^2.0.0",
+    "jasmine-core": "^5.0.0",
     "nodemon": "^2.0.22"
   },
   "nodemonConfig": {

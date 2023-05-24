@@ -360,7 +360,7 @@
 			"test_frameworks": [
 				"nodeunit"
 			],
-			"is_done": false,
+			"is_done": true,
 			"dependencies": []
 		},
 		{
@@ -498,10 +498,13 @@
 				"showdown",
 				"syntaxhighlighter"
 			],
-			"is_done": false,
 			"has_ui_tests": true,
 			"has_performance_tests": false,
-			"test_run_impossible": false
+			"test_run_impossible": true,
+			"has_failing_tests": false,
+			"no_javascript": false,
+			"not_english": false,
+			"is_done": true
 		},
 		{
 			"id": 1957399,
@@ -695,9 +698,12 @@
 			"dependencies": [
 				"jquery"
 			],
-			"is_done": false,
+			"is_done": true,
 			"has_ui_tests": true,
-			"has_performance_tests": false
+			"has_performance_tests": false,
+			"has_failing_tests": false,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 1873328,
@@ -874,7 +880,10 @@
 			],
 			"has_ui_tests": true,
 			"has_performance_tests": false,
-			"is_done": false
+			"is_done": true,
+			"has_failing_tests": false,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 1801106,
@@ -1026,10 +1035,10 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/3rd_Eden_FlashPolicyFileServer/tests"
+					"./projects/version_1_new/files/3rd_Eden_FlashPolicyFileServer/tests"
 				],
 				"files": [
-					"./projects/version_1/files/3rd_Eden_FlashPolicyFileServer/tests/unit.test.js"
+					"./projects/version_1_new/files/3rd_Eden_FlashPolicyFileServer/tests/unit.test.js"
 				]
 			},
 			"has_metrics": true,
@@ -1046,7 +1055,10 @@
 				"should"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"has_failing_tests": false,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 2418932,
@@ -1191,10 +1203,10 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/knadh_localStorageDB/test"
+					"./projects/version_1_new/files/knadh_localStorageDB/test"
 				],
 				"files": [
-					"./projects/version_1/files/knadh_localStorageDB/test/local_storage_db_test.js"
+					"./projects/version_1_new/files/knadh_localStorageDB/test/local_storage_db_test.js"
 				]
 			},
 			"has_metrics": true,
@@ -1214,7 +1226,10 @@
 				"mocha",
 				"chai"
 			],
-			"is_done": false
+			"is_done": true,
+			"has_failing_tests": false,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 2682001,
@@ -1352,7 +1367,10 @@
 			"dependencies": [
 				"jquery"
 			],
-			"is_done": false
+			"is_done": true,
+			"has_failing_tests": false,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 3044476,
@@ -1496,7 +1514,7 @@
 				"jasmine"
 			],
 			"has_failing_tests": true,
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 7272353,
@@ -1698,7 +1716,9 @@
 				]
 			},
 			"has_performance_metrics": true,
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 3754501,
@@ -1825,7 +1845,14 @@
 			],
 			"test_frameworks": [],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"test_occurences": {
+				"dirs": [],
+				"files": [
+					"./projects/version_1_new/files/rtyler_Hubboard/js/Hubboard-Tests.deploy.js",
+					"./projects/version_1_new/files/rtyler_Hubboard/js/Hubboard-Tests.js"
+				]
+			}
 		},
 		{
 			"id": 4689678,
@@ -2017,7 +2044,7 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/npm_init_package_json/test"
+					"./projects/version_1_new/files/npm_init_package_json/test"
 				],
 				"files": []
 			},
@@ -2035,7 +2062,9 @@
 				"tap"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 6067338,
@@ -2187,7 +2216,7 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/hoho_jquery_bem/test"
+					"./projects/version_1_new/files/hoho_jquery_bem/test"
 				],
 				"files": []
 			},
@@ -2195,7 +2224,7 @@
 			"has_metrics": true,
 			"has_failing_tests": false,
 			"has_ui_tests": true,
-			"test_run_impossible": true,
+			"test_run_impossible": false,
 			"has_frontend": true,
 			"has_backend": false,
 			"categories": [
@@ -2208,7 +2237,9 @@
 			"dependencies": [
 				"jquery"
 			],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 7371681,
@@ -2373,12 +2404,12 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/auth0_node_saml/test"
+					"./projects/version_1_new/files/auth0_node_saml/test"
 				],
 				"files": [
-					"./projects/version_1/files/auth0_node_saml/test/saml11.tests.js",
-					"./projects/version_1/files/auth0_node_saml/test/saml20.tests.js",
-					"./projects/version_1/files/auth0_node_saml/test/utils.tests.js"
+					"./projects/version_1_new/files/auth0_node_saml/test/saml11.tests.js",
+					"./projects/version_1_new/files/auth0_node_saml/test/saml20.tests.js",
+					"./projects/version_1_new/files/auth0_node_saml/test/utils.tests.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -2397,7 +2428,9 @@
 				"should"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 8165348,
@@ -2516,7 +2549,7 @@
 			"has_failing_tests": false,
 			"has_ui_tests": true,
 			"test_run_impossible": false,
-			"has_frontend": false,
+			"has_frontend": true,
 			"has_backend": false,
 			"categories": [
 				"Plugin"
@@ -2525,7 +2558,9 @@
 			"dependencies": [
 				"jquery"
 			],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 8976707,
@@ -2720,22 +2755,22 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/pimterry_loglevel/test"
+					"./projects/version_1_new/files/pimterry_loglevel/test"
 				],
 				"files": [
-					"./projects/version_1/files/pimterry_loglevel/test/console-fallback-test.js",
-					"./projects/version_1/files/pimterry_loglevel/test/cookie-test.js",
-					"./projects/version_1/files/pimterry_loglevel/test/default-level-test.js",
-					"./projects/version_1/files/pimterry_loglevel/test/get-current-level-test.js",
-					"./projects/version_1/files/pimterry_loglevel/test/integration-smoke-test.js",
-					"./projects/version_1/files/pimterry_loglevel/test/level-setting-test.js",
-					"./projects/version_1/files/pimterry_loglevel/test/local-storage-test.js",
-					"./projects/version_1/files/pimterry_loglevel/test/method-factory-test.js",
-					"./projects/version_1/files/pimterry_loglevel/test/multiple-logger-test.js",
-					"./projects/version_1/files/pimterry_loglevel/test/test-context-using-apply.js",
-					"./projects/version_1/files/pimterry_loglevel/test/test-helpers.js",
-					"./projects/version_1/files/pimterry_loglevel/test/test-qunit.js",
-					"./projects/version_1/files/pimterry_loglevel/test/type-test.ts"
+					"./projects/version_1_new/files/pimterry_loglevel/test/console-fallback-test.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/cookie-test.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/default-level-test.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/get-current-level-test.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/integration-smoke-test.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/level-setting-test.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/local-storage-test.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/method-factory-test.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/multiple-logger-test.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/test-context-using-apply.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/test-helpers.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/test-qunit.js",
+					"./projects/version_1_new/files/pimterry_loglevel/test/type-test.ts"
 				]
 			},
 			"has_performance_tests": false,
@@ -2755,7 +2790,9 @@
 				"istanbul"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 12972263,
@@ -2969,7 +3006,7 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/alvarotrigo_fullPage_js/tests"
+					"./projects/version_1_new/files/alvarotrigo_fullPage_js/tests"
 				],
 				"files": []
 			},
@@ -2988,7 +3025,9 @@
 				"qunitjs"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 11777995,
@@ -3150,10 +3189,10 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/nathanpeck_s3_upload_stream/tests"
+					"./projects/version_1_new/files/nathanpeck_s3_upload_stream/tests"
 				],
 				"files": [
-					"./projects/version_1/files/nathanpeck_s3_upload_stream/tests/test.js"
+					"./projects/version_1_new/files/nathanpeck_s3_upload_stream/tests/test.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -3162,7 +3201,7 @@
 			"has_ui_tests": false,
 			"test_run_impossible": false,
 			"has_frontend": false,
-			"has_backend": true,
+			"has_backend": false,
 			"categories": [
 				"Data Transfer"
 			],
@@ -3171,7 +3210,9 @@
 				"chai"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 12699462,
@@ -3338,11 +3379,11 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/martinj_node_imagickal/test"
+					"./projects/version_1_new/files/martinj_node_imagickal/test"
 				],
 				"files": [
-					"./projects/version_1/files/martinj_node_imagickal/test/commands.test.js",
-					"./projects/version_1/files/martinj_node_imagickal/test/imagickal.test.js"
+					"./projects/version_1_new/files/martinj_node_imagickal/test/commands.test.js",
+					"./projects/version_1_new/files/martinj_node_imagickal/test/imagickal.test.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -3362,7 +3403,9 @@
 				"should"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 14419754,
@@ -3522,10 +3565,10 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/electron_node_minidump/test"
+					"./projects/version_1_new/files/electron_node_minidump/test"
 				],
 				"files": [
-					"./projects/version_1/files/electron_node_minidump/test/minidump-test.js"
+					"./projects/version_1_new/files/electron_node_minidump/test/minidump-test.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -3542,7 +3585,9 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 14350939,
@@ -3719,12 +3764,12 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/rrharvey_grunt_file_blocks/spec"
+					"./projects/version_1_new/files/rrharvey_grunt_file_blocks/spec"
 				],
 				"files": [
-					"./projects/version_1/files/rrharvey_grunt_file_blocks/spec/blockconfigspec.js",
-					"./projects/version_1/files/rrharvey_grunt_file_blocks/spec/blockspec.js",
-					"./projects/version_1/files/rrharvey_grunt_file_blocks/spec/fileprocessorspec.js"
+					"./projects/version_1_new/files/rrharvey_grunt_file_blocks/spec/blockconfigspec.js",
+					"./projects/version_1_new/files/rrharvey_grunt_file_blocks/spec/blockspec.js",
+					"./projects/version_1_new/files/rrharvey_grunt_file_blocks/spec/fileprocessorspec.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -3742,7 +3787,9 @@
 				"jasmine"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 15032039,
@@ -3890,9 +3937,11 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/aurbroszniowski_HtmlAssertjs/test"
+					"./projects/version_1_new/files/aurbroszniowski_HtmlAssertjs/test"
 				],
-				"files": []
+				"files": [
+					"./projects/version_1_new/files/aurbroszniowski_HtmlAssertjs/test/htmlassertjsTest.js"
+				]
 			},
 			"has_performance_tests": false,
 			"has_metrics": true,
@@ -3909,7 +3958,9 @@
 				"casperjs"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 15398937,
@@ -4035,7 +4086,9 @@
 			],
 			"test_frameworks": [],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 19229476,
@@ -4208,9 +4261,11 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/krispo_angular_nvd3/test"
+					"./projects/version_1_new/files/krispo_angular_nvd3/test"
 				],
-				"files": []
+				"files": [
+					"./projects/version_1_new/files/krispo_angular_nvd3/test/angular-nvd3Spec.js"
+				]
 			},
 			"has_performance_tests": false,
 			"has_metrics": true,
@@ -4228,7 +4283,9 @@
 				"karma"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 16122984,
@@ -4345,7 +4402,8 @@
 			"test_occurences": {
 				"dirs": [],
 				"files": [
-					"./projects/version_1/files/clubajax_HeadlessBrowser/test.js"
+					"./projects/version_1_new/files/clubajax_HeadlessBrowser/loadHtmlForTest.js",
+					"./projects/version_1_new/files/clubajax_HeadlessBrowser/test.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -4361,7 +4419,9 @@
 			],
 			"test_frameworks": [],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 15887617,
@@ -4541,10 +4601,10 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/mozilla_events_webmaker_org/test"
+					"./projects/version_1_new/files/mozilla_events_webmaker_org/test"
 				],
 				"files": [
-					"./projects/version_1/files/mozilla_events_webmaker_org/test/spec.js"
+					"./projects/version_1_new/files/mozilla_events_webmaker_org/test/spec.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -4560,7 +4620,9 @@
 			],
 			"test_frameworks": [],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 16665655,
@@ -4832,7 +4894,9 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 19149794,
@@ -5050,7 +5114,9 @@
 				"tap"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 19662178,
@@ -5204,7 +5270,9 @@
 				"jasmine"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true,
+			"no_javascript": false,
+			"not_english": false
 		},
 		{
 			"id": 23681133,
@@ -5361,12 +5429,12 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/hunterloftis_jackrabbit/test"
+					"./projects/version_1_new/files/hunterloftis_jackrabbit/test"
 				],
 				"files": [
-					"./projects/version_1/files/hunterloftis_jackrabbit/test/exchange.test.js",
-					"./projects/version_1/files/hunterloftis_jackrabbit/test/jackrabbit.test.js",
-					"./projects/version_1/files/hunterloftis_jackrabbit/test/queue.test.js"
+					"./projects/version_1_new/files/hunterloftis_jackrabbit/test/exchange.test.js",
+					"./projects/version_1_new/files/hunterloftis_jackrabbit/test/jackrabbit.test.js",
+					"./projects/version_1_new/files/hunterloftis_jackrabbit/test/queue.test.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -5386,7 +5454,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 22356095,
@@ -5559,7 +5627,7 @@
 				"tape"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 22802949,
@@ -5717,11 +5785,11 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/DubFriend_jquery_repeater/test"
+					"./projects/version_1_new/files/DubFriend_jquery_repeater/test"
 				],
 				"files": [
-					"./projects/version_1/files/DubFriend_jquery_repeater/test/test-lib.js",
-					"./projects/version_1/files/DubFriend_jquery_repeater/test/test.js"
+					"./projects/version_1_new/files/DubFriend_jquery_repeater/test/test-lib.js",
+					"./projects/version_1_new/files/DubFriend_jquery_repeater/test/test.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -5741,7 +5809,7 @@
 				"qunitjs"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 24053311,
@@ -5915,7 +5983,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 25987209,
@@ -6094,7 +6162,7 @@
 				"jasmine"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 27758092,
@@ -6251,7 +6319,7 @@
 			"dependencies": [
 				"qs"
 			],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 28228126,
@@ -6403,7 +6471,7 @@
 			"dependencies": [
 				"assert"
 			],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 31618003,
@@ -6568,7 +6636,7 @@
 				"tape"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 34336300,
@@ -6762,7 +6830,7 @@
 				"ava"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 36491438,
@@ -6958,7 +7026,7 @@
 				"nyc"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 40841624,
@@ -7203,7 +7271,7 @@
 					"./projects/version_1/files/focus_trap_focus_trap/cypress.config.js"
 				]
 			},
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 40725300,
@@ -7481,7 +7549,7 @@
 				"webdriverio"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 45276457,
@@ -7646,7 +7714,7 @@
 				"chai"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 46190605,
@@ -7841,7 +7909,7 @@
 				"supertest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 47783743,
@@ -8071,7 +8139,7 @@
 			},
 			"has_performance_tests": false,
 			"has_metrics": true,
-			"has_failing_tests": false,
+			"has_failing_tests": true,
 			"has_ui_tests": false,
 			"test_run_impossible": false,
 			"has_frontend": true,
@@ -8087,7 +8155,7 @@
 				"react-addons-test-utils"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 48301719,
