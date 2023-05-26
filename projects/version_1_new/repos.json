@@ -8293,16 +8293,16 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-download/test",
-					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-filename/test",
-					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-name-parser/test",
-					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-url/test"
+					"./projects/version_1_new/files/laat_mvn_dl/packages/mvn-artifact-download/test",
+					"./projects/version_1_new/files/laat_mvn_dl/packages/mvn-artifact-filename/test",
+					"./projects/version_1_new/files/laat_mvn_dl/packages/mvn-artifact-name-parser/test",
+					"./projects/version_1_new/files/laat_mvn_dl/packages/mvn-artifact-url/test"
 				],
 				"files": [
-					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-download/test/test.js",
-					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-filename/test/test.js",
-					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-name-parser/test/test.js",
-					"./projects/version_1/files/laat_mvn_dl/packages/mvn-artifact-url/test/test.js"
+					"./projects/version_1_new/files/laat_mvn_dl/packages/mvn-artifact-download/test/test.js",
+					"./projects/version_1_new/files/laat_mvn_dl/packages/mvn-artifact-filename/test/test.js",
+					"./projects/version_1_new/files/laat_mvn_dl/packages/mvn-artifact-name-parser/test/test.js",
+					"./projects/version_1_new/files/laat_mvn_dl/packages/mvn-artifact-url/test/test.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -8319,10 +8319,11 @@
 				"Monorepo"
 			],
 			"test_frameworks": [
-				"lerna"
+				"lerna",
+				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 50081919,
@@ -8491,7 +8492,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 52402744,
@@ -8935,7 +8936,7 @@
 				"tape"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 63194792,
@@ -9134,7 +9135,7 @@
 				"sinon"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 64556037,
@@ -9418,7 +9419,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 69594225,
@@ -9782,7 +9783,7 @@
 				"sinon"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 71247742,
@@ -9956,7 +9957,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 80396695,
@@ -10163,7 +10164,7 @@
 				"sinon"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 82022247,
@@ -10373,7 +10374,7 @@
 				"sinon"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 82063465,
@@ -10550,10 +10551,10 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/agrishun_react_log_stream/tests"
+					"./projects/version_1_new/files/agrishun_react_log_stream/tests"
 				],
 				"files": [
-					"./projects/version_1/files/agrishun_react_log_stream/tests/LogStream.test.js"
+					"./projects/version_1_new/files/agrishun_react_log_stream/tests/LogStream.test.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -10571,7 +10572,7 @@
 			],
 			"test_frameworks": [],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 87843332,
@@ -10753,7 +10754,7 @@
 				"react-scripts"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 89916251,
@@ -10926,7 +10927,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 95873034,
@@ -11173,7 +11174,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 95796622,
@@ -11394,7 +11395,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 99177245,
@@ -11569,7 +11570,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 99131170,
@@ -11770,7 +11771,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 100946766,
@@ -11953,7 +11954,7 @@
 				"sinon"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 107443709,
@@ -12156,7 +12157,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 108065259,
@@ -12336,7 +12337,7 @@
 				"tape"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 111410181,
@@ -12534,7 +12535,7 @@
 				"supertest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 114477356,
@@ -12718,7 +12719,7 @@
 				"istanbul"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 124823433,
@@ -12943,7 +12944,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 133691175,
@@ -13194,7 +13195,7 @@
 				"truffle"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 136242280,
@@ -13399,7 +13400,7 @@
 				"tape"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 138875604,
@@ -21536,7 +21537,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 140947884,
@@ -21723,7 +21724,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 144754740,
@@ -21903,7 +21904,7 @@
 				"istanbul"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 169553531,
@@ -22092,7 +22093,7 @@
 				"ava"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 178520658,
@@ -22260,7 +22261,7 @@
 				"nock"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 186995123,
@@ -22452,7 +22453,7 @@
 			],
 			"dependencies": [],
 			"has_performance_metrics": true,
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 189631495,
@@ -22660,7 +22661,7 @@
 				"qunitjs"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 190670407,
@@ -22857,7 +22858,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 193695852,
@@ -23024,7 +23025,7 @@
 				"tape"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 202365235,
@@ -23220,7 +23221,7 @@
 			],
 			"dependencies": [],
 			"has_performance_metrics": true,
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 200358602,
@@ -23377,14 +23378,14 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/alfateam_node_cls/tests"
+					"./projects/version_1_new/files/alfateam_node_cls/tests"
 				],
 				"files": [
-					"./projects/version_1/files/alfateam_node_cls/tests/async.test.js",
-					"./projects/version_1/files/alfateam_node_cls/tests/nested.test.js",
-					"./projects/version_1/files/alfateam_node_cls/tests/start.test.js",
-					"./projects/version_1/files/alfateam_node_cls/tests/sync.test.js",
-					"./projects/version_1/files/alfateam_node_cls/tests/wrapper.test.js"
+					"./projects/version_1_new/files/alfateam_node_cls/tests/async.test.js",
+					"./projects/version_1_new/files/alfateam_node_cls/tests/nested.test.js",
+					"./projects/version_1_new/files/alfateam_node_cls/tests/start.test.js",
+					"./projects/version_1_new/files/alfateam_node_cls/tests/sync.test.js",
+					"./projects/version_1_new/files/alfateam_node_cls/tests/wrapper.test.js"
 				]
 			},
 			"has_performance_tests": false,
@@ -23405,7 +23406,7 @@
 				"coveralls"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 201105391,
@@ -23581,14 +23582,14 @@
 			"test_occurences": {
 				"dirs": [],
 				"files": [
-					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/e2e/src/app.e2e-spec.ts",
-					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/app.component.spec.ts",
-					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/home/home.page.spec.ts",
-					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/add-item/add-item.page.spec.ts",
-					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/auth/auth.page.spec.ts",
-					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/profile/profile.page.spec.ts",
-					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/single-item/single-item.page.spec.ts",
-					"./projects/version_1/files/benAkehurst_amazon_price_checker/client/apt/src/test.ts"
+					"./projects/version_1_new/files/benAkehurst_amazon_price_checker/client/apt/e2e/src/app.e2e-spec.ts",
+					"./projects/version_1_new/files/benAkehurst_amazon_price_checker/client/apt/src/app/app.component.spec.ts",
+					"./projects/version_1_new/files/benAkehurst_amazon_price_checker/client/apt/src/app/home/home.page.spec.ts",
+					"./projects/version_1_new/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/add-item/add-item.page.spec.ts",
+					"./projects/version_1_new/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/auth/auth.page.spec.ts",
+					"./projects/version_1_new/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/profile/profile.page.spec.ts",
+					"./projects/version_1_new/files/benAkehurst_amazon_price_checker/client/apt/src/app/pages/single-item/single-item.page.spec.ts",
+					"./projects/version_1_new/files/benAkehurst_amazon_price_checker/client/apt/src/test.ts"
 				]
 			},
 			"has_performance_tests": false,
@@ -23609,7 +23610,7 @@
 				"istanbul"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 209597906,

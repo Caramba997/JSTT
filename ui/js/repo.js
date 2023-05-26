@@ -69,6 +69,8 @@
     if (data.has_performance_tests) {
       $('[data-e="performance-section"]').show();
       forms.fromJson($('[data-e="performance"]'), data.performance_test_occurences);
+      $('[data-e="performance-test-metrics"]').show();
+      forms.fromJson($('[data-e="performance-metrics-json"]'), data.performance_test_occurences);
       if (data.has_performance_metrics) $('[data-a="calc-perf-metrics"').addClass('bg-success-subtle');
     }
     if (metrics) {
@@ -133,7 +135,7 @@
         });
         if (ntcHtml !== '') $('[data-e="manual-test"] tbody').html(ntcHtml);
       }
-      if (metrics.performance) {
+      if (metrics.performance && metrics.test != {}) {
         $('[data-e="performance-test-connections"]').show();
         const tbody = $('[data-e="connections-performance"] tbody')
         addConnectionRows(tbody, metrics.performanceConnections);
@@ -169,33 +171,6 @@
           html.val(category);
           html.text(category);
           selectElem.append(html);
-        });
-      }
-      if (metrics.performance) {
-        $(`[data-e="performance-test-metrics"]`).show();
-        const element = $('[data-e="metrics-performance"] tbody');
-        element.html('');
-        Object.entries(metrics.performance).forEach(([name, values]) => {
-          const metric = name.match(/[a-z]+/)[0],
-                scope = name.match(/[A-Z]/)[0] === 'M' ? 'Module' : 'Function';
-          const def = definitions[metric] || { name: '?', description: '?'},
-                tooltip = `<b>${def.name}</b><br><em>Scope: ${scope}</em><br>${def.description}`;
-          let cells = `<tr data-name="${name}"><td scope="row" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="${tooltip}">${name}</td>`;
-          Object.entries(values).forEach(([type, value]) => {
-            const formatValue = (val) => {
-              const valueS = val !== null ? `${val}`.split('.') : '?';
-              return valueS.length === 2 ? `${val.toFixed(3)}`.replace(/(\.0+|(?<=\.[1-9])0+|(?<=\.[0-9][1-9])0+)$/, '') : `${val}`;
-            };
-            if (value instanceof Array) {
-              const arr = value.map(formatValue);
-              cells += `<td data-type="${type}"><textarea rows="1" cols="50" class="form-control">${arr.join(', ')}</textarea></td>`;
-            }
-            else {
-              cells += `<td data-type="${type}">${formatValue(value)}</td>`;
-            }
-          });
-          cells += '</tr>';
-          element.append(cells);
         });
       }
     }
@@ -397,8 +372,8 @@
       Object.entries(metrics.testConnections).forEach(([testPath, sourcePath]) => {
         if (testPath === 'OTHER') {
           if (sourcePath.includes(pathFixed)) {
-            const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
-            const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.[jt]sx?)`), `OTHER-${moduleName}`);
+            const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jte]?s[xm]?)/)[0];
+            const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jte]?s[xm]?)`), `OTHER-${moduleName}`);
             if (testConnection === null) {
               testConnection = [ metrics.test[otherPath] ];
             }
@@ -419,8 +394,8 @@
         }
       });
       if (!testConnection) {
-        const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
-        const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.[jt]sx?)`), `OTHER-${moduleName}`)
+        const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jte]?s[xm]?)/)[0];
+        const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jte]?s[xm]?)`), `OTHER-${moduleName}`)
         metrics.test[otherPath] = metrics.test[otherPath] || {};
         testConnection = [ metrics.test[otherPath] ];
         metrics.testConnections.OTHER = metrics.testConnections.OTHER || [];
@@ -458,8 +433,8 @@
       Object.entries(metrics.performanceConnections).forEach(([testPath, sourcePath]) => {
         if (testPath === 'OTHER') {
           if (sourcePath.includes(pathFixed)) {
-            const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
-            const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.[jt]sx?)`), `OTHER-${moduleName}`);
+            const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jte]?s[xm]?)/)[0];
+            const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jte]?s[xm]?)`), `OTHER-${moduleName}`);
             if (testConnection === null) {
               testConnection = [ metrics.performance[otherPath] ];
             }
@@ -480,8 +455,8 @@
         }
       });
       if (!testConnection) {
-        const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.[jt]sx?)/)[0];
-        const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.[jt]sx?)`), `OTHER-${moduleName}`)
+        const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jte]?s[xm]?)/)[0];
+        const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jte]?s[xm]?)`), `OTHER-${moduleName}`)
         metrics.performance[otherPath] = metrics.performance[otherPath] || {};
         testConnection = [ metrics.performance[otherPath] ];
         metrics.performanceConnections.OTHER = metrics.performanceConnections.OTHER || [];

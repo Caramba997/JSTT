@@ -15,7 +15,7 @@
       const tdata = data.correlations.test;
       const tTable = $('[data-e="correlations-test"]');
       const tBody = tTable.find('tbody');
-      const headings = Array.from(Object.keys(tdata.noM_total));
+      const headings = Array.from(Object.keys(tdata.locM));
       let header = '<tr><th scope="col"></th>';
       headings.forEach(key => {
         header = header.concat(`<th scope="col">${key}</th>`);
