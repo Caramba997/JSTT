@@ -30781,7 +30781,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 208699501,
@@ -30952,7 +30952,7 @@
 				"react-scripts"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 216919499,
@@ -31174,7 +31174,7 @@
 				"sinon"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 230386172,
@@ -31474,7 +31474,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 236975336,
@@ -31659,7 +31659,7 @@
 				"tape"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 243035280,
@@ -31896,7 +31896,7 @@
 				"coverage-node"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 243282820,
@@ -32097,7 +32097,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 252021392,
@@ -32268,7 +32268,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 255003958,
@@ -32459,7 +32459,7 @@
 				"supertest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 257519299,
@@ -32632,7 +32632,7 @@
 				"react-scripts"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 256960083,
@@ -32810,7 +32810,7 @@
 				"react-scripts"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 262168684,
@@ -32968,7 +32968,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 264430324,
@@ -33128,26 +33128,26 @@
 				}
 			},
 			"local_folder": "tborgesvieira_Bootcamp_Online_Desenvolvedor_Full_Stack",
-			"has_tests": true,
+			"has_tests": false,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/tborgesvieira_Bootcamp_Online_Desenvolvedor_Full_Stack/Modulo3/Aula2/teste-app"
+					"./projects/version_1_new/files/tborgesvieira_Bootcamp_Online_Desenvolvedor_Full_Stack/Modulo3/Aula2/teste-app"
 				],
 				"files": [
-					"./projects/version_1/files/tborgesvieira_Bootcamp_Online_Desenvolvedor_Full_Stack/Modulo4/Trabalho4/my-bank-api/routes/clientesespeciaisRoute.js"
+					"./projects/version_1_new/files/tborgesvieira_Bootcamp_Online_Desenvolvedor_Full_Stack/Modulo4/Trabalho4/my-bank-api/routes/clientesespeciaisRoute.js"
 				]
 			},
-			"has_performance_tests": true,
+			"has_performance_tests": false,
 			"performance_test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/tborgesvieira_Bootcamp_Online_Desenvolvedor_Full_Stack/Modulo3/Aula3/1-javascript-nao-performatico/",
-					"./projects/version_1/files/tborgesvieira_Bootcamp_Online_Desenvolvedor_Full_Stack/Modulo3/Aula3/2-javascript-performatico/"
+					"./projects/version_1_new/files/tborgesvieira_Bootcamp_Online_Desenvolvedor_Full_Stack/Modulo3/Aula3/1-javascript-nao-performatico/",
+					"./projects/version_1_new/files/tborgesvieira_Bootcamp_Online_Desenvolvedor_Full_Stack/Modulo3/Aula3/2-javascript-performatico/"
 				],
 				"files": []
 			},
 			"has_metrics": true,
 			"has_failing_tests": false,
-			"has_ui_tests": true,
+			"has_ui_tests": false,
 			"test_run_impossible": false,
 			"has_frontend": true,
 			"has_backend": false,
@@ -33161,7 +33161,7 @@
 				"react-scripts"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 266893021,
@@ -33333,7 +33333,7 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/TarantinoArchive_won/.github/test"
+					"./projects/version_1_new/files/TarantinoArchive_won/.github/test"
 				],
 				"files": []
 			},
@@ -33352,7 +33352,7 @@
 			],
 			"test_frameworks": [],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 269393074,
@@ -33588,7 +33588,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 268939026,
@@ -33777,7 +33777,7 @@
 			],
 			"test_frameworks": [],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 306715938,
@@ -33952,7 +33952,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 308941686,
@@ -34218,7 +34218,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 353436659,
@@ -34483,7 +34483,7 @@
 				"react-scripts"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 365037686,
@@ -34654,7 +34654,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 367630796,
@@ -34831,7 +34831,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 373854773,
@@ -35000,7 +35000,7 @@
 				"testing-library"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 380242742,
@@ -35164,7 +35164,7 @@
 			],
 			"test_frameworks": [],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 395341042,
@@ -35323,7 +35323,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 438582044,
@@ -35502,7 +35502,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 431896191,
@@ -35878,7 +35878,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 418707091,
@@ -36025,7 +36025,7 @@
 				"react-scripts"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 498481074,
@@ -36218,7 +36218,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 509566907,
@@ -36443,7 +36443,7 @@
 				"sinon"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 600682324,
@@ -36624,7 +36624,7 @@
 				"hardhat"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 2279062,
@@ -36879,7 +36879,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 19708477,
@@ -37085,7 +37085,7 @@
 				"sinon"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 59701422,
@@ -37266,7 +37266,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 77293748,
@@ -37485,7 +37485,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 74766379,
@@ -37665,7 +37665,7 @@
 				"ng"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 112615357,
@@ -37896,7 +37896,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 104400765,
@@ -39238,37 +39238,77 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test"
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test"
 				],
 				"files": [
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/src/funcCoreTools/validateFuncCoreToolsIsLatest.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/addBinding.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/api.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/convertToValidPackageName.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/createFunction/createFunction.CSharp.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/createFunction/createFunction.CSharpScript.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/createFunction/createFunction.JavaScript.v1.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/createFunction/createFunction.Script.v2.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/envUtils.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/fsUtils.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/getScriptResourcesLanguage.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/global.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/hasMinFuncCliVersion.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/nightly/createProjectAndDeploy.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/nightly/functionAppOperations.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/nightly/global.nightly.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/nugetUtils.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/ParsedFunctionJson.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/parseJson.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/project/createNewProject.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/project/createNewProjectApi.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/project/createNewPythonProject.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/project/initProjectForVSCode.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/templateCount.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/tryParseFuncVersion.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/validateCSharpNamespace.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/venvUtils.test.ts",
-					"./projects/version_1/files/microsoft_vscode_azurefunctions/test/verifyVersionAndLanguage.test.ts"
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/addBinding/BindingCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/addBinding/settingSteps/AzureConnectionCreateStepBase.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/addBinding/settingSteps/cosmosDB/CosmosDBConnectionCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/addBinding/settingSteps/eventHub/EventHubConnectionCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/addBinding/settingSteps/LocalAppSettingCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/addBinding/settingSteps/serviceBus/ServiceBusConnectionCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/addBinding/settingSteps/StorageConnectionCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/appSettings/connectionSettings/azureWebJobsStorage/AzureWebJobsStorageExecuteStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/appSettings/connectionSettings/azureWebJobsStorage/validateStorageConnection.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/appSettings/connectionSettings/eventHubs/EventHubsConnectionExecuteStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/appSettings/connectionSettings/sqlDatabase/SqlDatabaseConnectionExecuteStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/dotnetSteps/DotnetFunctionCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/durableSteps/netherite/EventHubsNamespaceAuthRuleCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/durableSteps/netherite/EventHubsNamespaceCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/durableSteps/sql/SqlDatabaseCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/durableSteps/sql/SqlServerCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/FunctionCreateStepBase.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/javaSteps/JavaFunctionCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/openAPISteps/OpenAPICreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/openAPISteps/OpenAPIGetSpecificationFileStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/scriptSteps/NodeV4FunctionCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/scriptSteps/PythonFunctionCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/scriptSteps/ScriptFunctionCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunction/scriptSteps/TypeScriptFunctionCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createFunctionApp/FunctionAppCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/CustomProjectCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/DotnetProjectCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/GradleProjectCreateSteps.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/JavaScriptProjectCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/MavenProjectCreateSteps.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/PowerShellProjectCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/ProjectCreateStepBase.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/PysteinProjectCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/PythonProjectCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/ScriptProjectCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/ProjectCreateStep/TypeScriptProjectCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/commands/createNewProject/pythonSteps/PythonVenvCreateStep.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/src/funcCoreTools/validateFuncCoreToolsIsLatest.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/addBinding.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/api.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/convertToValidPackageName.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/createFunction/createFunction.CSharp.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/createFunction/createFunction.CSharpScript.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/createFunction/createFunction.JavaScript.v1.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/createFunction/createFunction.Script.v2.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/createFunction/FunctionTesterBase.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/envUtils.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/fsUtils.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/getScriptResourcesLanguage.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/global.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/hasMinFuncCliVersion.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/nightly/createProjectAndDeploy.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/nightly/functionAppOperations.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/nightly/global.nightly.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/nugetUtils.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/ParsedFunctionJson.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/parseJson.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/project/createNewProject.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/project/createNewProjectApi.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/project/createNewPythonProject.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/project/initProjectForVSCode.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/runTest.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/templateCount.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/tryParseFuncVersion.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/validateCSharpNamespace.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/venvUtils.test.ts",
+					"./projects/version_1_new/files/microsoft_vscode_azurefunctions/test/verifyVersionAndLanguage.test.ts"
 				]
 			},
 			"has_performance_tests": false,
@@ -39288,7 +39328,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 113127694,
@@ -39546,7 +39586,7 @@
 				"nx"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 137210526,
@@ -39785,7 +39825,7 @@
 				"karma"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 137340611,
@@ -39988,7 +40028,7 @@
 				"karma"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 142848718,
@@ -40239,7 +40279,7 @@
 				"jasmine"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 150007322,
@@ -40431,7 +40471,7 @@
 				"ng"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 161702744,
@@ -40594,18 +40634,18 @@
 			"has_tests": true,
 			"test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/IronCoreLabs_recrypt_wasm_binding/lib/tests",
-					"./projects/version_1/files/IronCoreLabs_recrypt_wasm_binding/tests"
+					"./projects/version_1_new/files/IronCoreLabs_recrypt_wasm_binding/lib/tests",
+					"./projects/version_1_new/files/IronCoreLabs_recrypt_wasm_binding/tests"
 				],
 				"files": [
-					"./projects/version_1/files/IronCoreLabs_recrypt_wasm_binding/lib/tests/Api256Shim.test.ts",
-					"./projects/version_1/files/IronCoreLabs_recrypt_wasm_binding/tests/testRunner.js"
+					"./projects/version_1_new/files/IronCoreLabs_recrypt_wasm_binding/lib/tests/Api256Shim.test.ts",
+					"./projects/version_1_new/files/IronCoreLabs_recrypt_wasm_binding/tests/testRunner.js"
 				]
 			},
 			"has_performance_tests": true,
 			"performance_test_occurences": {
 				"dirs": [
-					"./projects/version_1/files/IronCoreLabs_recrypt_wasm_binding/benchmark/"
+					"./projects/version_1_new/files/IronCoreLabs_recrypt_wasm_binding/benchmark/"
 				],
 				"files": []
 			},
@@ -40623,7 +40663,7 @@
 			"test_frameworks": [],
 			"dependencies": [],
 			"has_performance_metrics": true,
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 176525338,
@@ -40802,7 +40842,7 @@
 			],
 			"test_frameworks": [],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 194003373,
@@ -41019,7 +41059,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 218402232,
@@ -41240,7 +41280,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 231674050,
@@ -41530,7 +41570,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 248999781,
@@ -41837,7 +41877,7 @@
 				"karma"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 256855095,
@@ -42014,7 +42054,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 275163250,
@@ -42227,7 +42267,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 312544654,
@@ -42398,7 +42438,7 @@
 				"tsc"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 338876589,
@@ -42601,7 +42641,7 @@
 					"package.json"
 				]
 			},
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 338737916,
@@ -42840,7 +42880,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 346595448,
@@ -43012,7 +43052,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 365531235,
@@ -43241,7 +43281,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 374245001,
@@ -43481,7 +43521,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 394040232,
@@ -43685,7 +43725,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 409601058,
@@ -43902,7 +43942,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 401279564,
@@ -44124,7 +44164,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 413803705,
@@ -44343,7 +44383,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 417591966,
@@ -44575,7 +44615,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 476292314,
@@ -44799,7 +44839,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 476353715,
@@ -44982,7 +45022,7 @@
 				"vite"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 498865986,
@@ -45340,7 +45380,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 507423346,
@@ -45661,7 +45701,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 535526894,
@@ -45939,7 +45979,7 @@
 				}
 			},
 			"local_folder": "asdine_vscode_cue",
-			"has_tests": true,
+			"has_tests": false,
 			"test_occurences": {
 				"dirs": [
 					"./projects/version_1/files/asdine_vscode_cue/src/test"
@@ -45952,7 +45992,7 @@
 			"has_metrics": true,
 			"has_failing_tests": false,
 			"has_ui_tests": false,
-			"test_run_impossible": true,
+			"test_run_impossible": false,
 			"has_frontend": false,
 			"has_backend": false,
 			"no_javascript": false,
@@ -45965,7 +46005,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 600363449,
@@ -46157,7 +46197,7 @@
 				"jest"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		},
 		{
 			"id": 598994207,
@@ -46429,7 +46469,7 @@
 				}
 			},
 			"local_folder": "pwwang_vscode_gptcommit",
-			"has_tests": true,
+			"has_tests": false,
 			"test_occurences": {
 				"dirs": [
 					"./projects/version_1/files/pwwang_vscode_gptcommit/src/test"
@@ -46442,7 +46482,7 @@
 			"has_metrics": true,
 			"has_failing_tests": false,
 			"has_ui_tests": false,
-			"test_run_impossible": true,
+			"test_run_impossible": false,
 			"has_frontend": false,
 			"has_backend": false,
 			"no_javascript": false,
@@ -46456,7 +46496,7 @@
 				"mocha"
 			],
 			"dependencies": [],
-			"is_done": false
+			"is_done": true
 		}
 	],
 	"stats": {

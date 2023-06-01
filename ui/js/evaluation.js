@@ -117,6 +117,7 @@
       id: id
     });
     data.correlations = response.data.correlations;
+    console.log(data.correlations);
     await api.postPromise('evaluation', {
       id: id,
       data: data
