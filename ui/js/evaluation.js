@@ -55,7 +55,12 @@
               color = `rgb(${Math.abs(value.rho) * 255},${((Math.abs(value.rho) - 0.5) * 2) * 255},${((Math.abs(value.rho) - 0.5) * 2) * 255})`;
             }
           }
-          row = row.concat(template.replace('{{color}}', color).replace('{{value}}', value.rho.toFixed(4)).replace('{{title}}', `${value.p}, n=${value.n}`));
+          if (Object.keys(value).length === 0) {
+            row = row.concat(template.replace('{{color}}', 'black').replace('{{value}}', '').replace('{{title}}', ''));
+          }
+          else {
+            row = row.concat(template.replace('{{color}}', color).replace('{{value}}', value.rho.toFixed(4)).replace('{{title}}', `${value.p}, n=${value.n}`));
+          }
           index++;
         });
         tableData = tableData.concat(row);
