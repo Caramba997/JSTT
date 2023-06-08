@@ -39,7 +39,7 @@
             while (index < colIndex);
           }
           let color = 'lightgrey';
-          if (Math.abs(value.rho) >= 0.5) {
+          if (Math.abs(value.rho) >= 0.7) {
             if (Math.abs(value.p) < 0.05) {
               color = `rgb(${((Math.abs(value.rho) - 0.5) * 2) * 255},${Math.abs(value.rho) * 255},${((Math.abs(value.rho) - 0.5) * 2) * 255})`;
               tSummary.push({

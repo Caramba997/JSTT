@@ -116,7 +116,7 @@
     });
     $(`[data-e="stats-done"]`).text(`${Math.round(doneRepos / data.stats.total * 100)}% (${doneRepos}/${data.stats.total})`);
     $(`[data-e="stats-tests"]`).text(`${Math.round(haveTests / (haveTests + haveNoTests) * 100)}% (${haveTests}/${haveTests + haveNoTests})`);
-    $(`[data-e="stats-ui-tests"]`).text(`${Math.round(haveUiTests / data.stats.total * 100)}% (${haveUiTests}/${data.stats.total})`);
+    $(`[data-e="stats-ui-tests"]`).text(`${Math.round(haveUiTests / haveFrontend * 100)}% (${haveUiTests}/${haveFrontend})`);
     $(`[data-e="stats-perf-tests"]`).text(`${Math.round(havePerfTests / data.stats.total * 100)}% (${havePerfTests}/${data.stats.total})`);
     $(`[data-e="stats-frontend"]`).text(haveFrontend);
     $(`[data-e="stats-backend"]`).text(haveBackend);
