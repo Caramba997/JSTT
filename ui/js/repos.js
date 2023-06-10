@@ -118,8 +118,8 @@
     $(`[data-e="stats-tests"]`).text(`${Math.round(haveTests / (haveTests + haveNoTests) * 100)}% (${haveTests}/${haveTests + haveNoTests})`);
     $(`[data-e="stats-ui-tests"]`).text(`${Math.round(haveUiTests / haveFrontend * 100)}% (${haveUiTests}/${haveFrontend})`);
     $(`[data-e="stats-perf-tests"]`).text(`${Math.round(havePerfTests / data.stats.total * 100)}% (${havePerfTests}/${data.stats.total})`);
-    $(`[data-e="stats-frontend"]`).text(haveFrontend);
-    $(`[data-e="stats-backend"]`).text(haveBackend);
+    $(`[data-e="stats-frontend"]`).text(data.stats.frontend);
+    $(`[data-e="stats-backend"]`).text(data.stats.backend);
 
     // Init tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -170,7 +170,8 @@
             maxstars: 0,
             minstars: 100000000,
             frontend: 0,
-            backend: 0
+            backend: 0,
+            npm: 0
           };
     for (let i = 0; i < data.repos.length; i++) {
       progress.setProgress(i, data.repos.length);
@@ -179,10 +180,11 @@
       if (repo.language === 'TypeScript') stats.ts++;
       if (repo.owner.type === 'Organization') stats.org++;
       if (repo.owner.type === 'User') stats.individual++;
+      if (repo.is_npm === true) stats.npm++;
       stats.maxstars = Math.max(stats.maxstars, repo.stargazers_count);
       stats.minstars = Math.min(stats.minstars, repo.stargazers_count);
-      if (repo.is_frontend) stats.frontend++;
-      if (repo.is_backend) stats.backend++;
+      if (repo.has_frontend) stats.frontend++;
+      if (repo.has_backend) stats.backend++;
     }
     if (progress.status === 0) return;
     if (data.stats === undefined) {
@@ -190,6 +192,7 @@
     }
     else {
       Object.entries(stats).forEach(([key, value]) => {
+        if (key === 'npm' && value === 0) return;
         data.stats[key] = value;
       });
     }
