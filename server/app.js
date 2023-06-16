@@ -796,6 +796,156 @@ app.post('/api/clean', async (req, res) => {
   }
 });
 
+app.get('/api/commits', async (req, res) => {
+  const id = req.query.id;
+  let repo = req.query.repo;
+  if (!id) return error(res, 400, 'Param missing');
+  try {
+    const exists = files.exists('project', 'commits.json', [id]);
+    let result;
+    if (repo) repo = decodeURIComponent(repo);
+    if (exists) {
+      const data = files.json('project', 'commits.json', [id]);
+      if (repo) {
+        result = data.commits[repo] || [];
+      }
+      else {
+        result = data;
+      }
+    }
+    else {
+      if (repo) {
+        result = [];
+      }
+      else {
+        result = { commits: {} };
+      }
+    }
+    return success(res, result);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/commits', async (req, res) => {
+  const id = req.body.id,
+        repo = req.body.repo,
+        data = req.body.data;
+  if (!id || !data) return error(res, 400, 'Param missing');
+  try {
+    if (repo) {
+      const exists = files.exists('project', 'commits.json', [id]);
+      let content;
+      if (exists) {
+        content = files.json('project', 'commits.json', [id]);
+      }
+      else {
+        content = { commits: {} };
+      }
+      content.commits[repo] = data;
+      files.write('project', 'commits.json', content, [id], true);
+    }
+    else {
+      files.write('project', 'commits.json', data, [id], true);
+    }
+    return success(res, data);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.get('/api/prs', async (req, res) => {
+  const id = req.query.id;
+  let repo = req.query.repo;
+  if (!id) return error(res, 400, 'Param missing');
+  try {
+    const exists = files.exists('project', 'prs.json', [id]);
+    let result;
+    if (repo) repo = decodeURIComponent(repo);
+    if (exists) {
+      const data = files.json('project', 'prs.json', [id]);
+      if (repo) {
+        result = data.prs[repo] || [];
+      }
+      else {
+        result = data;
+      }
+    }
+    else {
+      if (repo) {
+        result = [];
+      }
+      else {
+        result = { prs: {} };
+      }
+    }
+    return success(res, result);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/prs', async (req, res) => {
+  const id = req.body.id,
+        repo = req.body.repo,
+        data = req.body.data;
+  if (!id || !data) return error(res, 400, 'Param missing');
+  try {
+    if (repo) {
+      const exists = files.exists('project', 'prs.json', [id]);
+      let content;
+      if (exists) {
+        content = files.json('project', 'prs.json', [id]);
+      }
+      else {
+        content = { prs: {} };
+      }
+      content.prs[repo] = data;
+      files.write('project', 'prs.json', content, [id], true);
+      return success(res, data);
+    }
+    else {
+      files.write('project', 'prs.json', data, [id], true);
+    }
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/findCommits', async (req, res) => {
+  const owner = req.body.owner,
+        repo = req.body.repo,
+        file = req.body.file;
+  if (!owner || !repo || !file) return error(res, 400, 'Param missing');
+  try {
+    const data = await gitHub.getCommitsForFile(repo, owner, file);
+    return success(res, data);
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Error getting results');
+  }
+});
+
+app.post('/api/findPrs', async (req, res) => {
+  const owner = req.body.owner,
+        repo = req.body.repo,
+        commit = req.body.commit;
+  if (!owner || !repo || !commit) return error(res, 400, 'Param missing');
+  try {
+    const data = await gitHub.getPrsForCommit(repo, owner, commit);
+    return success(res, data);
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Error getting results');
+  }
+});
+
 app.listen(config.port, () => {
   console.log(`API listening on port ${config.port}`);
 });

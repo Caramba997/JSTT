@@ -87,6 +87,7 @@
     }
 
     $('[data-a="open-evaluation"]').attr('href', `/ui/evaluation?id=${id}`);
+    $('[data-a="open-refactorings"]').attr('href', `/ui/refactorings?id=${id}`);
   }, (error) => {
     console.warn(error);
     $('[data-e="error-load"]').show();

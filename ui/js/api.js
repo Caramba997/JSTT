@@ -32,7 +32,11 @@ class API {
       clean: '/api/clean',
       calcperfmetrics: '/api/calcperfmetrics',
       evaluation: '/api/evaluation',
-      calccorrelations: '/api/calccorrelations'
+      calccorrelations: '/api/calccorrelations',
+      commits: '/api/commits',
+      prs: '/api/prs',
+      findCommits: '/api/findCommits',
+      findPrs: '/api/findPrs'
     };
   }
 

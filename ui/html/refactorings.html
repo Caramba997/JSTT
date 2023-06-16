@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Testability</title>
+    <meta name="author" content="Finn Carstensen">
+    <meta name="description" content="Finn Carstensen">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+    <script src="jquery.min.js" defer></script>
+    <script src="bootstrap.bundle.min.js" defer></script>
+    <script src="api.js" defer></script>
+    <script src="progress.js" defer></script>
+    <script src="refactorings.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="navbar-brand ps-3">JS Testability</div>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/ui/index">Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <button data-a="download" type="button" class="btn btn-outline-primary btn-sm">Download</button>
+          </li>
+          <li class="nav-item mx-1">
+            <button data-a="stats" type="button" class="btn btn-outline-primary btn-sm">Stats</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div data-e="error" class="alert alert-danger" style="display:none;" role="alert">
+      Error
+    </div>
+    <div data-e="success" class="alert alert-success" style="display:none;" role="alert">
+      Success
+    </div>
+    <div data-e="progress-modal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Progress <span data-e="progress-type"></span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="progress">
+              <div data-e="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;"></div>
+            </div>
+            <div class="text-center">
+              <span data-e="progress-current"></span>/<span data-e="progress-total"></span>
+            </div>
+            <div class="text-center">
+              <span data-e="progress-time">0:00</span> remaining
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-a="stop">Stop</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
