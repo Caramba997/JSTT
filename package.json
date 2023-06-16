@@ -34,6 +34,7 @@
     "express": "^4.18.2",
     "fastest-levenshtein": "^1.0.16",
     "github-api": "^3.4.0",
+    "isomorphic-git": "^1.24.1",
     "js-beautify": "^1.14.7",
     "json-format": "^1.0.1",
     "jstat": "^1.9.6",

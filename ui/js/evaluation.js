@@ -25,6 +25,7 @@
       let tableData = '';
       let tSummary = [];
       let corrButInsig = 0;
+      let moderate = 0;
       Object.entries(tdata).forEach(([tmetric, smetrics]) => {
         let index = 0;
         let row = `<tr><th scope="row">${tmetric}</th>`;
@@ -39,7 +40,7 @@
             while (index < colIndex);
           }
           let color = 'lightgrey';
-          if (Math.abs(value.rho) >= 0.7) {
+          if (Math.abs(value.rho) >= 0.5) {
             if (Math.abs(value.p) < 0.05) {
               color = `rgb(${((Math.abs(value.rho) - 0.5) * 2) * 255},${Math.abs(value.rho) * 255},${((Math.abs(value.rho) - 0.5) * 2) * 255})`;
               tSummary.push({
@@ -55,6 +56,12 @@
               color = `rgb(${Math.abs(value.rho) * 255},${((Math.abs(value.rho) - 0.5) * 2) * 255},${((Math.abs(value.rho) - 0.5) * 2) * 255})`;
             }
           }
+          else if (Math.abs(value.rho) >= 0.3) {
+            if (Math.abs(value.p) < 0.05) {
+              moderate++;
+              color = `rgb(${((Math.abs(value.rho) - 0.3) * 2) * 255},${((Math.abs(value.rho) - 0.3) * 2) * 255},${Math.abs(value.rho) * 3 * 255})`;
+            }
+          }
           if (Object.keys(value).length === 0) {
             row = row.concat(template.replace('{{color}}', 'black').replace('{{value}}', '').replace('{{title}}', ''));
           }
@@ -68,6 +75,7 @@
       tBody.html(tableData);
       console.log(`Significant correlations: ${tSummary.length}`);
       console.log(`Insignificant correlations: ${corrButInsig}`);
+      console.log(`Moderate correlations: ${moderate}`);
       const tSummaryTable = $('[data-e="correlations-test-summary"]');
       let summaryData = '';
       tSummary.forEach((entry) => {

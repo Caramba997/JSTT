@@ -16,25 +16,114 @@
   const gitHub = new GitHub();
   const metrics = new Metrics();
 
-  const data = files.json('project', 'repos.json', ['version_1']);
-  let js_f = 0, js_b = 0, ts_f = 0, ts_b = 0;
-  data.repos.forEach(repo => {
-    if (repo.language === 'JavaScript') {
-      if (repo.has_frontend === true) js_f++;
-      if (repo.has_backend === true) js_b++;
-    }
-    else {
-      if (repo.has_frontend === true) ts_f++;
-      if (repo.has_backend === true) ts_b++;
-    }
+  const data = files.json('project', 'evaluation.json', ['version_1_new']);
+  let str = '';
+  let min = 1;
+  let max = 0;
+  Object.entries(data.correlations.test).forEach(([tmetric, smetrics]) => {
+    Object.entries(smetrics).forEach(([smetric, values]) => {
+      if (Math.abs(values.rho) > 0.5) {
+        min = Math.min(min, Math.abs(values.rho));
+        max = Math.max(max, Math.abs(values.rho));
+        str += `${tmetric.replace('_', '\\_')} & ${smetric.replace('_', '\\_')} & ${values.rho.toFixed(4)} & ${`\\num{${values.p}}`.replace(/(?<=\.\d{4})\d+/, '')} \\\\\n`;
+      }
+    });
   });
-  console.log('JS', js_f, js_b);
-  console.log('TS', ts_f, ts_b);
+  files.write('project', 'str.txt', str, ['version_1_new']);
+  console.log(min, max);
+
+
+
+  // let c = 0, p = 0, s = 0;
+  // Object.values(data.repos).forEach(repo => {
+  //   const test = repo.testConnections;
+  //   let hasC = false;
+  //   Object.entries(test).forEach(([key, value]) => {
+  //     if (value) {
+  //       if (key === 'OTHER') {
+  //         value.forEach(file => {
+  //           c++;
+  //           hasC = true;
+  //         });
+  //       }
+  //       else {
+  //         c++;
+  //         s++;
+  //         hasC = true;
+  //       }
+  //     }
+  //   });
+  //   if (hasC) p++;
+  // });
+  // console.log(c, p, s);
+
+  
+  // let arr = [], js = [], ts = [];
+  // data.repos.forEach(repo => {
+  //   if (repo.no_javascript) return;
+  //   arr.push(repo.stargazers_count);
+  //   if (repo.language === 'JavaScript') {
+  //     js.push(repo.stargazers_count);
+  //   }
+  //   else {
+  //     ts.push(repo.stargazers_count);
+  //   }
+  // });
+  // const js_cr = metrics.valuesFromArr(arr);
+  // const js_pr = metrics.valuesFromArr(js);
+  // const ts_cr = metrics.valuesFromArr(ts);
+  // console.log(js_cr);
+  // console.log(js_pr);
+  // console.log(ts_cr);
+
+
+  // let t = 0, ti = 0, tf = 0;
+  // data.repos.forEach(repo => {
+  //   if (repo.no_javascript) return;
+  //   if (repo.has_tests) {
+  //     t++;
+  //   }
+  //   if (repo.test_run_impossible) ti++;
+  //   if (repo.has_failing_tests) tf++;
+  // });
+  // console.log(t, ti, tf);
+
+  // const result = {};
+  // data.repos.forEach(repo => {
+  //   if (repo.categories) {
+  //     repo.categories.forEach(fw => {
+  //       if (result[fw]) {
+  //         result[fw].total++;
+  //         result[fw][repo.language]++;
+  //       }
+  //       else {
+  //         result[fw] = {
+  //           name: fw,
+  //           total: 1,
+  //           JavaScript: 0,
+  //           TypeScript: 0
+  //         }
+  //         result[fw][repo.language]++;
+  //       }
+  //     });
+  //   }
+  // });
+  // let arr = Array.from(Object.values(result)).sort((a, b) => b.total - a.total);
+  // let str = '';
+  // arr.forEach(entry => {
+  //   str += `${entry.name} & ${entry.total} & ${entry.JavaScript} & ${entry.TypeScript} \\\\\n`;
+  // });
+  // files.write('project', 'fw.json', str, ['version_1']);
+  // console.log(arr);
 
 
   // let js_c = [], js_p = [];
   // let ts_c = [], ts_p = [];
+  // let total_c = 0, total_p = 0;
   // data.repos.forEach(repo => {
+  //   if (repo.no_javascript) return;
+  //   total_c += repo.total_commits;
+  //   total_p += repo.total_prs;
   //   if (repo.language === 'JavaScript') {
   //     js_c.push(repo.total_commits);
   //     js_p.push(repo.total_prs);
@@ -50,17 +139,21 @@
   // const ts_pr = metrics.valuesFromArr(ts_p);
 
   // console.log('COMMITS -------------------------------');
+  // console.log(total_c);
   // console.log(`[TOTAL] JS: ${js_cr.total} | TS: ${ts_cr.total}`);
   // console.log(`[MIN] JS: ${js_cr.min} | TS: ${ts_cr.min}`);
   // console.log(`[MAX] JS: ${js_cr.max} | TS: ${ts_cr.max}`);
   // console.log(`[AVG] JS: ${js_cr.avg} | TS: ${ts_cr.avg}`);
   // console.log(`[MED] JS: ${js_cr.med} | TS: ${ts_cr.med}`);
   // console.log('PRS -------------------------------');
+  // console.log(total_p);
   // console.log(`[TOTAL] JS: ${js_pr.total} | TS: ${ts_pr.total}`);
   // console.log(`[MIN] JS: ${js_pr.min} | TS: ${ts_pr.min}`);
   // console.log(`[MAX] JS: ${js_pr.max} | TS: ${ts_pr.max}`);
   // console.log(`[AVG] JS: ${js_pr.avg} | TS: ${ts_pr.avg}`);
   // console.log(`[MED] JS: ${js_pr.med} | TS: ${ts_pr.med}`);
+
+
 
 
   // const x = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];

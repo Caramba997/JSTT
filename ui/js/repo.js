@@ -85,6 +85,7 @@
         element.val(JSON.stringify(mtrcs, null, 2));
       });
       function addConnectionRows(tbody, data) {
+        if (!data) return;
         let html = '';
         let hasOther = false;
         Object.entries(data).forEach(([testPath, sourcePath]) => {
@@ -313,6 +314,7 @@
     const responseMetrics = response.data;
     Object.entries(responseMetrics).forEach(([type, paths]) => {
       Object.entries(paths).forEach(([path, mtrcs]) => {
+        metrics[type] = metrics[type] || {};
         metrics[type][path] = mtrcs;
       });
     });
@@ -372,8 +374,8 @@
       Object.entries(metrics.testConnections).forEach(([testPath, sourcePath]) => {
         if (testPath === 'OTHER') {
           if (sourcePath.includes(pathFixed)) {
-            const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jte]?s[xm]?)/)[0];
-            const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jte]?s[xm]?)`), `OTHER-${moduleName}`);
+            const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jteg]?s[xm]?)/)[0];
+            const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jteg]?s[xm]?)`), `OTHER-${moduleName}`);
             if (testConnection === null) {
               testConnection = [ metrics.test[otherPath] ];
             }
@@ -394,8 +396,8 @@
         }
       });
       if (!testConnection) {
-        const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jte]?s[xm]?)/)[0];
-        const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jte]?s[xm]?)`), `OTHER-${moduleName}`)
+        const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jteg]?s[xm]?)/)[0];
+        const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jteg]?s[xm]?)`), `OTHER-${moduleName}`)
         metrics.test[otherPath] = metrics.test[otherPath] || {};
         testConnection = [ metrics.test[otherPath] ];
         metrics.testConnections.OTHER = metrics.testConnections.OTHER || [];
@@ -433,8 +435,8 @@
       Object.entries(metrics.performanceConnections).forEach(([testPath, sourcePath]) => {
         if (testPath === 'OTHER') {
           if (sourcePath.includes(pathFixed)) {
-            const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jte]?s[xm]?)/)[0];
-            const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jte]?s[xm]?)`), `OTHER-${moduleName}`);
+            const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jteg]?s[xm]?)/)[0];
+            const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jteg]?s[xm]?)`), `OTHER-${moduleName}`);
             if (testConnection === null) {
               testConnection = [ metrics.performance[otherPath] ];
             }
@@ -455,8 +457,8 @@
         }
       });
       if (!testConnection) {
-        const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jte]?s[xm]?)/)[0];
-        const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jte]?s[xm]?)`), `OTHER-${moduleName}`)
+        const moduleName = pathFixed.match(/(?<=\/)[^\/]+(?=\.c?[jteg]?s[xm]?)/)[0];
+        const otherPath = pathFixed.replace(new RegExp(`${moduleName}(?=\.c?[jteg]?s[xm]?)`), `OTHER-${moduleName}`)
         metrics.performance[otherPath] = metrics.performance[otherPath] || {};
         testConnection = [ metrics.performance[otherPath] ];
         metrics.performanceConnections.OTHER = metrics.performanceConnections.OTHER || [];

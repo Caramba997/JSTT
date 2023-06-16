@@ -15,11 +15,8 @@
     tbody.html('');
     let doneRepos = 0;
     let haveTests = 0,
-        haveNoTests = 0,
         haveUiTests = 0,
-        havePerfTests = 0,
-        haveFrontend = 0,
-        haveBackend = 0;
+        havePerfTests = 0;
     let nextRepo = null;
     for (let i = 0; i < data.repos.length; i++) {
       const repo = data.repos[i],
@@ -83,11 +80,6 @@
         haveTests++;
         if (repo.has_ui_tests) haveUiTests++;
         if (repo.has_performance_tests) havePerfTests++;
-        if (repo.has_frontend) haveFrontend++;
-        if (repo.has_backend) haveBackend++;
-      }
-      else if (repo.has_tests === false) {
-        haveNoTests++;
       }
       html.find('a[data-e="repo-git"]').attr('href', repo.html_url);
       tbody.append(html);
@@ -114,10 +106,11 @@
     Array.from(Object.entries(stats)).forEach(([key, value]) => {
       $(`[data-e="stats-${key}"]`).text(value);
     });
+    $(`[data-e="stats-nojs"]`).text(`${Math.round((data.stats.total - data.stats.withJs) / data.stats.total * 100)}% (${data.stats.total - data.stats.withJs}/${data.stats.total})`);
     $(`[data-e="stats-done"]`).text(`${Math.round(doneRepos / data.stats.total * 100)}% (${doneRepos}/${data.stats.total})`);
-    $(`[data-e="stats-tests"]`).text(`${Math.round(haveTests / (haveTests + haveNoTests) * 100)}% (${haveTests}/${haveTests + haveNoTests})`);
-    $(`[data-e="stats-ui-tests"]`).text(`${Math.round(haveUiTests / haveFrontend * 100)}% (${haveUiTests}/${haveFrontend})`);
-    $(`[data-e="stats-perf-tests"]`).text(`${Math.round(havePerfTests / data.stats.total * 100)}% (${havePerfTests}/${data.stats.total})`);
+    $(`[data-e="stats-tests"]`).text(`${Math.round(haveTests / data.stats.withJs * 100)}% (${haveTests}/${data.stats.withJs})`);
+    $(`[data-e="stats-ui-tests"]`).text(`${Math.round(haveUiTests / data.stats.frontend * 100)}% (${haveUiTests}/${data.stats.frontend})`);
+    $(`[data-e="stats-perf-tests"]`).text(`${Math.round(havePerfTests / data.stats.withJs * 100)}% (${havePerfTests}/${data.stats.withJs})`);
     $(`[data-e="stats-frontend"]`).text(data.stats.frontend);
     $(`[data-e="stats-backend"]`).text(data.stats.backend);
 
@@ -163,6 +156,7 @@
     const stats = {
             name: id,
             total: data.repos.length,
+            withJs: 0,
             js: 0,
             ts: 0,
             org: 0,
@@ -176,6 +170,8 @@
     for (let i = 0; i < data.repos.length; i++) {
       progress.setProgress(i, data.repos.length);
       const repo = data.repos[i];
+      if (repo.no_javascript) continue;
+      stats.withJs++;
       if (repo.language === 'JavaScript') stats.js++;
       if (repo.language === 'TypeScript') stats.ts++;
       if (repo.owner.type === 'Organization') stats.org++;
@@ -254,7 +250,7 @@
       progress.setProgress(i, data.repos.length);
       const repo = data.repos[i];
       if (repo.total_commits !== undefined) {
-        totalCommits += repo.total_commits;
+        if (!repo.no_javascript) totalCommits += repo.total_commits;
         progress.setStartIndex(i + 1);
         continue;
       }
@@ -264,7 +260,7 @@
       if (response) {
         result = response.data;
         data.repos[i] = result;
-        totalCommits += result.total_commits;
+        if (!repo.no_javascript) totalCommits += result.total_commits;
         await api.postPromise('repos', {
           id: id,
           data: data
@@ -297,7 +293,7 @@
       progress.setProgress(i, data.repos.length);
       const repo = data.repos[i];
       if (repo.total_prs !== undefined) {
-        totalPRs += repo.total_prs;
+        if (!repo.no_javascript) totalPRs += repo.total_prs;
         progress.setStartIndex(i + 1);
         continue;
       }
@@ -307,7 +303,7 @@
       if (response) {
         result = response.data;
         data.repos[i] = result;
-        totalPRs += result.total_prs;
+        if (!repo.no_javascript) totalPRs += result.total_prs;
         await api.postPromise('repos', {
           id: id,
           data: data
