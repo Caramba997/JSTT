@@ -72,7 +72,7 @@
 
   async function calcStats() {
     const commits = (await api.getPromise('commits', { id: id })).data,
-          prs = (await api.getPromise('commits', { id: id })).data;
+          prs = (await api.getPromise('prs', { id: id })).data;
     commits.stats = {
       list: []
     };
