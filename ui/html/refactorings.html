@@ -32,9 +32,77 @@
           <li class="nav-item mx-1">
             <button data-a="stats" type="button" class="btn btn-outline-primary btn-sm">Stats</button>
           </li>
+          <li class="nav-item mx-1">
+            <button data-a="refactorings" type="button" class="btn btn-outline-primary btn-sm">Mine Refactorings</button>
+          </li>
         </ul>
       </div>
     </nav>
+
+    <div class="accordion m-2" id="sections">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#stats-content" aria-expanded="true" aria-controls="stats-content">
+            Info
+          </button>
+        </h2>
+        <div id="stats-content" class="accordion-collapse collapse show" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <div data-e="info" class="d-flex flex-column flex-wrap">
+              <div>Progress: <span data-e="info-progress">?</span></div>
+              <div>Refactorings: <span data-e="info-refactorings">?</span></div>
+              <h3>Commits</h3>
+              <div>Total: <span data-e="info-ctotal">?</span></div>
+              <div>Average: <span data-e="info-cavg">?</span></div>
+              <div>Median: <span data-e="info-cmed">?</span></div>
+              <div>Min: <span data-e="info-cmin">?</span></div>
+              <div>Max: <span data-e="info-cmax">?</span></div>
+              <h3>PRs</h3>
+              <div>Total: <span data-e="info-ptotal">?</span></div>
+              <div>Average: <span data-e="info-pavg">?</span></div>
+              <div>Median: <span data-e="info-pmed">?</span></div>
+              <div>Min: <span data-e="info-pmin">?</span></div>
+              <div>Max: <span data-e="info-pmax">?</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <table class="table table-striped" data-e="commit-list">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">SHA</th>
+          <th scope="col">Repo</th>
+          <th scope="col">PRs</th>
+          <th scope="col">Refactorings</th>
+          <th scope="col"><i class="fa-solid fa-check"></i></th>
+          <th scope="col">GitHub</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <template data-t="commit-list-item">
+      <tr data-index="" data-id="">
+        <th scope="row" data-e="commit-index"></th>
+        <td><a data-e="commit-sha" href="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-html="true" title=""></a></td>
+        <td data-e="commit-repo"></td>
+        <td data-e="commit-prs"></td>
+        <td data-e="commit-refactorings"></td>
+        <td>
+          <i data-e="commit-done" class="fa-solid fa-check" style="display: none;"></i>
+        </td>
+        <td>
+          <a data-e="commit-git" href="" target="_blank">
+            <i class="fa-solid fa-globe"></i>
+          </a>
+        </td>
+      </tr>
+    </template>
+
     <div data-e="error" class="alert alert-danger" style="display:none;" role="alert">
       Error
     </div>

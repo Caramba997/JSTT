@@ -9,6 +9,7 @@ const { Files } = require('../lib/files.js');
 const { NPM } = require('../lib/npm.js');
 const { Metrics } = require('../lib/metrics.js');
 const { Correlations } = require('../lib/correlations.js');
+const { Refactorings } = require('../lib/refactorings.js');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -29,6 +30,7 @@ const files = new Files();
 const npm = new NPM();
 const metrics = new Metrics();
 const correlations = new Correlations();
+const refactorings = new Refactorings();
 
 function success(res, data) {
   return res.send({
@@ -938,6 +940,81 @@ app.post('/api/findPrs', async (req, res) => {
   if (!owner || !repo || !commit) return error(res, 400, 'Param missing');
   try {
     const data = await gitHub.getPrsForCommit(repo, owner, commit);
+    return success(res, data);
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Error getting results');
+  }
+});
+
+app.get('/api/refactorings', async (req, res) => {
+  const id = req.query.id;
+  let repo = req.query.repo;
+  if (!id) return error(res, 400, 'Param missing');
+  try {
+    const exists = files.exists('project', 'refactorings.json', [id]);
+    let result;
+    if (repo) repo = decodeURIComponent(repo);
+    if (exists) {
+      const data = files.json('project', 'refactorings.json', [id]);
+      if (repo) {
+        result = data.refactorings[repo] || {};
+      }
+      else {
+        result = data;
+      }
+    }
+    else {
+      if (repo) {
+        result = {};
+      }
+      else {
+        result = { refactorings: {} };
+      }
+    }
+    return success(res, result);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/refactorings', async (req, res) => {
+  const id = req.body.id,
+        repo = req.body.repo,
+        data = req.body.data;
+  if (!id || !data) return error(res, 400, 'Param missing');
+  try {
+    if (repo) {
+      const exists = files.exists('project', 'refactorings.json', [id]);
+      let content;
+      if (exists) {
+        content = files.json('project', 'refactorings.json', [id]);
+      }
+      else {
+        content = { refactorings: {} };
+      }
+      content.refactorings[repo] = data;
+      files.write('project', 'refactorings.json', content, [id], true);
+      return success(res, data);
+    }
+    else {
+      files.write('project', 'refactorings.json', data, [id], true);
+    }
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/findRefactorings', async (req, res) => {
+  const owner = req.body.owner,
+        repo = req.body.repo,
+        commits = req.body.commits;
+  if (!owner || !repo || !commits) return error(res, 400, 'Param missing');
+  try {
+    const data = await refactorings.findRefactorings(owner, repo, commits);
     return success(res, data);
   }
   catch (e) {

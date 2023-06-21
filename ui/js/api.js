@@ -36,7 +36,9 @@ class API {
       commits: '/api/commits',
       prs: '/api/prs',
       findCommits: '/api/findCommits',
-      findPrs: '/api/findPrs'
+      findPrs: '/api/findPrs',
+      refactorings: '/api/refactorings',
+      findRefactorings: '/api/findRefactorings'
     };
   }
 
