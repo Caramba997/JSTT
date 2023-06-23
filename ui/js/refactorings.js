@@ -30,18 +30,20 @@
         refactoringCount = 0,
         nextCommit = null,
         c = 0;
+    const filter = $('[data-e="commit-filter').val();
     Object.entries(COMMITS.commits).forEach(([repo, commits]) => {
       for (let i = 0; i < commits.length; i++) {
         const commit = commits[i],
               html = template.clone(true);
+        const refactorings = REFACTORINGS.refactorings[repo];
+        if (filter === 'refactorings' && refactorings && refactorings[commit.sha] && refactorings[commit.sha].length === 0) continue;
         html.data('index', c);
         html.data('id', commit.sha);
         html.find('[data-e="commit-index"]').text(c + 1);
         const commitNameElement = html.find('[data-e="commit-sha"]')
-        commitNameElement.text(commit.sha).attr('href', `/ui/commit?sha=${commit.sha}&repo=${repo}`);
+        commitNameElement.text(commit.sha).attr('href', `/ui/commit?id=${id}&sha=${commit.sha}&repo=${repo}`);
         html.find('[data-e="commit-repo"]').text(repo);
         html.find('[data-e="commit-prs"]').text(commit.prs ? commit.prs.length : 0);
-        const refactorings = REFACTORINGS.refactorings[repo];
         html.find('[data-e="commit-refactorings"]').text(refactorings && refactorings[commit.sha] ? refactorings[commit.sha].length : 0);
         if (commit.is_done) {
           doneCommits++;
@@ -204,5 +206,7 @@
   $('[data-a="refactorings"]').on('click', () => {
     mineRefactorings();
   });
+
+  $('[data-e="commit-filter').on('change', buildPage);
 
 })();

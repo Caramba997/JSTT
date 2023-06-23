@@ -13,7 +13,7 @@
     <script src="bootstrap.bundle.min.js" defer></script>
     <script src="api.js" defer></script>
     <script src="progress.js" defer></script>
-    <script src="refactorings.js" defer></script>
+    <script src="commit.js" defer></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
@@ -26,14 +26,8 @@
           <li class="nav-item">
             <a class="nav-link" href="/ui/index">Home</a>
           </li>
-          <li class="nav-item mx-1">
-            <button data-a="download" type="button" class="btn btn-outline-primary btn-sm">Download</button>
-          </li>
-          <li class="nav-item mx-1">
-            <button data-a="stats" type="button" class="btn btn-outline-primary btn-sm">Stats</button>
-          </li>
-          <li class="nav-item mx-1">
-            <button data-a="refactorings" type="button" class="btn btn-outline-primary btn-sm">Mine Refactorings</button>
+          <li class="nav-item">
+            <a class="nav-link" data-a="refactorings-link" href="/ui/refactorings">Refactorings</a>
           </li>
         </ul>
       </div>
@@ -49,65 +43,55 @@
         <div id="stats-content" class="accordion-collapse collapse show" data-bs-parent="#sections">
           <div class="accordion-body">
             <div data-e="info" class="d-flex flex-column flex-wrap">
-              <div>Progress: <span data-e="info-progress">?</span></div>
+              <div>Repo: <span data-e="info-repo">?</span></div>
+              <div>SHA: <span data-e="info-sha">?</span></div>
               <div>Refactorings: <span data-e="info-refactorings">?</span></div>
-              <h3>Commits</h3>
-              <div>Total: <span data-e="info-ctotal">?</span></div>
-              <div>Average: <span data-e="info-cavg">?</span></div>
-              <div>Median: <span data-e="info-cmed">?</span></div>
-              <div>Min: <span data-e="info-cmin">?</span></div>
-              <div>Max: <span data-e="info-cmax">?</span></div>
-              <h3>PRs</h3>
-              <div>Total: <span data-e="info-ptotal">?</span></div>
-              <div>Average: <span data-e="info-pavg">?</span></div>
-              <div>Median: <span data-e="info-pmed">?</span></div>
-              <div>Min: <span data-e="info-pmin">?</span></div>
-              <div>Max: <span data-e="info-pmax">?</span></div>
+              <div>PRs: <span data-e="info-prs">?</span></div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <br>
-
-    <div>
-      <span>Filter </span>
-      <select class="form-select form-select-sm" data-e="commit-filter">
-        <option value="refactorings">Only with Refactorings</option>
-        <option value="all">All</option>
-      </select>
-    </div>
-
-    <table class="table table-striped" data-e="commit-list">
+    <table class="table table-striped" data-e="refactorings-list">
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">SHA</th>
-          <th scope="col">Repo</th>
-          <th scope="col">PRs</th>
-          <th scope="col">Refactorings</th>
-          <th scope="col"><i class="fa-solid fa-check"></i></th>
-          <th scope="col">GitHub</th>
+          <th scope="col">Type</th>
+          <th scope="col">Revision</th>
+          <th scope="col">Location Type</th>
+          <th scope="col">File</th>
+          <th scope="col">Test File</th>
+          <th scope="col">Line</th>
+          <th scope="col">Simple Name</th>
+          <th scope="col">Local Name</th>
+          <th scope="col">Parameters</th>
         </tr>
       </thead>
       <tbody></tbody>
     </table>
-    <template data-t="commit-list-item">
-      <tr data-index="" data-id="">
-        <th scope="row" data-e="commit-index"></th>
-        <td><a data-e="commit-sha" href="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-html="true" title=""></a></td>
-        <td data-e="commit-repo"></td>
-        <td data-e="commit-prs"></td>
-        <td data-e="commit-refactorings"></td>
-        <td>
-          <i data-e="commit-done" class="fa-solid fa-check" style="display: none;"></i>
-        </td>
-        <td>
-          <a data-e="commit-git" href="" target="_blank">
-            <i class="fa-solid fa-globe"></i>
-          </a>
-        </td>
+    <template data-t="refactorings-list-item">
+      <tr>
+        <th scope="row" data-e="refactoring-index" rowspan="2"></th>
+        <td data-e="refactoring-type" rowspan="2"></th>
+        <td data-e="refactoring-revision"></th>
+        <td data-e="refactoring-location"></th>
+        <td data-e="refactoring-file"></th>
+        <td data-e="refactoring-test-file" data-bs-toggle="tooltip" data-bs-placement="top"></th>
+        <td data-e="refactoring-line"></th>
+        <td data-e="refactoring-simple-name"></th>
+        <td data-e="refactoring-local-name"></th>
+        <td data-e="refactoring-parameters"></th>
+      </tr>
+      <tr>
+        <td data-e="refactoring-revision-a"></th>
+        <td data-e="refactoring-location-a"></th>
+        <td data-e="refactoring-file-a"></th>
+        <td data-e="refactoring-test-file-a" data-bs-toggle="tooltip" data-bs-placement="top"></th>
+        <td data-e="refactoring-line-a"></th>
+        <td data-e="refactoring-simple-name-a"></th>
+        <td data-e="refactoring-local-name-a"></th>
+        <td data-e="refactoring-parameters-a"></th>
       </tr>
     </template>
 

@@ -800,16 +800,28 @@ app.post('/api/clean', async (req, res) => {
 
 app.get('/api/commits', async (req, res) => {
   const id = req.query.id;
-  let repo = req.query.repo;
+  let repo = req.query.repo,
+      sha = req.query.sha;
   if (!id) return error(res, 400, 'Param missing');
   try {
     const exists = files.exists('project', 'commits.json', [id]);
-    let result;
+    let result = null;
     if (repo) repo = decodeURIComponent(repo);
+    if (sha) sha = decodeURIComponent(sha);
     if (exists) {
       const data = files.json('project', 'commits.json', [id]);
       if (repo) {
-        result = data.commits[repo] || [];
+        if (sha) {
+          for (let i = 0; i < data.commits[repo].length; i++) {
+            if (data.commits[repo][i].sha === sha) {
+              result = data.commits[repo][i];
+              break;
+            }
+          }
+        }
+        else {
+          result = data.commits[repo] || [];
+        }
       }
       else {
         result = data;
@@ -817,7 +829,12 @@ app.get('/api/commits', async (req, res) => {
     }
     else {
       if (repo) {
-        result = [];
+        if (sha) {
+          result = null;
+        }
+        else {
+          result = [];
+        }
       }
       else {
         result = { commits: {} };
@@ -833,6 +850,7 @@ app.get('/api/commits', async (req, res) => {
 app.post('/api/commits', async (req, res) => {
   const id = req.body.id,
         repo = req.body.repo,
+        sha = req.query.sha,
         data = req.body.data;
   if (!id || !data) return error(res, 400, 'Param missing');
   try {
@@ -845,7 +863,23 @@ app.post('/api/commits', async (req, res) => {
       else {
         content = { commits: {} };
       }
-      content.commits[repo] = data;
+      if (sha) {
+        content.commits[repo] = content.commits[repo] || [];
+        let found = false;
+        for (let i = 0; i < content.commits[repo].length; i++) {
+          if (content.commits[repo][i].sha === sha) {
+            content.commits[repo][i] = data;
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          content.commits[repo].push(data);
+        }
+      }
+      else {
+        content.commits[repo] = data;
+      }
       files.write('project', 'commits.json', content, [id], true);
     }
     else {
@@ -950,16 +984,23 @@ app.post('/api/findPrs', async (req, res) => {
 
 app.get('/api/refactorings', async (req, res) => {
   const id = req.query.id;
-  let repo = req.query.repo;
+  let repo = req.query.repo,
+      sha = req.query.sha;
   if (!id) return error(res, 400, 'Param missing');
   try {
     const exists = files.exists('project', 'refactorings.json', [id]);
     let result;
     if (repo) repo = decodeURIComponent(repo);
+    if (sha) sha = decodeURIComponent(sha);
     if (exists) {
       const data = files.json('project', 'refactorings.json', [id]);
       if (repo) {
-        result = data.refactorings[repo] || {};
+        if (sha) {
+          result = data.refactorings[repo] && data.refactorings[repo][sha] || [];
+        }
+        else {
+          result = data.refactorings[repo] || {};
+        }
       }
       else {
         result = data;
@@ -983,6 +1024,7 @@ app.get('/api/refactorings', async (req, res) => {
 app.post('/api/refactorings', async (req, res) => {
   const id = req.body.id,
         repo = req.body.repo,
+        sha = req.query.sha,
         data = req.body.data;
   if (!id || !data) return error(res, 400, 'Param missing');
   try {
@@ -995,7 +1037,12 @@ app.post('/api/refactorings', async (req, res) => {
       else {
         content = { refactorings: {} };
       }
-      content.refactorings[repo] = data;
+      if (sha) {
+        content.refactorings[repo][sha] = data;
+      }
+      else {
+        content.refactorings[repo] = data;
+      }
       files.write('project', 'refactorings.json', content, [id], true);
       return success(res, data);
     }
