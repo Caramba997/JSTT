@@ -29,6 +29,14 @@
           <li class="nav-item">
             <a class="nav-link" data-a="refactorings-link" href="/ui/refactorings">Refactorings</a>
           </li>
+          <li class="nav-item mx-1">
+            <button data-a="done" type="button" class="btn btn-sm" disabled>TODO</button>
+          </li>
+          <li class="nav-item mx-1">
+            <a data-e="commit-git" href="" target="_blank">
+              <i class="fa-solid fa-globe"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -56,6 +64,7 @@
     <table class="table table-striped" data-e="refactorings-list">
       <thead>
         <tr>
+          <th scope="col"><i class="fa-solid fa-check"></i></th>
           <th scope="col">#</th>
           <th scope="col">Type</th>
           <th scope="col">Revision</th>
@@ -72,6 +81,7 @@
     </table>
     <template data-t="refactorings-list-item">
       <tr>
+        <th scope="row" rowspan="2"><button data-a="testability-refactoring" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></button></i></th>
         <th scope="row" data-e="refactoring-index" rowspan="2"></th>
         <td data-e="refactoring-type" rowspan="2"></th>
         <td data-e="refactoring-revision"></th>

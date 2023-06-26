@@ -850,7 +850,7 @@ app.get('/api/commits', async (req, res) => {
 app.post('/api/commits', async (req, res) => {
   const id = req.body.id,
         repo = req.body.repo,
-        sha = req.query.sha,
+        sha = req.body.sha,
         data = req.body.data;
   if (!id || !data) return error(res, 400, 'Param missing');
   try {
@@ -880,10 +880,10 @@ app.post('/api/commits', async (req, res) => {
       else {
         content.commits[repo] = data;
       }
-      files.write('project', 'commits.json', content, [id], true);
+      files.write('project', 'commits.json', content, [id], false);
     }
     else {
-      files.write('project', 'commits.json', data, [id], true);
+      files.write('project', 'commits.json', data, [id], false);
     }
     return success(res, data);
   }
@@ -1024,7 +1024,7 @@ app.get('/api/refactorings', async (req, res) => {
 app.post('/api/refactorings', async (req, res) => {
   const id = req.body.id,
         repo = req.body.repo,
-        sha = req.query.sha,
+        sha = req.body.sha,
         data = req.body.data;
   if (!id || !data) return error(res, 400, 'Param missing');
   try {

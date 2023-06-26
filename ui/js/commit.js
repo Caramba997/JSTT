@@ -26,6 +26,22 @@
     for (let i = 0; i < REFACTORINGS.length; i++) {
       const ref = REFACTORINGS[i],
             html = template.clone(true);
+      const isTRButton = html.find('[data-a="testability-refactoring"]');
+      isTRButton.on('click', async () => {
+        progress.init('Toggle testability refactoring', 1);
+        if (ref.is_testability_refactoring === true) {
+          delete ref.is_testability_refactoring;
+          $('[data-a="testability-refactoring"]').removeClass('btn-success').addClass('btn-danger').html('<i class="fa-solid fa-xmark"></i>');
+        }
+        else {
+          ref.is_testability_refactoring = true;
+          $('[data-a="testability-refactoring"]').removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
+        }
+        await api.postPromise('refactorings', { id: id, repo: repo, sha: sha, data: REFACTORINGS });
+        progress.setProgress(1, 1);
+        progress.end();
+      });
+      if (ref.is_testability_refactoring) isTRButton.removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
       html.find('[data-e="refactoring-index"]').text(i + 1);
       html.find('[data-e="refactoring-type"]').text(ref.type);
       html.find('[data-e="refactoring-revision"]').text('BEFORE');
@@ -69,6 +85,9 @@
       tbody.append(html);
     }
 
+    $('[data-a="done"]').prop('disabled', false).addClass(COMMIT.is_done ? 'btn-success' : 'btn-danger');
+    $('[data-e="commit-git"]').attr('href', COMMIT.html_url);
+
     // Init tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -77,5 +96,25 @@
   }
 
   $('[data-a="refactorings-link"]').attr('href', `/ui/refactorings?id=${id}`);
+
+  $('[data-a="done"]').on('click', async () => {
+    progress.init('Toggle todo state', 1);
+    if (COMMIT.is_done === true) {
+      delete COMMIT.is_done;
+      $('[data-a="done"]').removeClass('btn-success').addClass('btn-danger').text('TODO');
+    }
+    else {
+      COMMIT.is_done = true;
+      $('[data-a="done"]').removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
+    }
+    await api.postPromise('commits', {
+      id: id,
+      repo: repo,
+      sha: sha,
+      data: COMMIT
+    });
+    progress.setProgress(1, 1);
+    progress.end();
+  });
 
 })();
