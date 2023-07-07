@@ -10,27 +10,50 @@
   const Traverse = require('@babel/traverse');
   const Types = require('@babel/types');
   const axios = require('axios');
+  const equal = require('deep-equal');
 
   const npm = new NPM();
   const files = new Files();
   const gitHub = new GitHub();
   const metrics = new Metrics();
 
-  const data = files.json('project', 'evaluation.json', ['version_1_new']);
-  let str = '';
-  let min = 1;
-  let max = 0;
-  Object.entries(data.correlations.test).forEach(([tmetric, smetrics]) => {
-    Object.entries(smetrics).forEach(([smetric, values]) => {
-      if (Math.abs(values.rho) > 0.5) {
-        min = Math.min(min, Math.abs(values.rho));
-        max = Math.max(max, Math.abs(values.rho));
-        str += `${tmetric.replace('_', '\\_')} & ${smetric.replace('_', '\\_')} & ${values.rho.toFixed(4)} & ${`\\num{${values.p}}`.replace(/(?<=\.\d{4})\d+/, '')} \\\\\n`;
+  const data = files.json('project', 'commits.json', ['version_1_new']);
+  Object.entries(data.commits).forEach(([repo, commits]) => {
+    const shas = {};
+    try {
+      for (let i = 0; i < commits.length;) {
+        const commit = commits[i];
+        if (shas[commit.sha] && equal(commit, shas[commit.sha])) {
+          commits.splice(i, 1);
+          continue;
+        }
+        shas[commit.sha] = commit;
+        i++;
       }
-    });
+    }
+    catch (e) {
+      console.error(e);
+      console.log(repo, typeof commits);
+      throw 'Error occured';
+    }
   });
-  files.write('project', 'str.txt', str, ['version_1_new']);
-  console.log(min, max);
+  files.write('project', 'commits.json', data, ['version_1_new']);
+
+  // const data = files.json('project', 'evaluation.json', ['version_1_new']);
+  // let str = '';
+  // let min = 1;
+  // let max = 0;
+  // Object.entries(data.correlations.test).forEach(([tmetric, smetrics]) => {
+  //   Object.entries(smetrics).forEach(([smetric, values]) => {
+  //     if (Math.abs(values.rho) > 0.5) {
+  //       min = Math.min(min, Math.abs(values.rho));
+  //       max = Math.max(max, Math.abs(values.rho));
+  //       str += `${tmetric.replace('_', '\\_')} & ${smetric.replace('_', '\\_')} & ${values.rho.toFixed(4)} & ${`\\num{${values.p}}`.replace(/(?<=\.\d{4})\d+/, '')} \\\\\n`;
+  //     }
+  //   });
+  // });
+  // files.write('project', 'str.txt', str, ['version_1_new']);
+  // console.log(min, max);
 
 
 

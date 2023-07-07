@@ -19,7 +19,19 @@
     statsElement.find('[data-e="info-repo"]').text(repo);
     statsElement.find('[data-e="info-sha"]').text(sha);
     statsElement.find('[data-e="info-refactorings"]').text(REFACTORINGS.length);
-    statsElement.find('[data-e="info-prs"]').text(COMMIT.prs && COMMIT.prs.length);
+    statsElement.find('[data-e="info-prs"]').text(COMMIT.prs && COMMIT.prs.length || 0);
+    if (COMMIT.prs && COMMIT.prs.length === 1) {
+      const prButton = $('[data-e="commit-pr"]');
+      prButton.show();
+      let pr = null;
+      for (let i = 0; i < PRS.length; i++) {
+        if (PRS[i].number === COMMIT.prs[0]) {
+          pr = PRS[i];
+          break;
+        }
+      }
+      if (pr) prButton.attr('href', pr.html_url);
+    }
     const tbody = $('[data-e="refactorings-list"] tbody'),
           template = $($('[data-t="refactorings-list-item"]').html());
     tbody.html('');
@@ -45,43 +57,43 @@
       html.find('[data-e="refactoring-index"]').text(i + 1);
       html.find('[data-e="refactoring-type"]').text(ref.type);
       html.find('[data-e="refactoring-revision"]').text('BEFORE');
-      html.find('[data-e="refactoring-location"]').text(ref.nodeBefore.type);
-      html.find('[data-e="refactoring-file"]').text(ref.nodeBefore.location.file);
+      html.find('[data-e="refactoring-location"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeBefore.type);
+      html.find('[data-e="refactoring-file"]').text(ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[0] : ref.nodeBefore.location.file);
       let testFile = '';
       if (METRICS.testConnections) {
         const testCons = Array.from(Object.entries(METRICS.testConnections));
         for (let k = 0; k < testCons.length; k++) {
           const con = testCons[k];
-          if (typeof con[1] === 'string' && con[1].match(new RegExp(`.*${ref.nodeBefore.location.file.replace('.', '\\.').replace('-', '\\-')}`))) {
+          if (typeof con[1] === 'string' && con[1].match(new RegExp(`.*${ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[0] : ref.nodeBefore.location.file.replace('.', '\\.').replace('-', '\\-')}`))) {
             testFile = con[0];
             break;
           }
         }
       }
       html.find('[data-e="refactoring-test-file"]').text(testFile.split('/').splice(-1)).attr('title', testFile);
-      html.find('[data-e="refactoring-line"]').text(ref.nodeBefore.location.line);
-      html.find('[data-e="refactoring-simple-name"]').text(ref.nodeBefore.simpleName);
-      html.find('[data-e="refactoring-local-name"]').text(ref.nodeBefore.localName);
-      html.find('[data-e="refactoring-parameters"]').text(ref.nodeBefore.parameters.reduce((prev, curr) => `${prev}${prev ? ', ' : ''}${curr.name}`, ''));
+      html.find('[data-e="refactoring-line"]').text(ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[1] : ref.nodeBefore.location.line);
+      html.find('[data-e="refactoring-simple-name"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeBefore.simpleName);
+      html.find('[data-e="refactoring-local-name"]').text(ref.tool === 'jsdiffer' ? ref.localNameBefore : ref.nodeBefore.localName);
+      html.find('[data-e="refactoring-parameters"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeBefore.parameters.reduce((prev, curr) => `${prev}${prev ? ', ' : ''}${curr.name}`, ''));
       html.find('[data-e="refactoring-revision-a"]').text('AFTER');
-      html.find('[data-e="refactoring-location-a"]').text(ref.nodeAfter.type);
-      html.find('[data-e="refactoring-file-a"]').text(ref.nodeAfter.location.file);
+      html.find('[data-e="refactoring-location-a"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeAfter.type);
+      html.find('[data-e="refactoring-file-a"]').text(ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[0] : ref.nodeAfter.location.file);
       testFile = '';
       if (METRICS.testConnections) {
         const testCons = Array.from(Object.entries(METRICS.testConnections));
         for (let k = 0; k < testCons.length; k++) {
           const con = testCons[k];
-          if (typeof con[1] === 'string' && con[1].match(new RegExp(`.*${ref.nodeAfter.location.file.replace('.', '\\.').replace('-', '\\-')}`))) {
+          if (typeof con[1] === 'string' && con[1].match(new RegExp(`.*${(ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[0] : ref.nodeAfter.location.file).replace('.', '\\.').replace('-', '\\-')}`))) {
             testFile = con[0];
             break;
           }
         }
       }
       html.find('[data-e="refactoring-test-file-a"]').text(testFile.split('/').splice(-1)).attr('title', testFile);
-      html.find('[data-e="refactoring-line-a"]').text(ref.nodeAfter.location.line);
-      html.find('[data-e="refactoring-simple-name-a"]').text(ref.nodeAfter.simpleName);
-      html.find('[data-e="refactoring-local-name-a"]').text(ref.nodeAfter.localName);
-      html.find('[data-e="refactoring-parameters-a"]').text(ref.nodeAfter.parameters.reduce((prev, curr) => `${prev}${prev ? ', ' : ''}${curr.name}`, ''));
+      html.find('[data-e="refactoring-line-a"]').text(ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[1] : ref.nodeAfter.location.line);
+      html.find('[data-e="refactoring-simple-name-a"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeAfter.simpleName);
+      html.find('[data-e="refactoring-local-name-a"]').text(ref.tool === 'jsdiffer' ? ref.localNameAfter : ref.nodeAfter.localName);
+      html.find('[data-e="refactoring-parameters-a"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeAfter.parameters.reduce((prev, curr) => `${prev}${prev ? ', ' : ''}${curr.name}`, ''));
       tbody.append(html);
     }
 

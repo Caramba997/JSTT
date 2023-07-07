@@ -10,6 +10,7 @@ const { NPM } = require('../lib/npm.js');
 const { Metrics } = require('../lib/metrics.js');
 const { Correlations } = require('../lib/correlations.js');
 const { Refactorings } = require('../lib/refactorings.js');
+const { RefactoringsJSDiffer } = require('../lib/refactorings-jsdiffer.js');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -31,6 +32,7 @@ const npm = new NPM();
 const metrics = new Metrics();
 const correlations = new Correlations();
 const refactorings = new Refactorings();
+const refactoringsJsDiffer = new RefactoringsJSDiffer();
 
 function success(res, data) {
   return res.send({
@@ -1062,6 +1064,21 @@ app.post('/api/findRefactorings', async (req, res) => {
   if (!owner || !repo || !commits) return error(res, 400, 'Param missing');
   try {
     const data = await refactorings.findRefactorings(owner, repo, commits);
+    return success(res, data);
+  }
+  catch (e) {
+    console.log(e);
+    return error(res, 500, 'Error getting results');
+  }
+});
+
+app.post('/api/findRefactoringsJsDiffer', async (req, res) => {
+  const owner = req.body.owner,
+        repo = req.body.repo,
+        commits = req.body.commits;
+  if (!owner || !repo || !commits) return error(res, 400, 'Param missing');
+  try {
+    const data = await refactoringsJsDiffer.findRefactorings(owner, repo, commits);
     return success(res, data);
   }
   catch (e) {

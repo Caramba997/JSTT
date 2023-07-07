@@ -194,6 +194,54 @@
     }
     progress.end();
   }
+  
+  async function mineRefactorings2() {
+    const total = Object.keys(COMMITS.commits).length;
+    progress.init('Mine refactorings from commits (JSDiffer)', total);
+    const commitsArray = Array.from(Object.entries(COMMITS.commits));
+    let completed = 0;
+    const oldRefs = Array.from(Object.values(REFACTORINGS.refactorings));
+    for (let i = 0; i < total; i++) {
+      let found = false;
+      Object.values(oldRefs[i]).forEach(commit => {
+        commit.forEach(ref => {
+          if (ref.tool === 'jsdiffer') found = true;
+        });
+      });
+      if (found) completed = i;
+    }
+    if (completed > 0) progress.setStartIndex(completed);
+    for (let i = completed; i < total && progress.status === 1; i++) {
+      const repo = commitsArray[i][0],
+            commits = commitsArray[i][1];
+      progress.setProgress(i, total);
+      const shas = commits.reduce((prev, curr) => {
+        prev.push(curr.sha);
+        return prev;
+      }, []);
+      const repoOwner = repo.split('/')[0],
+            repoName = repo.split('/')[1];
+      try {
+        const response = await api.postPromise('findRefactoringsJsDiffer', {
+          owner: repoOwner,
+          repo: repoName,
+          commits: shas
+        });
+        const data = response.data;
+        REFACTORINGS.refactorings[repo] = REFACTORINGS.refactorings[repo] || {};
+        data.forEach(commitRefactorings => {
+          REFACTORINGS.refactorings[repo][commitRefactorings.commitSha] = REFACTORINGS.refactorings[repo][commitRefactorings.commitSha] || [];
+          REFACTORINGS.refactorings[repo][commitRefactorings.commitSha].push(...commitRefactorings.refactorings);
+        });
+        await api.postPromise('refactorings', { id: id, repo: repo, data: REFACTORINGS.refactorings[repo] });
+      }
+      catch(e) {
+        console.error('Error retrieving refactorings, make sure the Java server is running');
+        return;
+      }
+    }
+    progress.end();
+  }
 
   $('[data-a="download"]').on('click', () => {
     getCommitsAndPrs();
@@ -205,6 +253,10 @@
 
   $('[data-a="refactorings"]').on('click', () => {
     mineRefactorings();
+  });
+
+  $('[data-a="refactorings2"]').on('click', () => {
+    mineRefactorings2();
   });
 
   $('[data-e="commit-filter').on('change', buildPage);

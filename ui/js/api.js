@@ -38,7 +38,8 @@ class API {
       findCommits: '/api/findCommits',
       findPrs: '/api/findPrs',
       refactorings: '/api/refactorings',
-      findRefactorings: '/api/findRefactorings'
+      findRefactorings: '/api/findRefactorings',
+      findRefactoringsJsDiffer: '/api/findRefactoringsJsDiffer'
     };
   }
 
