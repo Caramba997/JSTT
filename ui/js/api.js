@@ -39,7 +39,8 @@ class API {
       findPrs: '/api/findPrs',
       refactorings: '/api/refactorings',
       findRefactorings: '/api/findRefactorings',
-      findRefactoringsJsDiffer: '/api/findRefactoringsJsDiffer'
+      findRefactoringsJsDiffer: '/api/findRefactoringsJsDiffer',
+      refactoringTypes: '/api/refactoringTypes'
     };
   }
 

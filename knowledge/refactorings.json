@@ -1,0 +1,30 @@
+{
+	"types": [
+		"_CHANGE_VARIABLE_TYPE",
+		"_WRAP",
+		"Add Parameter",
+		"Change Variable Kind",
+		"EXTRACT",
+		"EXTRACT_MOVE",
+		"Extract And Move Method",
+		"Extract Method",
+		"INLINE",
+		"INTERNAL_MOVE",
+		"INTERNAL_MOVE_RENAME",
+		"Inline Method",
+		"MOVE",
+		"MOVE_RENAME",
+		"Move And Rename Class",
+		"Move And Rename File",
+		"Move Class",
+		"Move File",
+		"Move Method",
+		"RENAME",
+		"Remove Parameter",
+		"Rename Class",
+		"Rename File",
+		"Rename Method",
+		"Rename Parameter",
+		"Rename Variable"
+	]
+}

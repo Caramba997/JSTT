@@ -43,11 +43,11 @@
         progress.init('Toggle testability refactoring', 1);
         if (ref.is_testability_refactoring === true) {
           delete ref.is_testability_refactoring;
-          $('[data-a="testability-refactoring"]').removeClass('btn-success').addClass('btn-danger').html('<i class="fa-solid fa-xmark"></i>');
+          isTRButton.removeClass('btn-success').addClass('btn-danger').html('<i class="fa-solid fa-xmark"></i>');
         }
         else {
           ref.is_testability_refactoring = true;
-          $('[data-a="testability-refactoring"]').removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
+          isTRButton.removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
         }
         await api.postPromise('refactorings', { id: id, repo: repo, sha: sha, data: REFACTORINGS });
         progress.setProgress(1, 1);
@@ -56,49 +56,56 @@
       if (ref.is_testability_refactoring) isTRButton.removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
       html.find('[data-e="refactoring-index"]').text(i + 1);
       html.find('[data-e="refactoring-type"]').text(ref.type);
+      html.find('[data-e="refactoring-tool"]').text(ref.tool || 'RefDiff');
       html.find('[data-e="refactoring-revision"]').text('BEFORE');
-      html.find('[data-e="refactoring-location"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeBefore.type);
-      html.find('[data-e="refactoring-file"]').text(ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[0] : ref.nodeBefore.location.file);
+      html.find('[data-e="refactoring-location"]').text(ref.tool === 'jsdiffer' ? '-' : ref.tool === 'manual' ? '-' : ref.nodeBefore.type);
+      html.find('[data-e="refactoring-file"]').text(ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[0] : ref.tool === 'manual' ? ref.fileBefore : ref.nodeBefore.location.file);
       let testFile = '';
       if (METRICS.testConnections) {
         const testCons = Array.from(Object.entries(METRICS.testConnections));
         for (let k = 0; k < testCons.length; k++) {
           const con = testCons[k];
-          if (typeof con[1] === 'string' && con[1].match(new RegExp(`.*${ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[0] : ref.nodeBefore.location.file.replace('.', '\\.').replace('-', '\\-')}`))) {
+          const fileBefore = ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[0] : ref.tool === 'manual' ? ref.fileBefore : ref.nodeBefore.location.file;
+          if (fileBefore && typeof con[1] === 'string' && con[1].match(new RegExp(`.*${fileBefore.replace('.', '\\.').replace('-', '\\-')}`))) {
             testFile = con[0];
             break;
           }
         }
       }
       html.find('[data-e="refactoring-test-file"]').text(testFile.split('/').splice(-1)).attr('title', testFile);
-      html.find('[data-e="refactoring-line"]').text(ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[1] : ref.nodeBefore.location.line);
-      html.find('[data-e="refactoring-simple-name"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeBefore.simpleName);
-      html.find('[data-e="refactoring-local-name"]').text(ref.tool === 'jsdiffer' ? ref.localNameBefore : ref.nodeBefore.localName);
-      html.find('[data-e="refactoring-parameters"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeBefore.parameters.reduce((prev, curr) => `${prev}${prev ? ', ' : ''}${curr.name}`, ''));
+      html.find('[data-e="refactoring-line"]').text(ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[1] : ref.tool === 'manual' ? ref.lineBefore : ref.nodeBefore.location.line);
+      html.find('[data-e="refactoring-simple-name"]').text(ref.tool === 'jsdiffer' || ref.tool === 'manual' ? '-' : ref.nodeBefore.simpleName);
+      html.find('[data-e="refactoring-local-name"]').text(ref.tool === 'jsdiffer' ? ref.localNameBefore : ref.tool === 'manual' ? ref.nameBefore : ref.nodeBefore.localName);
+      html.find('[data-e="refactoring-parameters"]').text(ref.tool === 'jsdiffer' ? '-' : ref.tool === 'manual' ? ref.parametersBefore : ref.nodeBefore.parameters.reduce((prev, curr) => `${prev}${prev ? ', ' : ''}${curr.name}`, ''));
       html.find('[data-e="refactoring-revision-a"]').text('AFTER');
-      html.find('[data-e="refactoring-location-a"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeAfter.type);
-      html.find('[data-e="refactoring-file-a"]').text(ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[0] : ref.nodeAfter.location.file);
+      html.find('[data-e="refactoring-location-a"]').text(ref.tool === 'jsdiffer' || ref.tool === 'manual' ? '-' : ref.nodeAfter.type);
+      html.find('[data-e="refactoring-file-a"]').text(ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[0] : ref.tool === 'manual' ? ref.fileAfter : ref.nodeAfter.location.file);
       testFile = '';
       if (METRICS.testConnections) {
         const testCons = Array.from(Object.entries(METRICS.testConnections));
         for (let k = 0; k < testCons.length; k++) {
           const con = testCons[k];
-          if (typeof con[1] === 'string' && con[1].match(new RegExp(`.*${(ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[0] : ref.nodeAfter.location.file).replace('.', '\\.').replace('-', '\\-')}`))) {
+          const fileAfter = ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[0] : ref.tool === 'manual' ? ref.fileAfter : ref.nodeAfter.location.file;
+          if (fileAfter && typeof con[1] === 'string' && con[1].match(new RegExp(`.*${fileAfter.replace('.', '\\.').replace('-', '\\-')}`))) {
             testFile = con[0];
             break;
           }
         }
       }
       html.find('[data-e="refactoring-test-file-a"]').text(testFile.split('/').splice(-1)).attr('title', testFile);
-      html.find('[data-e="refactoring-line-a"]').text(ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[1] : ref.nodeAfter.location.line);
-      html.find('[data-e="refactoring-simple-name-a"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeAfter.simpleName);
-      html.find('[data-e="refactoring-local-name-a"]').text(ref.tool === 'jsdiffer' ? ref.localNameAfter : ref.nodeAfter.localName);
-      html.find('[data-e="refactoring-parameters-a"]').text(ref.tool === 'jsdiffer' ? '-' : ref.nodeAfter.parameters.reduce((prev, curr) => `${prev}${prev ? ', ' : ''}${curr.name}`, ''));
+      html.find('[data-e="refactoring-line-a"]').text(ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[1] : ref.tool === 'manual' ? ref.lineAfter : ref.nodeAfter.location.line);
+      html.find('[data-e="refactoring-simple-name-a"]').text(ref.tool === 'jsdiffer' || ref.tool === 'manual' ? '-' : ref.nodeAfter.simpleName);
+      html.find('[data-e="refactoring-local-name-a"]').text(ref.tool === 'jsdiffer' ? ref.localNameAfter : ref.tool === 'manual' ? ref.nameAfter : ref.nodeAfter.localName);
+      html.find('[data-e="refactoring-parameters-a"]').text(ref.tool === 'jsdiffer' ? '-' : ref.tool === 'manual' ? ref.parametersAfter : ref.nodeAfter.parameters.reduce((prev, curr) => `${prev}${prev ? ', ' : ''}${curr.name}`, ''));
       tbody.append(html);
     }
 
-    $('[data-a="done"]').prop('disabled', false).addClass(COMMIT.is_done ? 'btn-success' : 'btn-danger');
-    $('[data-e="commit-git"]').attr('href', COMMIT.html_url);
+    $('[data-a="done"]').prop('disabled', false).addClass(COMMIT.is_done ? 'btn-success' : 'btn-danger').html(COMMIT.is_done ? '<i class="fa-solid fa-check"></i>' : 'TODO');
+    $('[data-a="mark"]').prop('disabled', false).addClass(COMMIT.is_marked ? 'btn-warning' : 'btn-outline-warning').html(COMMIT.is_marked ? '<i class="fa-solid fa-exclamation"></i>' : 'Mark');
+    $('[data-e="commit-git"]').on('click', (e) => {
+      e.preventDefault();
+      window.open(COMMIT.html_url, 'git', 'popup');
+    });
 
     // Init tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -125,6 +132,65 @@
       sha: sha,
       data: COMMIT
     });
+    progress.setProgress(1, 1);
+    progress.end();
+  });
+
+  $('[data-a="mark"]').on('click', async () => {
+    progress.init('Toggle mark', 1);
+    if (COMMIT.is_marked === true) {
+      delete COMMIT.is_marked;
+      $('[data-a="mark"]').removeClass('btn-warning').addClass('btn-outline-warning').text('Mark');
+    }
+    else {
+      COMMIT.is_marked = true;
+      $('[data-a="mark"]').removeClass('btn-outline-warning').addClass('btn-warning').html('<i class="fa-solid fa-exclamation"></i>');
+    }
+    await api.postPromise('commits', {
+      id: id,
+      repo: repo,
+      sha: sha,
+      data: COMMIT
+    });
+    progress.setProgress(1, 1);
+    progress.end();
+  });
+  
+  const addModal = $('[data-e="add-modal"]');
+  const addModalB = new bootstrap.Modal(addModal, {
+    backdrop: 'static',
+    keyboard: false
+  });
+
+  $('[data-a="add"]').on('click', async () => {
+    const types = await api.getPromise('refactoringTypes');
+    const select = addModal.find('[name="type"]');
+    let html = select.html();
+    types.data.types.forEach(type => {
+      html += `<option value="${type}">${type}</option>`;
+    });
+    select.html(html);
+    addModalB.show();
+  });
+
+  $('[data-a="save"]').on('click', async () => {
+    addModalB.hide();
+    progress.init('Save new refactoring', 1);
+    const data = {
+      tool: 'manual',
+      is_testability_refactoring: addModal.find('[name="is_tr"]').is(':checked') ? true : false,
+      type: addModal.find('[name="type"]').val(),
+      fileBefore: addModal.find('[name="file_before"]').val(),
+      lineBefore: addModal.find('[name="line_before"]').val(),
+      nameBefore: addModal.find('[name="name_before"]').val(),
+      parametersBefore: addModal.find('[name="parameters_before"]').val(),
+      fileAfter: addModal.find('[name="file_after"]').val(),
+      lineAfter: addModal.find('[name="line_after"]').val(),
+      nameAfter: addModal.find('[name="name_after"]').val(),
+      parametersAfter: addModal.find('[name="parameters_after"]').val()
+    };
+    REFACTORINGS.push(data);
+    await api.postPromise('refactorings', { id: id, repo: repo, sha: sha, data: REFACTORINGS });
     progress.setProgress(1, 1);
     progress.end();
   });

@@ -33,9 +33,15 @@
             <button data-a="done" type="button" class="btn btn-sm" disabled>TODO</button>
           </li>
           <li class="nav-item mx-1">
+            <button data-a="mark" type="button" class="btn btn-sm" disabled>Mark</button>
+          </li>
+          <li class="nav-item mx-1">
             <a data-e="commit-git" href="" target="_blank">
               <i class="fa-solid fa-globe"></i>
             </a>
+          </li>
+          <li class="nav-item mx-4">
+            <button data-a="add" type="button" class="btn btn-sm btn-outline-primary">Add Refactoring</button>
           </li>
         </ul>
       </div>
@@ -70,6 +76,7 @@
           <th scope="col"><i class="fa-solid fa-check"></i></th>
           <th scope="col">#</th>
           <th scope="col">Type</th>
+          <th scope="col">Tool</th>
           <th scope="col">Revision</th>
           <th scope="col">Location Type</th>
           <th scope="col">File</th>
@@ -87,6 +94,7 @@
         <th scope="row" rowspan="2"><button data-a="testability-refactoring" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></button></i></th>
         <th scope="row" data-e="refactoring-index" rowspan="2"></th>
         <td data-e="refactoring-type" rowspan="2"></th>
+        <td data-e="refactoring-tool" rowspan="2"></th>
         <td data-e="refactoring-revision"></th>
         <td data-e="refactoring-location"></th>
         <td data-e="refactoring-file"></th>
@@ -134,6 +142,98 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-a="stop">Stop</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-e="add-modal" class="modal modal-xl fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Refactoring</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row py-2">
+                <div class="col">
+                  <h4>Attribute</h4>
+                </div>
+                <div class="col">
+                  <h4>Before</h4>
+                </div>
+                <div class="col">
+                  <h4>After</h4>
+                </div>
+              </div>
+              <div class="row py-2">
+                <div class="col">
+                  <label class="form-check-label">Is testability refactoring?</label>
+                </div>
+                <div class="col">
+                  <input type="checkbox" class="form-check-input" name="is_tr">
+                </div>
+                <div class="col"></div>
+              </div>
+              <div class="row py-2">
+                <div class="col">
+                  <label class="form-label">Type</label>
+                </div>
+                <div class="col">
+                  <select name="type" class="form-select">
+                    <option value="...">...</option>
+                  </select>
+                </div>
+                <div class="col"></div>
+              </div>
+              <div class="row py-2">
+                <div class="col">
+                  <label class="form-label">File</label>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" name="file_before">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" name="file_after">
+                </div>
+              </div>
+              <div class="row py-2">
+                <div class="col">
+                  <label class="form-label">Line</label>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" name="line_before">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" name="line_after">
+                </div>
+              </div>
+              <div class="row py-2">
+                <div class="col">
+                  <label class="form-label">Name</label>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" name="name_before">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" name="name_after">
+                </div>
+              </div>
+              <div class="row py-2">
+                <div class="col">
+                  <label class="form-label">Parameters</label>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" name="parameters_before">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" name="parameters_after">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-a="save">Save</button>
           </div>
         </div>
       </div>

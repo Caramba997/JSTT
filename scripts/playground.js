@@ -17,27 +17,41 @@
   const gitHub = new GitHub();
   const metrics = new Metrics();
 
-  const data = files.json('project', 'commits.json', ['version_1_new']);
-  Object.entries(data.commits).forEach(([repo, commits]) => {
-    const shas = {};
-    try {
-      for (let i = 0; i < commits.length;) {
-        const commit = commits[i];
-        if (shas[commit.sha] && equal(commit, shas[commit.sha])) {
-          commits.splice(i, 1);
-          continue;
-        }
-        shas[commit.sha] = commit;
-        i++;
-      }
-    }
-    catch (e) {
-      console.error(e);
-      console.log(repo, typeof commits);
-      throw 'Error occured';
-    }
+
+  const types = new Set();
+  const refactorings = files.json('project', 'refactorings.json', ['version_1_new']);
+  Object.values(refactorings.refactorings).forEach(repo => {
+    Object.values(repo).forEach(commit => {
+      commit.forEach(refactoring => {
+        types.add(refactoring.type);
+      });
+    });
   });
-  files.write('project', 'commits.json', data, ['version_1_new']);
+  files.write('knowledge', 'refactorings.json', {
+    types: Array.from(types).sort()
+  });
+
+  // const data = files.json('project', 'commits.json', ['version_1_new']);
+  // Object.entries(data.commits).forEach(([repo, commits]) => {
+  //   const shas = {};
+  //   try {
+  //     for (let i = 0; i < commits.length;) {
+  //       const commit = commits[i];
+  //       if (shas[commit.sha] && equal(commit, shas[commit.sha])) {
+  //         commits.splice(i, 1);
+  //         continue;
+  //       }
+  //       shas[commit.sha] = commit;
+  //       i++;
+  //     }
+  //   }
+  //   catch (e) {
+  //     console.error(e);
+  //     console.log(repo, typeof commits);
+  //     throw 'Error occured';
+  //   }
+  // });
+  // files.write('project', 'commits.json', data, ['version_1_new']);
 
   // const data = files.json('project', 'evaluation.json', ['version_1_new']);
   // let str = '';

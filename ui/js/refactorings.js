@@ -45,9 +45,12 @@
         html.find('[data-e="commit-repo"]').text(repo);
         html.find('[data-e="commit-prs"]').text(commit.prs ? commit.prs.length : 0);
         html.find('[data-e="commit-refactorings"]').text(refactorings && refactorings[commit.sha] ? refactorings[commit.sha].length : 0);
+        if (commit.is_marked) {
+          html.css('background-color', 'yellow');
+        }
         if (commit.is_done) {
           doneCommits++;
-          html.css('background-color', 'lightgreen');
+          if (!commit.is_marked) html.css('background-color', 'lightgreen');
           html.find('[data-e="commit-done"]').show();
         }
         else if (nextCommit === null) {

@@ -1045,11 +1045,11 @@ app.post('/api/refactorings', async (req, res) => {
       else {
         content.refactorings[repo] = data;
       }
-      files.write('project', 'refactorings.json', content, [id], true);
+      files.write('project', 'refactorings.json', content, [id], false);
       return success(res, data);
     }
     else {
-      files.write('project', 'refactorings.json', data, [id], true);
+      files.write('project', 'refactorings.json', data, [id], false);
     }
   }
   catch (e) {
@@ -1084,6 +1084,20 @@ app.post('/api/findRefactoringsJsDiffer', async (req, res) => {
   catch (e) {
     console.log(e);
     return error(res, 500, 'Error getting results');
+  }
+});
+
+app.get('/api/refactoringTypes', async (req, res) => {
+  try {
+    const exists = files.exists('knowledge', 'refactorings.json');
+    if (!exists) {
+      return success(res, { types: [] });
+    }
+    const types = files.json('knowledge', 'refactorings.json');
+    return success(res, types);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
   }
 });
 

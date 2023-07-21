@@ -542,7 +542,8 @@
 						"html_url": "https://github.com/davetayls/jquery.kinetic/commit/db7006450e404aea4d3a4c9bbcb1bca4acf5590e"
 					}
 				],
-				"prs": [52]
+				"prs": [52],
+				"is_done": true
 			},
 			{
 				"sha": "2525d49fca9e10f53c5361ec99eb22c1d6b55ef7",
@@ -622,7 +623,8 @@
 						"html_url": "https://github.com/davetayls/jquery.kinetic/commit/adda66e218e96b50048fe84745d5ba1e568b150a"
 					}
 				],
-				"prs": [56]
+				"prs": [56],
+				"is_done": true
 			},
 			{
 				"sha": "eb5194d5f813ff8494430c6b9b89de32373b1098",
@@ -859,7 +861,8 @@
 						"url": "https://api.github.com/repos/davetayls/jquery.kinetic/commits/68a2cc7debe5b77ee0736321e460f3a674271b4c",
 						"html_url": "https://github.com/davetayls/jquery.kinetic/commit/68a2cc7debe5b77ee0736321e460f3a674271b4c"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "be7a423afcf0974e9f1873d241bc3a08821074f4",
@@ -1022,7 +1025,9 @@
 						"url": "https://api.github.com/repos/Zazcallabah/mce/commits/fd1d8cd4ff743bdc8414cce9f973bc9267ea4afe",
 						"html_url": "https://github.com/Zazcallabah/mce/commit/fd1d8cd4ff743bdc8414cce9f973bc9267ea4afe"
 					}
-				]
+				],
+				"is_marked": true,
+				"is_done": true
 			},
 			{
 				"sha": "ef10b725814aa5cca6ec442f5d1bfa49c918c5eb",
@@ -1180,7 +1185,8 @@
 						"url": "https://api.github.com/repos/Zazcallabah/mce/commits/c65ab98081583f45bf3cd954896c6a592c2303c8",
 						"html_url": "https://github.com/Zazcallabah/mce/commit/c65ab98081583f45bf3cd954896c6a592c2303c8"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "dacc5dfb6e2b96081ade356f87504e03667ae15a",
@@ -1259,7 +1265,8 @@
 						"url": "https://api.github.com/repos/Zazcallabah/mce/commits/bfdd6601115be34c1e494d5b65ef5aa99271b829",
 						"html_url": "https://github.com/Zazcallabah/mce/commit/bfdd6601115be34c1e494d5b65ef5aa99271b829"
 					}
-				]
+				],
+				"is_done": true
 			}
 		],
 		"ForbesLindesay/throat": [
@@ -1341,7 +1348,8 @@
 						"html_url": "https://github.com/ForbesLindesay/throat/commit/f8ced5e317bbad5b331d618743d03814784afe4c"
 					}
 				],
-				"prs": [57]
+				"prs": [57],
+				"is_done": true
 			},
 			{
 				"sha": "f8ced5e317bbad5b331d618743d03814784afe4c",
@@ -1421,7 +1429,8 @@
 						"html_url": "https://github.com/ForbesLindesay/throat/commit/6b75d947ffbadff55f128d69aab393f604da04c3"
 					}
 				],
-				"prs": [56]
+				"prs": [56],
+				"is_done": true
 			},
 			{
 				"sha": "d77de8defd2d8049c06ccf314587890f9e620ac3",
@@ -1658,7 +1667,8 @@
 						"url": "https://api.github.com/repos/ForbesLindesay/throat/commits/ebc8b3dd41e1150919c23606e7dd846080035b6b",
 						"html_url": "https://github.com/ForbesLindesay/throat/commit/ebc8b3dd41e1150919c23606e7dd846080035b6b"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "06c9bc997ddbf686644ea8f894299ee44ee4d75a",
@@ -1737,7 +1747,8 @@
 						"url": "https://api.github.com/repos/ForbesLindesay/throat/commits/7440c8719c12eab6e6597468321e2a342817249a",
 						"html_url": "https://github.com/ForbesLindesay/throat/commit/7440c8719c12eab6e6597468321e2a342817249a"
 					}
-				]
+				],
+				"is_done": true
 			}
 		],
 		"rtyler/Hubboard": [
@@ -1780,7 +1791,8 @@
 						"url": "https://api.github.com/repos/rtyler/Hubboard/commits/26b7119b9cd42f124fc0a3b6bf979699d635b5d8",
 						"html_url": "https://github.com/rtyler/Hubboard/commit/26b7119b9cd42f124fc0a3b6bf979699d635b5d8"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "f027e7f23847778d2abb4c6d46626c6f883fb84a",
@@ -1821,7 +1833,8 @@
 						"url": "https://api.github.com/repos/rtyler/Hubboard/commits/5972ff8f2ddb68684c2a19bc8b1130d777acc940",
 						"html_url": "https://github.com/rtyler/Hubboard/commit/5972ff8f2ddb68684c2a19bc8b1130d777acc940"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "47fa55bdbd728ba2e117f3e86615e757580a246c",
@@ -1903,7 +1916,8 @@
 						"url": "https://api.github.com/repos/rtyler/Hubboard/commits/372cd16e809c1b97df03b280da481a22f607194b",
 						"html_url": "https://github.com/rtyler/Hubboard/commit/372cd16e809c1b97df03b280da481a22f607194b"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "d75e6bc77f84294c5c002f865806d6bff3de6e4b",
@@ -2026,7 +2040,8 @@
 						"html_url": "https://github.com/npm/init-package-json/commit/a3643d49130cd2056cf070eb4eac663e3fbe95ba"
 					}
 				],
-				"prs": [186]
+				"prs": [186],
+				"is_done": true
 			},
 			{
 				"sha": "c92869febe70e9762fd445ac1d85b1c9aa0f7dd5",
@@ -2106,7 +2121,8 @@
 						"html_url": "https://github.com/npm/init-package-json/commit/4c304060bcec8251d28c8ae5877239ca6160b518"
 					}
 				],
-				"prs": [117]
+				"prs": [117],
+				"is_done": true
 			},
 			{
 				"sha": "2292875b8bbaa06b9c867a5ad252a081f9c10598",
@@ -2186,7 +2202,8 @@
 						"html_url": "https://github.com/npm/init-package-json/commit/d97d564f196cd4c9c9b8da8197ec7fae27673c9a"
 					}
 				],
-				"prs": [126]
+				"prs": [126],
+				"is_done": true
 			}
 		],
 		"hoho/jquery-bem": [
@@ -2346,7 +2363,8 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/7b0a70c136ada802892595d9d29fb4ae4dc77a1b",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/7b0a70c136ada802892595d9d29fb4ae4dc77a1b"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "526e1a971d58682925ea5528a789c6960851c290",
@@ -2425,7 +2443,8 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/e50f552f83b4271b8408f311fb3960eda2ef1217",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/e50f552f83b4271b8408f311fb3960eda2ef1217"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "ff14fd8333f7d1702a512d2663053a39ea2dfe56",
@@ -2504,7 +2523,8 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/542fd1f702890df42baa7793e78a4de9807a87c3",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/542fd1f702890df42baa7793e78a4de9807a87c3"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "542fd1f702890df42baa7793e78a4de9807a87c3",
@@ -2583,7 +2603,8 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/c0060ed28141cdb7d8030fe2bad0bc17a9c944c2",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/c0060ed28141cdb7d8030fe2bad0bc17a9c944c2"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "c0060ed28141cdb7d8030fe2bad0bc17a9c944c2",
@@ -2820,7 +2841,8 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/e49d9c5e71b49e3f80cf6dabc8cff0487e90f3ec",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/e49d9c5e71b49e3f80cf6dabc8cff0487e90f3ec"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "e49d9c5e71b49e3f80cf6dabc8cff0487e90f3ec",
@@ -2899,7 +2921,8 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/1b9cd3e0cf845b474c396a037618e4ca79182842",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/1b9cd3e0cf845b474c396a037618e4ca79182842"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "f13caade88bdf3a550f47e38208b3e4f8b55007c",
@@ -2978,7 +3001,9 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/caeff441eda280e5b54b27dcf8f5b4b1fad4fc09",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/caeff441eda280e5b54b27dcf8f5b4b1fad4fc09"
 					}
-				]
+				],
+				"is_done": true,
+				"is_marked": true
 			},
 			{
 				"sha": "caeff441eda280e5b54b27dcf8f5b4b1fad4fc09",
@@ -3256,7 +3281,8 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/36f737baf05fdb4259cdf5d23c72d3ce483b740d",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/36f737baf05fdb4259cdf5d23c72d3ce483b740d"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "36f737baf05fdb4259cdf5d23c72d3ce483b740d",
@@ -3739,7 +3765,8 @@
 						"url": "https://api.github.com/repos/auth0/node-saml/commits/316982436cf9b7fe4a74d9758c9b4114a3d5e98f",
 						"html_url": "https://github.com/auth0/node-saml/commit/316982436cf9b7fe4a74d9758c9b4114a3d5e98f"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "b124b6bfa0a40fc8818aba5bc41b5f423bab68f8",
@@ -4603,7 +4630,8 @@
 						"html_url": "https://github.com/auth0/node-saml/commit/cb3bfcdc4b034b6ac3ea52172c1be7d6193fddec"
 					}
 				],
-				"prs": [66]
+				"prs": [66],
+				"is_done": true
 			},
 			{
 				"sha": "12c6d67e48694e4ed291aef24ad0f40e2a5a9573",
@@ -5132,7 +5160,8 @@
 						"html_url": "https://github.com/auth0/node-saml/commit/925c39a53f317e79168a2adee3b3763753a5a526"
 					}
 				],
-				"prs": [85]
+				"prs": [85],
+				"is_done": true
 			},
 			{
 				"sha": "f24aef449774c187f957ff676467dcb3eca4e5a0",
@@ -5275,7 +5304,8 @@
 						"url": "https://api.github.com/repos/pimterry/loglevel/commits/5c9a2b1c78b23382567c291ebf5836f074cd9d59",
 						"html_url": "https://github.com/pimterry/loglevel/commit/5c9a2b1c78b23382567c291ebf5836f074cd9d59"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "5c9a2b1c78b23382567c291ebf5836f074cd9d59",
@@ -5512,7 +5542,8 @@
 						"url": "https://api.github.com/repos/pimterry/loglevel/commits/18476dbc74d0426122f91aad6801295bc8379706",
 						"html_url": "https://github.com/pimterry/loglevel/commit/18476dbc74d0426122f91aad6801295bc8379706"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "7650d04fc18bab4dcd8f9acb06e0a30e9f3cbd4f",
@@ -5591,7 +5622,8 @@
 						"url": "https://api.github.com/repos/pimterry/loglevel/commits/ef8bdb3c0814c2ae231f0b9c04b1cee5ae662726",
 						"html_url": "https://github.com/pimterry/loglevel/commit/ef8bdb3c0814c2ae231f0b9c04b1cee5ae662726"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "7579e773ced9ee2f178a62797517ae48f3179ce7",
@@ -5830,7 +5862,8 @@
 						"html_url": "https://github.com/pimterry/loglevel/commit/730f218f593d9a637c0dc25528b1d25b44182a82"
 					}
 				],
-				"prs": [75]
+				"prs": [75],
+				"is_done": true
 			},
 			{
 				"sha": "730f218f593d9a637c0dc25528b1d25b44182a82",
@@ -6545,7 +6578,8 @@
 						"html_url": "https://github.com/pimterry/loglevel/commit/21b263909850c12e059b18df56a2cb4fe2737177"
 					}
 				],
-				"prs": [81]
+				"prs": [81],
+				"is_done": true
 			},
 			{
 				"sha": "391724a1a2593fa45c8c724a092a78ec7245a5a4",
@@ -6705,7 +6739,8 @@
 						"html_url": "https://github.com/pimterry/loglevel/commit/3e327ce5dd1c9c6f26f8ed4417cdc510a40a4749"
 					}
 				],
-				"prs": [81]
+				"prs": [81],
+				"is_done": true
 			},
 			{
 				"sha": "ae3a282a02ce377edad43e129c83a6d53cd7ed0c",
@@ -6946,7 +6981,8 @@
 						"url": "https://api.github.com/repos/nathanpeck/s3-upload-stream/commits/40f3abed884cde10c5be97113c12c6c2e9b1d55a",
 						"html_url": "https://github.com/nathanpeck/s3-upload-stream/commit/40f3abed884cde10c5be97113c12c6c2e9b1d55a"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "0d1b9b131d0dfa1cadf28aef95a558cfeefb8771",
@@ -7026,7 +7062,8 @@
 						"html_url": "https://github.com/nathanpeck/s3-upload-stream/commit/6e13e79bdf6842df62f666c1895e452ca57ec3dd"
 					}
 				],
-				"prs": [25]
+				"prs": [25],
+				"is_done": true
 			},
 			{
 				"sha": "a8cf486b996ba5f4a16c83178886baecacda36cd",
@@ -7263,7 +7300,8 @@
 						"url": "https://api.github.com/repos/nathanpeck/s3-upload-stream/commits/094086c4483286e50e0baa1d77d94010996baf3b",
 						"html_url": "https://github.com/nathanpeck/s3-upload-stream/commit/094086c4483286e50e0baa1d77d94010996baf3b"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "db7c8d7722fbdaa8af4b1ffea1766a3d1c1e4287",
@@ -7663,7 +7701,8 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/1318c3548a372c79fca9e964295fb0aa47f7f12d"
 					}
 				],
-				"prs": [46]
+				"prs": [46],
+				"is_done": true
 			},
 			{
 				"sha": "afb841f14755311f3dda0f7ce172495783717e18",
@@ -8531,7 +8570,8 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/6046bc3aae5a2f577323383c967688e35a1e6c51"
 					}
 				],
-				"prs": [50]
+				"prs": [50],
+				"is_done": true
 			},
 			{
 				"sha": "563c3b6cb5543be2eb33a39e1003a495188dadf3",
@@ -9006,7 +9046,8 @@
 						"url": "https://api.github.com/repos/martinj/node-imagickal/commits/0e99caf89d9edbfdd82953ff9403e1226aea2a12",
 						"html_url": "https://github.com/martinj/node-imagickal/commit/0e99caf89d9edbfdd82953ff9403e1226aea2a12"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "7b87f13b0894d7532a2e04a0b3d75f4a51ca7fc3",
@@ -9887,7 +9928,8 @@
 						"url": "https://api.github.com/repos/aurbroszniowski/HtmlAssertjs/commits/86c943a7f990ce4146b5e63e6ac61b7d62f7568c",
 						"html_url": "https://github.com/aurbroszniowski/HtmlAssertjs/commit/86c943a7f990ce4146b5e63e6ac61b7d62f7568c"
 					}
-				]
+				],
+				"is_done": true
 			}
 		],
 		"Zibx/robbo": [],
@@ -10287,7 +10329,8 @@
 						"url": "https://api.github.com/repos/clubajax/HeadlessBrowser/commits/cbba8823032eac2ffe6aac51ac936b036b809459",
 						"html_url": "https://github.com/clubajax/HeadlessBrowser/commit/cbba8823032eac2ffe6aac51ac936b036b809459"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "cbba8823032eac2ffe6aac51ac936b036b809459",
@@ -10366,7 +10409,8 @@
 						"url": "https://api.github.com/repos/clubajax/HeadlessBrowser/commits/dad83992600eb75eb79fc28f99807dbe480db3b6",
 						"html_url": "https://github.com/clubajax/HeadlessBrowser/commit/dad83992600eb75eb79fc28f99807dbe480db3b6"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "dad83992600eb75eb79fc28f99807dbe480db3b6",
@@ -10528,7 +10572,8 @@
 						"html_url": "https://github.com/webpack-contrib/sass-loader/commit/ff8d0789ebd13212aac0998ee1e828778acf1607"
 					}
 				],
-				"prs": [1012]
+				"prs": [1012],
+				"is_done": true
 			},
 			{
 				"sha": "4ca004b9e733bd2261ec68a7db4de07d79cf331a",
@@ -12918,7 +12963,8 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/ba60f2bf7d05738cb178d1fc02669f177e2f250e"
 					}
 				],
-				"prs": [45]
+				"prs": [45],
+				"is_done": true
 			},
 			{
 				"sha": "bc9a4aa0524b905774d50eb53a1d65087fbbefbe",
@@ -13078,7 +13124,8 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/64b1abbb7f32640f098174f3d501845716a14293"
 					}
 				],
-				"prs": [231]
+				"prs": [231],
+				"is_done": true
 			},
 			{
 				"sha": "050979d29c3d6e3300508fb71299d035137b002b",
@@ -18079,7 +18126,8 @@
 						"html_url": "https://github.com/mafintosh/protocol-buffers-schema/commit/e3cfb7aa81a594eb1ce559de92a6b7f907c7b4d7"
 					}
 				],
-				"prs": [4]
+				"prs": [4],
+				"is_done": true
 			}
 		],
 		"DubFriend/jquery.repeater": [
@@ -18239,7 +18287,8 @@
 						"url": "https://api.github.com/repos/DubFriend/jquery.repeater/commits/92598964bafc3b82e8ad0da4dc7371b7362cc15b",
 						"html_url": "https://github.com/DubFriend/jquery.repeater/commit/92598964bafc3b82e8ad0da4dc7371b7362cc15b"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "92598964bafc3b82e8ad0da4dc7371b7362cc15b",
@@ -21261,7 +21310,8 @@
 						"url": "https://api.github.com/repos/gregl83/expect-cookies/commits/ff32d27e25db981c563572d1e8fe02145f9c1a1a",
 						"html_url": "https://github.com/gregl83/expect-cookies/commit/ff32d27e25db981c563572d1e8fe02145f9c1a1a"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "994b8523240a17335b1ab2e1a910d36f87601edd",
@@ -29657,7 +29707,8 @@
 						"url": "https://api.github.com/repos/igalarza/address-scrapper/commits/94ed53dabe0ca9ace5ad0c07ab60b4af77592876",
 						"html_url": "https://github.com/igalarza/address-scrapper/commit/94ed53dabe0ca9ace5ad0c07ab60b4af77592876"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "95b7c16c71829a02d52b46c6cd235a9cc7de0313",
