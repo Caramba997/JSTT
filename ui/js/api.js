@@ -1,6 +1,5 @@
 class API {
   constructor() {
-    this.url = 'http://localhost:3000';
     this.routes = {
       checknpm: '/api/checknpm',
       project: '/api/project',
@@ -69,7 +68,7 @@ class API {
         search = `?${tempSearch.toString()}`;
       }
     }
-    fetch(this.url + route + search, {
+    fetch(route + search, {
       method: 'GET',
       credentials: 'include',
       headers: {
@@ -104,7 +103,7 @@ class API {
       console.error('[API] Post: Unknown endpoint');
       return null;
     }
-    fetch(this.url + route, {
+    fetch(route, {
       method: 'POST',
       credentials: 'include',
       headers: {
@@ -151,7 +150,7 @@ class API {
           search = `?${tempSearch.toString()}`;
         }
       }
-      fetch(this.url + route + search, {
+      fetch(route + search, {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -187,7 +186,7 @@ class API {
         reject(null);
         return;
       }
-      fetch(this.url + route, {
+      fetch(route, {
         method: 'POST',
         credentials: 'include',
         headers: {

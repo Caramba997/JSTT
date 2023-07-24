@@ -17,19 +17,80 @@
   const gitHub = new GitHub();
   const metrics = new Metrics();
 
-
-  const types = new Set();
-  const refactorings = files.json('project', 'refactorings.json', ['version_1_new']);
-  Object.values(refactorings.refactorings).forEach(repo => {
-    Object.values(repo).forEach(commit => {
-      commit.forEach(refactoring => {
-        types.add(refactoring.type);
-      });
+  const refactorings = files.json('project', 'refactorings.json', ['pavel']).refactorings;
+  const commits = files.json('project', 'commits.json', ['pavel']).commits;
+  const todos = {
+    marked: 0,
+    done: 0,
+    undone: 0,
+    with_tr: 0,
+    without_tr: 0,
+    with_ref: 0,
+    without_ref: 0
+  };
+  Object.entries(commits).forEach(([repo, repoCommits]) => {
+    repoCommits.forEach(commit => {
+      const commitRefactorings = refactorings[repo][commit.sha];
+      if (commitRefactorings && commitRefactorings.length > 0) {
+        todos.with_ref++;
+        if (commit.is_done) {
+          const trs = commitRefactorings.filter(ref => ref.is_testability_refactoring === true);
+          if (trs.length > 0) {
+            todos.with_tr++;
+            commit.for_pavel = true;
+          }
+          else {
+            todos.without_tr++;
+          }
+        }
+      }
+      else {
+        todos.without_ref++;
+      }
+      if (commit.is_marked) {
+        todos.marked++;
+        commit.for_pavel = true;
+        // delete commit.is_marked;
+      }
+      if (commit.is_done) {
+        todos.done++;
+        // delete commit.is_done;
+      }
+      else {
+        todos.undone++;
+      }
     });
   });
-  files.write('knowledge', 'refactorings.json', {
-    types: Array.from(types).sort()
-  });
+  // Object.values(refactorings.refactorings).forEach(repo => {
+  //   Object.values(repo).forEach(commit => {
+  //     commit.forEach(refactoring => {
+  //       if (refactoring.is_marked) todos.marked++;
+  //       if (refactoring.is_done) {
+  //         todos.done++;
+  //         if (!refactoring.is_testability_refactoring) todos.without_tr++;
+  //       }
+  //       else {
+  //         todos.undone++;
+  //       }
+  //       if (refactoring.is_testability_refactoring) todos.with_tr++;
+  //     });
+  //   });
+  // });
+  // files.write('project', 'refactorings.json', refactorings, ['pavel']);
+  console.log(todos);
+
+  // const types = new Set();
+  // const refactorings = files.json('project', 'refactorings.json', ['version_1_new']);
+  // Object.values(refactorings.refactorings).forEach(repo => {
+  //   Object.values(repo).forEach(commit => {
+  //     commit.forEach(refactoring => {
+  //       types.add(refactoring.type);
+  //     });
+  //   });
+  // });
+  // files.write('knowledge', 'refactorings.json', {
+  //   types: Array.from(types).sort()
+  // });
 
   // const data = files.json('project', 'commits.json', ['version_1_new']);
   // Object.entries(data.commits).forEach(([repo, commits]) => {
