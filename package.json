@@ -15,7 +15,8 @@
     "playground": "node scripts/playground.js",
     "debug": "nodemon server/app.js",
     "py-debug": "flask --app ./server/correlation run --debug",
-    "app": "node server/app.js"
+    "app": "node server/app.js",
+    "start": "node server/app.js"
   },
   "author": "Finn Carstensen",
   "license": "ISC",
