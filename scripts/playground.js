@@ -1,5 +1,6 @@
 (async() => {
   const { GitHub } = require('../lib/github.js');
+  const { Random } = require('../lib/random.js');
   const { Files } = require('../lib/files.js');
   const { Format } = require('../lib/format.js');
   const { Metrics } = require('../lib/metrics.js');
@@ -16,68 +17,88 @@
   const files = new Files();
   const gitHub = new GitHub();
   const metrics = new Metrics();
+  const random = new Random();
 
   const refactorings = files.json('project', 'refactorings.json', ['pavel']).refactorings;
-  const commits = files.json('project', 'commits.json', ['pavel']).commits;
-  const todos = {
-    marked: 0,
-    done: 0,
-    undone: 0,
-    with_tr: 0,
-    without_tr: 0,
-    with_ref: 0,
-    without_ref: 0
-  };
-  Object.entries(commits).forEach(([repo, repoCommits]) => {
-    repoCommits.forEach(commit => {
-      const commitRefactorings = refactorings[repo][commit.sha];
-      if (commitRefactorings && commitRefactorings.length > 0) {
-        todos.with_ref++;
-        if (commit.is_done) {
-          const trs = commitRefactorings.filter(ref => ref.is_testability_refactoring === true);
-          if (trs.length > 0) {
-            todos.with_tr++;
-            commit.for_pavel = true;
-          }
-          else {
-            todos.without_tr++;
-          }
-        }
-      }
-      else {
-        todos.without_ref++;
-      }
-      if (commit.is_marked) {
-        todos.marked++;
-        commit.for_pavel = true;
-        // delete commit.is_marked;
-      }
-      if (commit.is_done) {
-        todos.done++;
-        // delete commit.is_done;
-      }
-      else {
-        todos.undone++;
-      }
+  Object.values(refactorings).forEach(repo => {
+    Object.values(repo).forEach(commit => {
+      commit.forEach(refactoring => {
+        delete refactoring.is_testability_refactoring;
+      });
     });
   });
-  // Object.values(refactorings.refactorings).forEach(repo => {
-  //   Object.values(repo).forEach(commit => {
-  //     commit.forEach(refactoring => {
-  //       if (refactoring.is_marked) todos.marked++;
-  //       if (refactoring.is_done) {
-  //         todos.done++;
-  //         if (!refactoring.is_testability_refactoring) todos.without_tr++;
+  files.write('project', 'refactorings.json', { refactorings }, ['pavel']);
+
+  // const commits = files.json('project', 'commits.json', ['pavel']).commits;
+  // const todos = {
+  //   undone: [],
+  //   without_tr: [],
+  //   with_ref: [],
+  //   without_ref: []
+  // };
+  // Object.entries(commits).forEach(([repo, repoCommits]) => {
+  //   repoCommits.forEach(commit => {
+  //     const commitRefactorings = refactorings[repo][commit.sha];
+  //     if (commitRefactorings && commitRefactorings.length > 0) {
+  //       if (commit.is_done) {
+  //         const trs = commitRefactorings.filter(ref => ref.is_testability_refactoring === true);
+  //         if (trs.length > 0) {
+  //           commit.for_pavel = true;
+  //           commit.verification_tag = 'with_tr';
+  //         }
+  //         else {
+  //           todos.without_tr.push(commit);
+  //         }
   //       }
   //       else {
-  //         todos.undone++;
+  //         todos.with_ref.push(commit);
   //       }
-  //       if (refactoring.is_testability_refactoring) todos.with_tr++;
-  //     });
+  //     }
+  //     else {
+  //       todos.without_ref.push(commit);
+  //     }
+  //     if (commit.is_marked) {
+  //       commit.for_pavel = true;
+  //       commit.verification_tag = commit.verification_tag ? commit.verification_tag + ',marked' : 'marked';
+  //       delete commit.is_marked;
+  //     }
+  //     if (commit.is_done) {
+  //       delete commit.is_done;
+  //     }
+  //     else {
+  //       todos.undone.push(commit);
+  //     }
   //   });
   // });
-  // files.write('project', 'refactorings.json', refactorings, ['pavel']);
-  console.log(todos);
+  // let rands = await random.get(20, 0, todos.without_tr.length - 1);
+  // rands = rands.split(',');
+  // todos.without_tr = todos.without_tr.filter((commit, index) => rands.includes('' + index));
+  // todos.without_tr.forEach(commit => {
+  //   commit.for_pavel = true;
+  //   commit.verification_tag = commit.verification_tag ? commit.verification_tag + ',no_tr' : 'no_tr';
+  // });
+  // rands = await random.get(15, 0, todos.with_ref.length - 1);
+  // rands = rands.split(',');
+  // todos.with_ref = todos.with_ref.filter((commit, index) => rands.includes('' + index));
+  // todos.with_ref.forEach(commit => {
+  //   commit.for_pavel = true;
+  //   commit.verification_tag = commit.verification_tag ? commit.verification_tag + ',has_refs' : 'has_refs';
+  // });
+  // rands = await random.get(15, 0, todos.without_ref.length - 1);
+  // rands = rands.split(',');
+  // todos.without_ref = todos.without_ref.filter((commit, index) => rands.includes('' + index));
+  // todos.without_ref.forEach(commit => {
+  //   commit.for_pavel = true;
+  //   commit.verification_tag = commit.verification_tag ? commit.verification_tag + ',no_refs' : 'no_refs';
+  // });
+  // rands = await random.get(15, 0, todos.undone.length - 1);
+  // rands = rands.split(',');
+  // todos.undone = todos.undone.filter((commit, index) => rands.includes('' + index));
+  // todos.undone.forEach(commit => {
+  //   commit.for_pavel = true;
+  //   commit.verification_tag = commit.verification_tag ? commit.verification_tag + ',undone' : 'undone';
+  // });
+  // files.write('project', 'commits.json', { commits }, ['pavel']);
 
   // const types = new Set();
   // const refactorings = files.json('project', 'refactorings.json', ['version_1_new']);

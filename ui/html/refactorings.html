@@ -54,6 +54,8 @@
             <div data-e="info" class="d-flex flex-column flex-wrap">
               <div>Progress: <span data-e="info-progress">?</span></div>
               <div>Refactorings: <span data-e="info-refactorings">?</span></div>
+              <div>Testability Refactorings: <span data-e="info-trs">?</span></div>
+              <div>Commits with Testability Refactorings: <span data-e="info-ctrs">?</span></div>
               <h3>Commits</h3>
               <div>Total: <span data-e="info-ctotal">?</span></div>
               <div>Average: <span data-e="info-cavg">?</span></div>
@@ -77,6 +79,7 @@
     <div>
       <span>Filter </span>
       <select class="form-select form-select-sm" data-e="commit-filter">
+        <option value="pavel">Verification</option>
         <option value="refactorings">Only with Refactorings</option>
         <option value="all">All</option>
       </select>

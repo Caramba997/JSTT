@@ -26,7 +26,10 @@
     const tbody = $('[data-e="commit-list"] tbody'),
           template = $($('[data-t="commit-list-item"]').html());
     tbody.html('');
-    let doneCommits = 0,
+    let filteredCommits = 0,
+        doneCommits = 0,
+        commitsWithTrs = 0,
+        trs = 0,
         refactoringCount = 0,
         nextCommit = null,
         c = 0;
@@ -36,7 +39,16 @@
         const commit = commits[i],
               html = template.clone(true);
         const refactorings = REFACTORINGS.refactorings[repo];
+        if (refactorings && refactorings[commit.sha] && refactorings[commit.sha].length > 0) {
+          const commitTrs = refactorings[commit.sha].filter(ref => ref.is_testability_refactoring);
+          if (commitTrs.length > 0) {
+            commitsWithTrs++;
+            trs += commitTrs.length;
+          }
+        }
         if (filter === 'refactorings' && refactorings && refactorings[commit.sha] && refactorings[commit.sha].length === 0) continue;
+        if (filter === 'pavel' && !commit.for_pavel) continue;
+        filteredCommits++;
         html.data('index', c);
         html.data('id', commit.sha);
         html.find('[data-e="commit-index"]').text(c + 1);
@@ -62,9 +74,11 @@
         if (REFACTORINGS.refactorings[repo] && REFACTORINGS.refactorings[repo][commit.sha]) refactoringCount += REFACTORINGS.refactorings[repo][commit.sha].length;
       }
     });
-    if (COMMITS.stats) statsElement.find(`[data-e="info-progress"]`).text(`${Math.floor(doneCommits / COMMITS.stats.total * 100)}% (${doneCommits}/${COMMITS.stats.total})`);
+    if (COMMITS.stats) statsElement.find(`[data-e="info-progress"]`).text(`${Math.floor(doneCommits / filteredCommits * 100)}% (${doneCommits}/${filteredCommits})`);
     if (refactoringCount) statsElement.find(`[data-e="info-refactorings"]`).text(refactoringCount);
     if (nextCommit) nextCommit[0].scrollIntoView({ behavior: 'instant', block: 'center' });
+    statsElement.find(`[data-e="info-trs"]`).text(trs);
+    statsElement.find(`[data-e="info-ctrs"]`).text(commitsWithTrs);
   }
 
   async function getCommitsAndPrs() {
@@ -145,14 +159,14 @@
     COMMITS.stats.med = sorted.length % 2 === 1 ? sorted[Math.floor(sorted.length / 2)] : (sorted[sorted.length / 2- 1] + sorted[sorted.length / 2]) / 2;
     COMMITS.stats.min = Math.min(...COMMITS.stats.list);
     COMMITS.stats.max = Math.max(...COMMITS.stats.list);
-    prs.stats = {
+    PRS.stats = {
       list: []
     };
     Object.entries(PRS.prs).forEach(([project, pulls]) => {
       PRS.stats.list.push(pulls.length);
     });
     PRS.stats.total = PRS.stats.list.reduce((prev, curr) => prev + curr, 0);
-    PRS.stats.avg = PRS.stats.list.reduce((prev, curr) => prev + curr, 0) / prs.stats.list.length;
+    PRS.stats.avg = PRS.stats.list.reduce((prev, curr) => prev + curr, 0) / PRS.stats.list.length;
     sorted = [...PRS.stats.list].sort((a, b) => a - b);
     PRS.stats.med = sorted.length % 2 === 1 ? sorted[Math.floor(sorted.length / 2)] : (sorted[sorted.length / 2- 1] + sorted[sorted.length / 2]) / 2;
     PRS.stats.min = Math.min(...PRS.stats.list);

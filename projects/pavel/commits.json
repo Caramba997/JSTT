@@ -542,8 +542,7 @@
 						"html_url": "https://github.com/davetayls/jquery.kinetic/commit/db7006450e404aea4d3a4c9bbcb1bca4acf5590e"
 					}
 				],
-				"prs": [52],
-				"is_done": true
+				"prs": [52]
 			},
 			{
 				"sha": "2525d49fca9e10f53c5361ec99eb22c1d6b55ef7",
@@ -623,8 +622,7 @@
 						"html_url": "https://github.com/davetayls/jquery.kinetic/commit/adda66e218e96b50048fe84745d5ba1e568b150a"
 					}
 				],
-				"prs": [56],
-				"is_done": true
+				"prs": [56]
 			},
 			{
 				"sha": "eb5194d5f813ff8494430c6b9b89de32373b1098",
@@ -861,8 +859,7 @@
 						"url": "https://api.github.com/repos/davetayls/jquery.kinetic/commits/68a2cc7debe5b77ee0736321e460f3a674271b4c",
 						"html_url": "https://github.com/davetayls/jquery.kinetic/commit/68a2cc7debe5b77ee0736321e460f3a674271b4c"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "be7a423afcf0974e9f1873d241bc3a08821074f4",
@@ -1026,8 +1023,8 @@
 						"html_url": "https://github.com/Zazcallabah/mce/commit/fd1d8cd4ff743bdc8414cce9f973bc9267ea4afe"
 					}
 				],
-				"is_marked": true,
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "with_tr,marked"
 			},
 			{
 				"sha": "ef10b725814aa5cca6ec442f5d1bfa49c918c5eb",
@@ -1185,8 +1182,7 @@
 						"url": "https://api.github.com/repos/Zazcallabah/mce/commits/c65ab98081583f45bf3cd954896c6a592c2303c8",
 						"html_url": "https://github.com/Zazcallabah/mce/commit/c65ab98081583f45bf3cd954896c6a592c2303c8"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "dacc5dfb6e2b96081ade356f87504e03667ae15a",
@@ -1266,7 +1262,8 @@
 						"html_url": "https://github.com/Zazcallabah/mce/commit/bfdd6601115be34c1e494d5b65ef5aa99271b829"
 					}
 				],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "with_tr"
 			}
 		],
 		"ForbesLindesay/throat": [
@@ -1348,8 +1345,7 @@
 						"html_url": "https://github.com/ForbesLindesay/throat/commit/f8ced5e317bbad5b331d618743d03814784afe4c"
 					}
 				],
-				"prs": [57],
-				"is_done": true
+				"prs": [57]
 			},
 			{
 				"sha": "f8ced5e317bbad5b331d618743d03814784afe4c",
@@ -1429,8 +1425,7 @@
 						"html_url": "https://github.com/ForbesLindesay/throat/commit/6b75d947ffbadff55f128d69aab393f604da04c3"
 					}
 				],
-				"prs": [56],
-				"is_done": true
+				"prs": [56]
 			},
 			{
 				"sha": "d77de8defd2d8049c06ccf314587890f9e620ac3",
@@ -1667,8 +1662,7 @@
 						"url": "https://api.github.com/repos/ForbesLindesay/throat/commits/ebc8b3dd41e1150919c23606e7dd846080035b6b",
 						"html_url": "https://github.com/ForbesLindesay/throat/commit/ebc8b3dd41e1150919c23606e7dd846080035b6b"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "06c9bc997ddbf686644ea8f894299ee44ee4d75a",
@@ -1747,8 +1741,7 @@
 						"url": "https://api.github.com/repos/ForbesLindesay/throat/commits/7440c8719c12eab6e6597468321e2a342817249a",
 						"html_url": "https://github.com/ForbesLindesay/throat/commit/7440c8719c12eab6e6597468321e2a342817249a"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"rtyler/Hubboard": [
@@ -1791,8 +1784,7 @@
 						"url": "https://api.github.com/repos/rtyler/Hubboard/commits/26b7119b9cd42f124fc0a3b6bf979699d635b5d8",
 						"html_url": "https://github.com/rtyler/Hubboard/commit/26b7119b9cd42f124fc0a3b6bf979699d635b5d8"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "f027e7f23847778d2abb4c6d46626c6f883fb84a",
@@ -1833,8 +1825,7 @@
 						"url": "https://api.github.com/repos/rtyler/Hubboard/commits/5972ff8f2ddb68684c2a19bc8b1130d777acc940",
 						"html_url": "https://github.com/rtyler/Hubboard/commit/5972ff8f2ddb68684c2a19bc8b1130d777acc940"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "47fa55bdbd728ba2e117f3e86615e757580a246c",
@@ -1916,8 +1907,7 @@
 						"url": "https://api.github.com/repos/rtyler/Hubboard/commits/372cd16e809c1b97df03b280da481a22f607194b",
 						"html_url": "https://github.com/rtyler/Hubboard/commit/372cd16e809c1b97df03b280da481a22f607194b"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "d75e6bc77f84294c5c002f865806d6bff3de6e4b",
@@ -2040,8 +2030,7 @@
 						"html_url": "https://github.com/npm/init-package-json/commit/a3643d49130cd2056cf070eb4eac663e3fbe95ba"
 					}
 				],
-				"prs": [186],
-				"is_done": true
+				"prs": [186]
 			},
 			{
 				"sha": "c92869febe70e9762fd445ac1d85b1c9aa0f7dd5",
@@ -2121,8 +2110,7 @@
 						"html_url": "https://github.com/npm/init-package-json/commit/4c304060bcec8251d28c8ae5877239ca6160b518"
 					}
 				],
-				"prs": [117],
-				"is_done": true
+				"prs": [117]
 			},
 			{
 				"sha": "2292875b8bbaa06b9c867a5ad252a081f9c10598",
@@ -2202,8 +2190,7 @@
 						"html_url": "https://github.com/npm/init-package-json/commit/d97d564f196cd4c9c9b8da8197ec7fae27673c9a"
 					}
 				],
-				"prs": [126],
-				"is_done": true
+				"prs": [126]
 			}
 		],
 		"hoho/jquery-bem": [
@@ -2363,8 +2350,7 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/7b0a70c136ada802892595d9d29fb4ae4dc77a1b",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/7b0a70c136ada802892595d9d29fb4ae4dc77a1b"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "526e1a971d58682925ea5528a789c6960851c290",
@@ -2443,8 +2429,7 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/e50f552f83b4271b8408f311fb3960eda2ef1217",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/e50f552f83b4271b8408f311fb3960eda2ef1217"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "ff14fd8333f7d1702a512d2663053a39ea2dfe56",
@@ -2524,7 +2509,8 @@
 						"html_url": "https://github.com/hoho/jquery-bem/commit/542fd1f702890df42baa7793e78a4de9807a87c3"
 					}
 				],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "542fd1f702890df42baa7793e78a4de9807a87c3",
@@ -2603,8 +2589,7 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/c0060ed28141cdb7d8030fe2bad0bc17a9c944c2",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/c0060ed28141cdb7d8030fe2bad0bc17a9c944c2"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "c0060ed28141cdb7d8030fe2bad0bc17a9c944c2",
@@ -2841,8 +2826,7 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/e49d9c5e71b49e3f80cf6dabc8cff0487e90f3ec",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/e49d9c5e71b49e3f80cf6dabc8cff0487e90f3ec"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "e49d9c5e71b49e3f80cf6dabc8cff0487e90f3ec",
@@ -2921,8 +2905,7 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/1b9cd3e0cf845b474c396a037618e4ca79182842",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/1b9cd3e0cf845b474c396a037618e4ca79182842"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "f13caade88bdf3a550f47e38208b3e4f8b55007c",
@@ -3002,8 +2985,8 @@
 						"html_url": "https://github.com/hoho/jquery-bem/commit/caeff441eda280e5b54b27dcf8f5b4b1fad4fc09"
 					}
 				],
-				"is_done": true,
-				"is_marked": true
+				"for_pavel": true,
+				"verification_tag": "with_tr,marked"
 			},
 			{
 				"sha": "caeff441eda280e5b54b27dcf8f5b4b1fad4fc09",
@@ -3281,8 +3264,7 @@
 						"url": "https://api.github.com/repos/hoho/jquery-bem/commits/36f737baf05fdb4259cdf5d23c72d3ce483b740d",
 						"html_url": "https://github.com/hoho/jquery-bem/commit/36f737baf05fdb4259cdf5d23c72d3ce483b740d"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "36f737baf05fdb4259cdf5d23c72d3ce483b740d",
@@ -3765,8 +3747,7 @@
 						"url": "https://api.github.com/repos/auth0/node-saml/commits/316982436cf9b7fe4a74d9758c9b4114a3d5e98f",
 						"html_url": "https://github.com/auth0/node-saml/commit/316982436cf9b7fe4a74d9758c9b4114a3d5e98f"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "b124b6bfa0a40fc8818aba5bc41b5f423bab68f8",
@@ -3845,7 +3826,9 @@
 						"url": "https://api.github.com/repos/auth0/node-saml/commits/82880352ea8338e8fe60be7f6512eb29c9c175e8",
 						"html_url": "https://github.com/auth0/node-saml/commit/82880352ea8338e8fe60be7f6512eb29c9c175e8"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "9c960791a35197bfaf5f50dc0950bff499d94efd",
@@ -4630,8 +4613,7 @@
 						"html_url": "https://github.com/auth0/node-saml/commit/cb3bfcdc4b034b6ac3ea52172c1be7d6193fddec"
 					}
 				],
-				"prs": [66],
-				"is_done": true
+				"prs": [66]
 			},
 			{
 				"sha": "12c6d67e48694e4ed291aef24ad0f40e2a5a9573",
@@ -5160,8 +5142,7 @@
 						"html_url": "https://github.com/auth0/node-saml/commit/925c39a53f317e79168a2adee3b3763753a5a526"
 					}
 				],
-				"prs": [85],
-				"is_done": true
+				"prs": [85]
 			},
 			{
 				"sha": "f24aef449774c187f957ff676467dcb3eca4e5a0",
@@ -5304,8 +5285,7 @@
 						"url": "https://api.github.com/repos/pimterry/loglevel/commits/5c9a2b1c78b23382567c291ebf5836f074cd9d59",
 						"html_url": "https://github.com/pimterry/loglevel/commit/5c9a2b1c78b23382567c291ebf5836f074cd9d59"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "5c9a2b1c78b23382567c291ebf5836f074cd9d59",
@@ -5542,8 +5522,7 @@
 						"url": "https://api.github.com/repos/pimterry/loglevel/commits/18476dbc74d0426122f91aad6801295bc8379706",
 						"html_url": "https://github.com/pimterry/loglevel/commit/18476dbc74d0426122f91aad6801295bc8379706"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "7650d04fc18bab4dcd8f9acb06e0a30e9f3cbd4f",
@@ -5622,8 +5601,7 @@
 						"url": "https://api.github.com/repos/pimterry/loglevel/commits/ef8bdb3c0814c2ae231f0b9c04b1cee5ae662726",
 						"html_url": "https://github.com/pimterry/loglevel/commit/ef8bdb3c0814c2ae231f0b9c04b1cee5ae662726"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "7579e773ced9ee2f178a62797517ae48f3179ce7",
@@ -5863,7 +5841,8 @@
 					}
 				],
 				"prs": [75],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "730f218f593d9a637c0dc25528b1d25b44182a82",
@@ -6578,8 +6557,7 @@
 						"html_url": "https://github.com/pimterry/loglevel/commit/21b263909850c12e059b18df56a2cb4fe2737177"
 					}
 				],
-				"prs": [81],
-				"is_done": true
+				"prs": [81]
 			},
 			{
 				"sha": "391724a1a2593fa45c8c724a092a78ec7245a5a4",
@@ -6740,7 +6718,8 @@
 					}
 				],
 				"prs": [81],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "ae3a282a02ce377edad43e129c83a6d53cd7ed0c",
@@ -6981,8 +6960,7 @@
 						"url": "https://api.github.com/repos/nathanpeck/s3-upload-stream/commits/40f3abed884cde10c5be97113c12c6c2e9b1d55a",
 						"html_url": "https://github.com/nathanpeck/s3-upload-stream/commit/40f3abed884cde10c5be97113c12c6c2e9b1d55a"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "0d1b9b131d0dfa1cadf28aef95a558cfeefb8771",
@@ -7062,8 +7040,7 @@
 						"html_url": "https://github.com/nathanpeck/s3-upload-stream/commit/6e13e79bdf6842df62f666c1895e452ca57ec3dd"
 					}
 				],
-				"prs": [25],
-				"is_done": true
+				"prs": [25]
 			},
 			{
 				"sha": "a8cf486b996ba5f4a16c83178886baecacda36cd",
@@ -7300,8 +7277,7 @@
 						"url": "https://api.github.com/repos/nathanpeck/s3-upload-stream/commits/094086c4483286e50e0baa1d77d94010996baf3b",
 						"html_url": "https://github.com/nathanpeck/s3-upload-stream/commit/094086c4483286e50e0baa1d77d94010996baf3b"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "db7c8d7722fbdaa8af4b1ffea1766a3d1c1e4287",
@@ -7701,8 +7677,7 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/1318c3548a372c79fca9e964295fb0aa47f7f12d"
 					}
 				],
-				"prs": [46],
-				"is_done": true
+				"prs": [46]
 			},
 			{
 				"sha": "afb841f14755311f3dda0f7ce172495783717e18",
@@ -8570,8 +8545,7 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/6046bc3aae5a2f577323383c967688e35a1e6c51"
 					}
 				],
-				"prs": [50],
-				"is_done": true
+				"prs": [50]
 			},
 			{
 				"sha": "563c3b6cb5543be2eb33a39e1003a495188dadf3",
@@ -8967,7 +8941,9 @@
 						"url": "https://api.github.com/repos/martinj/node-imagickal/commits/51cd539e8471ac08b77368547e2f310ab72559fa",
 						"html_url": "https://github.com/martinj/node-imagickal/commit/51cd539e8471ac08b77368547e2f310ab72559fa"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "51cd539e8471ac08b77368547e2f310ab72559fa",
@@ -9046,8 +9022,7 @@
 						"url": "https://api.github.com/repos/martinj/node-imagickal/commits/0e99caf89d9edbfdd82953ff9403e1226aea2a12",
 						"html_url": "https://github.com/martinj/node-imagickal/commit/0e99caf89d9edbfdd82953ff9403e1226aea2a12"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "7b87f13b0894d7532a2e04a0b3d75f4a51ca7fc3",
@@ -9929,7 +9904,8 @@
 						"html_url": "https://github.com/aurbroszniowski/HtmlAssertjs/commit/86c943a7f990ce4146b5e63e6ac61b7d62f7568c"
 					}
 				],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			}
 		],
 		"Zibx/robbo": [],
@@ -10329,8 +10305,7 @@
 						"url": "https://api.github.com/repos/clubajax/HeadlessBrowser/commits/cbba8823032eac2ffe6aac51ac936b036b809459",
 						"html_url": "https://github.com/clubajax/HeadlessBrowser/commit/cbba8823032eac2ffe6aac51ac936b036b809459"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "cbba8823032eac2ffe6aac51ac936b036b809459",
@@ -10410,7 +10385,8 @@
 						"html_url": "https://github.com/clubajax/HeadlessBrowser/commit/dad83992600eb75eb79fc28f99807dbe480db3b6"
 					}
 				],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "dad83992600eb75eb79fc28f99807dbe480db3b6",
@@ -10573,7 +10549,8 @@
 					}
 				],
 				"prs": [1012],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "4ca004b9e733bd2261ec68a7db4de07d79cf331a",
@@ -10775,8 +10752,7 @@
 						"html_url": "https://github.com/webpack-contrib/sass-loader/commit/c11478da281ce06812f9d8444d713cce501b7c72"
 					}
 				],
-				"prs": [856],
-				"is_done": true
+				"prs": [856]
 			},
 			{
 				"sha": "c459352727cdf991c43f1e6e6e31bde2aef7dfe6",
@@ -10837,8 +10813,7 @@
 						"html_url": "https://github.com/webpack-contrib/sass-loader/commit/1905e7bdb98ea236f20e4483d01dd5bae0382714"
 					}
 				],
-				"prs": [719],
-				"is_done": true
+				"prs": [719]
 			},
 			{
 				"sha": "f670635a33323d19d8469ed8d1ed05b5300db243",
@@ -11077,8 +11052,7 @@
 						"html_url": "https://github.com/webpack-contrib/sass-loader/commit/f8c80553899c963d2693ad4e0a69525ae5006973"
 					}
 				],
-				"prs": [919],
-				"is_done": true
+				"prs": [919]
 			},
 			{
 				"sha": "9e87b6b103c4f8a32f89235f97f006c3a1115355",
@@ -11238,8 +11212,7 @@
 						"html_url": "https://github.com/webpack-contrib/sass-loader/commit/edab08fa9d13097170d74bea2a0e19f246c96d2a"
 					}
 				],
-				"prs": [1092],
-				"is_done": true
+				"prs": [1092]
 			},
 			{
 				"sha": "bb7cef97d5d9ba26dc2db2e1948a2a04b26f4031",
@@ -11479,8 +11452,7 @@
 						"html_url": "https://github.com/webpack-contrib/sass-loader/commit/6641a16d510db653fbdc2bcfc265603c9f6fcd1a"
 					}
 				],
-				"prs": [959],
-				"is_done": true
+				"prs": [959]
 			},
 			{
 				"sha": "6641a16d510db653fbdc2bcfc265603c9f6fcd1a",
@@ -11560,8 +11532,7 @@
 						"html_url": "https://github.com/webpack-contrib/sass-loader/commit/67aa1391c12013aae70e08f5bbabb94e74b10a6d"
 					}
 				],
-				"prs": [906],
-				"is_done": true
+				"prs": [906]
 			},
 			{
 				"sha": "f403a4e161b852bfd501d65ca6b4795f7c6c1b4a",
@@ -11721,8 +11692,7 @@
 						"html_url": "https://github.com/webpack-contrib/sass-loader/commit/ca6eca0642c11b3d5310cb8db74c87df41449348"
 					}
 				],
-				"prs": [912],
-				"is_done": true
+				"prs": [912]
 			},
 			{
 				"sha": "cadc75e80caf7d32ea47de1cbaab639f9204c0eb",
@@ -11986,7 +11956,8 @@
 					}
 				],
 				"prs": [866],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "d2b532c3f5b3fa32be4ddff6126c9e49ccf3b60c",
@@ -12067,8 +12038,8 @@
 					}
 				],
 				"prs": [874],
-				"is_marked": true,
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "with_tr,marked"
 			},
 			{
 				"sha": "af5a072c5170f96f3d0643dec658248d98f65ff7",
@@ -12148,8 +12119,7 @@
 						"html_url": "https://github.com/webpack-contrib/sass-loader/commit/0db6fb61416052ad750383efb829e2c42a75a238"
 					}
 				],
-				"prs": [927],
-				"is_done": true
+				"prs": [927]
 			},
 			{
 				"sha": "8327d55df9e8fc6e24d2759d7bd50174ed1ff1e4",
@@ -12271,8 +12241,7 @@
 						"html_url": "https://github.com/webpack-contrib/sass-loader/commit/d2b532c3f5b3fa32be4ddff6126c9e49ccf3b60c"
 					}
 				],
-				"prs": [882],
-				"is_done": true
+				"prs": [882]
 			},
 			{
 				"sha": "c652c79b67999546d0e65f237a947b3e1b454691",
@@ -12976,7 +12945,8 @@
 					}
 				],
 				"prs": [45],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "bc9a4aa0524b905774d50eb53a1d65087fbbefbe",
@@ -13136,8 +13106,7 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/64b1abbb7f32640f098174f3d501845716a14293"
 					}
 				],
-				"prs": [231],
-				"is_done": true
+				"prs": [231]
 			},
 			{
 				"sha": "050979d29c3d6e3300508fb71299d035137b002b",
@@ -13297,8 +13266,7 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/a52aceb65b384ebb2ecd1746f9a58365192d5589"
 					}
 				],
-				"prs": [163],
-				"is_done": true
+				"prs": [163]
 			},
 			{
 				"sha": "9d4edc379de3f65c30e7a035ea1a8c8babb850d5",
@@ -13378,8 +13346,7 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/f175ac638c423046c6c61f5d354f9e9dd7131ba8"
 					}
 				],
-				"prs": [27],
-				"is_done": true
+				"prs": [27]
 			},
 			{
 				"sha": "5e0d060ddd169b9153e2a2f6ecb619e99dcc62fd",
@@ -13459,8 +13426,7 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/464817b45d191589a477aecb1105f9908776ed5d"
 					}
 				],
-				"prs": [27],
-				"is_done": true
+				"prs": [27]
 			},
 			{
 				"sha": "218b9672e5d5311294f952357eb52314a5e8fd23",
@@ -14021,7 +13987,8 @@
 					}
 				],
 				"prs": [503],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "313f208ea323232919e42bf88871d8e19ddacec3",
@@ -14261,8 +14228,7 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/822c64a4b8e7006b02bba787ef631744e7f5211d"
 					}
 				],
-				"prs": [90],
-				"is_done": true
+				"prs": [90]
 			},
 			{
 				"sha": "7207b377c530322cca32642260415772389c4476",
@@ -14423,7 +14389,8 @@
 					}
 				],
 				"prs": [63],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "017c772b2c23340ac7715a5410e86f9f708a9639",
@@ -14504,7 +14471,8 @@
 					}
 				],
 				"prs": [53],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "c4f6ec20a3ce6d79ca0ba9e7eff5e1ad561db26e",
@@ -14584,8 +14552,7 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/b0373e8d0734c119099be5cd825ad4798b730a5c"
 					}
 				],
-				"prs": [52],
-				"is_done": true
+				"prs": [52]
 			},
 			{
 				"sha": "964b935ea6860ef41eff1cc4a231a120e9a8aa26",
@@ -14745,8 +14712,7 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/c6f411970deb4641675a1d14cafd5a575669c3a7"
 					}
 				],
-				"prs": [27],
-				"is_done": true
+				"prs": [27]
 			},
 			{
 				"sha": "34ae7eb6edbb0f515ce12dce7067f62333906da4",
@@ -15147,7 +15113,8 @@
 					}
 				],
 				"prs": [6],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "with_tr"
 			},
 			{
 				"sha": "5b449f60e20adea1ac541c4a77d9cb9746bf3d3c",
@@ -15387,7 +15354,9 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/0eabdc5e5fa1073d461efd758a62cbffe4336983"
 					}
 				],
-				"prs": [76]
+				"prs": [76],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "ace612700d6865bc7f07c0c81771b1985c42c5a0",
@@ -15868,7 +15837,8 @@
 					}
 				],
 				"prs": [163],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "36dcce457153d440205be66fc200bbceac5fc186",
@@ -16108,7 +16078,9 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/eedd78ddb74f6c52e8da6a076f90ff6cb8ef58f1"
 					}
 				],
-				"prs": [539]
+				"prs": [539],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "491082c485fe6bc3fca7a95cc42a02dcf57e41c9",
@@ -16269,7 +16241,8 @@
 					}
 				],
 				"prs": [7],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "with_tr"
 			},
 			{
 				"sha": "b8d588cae3f83fa14a24f4b2fcab372d2222c07a",
@@ -16589,8 +16562,7 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/6341b16a09f6731b485b8f33de657c89ec209488"
 					}
 				],
-				"prs": [498],
-				"is_done": true
+				"prs": [498]
 			},
 			{
 				"sha": "6341b16a09f6731b485b8f33de657c89ec209488",
@@ -16750,8 +16722,7 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/a6f4768022868fa3ae53809a14a55922ca5f4fa9"
 					}
 				],
-				"prs": [435],
-				"is_done": true
+				"prs": [435]
 			},
 			{
 				"sha": "1ba3fc02bd251a2106422dbd67ee529d226dea9b",
@@ -17151,8 +17122,7 @@
 						"html_url": "https://github.com/pelias/openstreetmap/commit/768fa08319f1cd96cf3ec64fc11133259c6f4d47"
 					}
 				],
-				"prs": [52],
-				"is_done": true
+				"prs": [52]
 			},
 			{
 				"sha": "5d0387a9c60e284c5095ad9aa7799029862e3ba5",
@@ -17951,8 +17921,7 @@
 						"url": "https://api.github.com/repos/hunterloftis/jackrabbit/commits/9398878081dd769bd615e396f6881f8f49b4ad17",
 						"html_url": "https://github.com/hunterloftis/jackrabbit/commit/9398878081dd769bd615e396f6881f8f49b4ad17"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "ad389a4da7fb065d07ff4a3d7d34f70d2c0f78b0",
@@ -18110,8 +18079,7 @@
 						"url": "https://api.github.com/repos/hunterloftis/jackrabbit/commits/aeff49f185c07b8565cfab0d9bf26efc74608177",
 						"html_url": "https://github.com/hunterloftis/jackrabbit/commit/aeff49f185c07b8565cfab0d9bf26efc74608177"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"mafintosh/protocol-buffers-schema": [
@@ -18155,8 +18123,7 @@
 						"html_url": "https://github.com/mafintosh/protocol-buffers-schema/commit/e3cfb7aa81a594eb1ce559de92a6b7f907c7b4d7"
 					}
 				],
-				"prs": [4],
-				"is_done": true
+				"prs": [4]
 			}
 		],
 		"DubFriend/jquery.repeater": [
@@ -18316,8 +18283,7 @@
 						"url": "https://api.github.com/repos/DubFriend/jquery.repeater/commits/92598964bafc3b82e8ad0da4dc7371b7362cc15b",
 						"html_url": "https://github.com/DubFriend/jquery.repeater/commit/92598964bafc3b82e8ad0da4dc7371b7362cc15b"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "92598964bafc3b82e8ad0da4dc7371b7362cc15b",
@@ -18556,8 +18522,7 @@
 						"html_url": "https://github.com/DubFriend/jquery.repeater/commit/f1622d4335dc5e1ccab78652d9b8e83fc7b4162f"
 					}
 				],
-				"prs": [16],
-				"is_done": true
+				"prs": [16]
 			},
 			{
 				"sha": "f1622d4335dc5e1ccab78652d9b8e83fc7b4162f",
@@ -18877,8 +18842,7 @@
 						"html_url": "https://github.com/DubFriend/jquery.repeater/commit/3a3e4b5eea35231adb86790ce0bfa0898168b222"
 					}
 				],
-				"prs": [16],
-				"is_done": true
+				"prs": [16]
 			},
 			{
 				"sha": "d3c51124eeee16b425a9787bd00c8d2461ffd39f",
@@ -18957,8 +18921,7 @@
 						"url": "https://api.github.com/repos/DubFriend/jquery.repeater/commits/d4d2ce7c52f198940b772d518009b991c2af7abe",
 						"html_url": "https://github.com/DubFriend/jquery.repeater/commit/d4d2ce7c52f198940b772d518009b991c2af7abe"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "0ffad3c1aa635544fead05e36cc4f32cc959ede1",
@@ -19112,8 +19075,7 @@
 						"url": "https://api.github.com/repos/asbjornenge/rainbow-dns/commits/c1e95e0ddbec736bff7392c473498efec637d498",
 						"html_url": "https://github.com/asbjornenge/rainbow-dns/commit/c1e95e0ddbec736bff7392c473498efec637d498"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "29e593a56e8e6342df814d129a917c5caf378556",
@@ -19192,8 +19154,7 @@
 						"url": "https://api.github.com/repos/asbjornenge/rainbow-dns/commits/d97d57e85d3f8e659d6aa67738848a5eaee29d7f",
 						"html_url": "https://github.com/asbjornenge/rainbow-dns/commit/d97d57e85d3f8e659d6aa67738848a5eaee29d7f"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "d97d57e85d3f8e659d6aa67738848a5eaee29d7f",
@@ -19272,8 +19233,7 @@
 						"url": "https://api.github.com/repos/asbjornenge/rainbow-dns/commits/fe0ae517b58836ddb3ad06c5ff58765d8faa973c",
 						"html_url": "https://github.com/asbjornenge/rainbow-dns/commit/fe0ae517b58836ddb3ad06c5ff58765d8faa973c"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "68f940266c05d98913886948e0261d2a2d1a8b30",
@@ -19352,8 +19312,7 @@
 						"url": "https://api.github.com/repos/asbjornenge/rainbow-dns/commits/69ca067ad26e815c224b8147b5b3dbfdbe7d539d",
 						"html_url": "https://github.com/asbjornenge/rainbow-dns/commit/69ca067ad26e815c224b8147b5b3dbfdbe7d539d"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"mrooding/angular-1.3-validators": [
@@ -19437,8 +19396,7 @@
 						"url": "https://api.github.com/repos/mrooding/angular-1.3-validators/commits/905dcfd9019519a985a16f44c35df449a4b6068c",
 						"html_url": "https://github.com/mrooding/angular-1.3-validators/commit/905dcfd9019519a985a16f44c35df449a4b6068c"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"kadirahq/flow-router": [
@@ -19722,7 +19680,8 @@
 					}
 				],
 				"prs": [172],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "32a2d6c91a652f0b0afbbd3a776f661d98aadb38",
@@ -19882,8 +19841,7 @@
 						"html_url": "https://github.com/kadirahq/flow-router/commit/2cd6dbe9d33e30331ab221c72fb5b7add51ff8db"
 					}
 				],
-				"prs": [273],
-				"is_done": true
+				"prs": [273]
 			},
 			{
 				"sha": "77f58af27ae6561259d1574e5ca3f8559cc8630c",
@@ -20120,8 +20078,7 @@
 						"url": "https://api.github.com/repos/kadirahq/flow-router/commits/e47e75291b44369b326b28f7c513b51ba48d8c1c",
 						"html_url": "https://github.com/kadirahq/flow-router/commit/e47e75291b44369b326b28f7c513b51ba48d8c1c"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"mizchi/mz-match": [
@@ -20359,7 +20316,8 @@
 						"html_url": "https://github.com/andrepolischuk/typographic-numbers/commit/2c0e6dfe8b1e556860fcfe903b046a0eb9f47704"
 					}
 				],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "0c64b77bcf316ca0e028b96af516aa9f28d00aad",
@@ -20832,8 +20790,7 @@
 						"html_url": "https://github.com/focus-trap/focus-trap/commit/0eca669477eb3e25c197809efbbbd8fc451eb346"
 					}
 				],
-				"prs": [932],
-				"is_done": true
+				"prs": [932]
 			},
 			{
 				"sha": "da97007787235571a394544ed85ec31445f2069e",
@@ -20913,8 +20870,7 @@
 						"html_url": "https://github.com/focus-trap/focus-trap/commit/7bbd6dd3bd7e2c7d625e35be168558d9cadc2434"
 					}
 				],
-				"prs": [914],
-				"is_done": true
+				"prs": [914]
 			},
 			{
 				"sha": "a27ad58947ea34a8684ec486c3d87b5348aa3a24",
@@ -21074,8 +21030,7 @@
 						"html_url": "https://github.com/focus-trap/focus-trap/commit/55401af8e26a5572dd248d73b0f106940c45116f"
 					}
 				],
-				"prs": [847],
-				"is_done": true
+				"prs": [847]
 			},
 			{
 				"sha": "88cc9bc1eb1edfbdf32cdd4b9dab007efd9c875e",
@@ -21155,8 +21110,7 @@
 						"html_url": "https://github.com/focus-trap/focus-trap/commit/a0c3761bce5254080b4033b5aa97a3f88ba05fc4"
 					}
 				],
-				"prs": [826],
-				"is_done": true
+				"prs": [826]
 			}
 		],
 		"BreakOutEvent/breakout-frontend": [
@@ -21355,8 +21309,7 @@
 						"url": "https://api.github.com/repos/gregl83/expect-cookies/commits/ff32d27e25db981c563572d1e8fe02145f9c1a1a",
 						"html_url": "https://github.com/gregl83/expect-cookies/commit/ff32d27e25db981c563572d1e8fe02145f9c1a1a"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "994b8523240a17335b1ab2e1a910d36f87601edd",
@@ -21435,8 +21388,7 @@
 						"url": "https://api.github.com/repos/gregl83/expect-cookies/commits/6def20f752f7b8afced4554cda07d42e9d6921cb",
 						"html_url": "https://github.com/gregl83/expect-cookies/commit/6def20f752f7b8afced4554cda07d42e9d6921cb"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"redradix/redux-base-app": [
@@ -21517,8 +21469,7 @@
 						"url": "https://api.github.com/repos/redradix/redux-base-app/commits/3e2f6d2aca80992f771e81794a74699f487c370b",
 						"html_url": "https://github.com/redradix/redux-base-app/commit/3e2f6d2aca80992f771e81794a74699f487c370b"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "6fad74b4c4660d04a351b2f0e1760e9e8dfa762b",
@@ -21676,8 +21627,7 @@
 						"url": "https://api.github.com/repos/redradix/redux-base-app/commits/fc090bd1607697dd80b2a92158b12ab4eb471a54",
 						"html_url": "https://github.com/redradix/redux-base-app/commit/fc090bd1607697dd80b2a92158b12ab4eb471a54"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "76aa867391afe853470839a09f8f4fb7fb5441fa",
@@ -21756,8 +21706,7 @@
 						"url": "https://api.github.com/repos/redradix/redux-base-app/commits/80c393dde8b65c89b54856ef04a37590df52e792",
 						"html_url": "https://github.com/redradix/redux-base-app/commit/80c393dde8b65c89b54856ef04a37590df52e792"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"laat/mvn-dl": [],
@@ -21839,8 +21788,7 @@
 						"url": "https://api.github.com/repos/hanqingnan/alidayu-node/commits/b093562ff2f4d7e75fbe6cbb2b06161bdfe01aa8",
 						"html_url": "https://github.com/hanqingnan/alidayu-node/commit/b093562ff2f4d7e75fbe6cbb2b06161bdfe01aa8"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "b093562ff2f4d7e75fbe6cbb2b06161bdfe01aa8",
@@ -21919,7 +21867,9 @@
 						"url": "https://api.github.com/repos/hanqingnan/alidayu-node/commits/1b35448c15bd7e7c3fa54e6a51a6073e98299b00",
 						"html_url": "https://github.com/hanqingnan/alidayu-node/commit/1b35448c15bd7e7c3fa54e6a51a6073e98299b00"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			}
 		],
 		"digidem/mapeo-desktop": [
@@ -22002,7 +21952,8 @@
 					}
 				],
 				"prs": [393],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "18b6ddd3c9ea2ad04391d7b8ae336a779a515613",
@@ -22163,7 +22114,8 @@
 					}
 				],
 				"prs": [160],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			}
 		],
 		"mustardamus/lehm": [
@@ -22244,7 +22196,9 @@
 						"url": "https://api.github.com/repos/mustardamus/lehm/commits/db9ad91277954361dc624a133d2fbcb19670d412",
 						"html_url": "https://github.com/mustardamus/lehm/commit/db9ad91277954361dc624a133d2fbcb19670d412"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "12c0fdc423945f4ec4e0e94a51039cef241251f1",
@@ -22323,8 +22277,7 @@
 						"url": "https://api.github.com/repos/mustardamus/lehm/commits/0fb1c8bed76745691eff6e59e32ba32d0ea0fe1a",
 						"html_url": "https://github.com/mustardamus/lehm/commit/0fb1c8bed76745691eff6e59e32ba32d0ea0fe1a"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "74d6d95dbf24b96fe2449744189eeb88712aa3bf",
@@ -22798,8 +22751,7 @@
 						"url": "https://api.github.com/repos/mustardamus/lehm/commits/28e1ecaf1df1adcd2a127a4fb0c2989f83f0b86b",
 						"html_url": "https://github.com/mustardamus/lehm/commit/28e1ecaf1df1adcd2a127a4fb0c2989f83f0b86b"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "d111f70cb3b107a1b65473e31502a4b0f6bcad0f",
@@ -23273,8 +23225,7 @@
 						"url": "https://api.github.com/repos/mustardamus/lehm/commits/2a9d70109e8b8052ecf309f47046c8daaeb118c3",
 						"html_url": "https://github.com/mustardamus/lehm/commit/2a9d70109e8b8052ecf309f47046c8daaeb118c3"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "2a9d70109e8b8052ecf309f47046c8daaeb118c3",
@@ -23353,8 +23304,7 @@
 						"url": "https://api.github.com/repos/mustardamus/lehm/commits/d4da8f37a96a57643eed4dd085b8f511e603f974",
 						"html_url": "https://github.com/mustardamus/lehm/commit/d4da8f37a96a57643eed4dd085b8f511e603f974"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "3eff3c8034c51cbd443cb9a6f8fef8d8034efeae",
@@ -23433,8 +23383,7 @@
 						"url": "https://api.github.com/repos/mustardamus/lehm/commits/adbdbaa63a975a32df3c8f856747362a684b6a52",
 						"html_url": "https://github.com/mustardamus/lehm/commit/adbdbaa63a975a32df3c8f856747362a684b6a52"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "7695b7a3f5dcdb10ed4858de84c6e3e2a4dd27e3",
@@ -23672,7 +23621,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/69a83fb00769d9b755a05c051e22a3d54e655767"
 					}
 				],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "d6e7fec07820049a10426efb5434acd83b3cf6b3",
@@ -24622,8 +24572,7 @@
 						"url": "https://api.github.com/repos/mukeshsoni/frolic/commits/3ae98e6495c668dd5ac8cca51e47ae0f4a034b15",
 						"html_url": "https://github.com/mukeshsoni/frolic/commit/3ae98e6495c668dd5ac8cca51e47ae0f4a034b15"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"axynos/STARK": [
@@ -24704,7 +24653,9 @@
 						"url": "https://api.github.com/repos/axynos/STARK/commits/383c11878b361e2a4449d95509eb57bff16c4ad5",
 						"html_url": "https://github.com/axynos/STARK/commit/383c11878b361e2a4449d95509eb57bff16c4ad5"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "9c36872a792ebbd5440a10c9a5512481470cea72",
@@ -25021,7 +24972,9 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/eb4112d1e4a7b57cb960749a81b45b8a41932b3b"
 					}
 				],
-				"prs": [23]
+				"prs": [23],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "98245c3e67f9b4d84338f14d7fb18fd7dbe8463a",
@@ -25741,8 +25694,7 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/48ca90dd9181d8b1530b9f77fa9fed14a1ca5add"
 					}
 				],
-				"prs": [7],
-				"is_done": true
+				"prs": [7]
 			},
 			{
 				"sha": "021565ac81d08ad746f3f7f9a835326a1caeb205",
@@ -25822,8 +25774,7 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/9ea51d7d8dd3bd5274f0358871134aae8789c4ce"
 					}
 				],
-				"prs": [7],
-				"is_done": true
+				"prs": [7]
 			},
 			{
 				"sha": "34df11436c60fc75f77fa763097357a430d34578",
@@ -26700,7 +26651,9 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/985c596d361d41081f46bd66679abf4be419a479"
 					}
 				],
-				"prs": [7]
+				"prs": [7],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "02390d3addcc1d27d1d765ef5eacc505cd67ea5a",
@@ -26860,8 +26813,7 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/e5ae7cd82e995dda04f681a4003fda42d3502644"
 					}
 				],
-				"prs": [23],
-				"is_done": true
+				"prs": [23]
 			},
 			{
 				"sha": "19ed3189c9c64cd2cd8cfc6ad22074637922f26a",
@@ -27181,7 +27133,9 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/c6f1f84df2a7c43836f37367dffafb99c97f2c9b"
 					}
 				],
-				"prs": [8]
+				"prs": [8],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "f0f814d95cd3ab81538701bee8a061be447dd58f",
@@ -27261,8 +27215,7 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/b63217cd9ab1d5efaf5903f4e23b4bda7c293847"
 					}
 				],
-				"prs": [7],
-				"is_done": true
+				"prs": [7]
 			},
 			{
 				"sha": "77f39e7438a547d58ca4e7a963b528e96e3c5a50",
@@ -27581,8 +27534,7 @@
 						"url": "https://api.github.com/repos/DripEmail/drip-nodejs/commits/fa5e896ddaf817c80c679e2663252d8345b42e38",
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/fa5e896ddaf817c80c679e2663252d8345b42e38"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "53a7e882f79f3322b85e19195c21cd677b8a4d5b",
@@ -27742,8 +27694,7 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/b9f2aa7f1cb0af4c739989130d89e3a36b53a602"
 					}
 				],
-				"prs": [7],
-				"is_done": true
+				"prs": [7]
 			},
 			{
 				"sha": "06ba4c90eccdcca35770b910f9ce4027f181cf83",
@@ -27982,8 +27933,7 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/52dadfe347689b675b0052c0f9cb97466d3dd1bd"
 					}
 				],
-				"prs": [7],
-				"is_done": true
+				"prs": [7]
 			},
 			{
 				"sha": "52dadfe347689b675b0052c0f9cb97466d3dd1bd",
@@ -28144,8 +28094,7 @@
 						"url": "https://api.github.com/repos/agrishun/react-log-stream/commits/8b2b900f4853610a8b54a15196ef4c3464cf9c7e",
 						"html_url": "https://github.com/agrishun/react-log-stream/commit/8b2b900f4853610a8b54a15196ef4c3464cf9c7e"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"S-I-T/Carepalito": [
@@ -28383,8 +28332,7 @@
 						"html_url": "https://github.com/eleven-labs/codelabs/commit/8c5128f340917861c6761a706ed2225201358d2c"
 					}
 				],
-				"prs": [12],
-				"is_done": true
+				"prs": [12]
 			},
 			{
 				"sha": "1088d311517b6bbe5cb2886d280bdffbf4bedeeb",
@@ -28464,8 +28412,7 @@
 						"html_url": "https://github.com/eleven-labs/codelabs/commit/03a4dccff1a4938cc5a393db1c33e85f606d98e1"
 					}
 				],
-				"prs": [19],
-				"is_done": true
+				"prs": [19]
 			}
 		],
 		"mapbox/scroll-restorer": [
@@ -28859,8 +28806,7 @@
 						"url": "https://api.github.com/repos/humanmade/cf-to-tf/commits/6ea5755923598f0cae634c8c590a4cade8efdfbb",
 						"html_url": "https://github.com/humanmade/cf-to-tf/commit/6ea5755923598f0cae634c8c590a4cade8efdfbb"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"sidferreira/ignite-web-boilerplate": [
@@ -29060,8 +29006,7 @@
 						"html_url": "https://github.com/modosc/global-jsdom/commit/2c451ea4d4f38dc22f1bb24778247ce00a9e2e84"
 					}
 				],
-				"prs": [278],
-				"is_done": true
+				"prs": [278]
 			}
 		],
 		"raphamorim/node-replace": [
@@ -29142,8 +29087,7 @@
 						"url": "https://api.github.com/repos/raphamorim/node-replace/commits/b9c6873c3dc91c8241a665c184ae2b0014b8898e",
 						"html_url": "https://github.com/raphamorim/node-replace/commit/b9c6873c3dc91c8241a665c184ae2b0014b8898e"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "455224d9f214cfa3c764912a2efe6e0f9165403f",
@@ -29222,8 +29166,7 @@
 						"url": "https://api.github.com/repos/raphamorim/node-replace/commits/1a9854cb2148f76634cd87b1c6943807971eda0b",
 						"html_url": "https://github.com/raphamorim/node-replace/commit/1a9854cb2148f76634cd87b1c6943807971eda0b"
 					}
-				],
-				"is_done": true
+				]
 			}
 		],
 		"heiseonline/embetty-server": [
@@ -29780,8 +29723,7 @@
 						"url": "https://api.github.com/repos/igalarza/address-scrapper/commits/94ed53dabe0ca9ace5ad0c07ab60b4af77592876",
 						"html_url": "https://github.com/igalarza/address-scrapper/commit/94ed53dabe0ca9ace5ad0c07ab60b4af77592876"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "95b7c16c71829a02d52b46c6cd235a9cc7de0313",
@@ -30097,8 +30039,7 @@
 						"url": "https://api.github.com/repos/igalarza/address-scrapper/commits/fe1ec76e05c26141929e291ad00938c2a5923540",
 						"html_url": "https://github.com/igalarza/address-scrapper/commit/fe1ec76e05c26141929e291ad00938c2a5923540"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "2e6da0ccc5fb9dcce71721b0ab551d011302bc7e",
@@ -30259,8 +30200,7 @@
 						"html_url": "https://github.com/timkpaine/jupyterlab_iframe/commit/ccd98228841f8a8d3d8abe365afbd6c26f579c3d"
 					}
 				],
-				"prs": [99],
-				"is_done": true
+				"prs": [99]
 			}
 		],
 		"AraBlocks/ara-identity": [
@@ -30421,8 +30361,7 @@
 						"html_url": "https://github.com/AraBlocks/ara-identity/commit/d80a8ef155748fb7e4b9058cd1620f639efbc000"
 					}
 				],
-				"prs": [13],
-				"is_done": true
+				"prs": [13]
 			},
 			{
 				"sha": "43dd1fa14065e993f7462b5c4c0fc8178eee4e29",
@@ -30503,7 +30442,8 @@
 					}
 				],
 				"prs": [26],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "88fb50ae35d78ebbc2ca134a7d0b39685cffc464",
@@ -30583,8 +30523,7 @@
 						"html_url": "https://github.com/AraBlocks/ara-identity/commit/cd4ea535e7ff486de5f75e498fd4f35825b21a2d"
 					}
 				],
-				"prs": [32],
-				"is_done": true
+				"prs": [32]
 			},
 			{
 				"sha": "f5df604868dc1335de07dda6ccd0418926880de0",
@@ -30744,8 +30683,7 @@
 						"html_url": "https://github.com/AraBlocks/ara-identity/commit/8ca33cc8f2af31b64237e9d1abd8790978773ab2"
 					}
 				],
-				"prs": [29],
-				"is_done": true
+				"prs": [29]
 			},
 			{
 				"sha": "2b6f64220c08f43a752ad0e7981fcd09ef4adbd6",
@@ -30824,8 +30762,7 @@
 						"url": "https://api.github.com/repos/AraBlocks/ara-identity/commits/6d934d0ec782e42903afb3dbe3e32bd56b74f923",
 						"html_url": "https://github.com/AraBlocks/ara-identity/commit/6d934d0ec782e42903afb3dbe3e32bd56b74f923"
 					}
-				],
-				"is_done": true
+				]
 			},
 			{
 				"sha": "8fa78192b162bf81b7aeb9f30d253ac32e7e8ea6",
@@ -30906,7 +30843,8 @@
 					}
 				],
 				"prs": [29],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "f8bfb31fea295b4992d7be8ff7b3cb2d856f9ee3",
@@ -31066,8 +31004,7 @@
 						"html_url": "https://github.com/AraBlocks/ara-identity/commit/b4293c7b71b31cad3537ffb6805d7c1bedc3da22"
 					}
 				],
-				"prs": [33],
-				"is_done": true
+				"prs": [33]
 			},
 			{
 				"sha": "072122af1651fe39f69981a0c5b5a72f40e26764",
@@ -31307,7 +31244,9 @@
 						"html_url": "https://github.com/AraBlocks/ara-identity/commit/6947782cae00f02f8d773bba5fc347f31d4fb873"
 					}
 				],
-				"prs": [24]
+				"prs": [24],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "88cedd674cedb563451546bf19ef0085d8c75bc1",
@@ -31387,8 +31326,7 @@
 						"html_url": "https://github.com/AraBlocks/ara-identity/commit/b189f740b34d313447a92e58e5946d3f88dd2f98"
 					}
 				],
-				"prs": [24],
-				"is_done": true
+				"prs": [24]
 			},
 			{
 				"sha": "1aca9181fe392ef8bc0cc38d215c7385b29bc060",
@@ -31468,8 +31406,7 @@
 						"html_url": "https://github.com/AraBlocks/ara-identity/commit/2896a3751c4e3de621e3230d6996241b80e7785d"
 					}
 				],
-				"prs": [24],
-				"is_done": true
+				"prs": [24]
 			},
 			{
 				"sha": "f1a34e18feb2e357a57284d02b528adf54f038e8",
@@ -31710,7 +31647,8 @@
 					}
 				],
 				"prs": [62],
-				"is_done": true
+				"for_pavel": true,
+				"verification_tag": "no_tr"
 			},
 			{
 				"sha": "39b2af36898fb746b0526627820d8b92a41ade37",
@@ -32108,7 +32046,9 @@
 						"url": "https://api.github.com/repos/sindresorhus/split-on-first/commits/edbd16d9f91a00690eb7fa0142fcac8d8244c770",
 						"html_url": "https://github.com/sindresorhus/split-on-first/commit/edbd16d9f91a00690eb7fa0142fcac8d8244c770"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "55511cb4c7dabfecc9c67d3fd02d5966946e612a",
@@ -32424,8 +32364,7 @@
 						"html_url": "https://github.com/scalar-labs/scalardl-node-client-sdk/commit/38e850763a4354374f0ec52740451ece597a7e01"
 					}
 				],
-				"prs": [81],
-				"is_done": true
+				"prs": [81]
 			},
 			{
 				"sha": "d22a7f790f43e16837869ec9f67d90d789cf5b84",
@@ -33704,7 +33643,9 @@
 						"html_url": "https://github.com/benAkehurst/amazon-price-checker/commit/4b875afed614f7e3d8647b61a02c341655ddd036"
 					}
 				],
-				"prs": [4]
+				"prs": [4],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "fc61f2e29071cf3718d2d197fc89f6edc94726dd",
@@ -35305,7 +35246,9 @@
 						"url": "https://api.github.com/repos/jaydenseric/graphql-http-test/commits/acf6c1d76b60bcf63fb3b7a15b7ace66f23c4404",
 						"html_url": "https://github.com/jaydenseric/graphql-http-test/commit/acf6c1d76b60bcf63fb3b7a15b7ace66f23c4404"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "6f0c4d54e3cd07590a05fdeff8f2990c7a8024a7",
@@ -35936,7 +35879,9 @@
 						"url": "https://api.github.com/repos/noisyneuron/inverse/commits/5bc51f0aec80b0a5c86553520e55a3fd2ec1faa6",
 						"html_url": "https://github.com/noisyneuron/inverse/commit/5bc51f0aec80b0a5c86553520e55a3fd2ec1faa6"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			}
 		],
 		"TarantinoArchive/won": [],
@@ -37696,7 +37641,9 @@
 						"html_url": "https://github.com/sutt0n/serverless-clamav-lambda-layer/commit/092f3d77632a54b9ac153bd481cd1da5b99012c1"
 					}
 				],
-				"prs": [3]
+				"prs": [3],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "176b3fa4efb972e8494ef8cfd3f919eda08cd2d7",
@@ -38539,7 +38486,9 @@
 						"html_url": "https://github.com/GiuseppeTG/To-do-list/commit/5748f4d29210d182ccd97727345fc750cebe11d0"
 					}
 				],
-				"prs": [7]
+				"prs": [7],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "6658f34712c28ee1a14ca831988a35ba60969a02",
@@ -39769,7 +39718,9 @@
 						"html_url": "https://github.com/fb55/htmlparser2/commit/28c162be4d16a329382697f649dc471a39765ac3"
 					}
 				],
-				"prs": [930]
+				"prs": [930],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "28c162be4d16a329382697f649dc471a39765ac3",
@@ -40964,7 +40915,9 @@
 						"url": "https://api.github.com/repos/mWater/ez-localize/commits/a09230ea7318c44758e4f39d6f91d52e1dbef999",
 						"html_url": "https://github.com/mWater/ez-localize/commit/a09230ea7318c44758e4f39d6f91d52e1dbef999"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "221f13218571c5fbfe928523dea4a2ba00f329da",
@@ -41043,7 +40996,9 @@
 						"url": "https://api.github.com/repos/mWater/ez-localize/commits/cd543654b796dfecc3beacca9fe6df893f0cea2d",
 						"html_url": "https://github.com/mWater/ez-localize/commit/cd543654b796dfecc3beacca9fe6df893f0cea2d"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "f928ca71b3c34a00bc759ddb2067566cfcf58eba",
@@ -41201,7 +41156,9 @@
 						"url": "https://api.github.com/repos/mWater/ez-localize/commits/b3cda332a5905d973ab4c04a9e8d8d8376fc4b8c",
 						"html_url": "https://github.com/mWater/ez-localize/commit/b3cda332a5905d973ab4c04a9e8d8d8376fc4b8c"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "b02d582015ed606fc211e74ef61f4f522a6e11e4",
@@ -41359,7 +41316,9 @@
 						"url": "https://api.github.com/repos/mWater/ez-localize/commits/7c049237876944df57f33ee02a64cab785d3eb01",
 						"html_url": "https://github.com/mWater/ez-localize/commit/7c049237876944df57f33ee02a64cab785d3eb01"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			}
 		],
 		"braintree/iframer": [],
@@ -43180,7 +43139,9 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/9421bf721076fe9beb6a05c6219bd133da67337d"
 					}
 				],
-				"prs": [1606]
+				"prs": [1606],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "f0784d241f209229d70ba0c4c983da5d7604b83d",
@@ -43260,7 +43221,9 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/ca5568bd6163ff79358ac93782faa8ad96840431"
 					}
 				],
-				"prs": [2970]
+				"prs": [2970],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "c27703a3e029f509f571d7ea84a9c62e8442cf06",
@@ -44500,7 +44463,9 @@
 						"html_url": "https://github.com/IronCoreLabs/recrypt-wasm-binding/commit/b9fb15866850270e5e00e749a774809c45b7cdfa"
 					}
 				],
-				"prs": [45]
+				"prs": [45],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "9aec40d07f7863ac958c5bc3a6de7e36f10377ef",
@@ -44660,7 +44625,9 @@
 						"html_url": "https://github.com/IronCoreLabs/recrypt-wasm-binding/commit/70f4cbaae4553085cea4353045acb584e0e22402"
 					}
 				],
-				"prs": [25]
+				"prs": [25],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "4a8e3d0e5a6ac3132622c668751fa975ebd7bcac",
@@ -44740,7 +44707,9 @@
 						"html_url": "https://github.com/IronCoreLabs/recrypt-wasm-binding/commit/67e47264f0cc42e3e0ea4b98c8954324b771ebaf"
 					}
 				],
-				"prs": [14]
+				"prs": [14],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "e2d8ed95e560fe11d082d8991361f1818998fd56",
@@ -45650,7 +45619,9 @@
 						"url": "https://api.github.com/repos/erukiti/easybooks/commits/0941dffbb095e50d3f520f72a4e64cf917011477",
 						"html_url": "https://github.com/erukiti/easybooks/commit/0941dffbb095e50d3f520f72a4e64cf917011477"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "90c8eae94ad11020979f3697c45400eabb517d2b",
@@ -46655,7 +46626,9 @@
 						"html_url": "https://github.com/erukiti/easybooks/commit/8fed3778c68ad8176a81bb4cd5d469f79ffce515"
 					}
 				],
-				"prs": [3]
+				"prs": [3],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "651fca20bf1399ffc08ec270cf11b48754242615",
@@ -46892,7 +46865,9 @@
 						"url": "https://api.github.com/repos/erukiti/easybooks/commits/b8f54573fbe2a13134b5a456799f006af102d7a3",
 						"html_url": "https://github.com/erukiti/easybooks/commit/b8f54573fbe2a13134b5a456799f006af102d7a3"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			}
 		],
 		"m-ripper/vuex-multi-history": [
@@ -47605,7 +47580,9 @@
 						"url": "https://api.github.com/repos/m-ripper/vuex-multi-history/commits/10688845c423b9a45cda51a2f782e3e1b5a54558",
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/10688845c423b9a45cda51a2f782e3e1b5a54558"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "1434f8cbb632f2e69943f26a6ad0bd6aa5190692",
@@ -47842,7 +47819,9 @@
 						"url": "https://api.github.com/repos/m-ripper/vuex-multi-history/commits/965fd4c98b1d176aa0b0a701431fd72f33c69e09",
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/965fd4c98b1d176aa0b0a701431fd72f33c69e09"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "82baf17a4393aee308096a7f44d13bed3a5fae98",
@@ -49576,7 +49555,9 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/dc972c9f3aefaad34164d750b85fd190cbb2f493"
 					}
 				],
-				"prs": [157]
+				"prs": [157],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "ca8942c742d5e7f1fa8f50967b6f8b12c7b82020",
@@ -53592,7 +53573,9 @@
 						"html_url": "https://github.com/yoshi389111/github-profile-3d-contrib/commit/22192da51db364b8f206aaba40c13ff3b11f1127"
 					}
 				],
-				"prs": [18]
+				"prs": [18],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "a66a607ad0a70e460e9e98930a3c1d3f4188a29f",
@@ -53994,7 +53977,9 @@
 						"html_url": "https://github.com/ably-labs/fully-featured-scalable-chat-app/commit/ca7d60a904161a7baf15780a35993f67e56c1035"
 					}
 				],
-				"prs": [58]
+				"prs": [58],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "ca7d60a904161a7baf15780a35993f67e56c1035",
@@ -54553,7 +54538,9 @@
 						"html_url": "https://github.com/ably-labs/fully-featured-scalable-chat-app/commit/4f823be8141524a59676dca1d338a0e5447453b0"
 					}
 				],
-				"prs": [61]
+				"prs": [61],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "d6ffaaebaa33d55c3f1b6d583727585b7ff9f608",
@@ -55192,7 +55179,9 @@
 						"html_url": "https://github.com/ably-labs/fully-featured-scalable-chat-app/commit/eadc474eb255686518913f851c614bc7284c5f28"
 					}
 				],
-				"prs": [13]
+				"prs": [13],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			}
 		],
 		"gear-tech/gear-js": [
@@ -55434,7 +55423,9 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/1f5ebf3cf1f96116ec20c8d09679bd51a9e27f14"
 					}
 				],
-				"prs": [1023]
+				"prs": [1023],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "5fdc65176ed7e883d7c565c0e3bb10254ba284fe",
@@ -56074,7 +56065,9 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/c41ef739674e66b44af3d9bc1d85021b729755f2"
 					}
 				],
-				"prs": [743]
+				"prs": [743],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "56d556b1982f984993c7b3c01b7939deb196d366",
@@ -56154,7 +56147,9 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/cd7d8365cbc79cda625f7e7f81d21fc9a1c2b37e"
 					}
 				],
-				"prs": [840]
+				"prs": [840],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "611181d38a8dad1eb3d1df02411f298a473a0338",
@@ -56394,7 +56389,9 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/221da3cca22f8dfd753ca596c411158d7af5b877"
 					}
 				],
-				"prs": [1283]
+				"prs": [1283],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "a8f5d64852b91cd8a20ec32ecd14ca0942d3d795",
@@ -56474,7 +56471,9 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/f767ba8a9484c15e284bd91a19cb3730e9f876ab"
 					}
 				],
-				"prs": [811]
+				"prs": [811],
+				"for_pavel": true,
+				"verification_tag": "no_refs"
 			},
 			{
 				"sha": "cb4b553c01535ef6f7f70ecf1841120f8270c0d3",
@@ -58797,7 +58796,9 @@
 						"html_url": "https://github.com/adaleks/anywhere-ui/commit/c7cea03ef00f01b3483cfe53e8b6401ba78b9268"
 					}
 				],
-				"prs": [41]
+				"prs": [41],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "68c5b44fcf6fe0480885886779f6a5deaa49bfd2",
@@ -59037,7 +59038,9 @@
 						"html_url": "https://github.com/adaleks/anywhere-ui/commit/fa0aa405a3420dccc7c8ee8e679eae1257ec8fcd"
 					}
 				],
-				"prs": [17]
+				"prs": [17],
+				"for_pavel": true,
+				"verification_tag": "undone"
 			},
 			{
 				"sha": "6650f0121c846e29e892b29bd6619a833e6c41f5",
@@ -61346,7 +61349,9 @@
 						"url": "https://api.github.com/repos/SkyZeroZx/API-NestJS-Sky-Calendar/commits/789300af4c7255d4dfa212426cdd841880b984fa",
 						"html_url": "https://github.com/SkyZeroZx/API-NestJS-Sky-Calendar/commit/789300af4c7255d4dfa212426cdd841880b984fa"
 					}
-				]
+				],
+				"for_pavel": true,
+				"verification_tag": "has_refs"
 			},
 			{
 				"sha": "32b18a4900631586361f196855fbdae2ffedea2f",
@@ -61900,11 +61905,11 @@
 		]
 	},
 	"stats": {
-		"list": [0,2,5,0,8,0,0,0,4,6,10,31,29,30,0,31,0,7,26,7,1,1,0,3,4,0,54,80,0,13,1,11,5,2,10,2,1,4,4,5,1,2,2,11,0,3,6,31,1,10,2,0,67,1,1,2,2,2,5,11,1,3,3,10,9,2,38,1,2,0,0,4,0,19,7,2,1,0,2,7,0,1,1,23,0,17,6,1,2,1,1,1,0,1,2,0,6,8,1,1,1,6,2,1,83,6,8,1,1,35,15,0,0,1,10,35,4,0,4,5,1,7,1,28,22,7,72,2,4,31,2,1,1,8,0,0,24,82,0,42,12,6,30,46,2],
-		"total": 1390,
-		"avg": 9.586206896551724,
+		"list": [0,2,2,0,8,0,0,0,4,6,5,3,15,27,0,21,0,7,22,7,1,1,0,3,4,0,26,61,0,10,1,11,4,2,9,1,1,4,2,5,1,1,2,4,0,2,3,30,1,3,1,0,39,1,1,1,2,1,4,1,1,1,2,4,8,1,19,1,2,0,0,4,0,10,1,2,1,0,1,4,0,1,1,10,0,8,2,1,1,1,1,1,0,1,2,0,6,4,1,1,1,6,2,1,5,5,6,1,1,21,9,0,0,1,2,29,1,0,2,4,1,7,1,24,13,7,35,1,4,24,1,1,1,6,0,0,18,39,0,10,8,2,13,10,2],
+		"total": 802,
+		"avg": 5.531034482758621,
 		"med": 2,
 		"min": 0,
-		"max": 83
+		"max": 61
 	}
 }

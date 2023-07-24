@@ -891,8 +891,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function simulateEnchantmentsInternal at js/mc.js:81}\t{Function simulateEnchantmentsInternal at js/mc.js:106})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function simulateEnchantmentsInternal at js/mc.js:81}\t{Function simulateEnchantmentsInternal at js/mc.js:106})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -951,8 +950,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function getBaseEnchantmentLevel at js/mc.js:137}\t{Function getBaseEnchantmentLevel at js/mc.js:153})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function getBaseEnchantmentLevel at js/mc.js:137}\t{Function getBaseEnchantmentLevel at js/mc.js:153})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -1005,8 +1003,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function X at js/mc.js:22}\t{Function X at js/mc.js:10})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function X at js/mc.js:22}\t{Function X at js/mc.js:10})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -1051,8 +1048,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function N at js/mc.js:29}\t{Function N at js/mc.js:4})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function N at js/mc.js:29}\t{Function N at js/mc.js:4})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -1117,8 +1113,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function getEnchantments at js/mc.js:46}\t{Function getEnchantments at js/mc.js:77})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function getEnchantments at js/mc.js:46}\t{Function getEnchantments at js/mc.js:77})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -1177,8 +1172,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function simulateDistr at js/mc.js:8}\t{Function simulateDistr at js/mc.js:21})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function simulateDistr at js/mc.js:8}\t{Function simulateDistr at js/mc.js:21})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -1237,8 +1231,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function stripeIncompatibleEnchantments at js/mc.js:63}\t{Function stripeIncompatibleEnchantments at js/mc.js:94})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function stripeIncompatibleEnchantments at js/mc.js:63}\t{Function stripeIncompatibleEnchantments at js/mc.js:94})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -1297,8 +1290,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function simulateEnchantments at js/mc.js:75}\t{Function simulateEnchantments at js/mc.js:181})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function simulateEnchantments at js/mc.js:75}\t{Function simulateEnchantments at js/mc.js:181})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -1351,8 +1343,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function selectWeighted at js/mc.js:113}\t{Function selectWeighted at js/mc.js:133})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function selectWeighted at js/mc.js:113}\t{Function selectWeighted at js/mc.js:133})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -1417,8 +1408,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function foreachValidEnchantment at js/mc.js:35}\t{Function foreachValidEnchantment at js/mc.js:67})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function foreachValidEnchantment at js/mc.js:35}\t{Function foreachValidEnchantment at js/mc.js:67})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"description": "Add Parameter\tmc in method makeSim.simulate(gc ,c ,level ,mc) atjs/simulation.js|makeSim.simulate",
@@ -1427,8 +1417,7 @@
 					"localNameAfter": "mc",
 					"locationBefore": "",
 					"locationAfter": "js/simulation.js:79-81|(3,36)-(3,38)",
-					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"tool": "jsdiffer"
 				},
 				{
 					"description": "Add Parameter\tmc in method makeSim.byEnchantment(mc) atjs/simulation.js|makeSim.byEnchantment",
@@ -1437,8 +1426,7 @@
 					"localNameAfter": "mc",
 					"locationBefore": "",
 					"locationAfter": "js/simulation.js:1068-1070|(46,30)-(46,32)",
-					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"tool": "jsdiffer"
 				},
 				{
 					"description": "Add Parameter\tmc in method makeSim.byLevel(from ,to ,mc) atjs/simulation.js|makeSim.byLevel",
@@ -1447,12 +1435,10 @@
 					"localNameAfter": "mc",
 					"locationBefore": "",
 					"locationAfter": "js/simulation.js:2941-2943|(94,32)-(94,34)",
-					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"tool": "jsdiffer"
 				},
 				{
 					"tool": "manual",
-					"is_testability_refactoring": true,
 					"type": "_WRAP",
 					"fileBefore": "js/mc.js",
 					"lineBefore": "",
@@ -28489,8 +28475,7 @@
 					"similarity": null,
 					"standardDescription": "MOVE_RENAME\t{Function getMaterialId at js/page.js:153}\t{Function materialId at js/viewmodel.js:49})",
 					"descriptionWithScore": "MOVE_RENAME\t{Function getMaterialId at js/page.js:153}\t{Function materialId at js/viewmodel.js:49})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "MOVE_RENAME",
@@ -28543,8 +28528,7 @@
 					"similarity": null,
 					"standardDescription": "MOVE_RENAME\t{Function getItemId at js/page.js:136}\t{Function itemId at js/viewmodel.js:30})",
 					"descriptionWithScore": "MOVE_RENAME\t{Function getItemId at js/page.js:136}\t{Function itemId at js/viewmodel.js:30})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -28607,8 +28591,7 @@
 					"localNameAfter": "model",
 					"locationBefore": "",
 					"locationAfter": "js/storage.js:1069-1074|(53,19)-(53,24)",
-					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"tool": "jsdiffer"
 				},
 				{
 					"description": "Add Parameter\tmodel in method makePage(storage ,tools ,model) atjs/page.js|makePage",
@@ -28617,8 +28600,7 @@
 					"localNameAfter": "model",
 					"locationBefore": "",
 					"locationAfter": "js/page.js:41-46|(1,41)-(1,46)",
-					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"tool": "jsdiffer"
 				},
 				{
 					"description": "Rename Parameter\tdata to model in makeIterator.1.run(times ,model) at js/iterator.js|makeIterator.1.run",
@@ -28627,8 +28609,7 @@
 					"localNameAfter": "model",
 					"locationBefore": "js/iterator.js:83-87|(3,23)-(3,27)",
 					"locationAfter": "js/iterator.js:83-88|(3,23)-(3,28)",
-					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"tool": "jsdiffer"
 				}
 			]
 		},
@@ -37751,7 +37732,6 @@
 				},
 				{
 					"tool": "manual",
-					"is_testability_refactoring": true,
 					"type": "_CHANGE_VARIABLE_TYPE",
 					"fileBefore": "jquery-bem.js",
 					"lineBefore": "108",
@@ -46577,8 +46557,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function startResolving at src/utils.js:271}\t{Function startResolving at src/utils.js:305})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function startResolving at src/utils.js:271}\t{Function startResolving at src/utils.js:305})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "EXTRACT",
@@ -46688,8 +46667,7 @@
 					"similarity": 0.9277340695368446,
 					"standardDescription": "EXTRACT\t{Function getWebpackImporter at src/utils.js:270}\t{Function getWebpackResolver at src/utils.js:299})",
 					"descriptionWithScore": "EXTRACT (score=0,928)\t{Function getWebpackImporter at src/utils.js:270}\t{Function getWebpackResolver at src/utils.js:299})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				}
 			],
 			"af5a072c5170f96f3d0643dec658248d98f65ff7": [
@@ -50547,7 +50525,6 @@
 				},
 				{
 					"tool": "manual",
-					"is_testability_refactoring": true,
 					"type": "_EXTRACT",
 					"fileBefore": "stream/address_extractor.js",
 					"lineBefore": "14",
@@ -50696,7 +50673,6 @@
 				},
 				{
 					"tool": "manual",
-					"is_testability_refactoring": true,
 					"type": "_EXPORT_FUNCTION",
 					"fileBefore": "stream/stats.js",
 					"lineBefore": "",
