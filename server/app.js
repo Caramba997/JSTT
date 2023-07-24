@@ -1101,6 +1101,6 @@ app.get('/api/refactoringTypes', async (req, res) => {
   }
 });
 
-app.listen(config.port, () => {
-  console.log(`API listening on port ${config.port}`);
+app.listen(process.env.PORT || 80, () => {
+  console.log(`API listening on port ${process.env.PORT || 80}`);
 });
