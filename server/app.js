@@ -60,12 +60,14 @@ app.get('/api/projects', async (req, res) => {
     const result = {
             projects: []
           };
-    fs.readdirSync(files.path('projects', ''), { withFileTypes: true }).filter(dirent => dirent.isDirectory()).forEach(dir => {
-      result.projects.push(files.json('project', 'project.json', [dir.name]));
-    });
+    for (let dir of fs.readdirSync(files.path('projects', ''), { withFileTypes: true }).filter(dirent => dirent.isDirectory())) {
+      const data = await files.json('project', 'project.json', [dir.name])
+      result.projects.push(data);
+    }
     return success(res, result);
   }
   catch (e) {
+    console.log(e);
     return error(res, 500, 'Something went wrong');
   }
 });
@@ -74,7 +76,7 @@ app.get('/api/project', async (req, res) => {
   const id = req.query.id;
   if (!id) return error(res, 400, 'Id missing');
   try {
-    return success(res, files.json('project', 'project.json', [id]));
+    return success(res, await files.json('project', 'project.json', [id]));
   }
   catch (e) {
     return error(res, 500, 'Something went wrong');
@@ -109,7 +111,7 @@ app.get('/api/randoms', async (req, res) => {
   const id = req.query.id;
   if (!id) return error(res, 400, 'Id missing');
   try {
-    const randoms = files.raw('project', 'randoms.txt', [id]);
+    const randoms = await files.raw('project', 'randoms.txt', [id]);
     return success(res, randoms);
   }
   catch (e) {
@@ -132,7 +134,7 @@ app.post('/api/randoms', async (req, res) => {
       randoms = await random.get(number, 1, max);
     }
     files.write('project', 'randoms.txt', randoms, [id]);
-    const project = files.json('project', 'project.json', [id]);
+    const project = await files.json('project', 'project.json', [id]);
     project.has_randoms = true;
     project.total = max;
     files.write('project', 'project.json', project, [id]);
@@ -148,7 +150,7 @@ app.get('/api/counts', async (req, res) => {
   const id = req.query.id;
   if (!id) return error(res, 400, 'Id missing');
   try {
-    const counts = files.json('project', 'counts.json', [id]);
+    const counts = await files.json('project', 'counts.json', [id]);
     return success(res, counts);
   }
   catch (e) {
@@ -162,7 +164,7 @@ app.post('/api/counts', async (req, res) => {
   if (!id || !data) return error(res, 400, 'Param missing');
   try {
     files.write('project', 'counts.json', data, [id]);
-    const project = files.json('project', 'project.json', [id]);
+    const project = await files.json('project', 'project.json', [id]);
     project.has_counts = true;
     files.write('project', 'project.json', project, [id]);
     return success(res, 'Successfully saved counts');
@@ -220,7 +222,7 @@ app.get('/api/repo', async (req, res) => {
   try {
     const exists = files.exists('project', 'repos.json', [id]);
     if (!exists) return error(res, 404, 'repos.json not existent');
-    const repos = files.json('project', 'repos.json', [id]);
+    const repos = await files.json('project', 'repos.json', [id]);
     let result = null;
     for (let i = 0; i < repos.repos.length; i++) {
       const current = repos.repos[i];
@@ -245,7 +247,7 @@ app.post('/api/repo', async (req, res) => {
   try {
     const exists = files.exists('project', 'repos.json', [id]);
     if (!exists) return error(res, 404, 'repos.json not existent');
-    const repos = files.json('project', 'repos.json', [id]);
+    const repos = await files.json('project', 'repos.json', [id]);
     let found = false;
     for (let i = 0; i < repos.repos.length; i++) {
       const current = repos.repos[i];
@@ -260,7 +262,7 @@ app.post('/api/repo', async (req, res) => {
     if (data.categories !== undefined && data.categories.length > 0) {
       let newCategories;
       if (files.exists('knowledge', 'categories.json')) {
-        newCategories = files.json('knowledge', 'categories.json');
+        newCategories = await files.json('knowledge', 'categories.json');
       }
       else {
         newCategories = { categories: [] };
@@ -277,7 +279,7 @@ app.post('/api/repo', async (req, res) => {
     if (data.test_frameworks !== undefined && data.test_frameworks.length > 0) {
       let newFrameworks;
       if (files.exists('knowledge', 'testframeworks.json')) {
-        newFrameworks = files.json('knowledge', 'testframeworks.json');
+        newFrameworks = await files.json('knowledge', 'testframeworks.json');
       }
       else {
         newFrameworks = { frameworks: [] };
@@ -294,7 +296,7 @@ app.post('/api/repo', async (req, res) => {
     if (data.dependencies !== undefined && data.dependencies.length > 0) {
       let newDependencies;
       if (files.exists('knowledge', 'dependencies.json')) {
-        newDependencies = files.json('knowledge', 'dependencies.json');
+        newDependencies = await files.json('knowledge', 'dependencies.json');
       }
       else {
         newDependencies = { dependencies: [] };
@@ -322,7 +324,7 @@ app.get('/api/repos', async (req, res) => {
   try {
     const exists = files.exists('project', 'repos.json', [id]);
     if (!exists) return error(res, 404, 'Repos not existent');
-    const repos = files.json('project', 'repos.json', [id]);
+    const repos = await files.json('project', 'repos.json', [id]);
     return success(res, repos);
   }
   catch (e) {
@@ -336,7 +338,7 @@ app.post('/api/repos', async (req, res) => {
   if (!id || !data) return error(res, 400, 'Param missing');
   try {
     files.write('project', 'repos.json', data, [id]);
-    const project = files.json('project', 'project.json', [id]);
+    const project = await files.json('project', 'project.json', [id]);
     if (project.size === data.repos.length) {
       project.has_repos = true;
       files.write('project', 'project.json', project, [id]);
@@ -355,7 +357,7 @@ app.get('/api/evaluation', async (req, res) => {
     const exists = files.exists('project', 'evaluation.json', [id]);
     let result;
     if (exists) {
-      result = files.json('project', 'evaluation.json', [id]);
+      result = await files.json('project', 'evaluation.json', [id]);
     }
     else {
       result = {};
@@ -400,7 +402,7 @@ app.get('/api/dependencies', async (req, res) => {
   const id = req.query.id;
   if (!id) return error(res, 400, 'Id missing');
   try {
-    const dependencies = files.json('project', 'dependencies.json', [id]);
+    const dependencies = await files.json('project', 'dependencies.json', [id]);
     return success(res, dependencies);
   }
   catch (e) {
@@ -480,7 +482,7 @@ app.get('/api/npmall', async (req, res) => {
     if (!exists) {
       return success(res, { fetched: false });
     }
-    const npmall = files.raw('knowledge', 'npmall.json');
+    const npmall = await files.raw('knowledge', 'npmall.json');
     const minified = npmall.includes('"names":');
     if (includeContent) {
       return success(res, { fetched: true, minified: minified, data: JSON.parse(npmall) });
@@ -509,7 +511,7 @@ app.post('/api/npmall', async (req, res) => {
 
 app.post('/api/npmminify', async (req, res) => {
   try {
-    const npmall = files.json('knowledge', 'npmall.json');
+    const npmall = await files.json('knowledge', 'npmall.json');
     const minified = {
       total: npmall.total_rows,
       names: []
@@ -620,7 +622,7 @@ app.get('/api/metrics', async (req, res) => {
     let result;
     if (repo) repo = decodeURIComponent(repo);
     if (exists) {
-      const data = files.json('project', 'metrics.json', [id]);
+      const data = await files.json('project', 'metrics.json', [id]);
       if (repo) {
         result = data.repos[repo] || { source: {}, test: {}, testConnections: {} };
       }
@@ -652,7 +654,7 @@ app.post('/api/metrics', async (req, res) => {
     const exists = files.exists('project', 'metrics.json', [id]);
     let content;
     if (exists) {
-      content = files.json('project', 'metrics.json', [id]);
+      content = await files.json('project', 'metrics.json', [id]);
     }
     else {
       content = { repos: {} };
@@ -700,8 +702,8 @@ app.post('/api/calccorrelations', async (req, res) => {
   const id = req.body.id;
   if (!id) return error(res, 400, 'Param missing');
   try {
-    const data = files.json('project', 'metrics.json', [id]);
-    const repos = files.json('project', 'repos.json', [id]);
+    const data = await files.json('project', 'metrics.json', [id]);
+    const repos = await files.json('project', 'repos.json', [id]);
     const correlation = await correlations.project(data, repos.repos);
     return success(res, { correlations: correlation });
   }
@@ -717,7 +719,7 @@ app.get('/api/categories', async (req, res) => {
     if (!exists) {
       return success(res, { categories: [] });
     }
-    const categories = files.json('knowledge', 'categories.json');
+    const categories = await files.json('knowledge', 'categories.json');
     return success(res, categories);
   }
   catch (e) {
@@ -731,7 +733,7 @@ app.get('/api/frameworks', async (req, res) => {
     if (!exists) {
       return success(res, { frameworks: [] });
     }
-    const frameworks = files.json('knowledge', 'testframeworks.json');
+    const frameworks = await files.json('knowledge', 'testframeworks.json');
     return success(res, frameworks);
   }
   catch (e) {
@@ -745,7 +747,7 @@ app.get('/api/knowndependencies', async (req, res) => {
     if (!exists) {
       return success(res, { dependencies: [] });
     }
-    const dependencies = files.json('knowledge', 'dependencies.json');
+    const dependencies = await files.json('knowledge', 'dependencies.json');
     return success(res, dependencies);
   }
   catch (e) {
@@ -759,7 +761,7 @@ app.get('/api/metricdefs', async (req, res) => {
     if (!exists) {
       return success(res, { metrics: {} });
     }
-    const metrics = files.json('knowledge', 'metrics.json');
+    const metrics = await files.json('knowledge', 'metrics.json');
     return success(res, metrics);
   }
   catch (e) {
@@ -775,7 +777,7 @@ app.post('/api/calccoverage', async (req, res) => {
     const formattedName = files.safeFormat(repo);
     const exists = files.exists('files', 'coverage-summary.json', [id, formattedName]);
     if (!exists) return error(res, 404, 'Coverage report does not exist, create it first')
-    const report = files.json('files', 'coverage-summary.json', [id, formattedName]);
+    const report = await files.json('files', 'coverage-summary.json', [id, formattedName]);
     const coverage = metrics.coverageFromSummary(report);
     return success(res, coverage);
   }
@@ -811,7 +813,7 @@ app.get('/api/commits', async (req, res) => {
     if (repo) repo = decodeURIComponent(repo);
     if (sha) sha = decodeURIComponent(sha);
     if (exists) {
-      const data = files.json('project', 'commits.json', [id]);
+      const data = await files.json('project', 'commits.json', [id]);
       if (repo) {
         if (sha) {
           for (let i = 0; i < data.commits[repo].length; i++) {
@@ -860,7 +862,7 @@ app.post('/api/commits', async (req, res) => {
       const exists = files.exists('project', 'commits.json', [id]);
       let content;
       if (exists) {
-        content = files.json('project', 'commits.json', [id]);
+        content = await files.json('project', 'commits.json', [id]);
       }
       else {
         content = { commits: {} };
@@ -903,7 +905,7 @@ app.get('/api/prs', async (req, res) => {
     let result;
     if (repo) repo = decodeURIComponent(repo);
     if (exists) {
-      const data = files.json('project', 'prs.json', [id]);
+      const data = await files.json('project', 'prs.json', [id]);
       if (repo) {
         result = data.prs[repo] || [];
       }
@@ -936,7 +938,7 @@ app.post('/api/prs', async (req, res) => {
       const exists = files.exists('project', 'prs.json', [id]);
       let content;
       if (exists) {
-        content = files.json('project', 'prs.json', [id]);
+        content = await files.json('project', 'prs.json', [id]);
       }
       else {
         content = { prs: {} };
@@ -995,7 +997,7 @@ app.get('/api/refactorings', async (req, res) => {
     if (repo) repo = decodeURIComponent(repo);
     if (sha) sha = decodeURIComponent(sha);
     if (exists) {
-      const data = files.json('project', 'refactorings.json', [id]);
+      const data = await files.json('project', 'refactorings.json', [id]);
       if (repo) {
         if (sha) {
           result = data.refactorings[repo] && data.refactorings[repo][sha] || [];
@@ -1034,7 +1036,7 @@ app.post('/api/refactorings', async (req, res) => {
       const exists = files.exists('project', 'refactorings.json', [id]);
       let content;
       if (exists) {
-        content = files.json('project', 'refactorings.json', [id]);
+        content = await files.json('project', 'refactorings.json', [id]);
       }
       else {
         content = { refactorings: {} };
@@ -1093,7 +1095,7 @@ app.get('/api/refactoringTypes', async (req, res) => {
     if (!exists) {
       return success(res, { types: [] });
     }
-    const types = files.json('knowledge', 'refactorings.json');
+    const types = await files.json('knowledge', 'refactorings.json');
     return success(res, types);
   }
   catch (e) {

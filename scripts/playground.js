@@ -19,15 +19,24 @@
   const metrics = new Metrics();
   const random = new Random();
 
-  const refactorings = files.json('project', 'refactorings.json', ['pavel']).refactorings;
-  Object.values(refactorings).forEach(repo => {
-    Object.values(repo).forEach(commit => {
-      commit.forEach(refactoring => {
-        delete refactoring.is_testability_refactoring;
-      });
-    });
-  });
-  files.write('project', 'refactorings.json', { refactorings }, ['pavel']);
+  const { AWSClient } = require('../lib/aws.js');
+  const aws = new AWSClient();
+  const dirs = fs.readdirSync('./projects/pavel/', {withFileTypes: true});
+  for (let i = 0; i < dirs.length; i++) {
+    const path = './projects/pavel/' + dirs[i].name;
+    const data = fs.readFileSync(path, { encoding:'utf8', flag:'r' });
+    await aws.upload(path, data);
+  }
+
+  // const refactorings = files.json('project', 'refactorings.json', ['pavel']).refactorings;
+  // Object.values(refactorings).forEach(repo => {
+  //   Object.values(repo).forEach(commit => {
+  //     commit.forEach(refactoring => {
+  //       delete refactoring.is_testability_refactoring;
+  //     });
+  //   });
+  // });
+  // files.write('project', 'refactorings.json', { refactorings }, ['pavel']);
 
   // const commits = files.json('project', 'commits.json', ['pavel']).commits;
   // const todos = {
