@@ -1,6 +1,8 @@
 {
 	"types": [
 		"_CHANGE_VARIABLE_TYPE",
+		"_EXPORT_FUNCTION",
+		"_EXTRACT",
 		"_WRAP",
 		"Add Parameter",
 		"Change Variable Kind",

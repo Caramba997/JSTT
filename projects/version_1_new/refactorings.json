@@ -46577,7 +46577,8 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function startResolving at src/utils.js:271}\t{Function startResolving at src/utils.js:305})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function startResolving at src/utils.js:271}\t{Function startResolving at src/utils.js:305})",
-					"refactoring": true
+					"refactoring": true,
+					"is_testability_refactoring": true
 				},
 				{
 					"type": "EXTRACT",
@@ -46687,7 +46688,8 @@
 					"similarity": 0.9277340695368446,
 					"standardDescription": "EXTRACT\t{Function getWebpackImporter at src/utils.js:270}\t{Function getWebpackResolver at src/utils.js:299})",
 					"descriptionWithScore": "EXTRACT (score=0,928)\t{Function getWebpackImporter at src/utils.js:270}\t{Function getWebpackResolver at src/utils.js:299})",
-					"refactoring": true
+					"refactoring": true,
+					"is_testability_refactoring": true
 				}
 			],
 			"af5a072c5170f96f3d0643dec658248d98f65ff7": [
@@ -50542,6 +50544,19 @@
 					"standardDescription": "EXTRACT\t{Function exports at stream/node_filter.js:5}\t{Function isPOIFromFeatureList at stream/node_filter.js:9})",
 					"descriptionWithScore": "EXTRACT (score=0,706)\t{Function exports at stream/node_filter.js:5}\t{Function isPOIFromFeatureList at stream/node_filter.js:9})",
 					"refactoring": true
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXTRACT",
+					"fileBefore": "stream/address_extractor.js",
+					"lineBefore": "14",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "stream/address_extractor.js",
+					"lineAfter": "5",
+					"nameAfter": "hasValidAddress",
+					"parametersAfter": "item"
 				}
 			],
 			"5b449f60e20adea1ac541c4a77d9cb9746bf3d3c": [],
@@ -50678,6 +50693,19 @@
 					"standardDescription": "EXTRACT\t{Function exports at stream/osm_types.js:4}\t{Function filterTypeStream at stream/osm_types.js:4})",
 					"descriptionWithScore": "EXTRACT (score=0,643)\t{Function exports at stream/osm_types.js:4}\t{Function filterTypeStream at stream/osm_types.js:4})",
 					"refactoring": true
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "stream/stats.js",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "stream/stats.js",
+					"lineAfter": "53",
+					"nameAfter": "_reset",
+					"parametersAfter": ""
 				}
 			],
 			"b8d588cae3f83fa14a24f4b2fcab372d2222c07a": [],

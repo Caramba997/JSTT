@@ -191,6 +191,7 @@
     };
     REFACTORINGS.push(data);
     await api.postPromise('refactorings', { id: id, repo: repo, sha: sha, data: REFACTORINGS });
+    buildPage();
     progress.setProgress(1, 1);
     progress.end();
   });
