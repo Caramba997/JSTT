@@ -32585,7 +32585,8 @@
 						"html_url": "https://github.com/scalar-labs/scalardl-node-client-sdk/commit/5987a81973f88bf06d68f565baf24f1fb691b2a8"
 					}
 				],
-				"prs": [39]
+				"prs": [39],
+				"is_done": true
 			},
 			{
 				"sha": "014f00bc0e0b7955f57f523e6f230e62d903549e",
@@ -32665,7 +32666,8 @@
 						"html_url": "https://github.com/scalar-labs/scalardl-node-client-sdk/commit/07785b6b247295a53d1463a8db85fc8a2d20897c"
 					}
 				],
-				"prs": [35]
+				"prs": [35],
+				"is_done": true
 			},
 			{
 				"sha": "e7a740601af0c452841a40c559541d069023b0f7",

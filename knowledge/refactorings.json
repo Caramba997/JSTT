@@ -1,5 +1,7 @@
 {
 	"types": [
+		"_ADDITIONAL_NOT_IN_LIST",
+		"_ADD_PARAMETER",
 		"_CHANGE_VARIABLE_TYPE",
 		"_EXPORT_FUNCTION",
 		"_EXTRACT",

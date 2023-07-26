@@ -165,11 +165,17 @@
   $('[data-a="add"]').on('click', async () => {
     const types = await api.getPromise('refactoringTypes');
     const select = addModal.find('[name="type"]');
-    let html = select.html();
+    let manualHtml = '',
+        toolHtml = '';
     types.data.types.forEach(type => {
-      html += `<option value="${type}">${type}</option>`;
+      if (/^_.*$/.test(type)) {
+        manualHtml += `<option value="${type}">${type}</option>`;
+      }
+      else {
+        toolHtml += `<option value="${type}">${type}</option>`;
+      }
     });
-    select.html(html);
+    select.html(`${select.html()}<optgroup label="Types for manual creation">${manualHtml}</optgroup><optgroup label="Other types from tools">${toolHtml}</optgroup>`);
     addModalB.show();
   });
 
