@@ -77470,7 +77470,8 @@
 					"similarity": 0.6566489573291359,
 					"standardDescription": "EXTRACT\t{Function createTable at config/gravity.js:1012}\t{Function makeQuestion at config/gravity.js:1011})",
 					"descriptionWithScore": "EXTRACT (score=0,657)\t{Function createTable at config/gravity.js:1012}\t{Function makeQuestion at config/gravity.js:1011})",
-					"refactoring": true
+					"refactoring": true,
+					"is_testability_refactoring": true
 				}
 			],
 			"56e6b3748ee6067ec078679d50396e0444b1b5ed": [],
@@ -77482,7 +77483,8 @@
 					"localNameAfter": "accountId",
 					"locationBefore": "",
 					"locationAfter": "config/gravity.js:29545-29554|(854,36)-(854,45)",
-					"tool": "jsdiffer"
+					"tool": "jsdiffer",
+					"is_testability_refactoring": true
 				},
 				{
 					"description": "Add Parameter\tjupServ in method Gravity.getBalance(address ,accountId ,jupServ) atconfig/gravity.js|Gravity.getBalance",
@@ -77491,7 +77493,8 @@
 					"localNameAfter": "jupServ",
 					"locationBefore": "",
 					"locationAfter": "config/gravity.js:29556-29591|(854,47)-(854,82)",
-					"tool": "jsdiffer"
+					"tool": "jsdiffer",
+					"is_testability_refactoring": true
 				}
 			],
 			"976d36a7e22683ba1af0898fd50e20b2e88afb3a": []
@@ -77666,6 +77669,19 @@
 					"standardDescription": "MOVE\t{Function useTranslation at src/utils/test-utils.js:9}\t{Function useTranslation at src/setupTests.js:11})",
 					"descriptionWithScore": "MOVE\t{Function useTranslation at src/utils/test-utils.js:9}\t{Function useTranslation at src/setupTests.js:11})",
 					"refactoring": true
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_ATTRIBUTE",
+					"fileBefore": "src/components/Loader.js",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "src/components/Loader.js",
+					"lineAfter": "9",
+					"nameAfter": "role",
+					"parametersAfter": "'alert'"
 				}
 			],
 			"520f18eb65e028b5cd04bb65667c71e379bcb4f8": [],

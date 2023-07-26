@@ -1,5 +1,6 @@
 {
 	"types": [
+		"_ADD_ATTRIBUTE",
 		"_CHANGE_VARIABLE_TYPE",
 		"_EXPORT_FUNCTION",
 		"_EXTRACT",
