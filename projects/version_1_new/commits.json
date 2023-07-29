@@ -41719,7 +41719,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/8694350c4fb92e3a9b2504a1d8647e8dd61454e2"
 					}
 				],
-				"prs": [3168]
+				"prs": [3168],
+				"is_done": true
 			},
 			{
 				"sha": "411ece5f9453af075c1ff48c70aec349f5942a47",
@@ -41879,7 +41880,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/d9464a18e1b2daf23e61f8f0fdbe8ddbd67fc925"
 					}
 				],
-				"prs": [2891]
+				"prs": [2891],
+				"is_done": true
 			},
 			{
 				"sha": "67c8ebc6b8931e6ab379dfe42c9c747de2c5b03e",
@@ -42039,7 +42041,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/79360aa6975e2e2320d767062055acd3502fca2a"
 					}
 				],
-				"prs": [2856]
+				"prs": [2856],
+				"is_done": true
 			},
 			{
 				"sha": "4d43353ad99c360a0ad09cd980b31986fe8e00d2",
@@ -42340,7 +42343,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/d236d8c5196b14461a778fa465db2073bab91e9e"
 					}
 				],
-				"prs": [181]
+				"prs": [181],
+				"is_done": true
 			},
 			{
 				"sha": "8cdb675b08542b76290f03552cd6d17510561506",
@@ -42420,7 +42424,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/8239b0be9332a6c6ac9690725ef0850ed2bd639a"
 					}
 				],
-				"prs": [63]
+				"prs": [63],
+				"is_done": true
 			},
 			{
 				"sha": "492a0469506ca49718b9947988580c1dc818ee33",
@@ -42500,7 +42505,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/88b4d9bd5da5ab39244e7dfe2a0dd6a389e1d3b9"
 					}
 				],
-				"prs": [1540]
+				"prs": [1540],
+				"is_done": true
 			},
 			{
 				"sha": "27970afcd4de8fa39ce6ab554813828839b18ed1",
@@ -42580,7 +42586,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/54c7614fbb984fbf3ff6bff1028979bd96f3a644"
 					}
 				],
-				"prs": [2928]
+				"prs": [2928],
+				"is_done": true
 			},
 			{
 				"sha": "891d4996867081db98ca779da6f96fe78247f78f",
@@ -42820,7 +42827,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/5b778ecc83ee1445cb4c9b5d001611af39eb3967"
 					}
 				],
-				"prs": [2716]
+				"prs": [2716],
+				"is_done": true
 			},
 			{
 				"sha": "2c247b9b9d0e4943bdc3836b771f408f80ff2bce",
@@ -42900,7 +42908,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/c076c1d502ca094a042c09cbca877be1c2e6fe45"
 					}
 				],
-				"prs": [1204]
+				"prs": [1204],
+				"is_done": true
 			},
 			{
 				"sha": "77d25d915fb8c9a9a154c720be9f1cc8488bcbaf",
@@ -43060,7 +43069,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/677489df70f50f4b5a99a76b615fb0adaf50545b"
 					}
 				],
-				"prs": [2707]
+				"prs": [2707],
+				"is_done": true
 			},
 			{
 				"sha": "2adfda001068b6dad6c663f75db57b88c1afc41e",
@@ -43220,7 +43230,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/9421bf721076fe9beb6a05c6219bd133da67337d"
 					}
 				],
-				"prs": [1606]
+				"prs": [1606],
+				"is_done": true
 			},
 			{
 				"sha": "f0784d241f209229d70ba0c4c983da5d7604b83d",
@@ -43300,7 +43311,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/ca5568bd6163ff79358ac93782faa8ad96840431"
 					}
 				],
-				"prs": [2970]
+				"prs": [2970],
+				"is_done": true
 			},
 			{
 				"sha": "c27703a3e029f509f571d7ea84a9c62e8442cf06",
@@ -43460,7 +43472,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/6a821eace7f3e34449534ec475bd77d6a2cd5ec4"
 					}
 				],
-				"prs": [1814]
+				"prs": [1814],
+				"is_done": true
 			},
 			{
 				"sha": "326f38a2e9fd52d9d266ffd6e5abde8276c18b1c",
@@ -43620,7 +43633,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/704f13bffea4e71c8f557ae068137b8d95d3b1e2"
 					}
 				],
-				"prs": [1176]
+				"prs": [1176],
+				"is_done": true
 			},
 			{
 				"sha": "9b9549bd1a8559040fc0341ee9f5489a55ad41b7",
@@ -43700,7 +43714,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/974eef4b267a0e28497ba5789fd07637db1cfae7"
 					}
 				],
-				"prs": [978]
+				"prs": [978],
+				"is_done": true
 			},
 			{
 				"sha": "f52388ad23542c42f4856f131f9b0ea9b622aecc",
@@ -43780,7 +43795,8 @@
 						"html_url": "https://github.com/microsoft/vscode-azurefunctions/commit/61a263fefe265c83c505b6f756d307aa38714321"
 					}
 				],
-				"prs": [2876]
+				"prs": [2876],
+				"is_done": true
 			},
 			{
 				"sha": "ce8d8d61bedd4bbda3a5f2c749fb8ddf2e4f166e",
@@ -44377,7 +44393,8 @@
 						"html_url": "https://github.com/tinesoft/ngx-storybook-schematics/commit/5a736d8981f1517c7d9cea0c98749f6f3ab60df8"
 					}
 				],
-				"prs": [4]
+				"prs": [4],
+				"is_done": true
 			}
 		],
 		"AngularFirebase/139-hold-to-delete-directive": [
@@ -45175,7 +45192,8 @@
 						"url": "https://api.github.com/repos/erukiti/easybooks/commits/ea535910068626fce560468aa24dca7dc30b0da2",
 						"html_url": "https://github.com/erukiti/easybooks/commit/ea535910068626fce560468aa24dca7dc30b0da2"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "1689b39a4f960552c6f581faa50f94717c44533b",
@@ -45333,7 +45351,8 @@
 						"url": "https://api.github.com/repos/erukiti/easybooks/commits/992eff78e886533b74cbce3e3eeaf9af5301da5d",
 						"html_url": "https://github.com/erukiti/easybooks/commit/992eff78e886533b74cbce3e3eeaf9af5301da5d"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "ae343dbebd8e286f64b25a7f604cff3bdd0e1d05",
@@ -45453,7 +45472,8 @@
 						"url": "https://api.github.com/repos/erukiti/easybooks/commits/8fed3778c68ad8176a81bb4cd5d469f79ffce515",
 						"html_url": "https://github.com/erukiti/easybooks/commit/8fed3778c68ad8176a81bb4cd5d469f79ffce515"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "8fed3778c68ad8176a81bb4cd5d469f79ffce515",
@@ -45532,7 +45552,8 @@
 						"url": "https://api.github.com/repos/erukiti/easybooks/commits/90c8eae94ad11020979f3697c45400eabb517d2b",
 						"html_url": "https://github.com/erukiti/easybooks/commit/90c8eae94ad11020979f3697c45400eabb517d2b"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "8e548e39bad551c66d4a19c71825abda45e4df0f",
@@ -45611,7 +45632,8 @@
 						"url": "https://api.github.com/repos/erukiti/easybooks/commits/8b5168316d46504161dfb377fb9f4d3faa80b621",
 						"html_url": "https://github.com/erukiti/easybooks/commit/8b5168316d46504161dfb377fb9f4d3faa80b621"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "8b5168316d46504161dfb377fb9f4d3faa80b621",
@@ -45690,7 +45712,8 @@
 						"url": "https://api.github.com/repos/erukiti/easybooks/commits/0941dffbb095e50d3f520f72a4e64cf917011477",
 						"html_url": "https://github.com/erukiti/easybooks/commit/0941dffbb095e50d3f520f72a4e64cf917011477"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "90c8eae94ad11020979f3697c45400eabb517d2b",
@@ -47092,7 +47115,8 @@
 						"url": "https://api.github.com/repos/m-ripper/vuex-multi-history/commits/b42b0c7b95bdcecc4fc9290af7af98fd0644e2aa",
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/b42b0c7b95bdcecc4fc9290af7af98fd0644e2aa"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "ec62c5376a20bdac6dcf88f0448bc69ee3ff0cf5",
@@ -47171,7 +47195,8 @@
 						"url": "https://api.github.com/repos/m-ripper/vuex-multi-history/commits/efe69857251137b9c363588cccb4cc69bddc976f",
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/efe69857251137b9c363588cccb4cc69bddc976f"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "db1d1ca552924125804958ac62b0fa3d5acd432b",
@@ -47329,7 +47354,8 @@
 						"url": "https://api.github.com/repos/m-ripper/vuex-multi-history/commits/e7eedf570979d35ea8f4d1513426a61e9d025241",
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/e7eedf570979d35ea8f4d1513426a61e9d025241"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "b42b0c7b95bdcecc4fc9290af7af98fd0644e2aa",
@@ -47566,7 +47592,8 @@
 						"url": "https://api.github.com/repos/m-ripper/vuex-multi-history/commits/e378ec040a26aeb4b16708275a3ef9876fc59e14",
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/e378ec040a26aeb4b16708275a3ef9876fc59e14"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "c120e4d7c75a8c05dfc3a4df49561fad628027d8",
@@ -47645,7 +47672,8 @@
 						"url": "https://api.github.com/repos/m-ripper/vuex-multi-history/commits/10688845c423b9a45cda51a2f782e3e1b5a54558",
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/10688845c423b9a45cda51a2f782e3e1b5a54558"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "1434f8cbb632f2e69943f26a6ad0bd6aa5190692",
@@ -47724,7 +47752,8 @@
 						"url": "https://api.github.com/repos/m-ripper/vuex-multi-history/commits/0ae0564b7aa2292b68928f4993b81a2c8180fefd",
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/0ae0564b7aa2292b68928f4993b81a2c8180fefd"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "f63816eb3e8c6071edc30a3b63a69e72ecfdf65e",
@@ -47882,7 +47911,8 @@
 						"url": "https://api.github.com/repos/m-ripper/vuex-multi-history/commits/965fd4c98b1d176aa0b0a701431fd72f33c69e09",
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/965fd4c98b1d176aa0b0a701431fd72f33c69e09"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "82baf17a4393aee308096a7f44d13bed3a5fae98",
@@ -48127,7 +48157,8 @@
 						"url": "https://api.github.com/repos/aws/constructs/commits/ed351900d29ba52e0f2149eba753922ab94a3f14",
 						"html_url": "https://github.com/aws/constructs/commit/ed351900d29ba52e0f2149eba753922ab94a3f14"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "754a84dfcc09caa920fdf175001035b1283bb106",
@@ -48207,7 +48238,8 @@
 						"html_url": "https://github.com/aws/constructs/commit/8e633057e6e4062de8c940e2891db28d39a200cf"
 					}
 				],
-				"prs": [314]
+				"prs": [314],
+				"is_done": true
 			},
 			{
 				"sha": "c45ee7f551739b69c56c69ac1c20949d594af358",
@@ -48367,7 +48399,8 @@
 						"html_url": "https://github.com/aws/constructs/commit/3614631ff164dabff026992289b46e3648ed45c6"
 					}
 				],
-				"prs": [263]
+				"prs": [263],
+				"is_done": true
 			},
 			{
 				"sha": "3614631ff164dabff026992289b46e3648ed45c6",
@@ -48527,7 +48560,8 @@
 						"html_url": "https://github.com/aws/constructs/commit/1c174f79f43c1ecc0e0e1818b693f873dd66287c"
 					}
 				],
-				"prs": [132]
+				"prs": [132],
+				"is_done": true
 			}
 		],
 		"lokalkauf/lokalkauf-frontend": [
@@ -48723,7 +48757,8 @@
 						"url": "https://api.github.com/repos/lokalkauf/lokalkauf-frontend/commits/4761039c414b385355ea651daa58ca61e135c714",
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/4761039c414b385355ea651daa58ca61e135c714"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "20c515f8da496d47591c5f5674d7338848ea02a8",
@@ -48929,7 +48964,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/8d1303481e39cbc68aeaa61ed6527155700be2b0"
 					}
 				],
-				"prs": [16]
+				"prs": [16],
+				"is_done": true
 			},
 			{
 				"sha": "bb44a6227e2ee4cc354bb05d313b196293f3700e",
@@ -48971,7 +49007,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/083ef5200b92090bfeb0ef80ac5376cccdb16083"
 					}
 				],
-				"prs": [16]
+				"prs": [16],
+				"is_done": true
 			},
 			{
 				"sha": "25f0b78c418c58a747f69e769639e0fa0a8f5b52",
@@ -49536,7 +49573,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/0d5958dad3e7ef35f5ca3793aa91da2914d9fd67"
 					}
 				],
-				"prs": [37]
+				"prs": [37],
+				"is_done": true
 			},
 			{
 				"sha": "aad85527f98ee6209fa81a90c77397a2ea19888e",
@@ -50097,7 +50135,8 @@
 						"url": "https://api.github.com/repos/lokalkauf/lokalkauf-frontend/commits/d114c55b60cf0e599c8e63d83c010aca667a4b4c",
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/d114c55b60cf0e599c8e63d83c010aca667a4b4c"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "24e79f9b1371f0b50498823ac777d44e4ab3728a",
@@ -50456,7 +50495,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/7fb3d34d9000c55c68cfbaa02c7e90e7dba376c5"
 					}
 				],
-				"prs": [9]
+				"prs": [9],
+				"is_done": true
 			},
 			{
 				"sha": "74f96cbc558e9c14bbbb68313da0b626feb8378a",
@@ -50620,7 +50660,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/8528880ae53c7363b3892386e4ac932f69bfc794"
 					}
 				],
-				"prs": [157]
+				"prs": [157],
+				"is_done": true
 			},
 			{
 				"sha": "71e886628b7c9c64945a2f543b36a605743792f3",
@@ -51024,7 +51065,8 @@
 						"url": "https://api.github.com/repos/MarioArnt/azure-ad-jwt-lite/commits/1e664562d995fdd63beaffed52289f147ab63780",
 						"html_url": "https://github.com/MarioArnt/azure-ad-jwt-lite/commit/1e664562d995fdd63beaffed52289f147ab63780"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "7834f3255656a3ea24ae7ccef6bedd5d34948a93",
@@ -53156,7 +53198,8 @@
 						"url": "https://api.github.com/repos/juanm4/hexagonal-architecture-frontend/commits/22c06dd7a24b45179d423f1eec44534767152d43",
 						"html_url": "https://github.com/juanm4/hexagonal-architecture-frontend/commit/22c06dd7a24b45179d423f1eec44534767152d43"
 					}
-				]
+				],
+				"is_done": true
 			}
 		],
 		"bytecodepandit/pchat": [
@@ -53237,7 +53280,8 @@
 						"url": "https://api.github.com/repos/bytecodepandit/pchat/commits/caa44b704c3b67df0bf8d964e7e7b13c91d115f6",
 						"html_url": "https://github.com/bytecodepandit/pchat/commit/caa44b704c3b67df0bf8d964e7e7b13c91d115f6"
 					}
-				]
+				],
+				"is_done": true
 			}
 		],
 		"roblouie/gameboy-emulator": [
@@ -53319,7 +53363,8 @@
 						"html_url": "https://github.com/roblouie/gameboy-emulator/commit/e43bff111710c13af806b286794bd1b967e0c414"
 					}
 				],
-				"prs": [39]
+				"prs": [39],
+				"is_done": true
 			}
 		],
 		"yoshi389111/github-profile-3d-contrib": [
@@ -54034,7 +54079,8 @@
 						"html_url": "https://github.com/ably-labs/fully-featured-scalable-chat-app/commit/ca7d60a904161a7baf15780a35993f67e56c1035"
 					}
 				],
-				"prs": [58]
+				"prs": [58],
+				"is_done": true
 			},
 			{
 				"sha": "ca7d60a904161a7baf15780a35993f67e56c1035",
@@ -54513,7 +54559,9 @@
 						"url": "https://api.github.com/repos/ably-labs/fully-featured-scalable-chat-app/commits/fb1239fbf9c90fd88caeb612ffe22dbbc18faecd",
 						"html_url": "https://github.com/ably-labs/fully-featured-scalable-chat-app/commit/fb1239fbf9c90fd88caeb612ffe22dbbc18faecd"
 					}
-				]
+				],
+				"is_marked": true,
+				"is_done": true
 			},
 			{
 				"sha": "d0ed70f04554f2ea6242a24e34b1937e061fe648",
@@ -54593,7 +54641,8 @@
 						"html_url": "https://github.com/ably-labs/fully-featured-scalable-chat-app/commit/4f823be8141524a59676dca1d338a0e5447453b0"
 					}
 				],
-				"prs": [61]
+				"prs": [61],
+				"is_done": true
 			},
 			{
 				"sha": "d6ffaaebaa33d55c3f1b6d583727585b7ff9f608",
@@ -54673,7 +54722,8 @@
 						"html_url": "https://github.com/ably-labs/fully-featured-scalable-chat-app/commit/42a83d64453473a863d890bec03185893f93fa80"
 					}
 				],
-				"prs": [58]
+				"prs": [58],
+				"is_done": true
 			},
 			{
 				"sha": "a942c0255fad45ccd8fd3f466d3491050711f7dd",
@@ -55152,7 +55202,8 @@
 						"url": "https://api.github.com/repos/ably-labs/fully-featured-scalable-chat-app/commits/03bb88bbfd2a2250af42ce16f44fcdfc3ef0fbae",
 						"html_url": "https://github.com/ably-labs/fully-featured-scalable-chat-app/commit/03bb88bbfd2a2250af42ce16f44fcdfc3ef0fbae"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "1dd9eab2b88591789ec2bbf869178b1c5b030fd1",
@@ -55232,7 +55283,8 @@
 						"html_url": "https://github.com/ably-labs/fully-featured-scalable-chat-app/commit/eadc474eb255686518913f851c614bc7284c5f28"
 					}
 				],
-				"prs": [13]
+				"prs": [13],
+				"is_done": true
 			}
 		],
 		"gear-tech/gear-js": [
@@ -55314,7 +55366,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/bee310ebd6e59d6c178b6b8a203261b6626d2def"
 					}
 				],
-				"prs": [1172]
+				"prs": [1172],
+				"is_done": true
 			},
 			{
 				"sha": "4e724068fc09da33fae2377953684847d45db011",

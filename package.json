@@ -17,6 +17,9 @@
     "py-debug": "flask --app ./server/correlation run --debug",
     "app": "node server/app.js"
   },
+  "engines": {
+    "node": "20.0.x"
+  },
   "author": "Finn Carstensen",
   "license": "ISC",
   "dependencies": {

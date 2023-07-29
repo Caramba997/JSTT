@@ -93770,6 +93770,19 @@
 					"standardDescription": "EXTRACT_MOVE\t{Function redo at src/HistoryPlugin.ts:129}\t{Function replaceState at src/VuexHistory.ts:123})",
 					"descriptionWithScore": "EXTRACT_MOVE (score=0,621)\t{Function redo at src/HistoryPlugin.ts:129}\t{Function replaceState at src/VuexHistory.ts:123})",
 					"refactoring": true
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_SPLIT_MODULE",
+					"fileBefore": "src/HistoryPlugin.ts",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "src/VuexHistory.ts,src/VuexHistoryPlugin.ts",
+					"lineAfter": "",
+					"nameAfter": "",
+					"parametersAfter": ""
 				}
 			],
 			"82baf17a4393aee308096a7f44d13bed3a5fae98": []
@@ -102669,6 +102682,19 @@
 					"locationBefore": "api/account-signin/index.ts:809-833|(20,10)-(20,34)",
 					"locationAfter": "api/account-signin/index.ts:810-828|(19,10)-(19,28)",
 					"tool": "jsdiffer"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "api/common/JwtGenerator.ts",
+					"lineBefore": "9",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "api/common/JwtGenerator.ts",
+					"lineAfter": "16",
+					"nameAfter": "fromBase64Key",
+					"parametersAfter": "key"
 				}
 			],
 			"d0ed70f04554f2ea6242a24e34b1937e061fe648": [
@@ -102691,6 +102717,19 @@
 					"locationBefore": "",
 					"locationAfter": "api/common/services/UserService.ts:3675-3687|(112,46)-(112,58)",
 					"tool": "jsdiffer"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "api/common/services/UserService.ts",
+					"lineBefore": "109",
+					"nameBefore": "getProfileImage",
+					"parametersBefore": "email, oauthPicture",
+					"fileAfter": "api/common/services/UserService.ts",
+					"lineAfter": "112",
+					"nameAfter": "getProfileImage",
+					"parametersAfter": "email, size, oauthPicture"
 				}
 			],
 			"a942c0255fad45ccd8fd3f466d3491050711f7dd": [],
@@ -103257,6 +103296,19 @@
 					"locationBefore": "app/src/sdk/BffApiClient.ts:7-1638|(1,7)-(57,1)",
 					"locationAfter": "app/src/sdk/BffApiClient.js:7-1590|(1,7)-(56,1)",
 					"tool": "jsdiffer"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_PARAMETER",
+					"fileBefore": "app/src/sdk/BffApiClient.ts",
+					"lineBefore": "5",
+					"nameBefore": "constructor",
+					"parametersBefore": "jwtToken",
+					"fileAfter": "app/src/sdk/BffApiClient.js",
+					"lineAfter": "3",
+					"nameAfter": "constructor",
+					"parametersAfter": "jwtToken, fetchFunc"
 				}
 			]
 		},
