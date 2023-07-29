@@ -104728,7 +104728,8 @@
 					"similarity": 0.958825609393356,
 					"standardDescription": "EXTRACT\t{Function constructor at Code/src/classes/Product.ts:14}\t{Function setDetails at Code/src/classes/Product.ts:57})",
 					"descriptionWithScore": "EXTRACT (score=0,959)\t{Function constructor at Code/src/classes/Product.ts:14}\t{Function setDetails at Code/src/classes/Product.ts:57})",
-					"refactoring": true
+					"refactoring": true,
+					"is_testability_refactoring": true
 				},
 				{
 					"description": "Rename Method\tProduct.setQuantity(amount) renamed to Product.updateQuantity(amount) at Code/src/classes/Product.ts|Product.setQuantity",
@@ -104765,6 +104766,19 @@
 					"locationBefore": "Code/src/classes/Product.ts:329-1112|(14,4)-(32,5)",
 					"locationAfter": "Code/src/classes/Product.ts:1766-2037|(57,4)-(63,5)",
 					"tool": "jsdiffer"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_GETTER",
+					"fileBefore": "Code/src/classes/ShoppingCart.ts",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "Code/src/classes/ShoppingCart.ts",
+					"lineAfter": "17",
+					"nameAfter": "getItem",
+					"parametersAfter": "index"
 				}
 			]
 		},
@@ -104987,6 +105001,19 @@
 					"locationBefore": "src/user/user.controller.ts:1342-1613|(38,2)-(46,3)",
 					"locationAfter": "src/user/user.controller.ts:1423-1669|(40,2)-(46,3)",
 					"tool": "jsdiffer"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "src/common/decorators/user.decorator.ts",
+					"lineBefore": "3",
+					"nameBefore": "User",
+					"parametersBefore": "data, ctx",
+					"fileAfter": "src/common/decorators/user.decorator.ts",
+					"lineAfter": "3",
+					"nameAfter": "User",
+					"parametersAfter": "data, ctx"
 				}
 			],
 			"446a232a896ce10f1f1c452c2304dc76586453b3": [

@@ -38,6 +38,7 @@
       for (let i = 0; i < commits.length; i++) {
         const commit = commits[i],
               html = template.clone(true);
+        if (filter === 'undone' && commit.is_done) continue;
         const refactorings = REFACTORINGS.refactorings[repo];
         if (refactorings && refactorings[commit.sha] && refactorings[commit.sha].length > 0) {
           const commitTrs = refactorings[commit.sha].filter(ref => ref.is_testability_refactoring);

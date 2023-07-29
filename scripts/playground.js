@@ -4,6 +4,7 @@
   const { Format } = require('../lib/format.js');
   const { Metrics } = require('../lib/metrics.js');
   const { NPM } = require('../lib/npm.js');
+  const { Random } = require('../lib/random.js');
   const fs = require('fs');
   const escomplex = require('typhonjs-escomplex');
   const Parser = require('@babel/parser');
@@ -11,25 +12,42 @@
   const Types = require('@babel/types');
   const axios = require('axios');
   const equal = require('deep-equal');
-
   const npm = new NPM();
   const files = new Files();
   const gitHub = new GitHub();
   const metrics = new Metrics();
+  const random = new Random();
 
 
-  const types = new Set();
-  const refactorings = files.json('project', 'refactorings.json', ['version_1_new']);
-  Object.values(refactorings.refactorings).forEach(repo => {
-    Object.values(repo).forEach(commit => {
-      commit.forEach(refactoring => {
-        types.add(refactoring.type);
-      });
+  const commits = files.json('project', 'commits.json', ['version_1_new']);
+  const undone = [];
+  Object.entries(commits.commits).forEach(([repo, commits]) => {
+    let i = 0;
+    commits.forEach(commit => {
+      if (!commit.is_done) undone.push({ repo, i });
+      i++;
     });
   });
-  files.write('knowledge', 'refactorings.json', {
-    types: Array.from(types).sort()
-  });
+  // let rands = await random.get(20, 0, todos.without_tr.length - 1);
+  // rands = rands.split(',');
+  // todos.without_tr = todos.without_tr.filter((commit, index) => rands.includes('' + index));
+  // todos.without_tr.forEach(commit => {
+  //   commit.for_pavel = true;
+  //   commit.verification_tag = commit.verification_tag ? commit.verification_tag + ',no_tr' : 'no_tr';
+  // });
+
+  // const types = new Set();
+  // const refactorings = files.json('project', 'refactorings.json', ['version_1_new']);
+  // Object.values(refactorings.refactorings).forEach(repo => {
+  //   Object.values(repo).forEach(commit => {
+  //     commit.forEach(refactoring => {
+  //       types.add(refactoring.type);
+  //     });
+  //   });
+  // });
+  // files.write('knowledge', 'refactorings.json', {
+  //   types: Array.from(types).sort()
+  // });
 
   // const data = files.json('project', 'commits.json', ['version_1_new']);
   // Object.entries(data.commits).forEach(([repo, commits]) => {

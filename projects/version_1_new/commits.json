@@ -55527,7 +55527,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/1f5ebf3cf1f96116ec20c8d09679bd51a9e27f14"
 					}
 				],
-				"prs": [1023]
+				"prs": [1023],
+				"is_done": true
 			},
 			{
 				"sha": "5fdc65176ed7e883d7c565c0e3bb10254ba284fe",
@@ -55607,7 +55608,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/704a4329be225d5592c258575b0a8731b0800546"
 					}
 				],
-				"prs": [692]
+				"prs": [692],
+				"is_done": true
 			},
 			{
 				"sha": "def77053b843dbcad2045dc29a96fa15b77d74c5",
@@ -55687,7 +55689,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/09d3282d9e61248494d2b99e9ce1c5b8bcf3fc6d"
 					}
 				],
-				"prs": [1278]
+				"prs": [1278],
+				"is_done": true
 			},
 			{
 				"sha": "0063bed204ef958f98c43c965185ef2b18e54f28",
@@ -55767,7 +55770,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/3a70021970c5325d05d481fe3ad3556ff73b8b9f"
 					}
 				],
-				"prs": [1146]
+				"prs": [1146],
+				"is_done": true
 			},
 			{
 				"sha": "6aca8d8d8350119846e8a300164067812d5b5e6e",
@@ -55847,7 +55851,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/2101180c27aa14da57664e2ee8bec8796c4c06e8"
 					}
 				],
-				"prs": [981]
+				"prs": [981],
+				"is_done": true
 			},
 			{
 				"sha": "833973528d76928fa54dae781bca11c437be0327",
@@ -55927,7 +55932,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/c53316a5152f7f25273f2b02980727650bd926f0"
 					}
 				],
-				"prs": [937]
+				"prs": [937],
+				"is_done": true
 			},
 			{
 				"sha": "3b1edebf846a8d1bd3b8049ac6303d2ffac74415",
@@ -56007,7 +56013,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/5ec6ce540bef176bdc97d96b15ed5d67c4c128a6"
 					}
 				],
-				"prs": [864]
+				"prs": [864],
+				"is_done": true
 			},
 			{
 				"sha": "2e50e33765868af3d1b3df763f3fb740f1587bc2",
@@ -56087,7 +56094,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/38e3b236f280ca01b56b0246c8210b10e90b4e84"
 					}
 				],
-				"prs": [819]
+				"prs": [819],
+				"is_done": true
 			},
 			{
 				"sha": "336756fc7874df7d901c2bff1c0599654fd929d1",
@@ -56167,7 +56175,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/c41ef739674e66b44af3d9bc1d85021b729755f2"
 					}
 				],
-				"prs": [743]
+				"prs": [743],
+				"is_done": true
 			},
 			{
 				"sha": "56d556b1982f984993c7b3c01b7939deb196d366",
@@ -56247,7 +56256,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/cd7d8365cbc79cda625f7e7f81d21fc9a1c2b37e"
 					}
 				],
-				"prs": [840]
+				"prs": [840],
+				"is_done": true
 			},
 			{
 				"sha": "611181d38a8dad1eb3d1df02411f298a473a0338",
@@ -56327,7 +56337,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/a766eec75f0c76782f232005a7f051aebc17a476"
 					}
 				],
-				"prs": [1135]
+				"prs": [1135],
+				"is_done": true
 			},
 			{
 				"sha": "a8095828d5dfa8d1365b2544b15d43c91dbb929e",
@@ -56407,7 +56418,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/cb37c88df97f6d3319199090e41c775dfc75b990"
 					}
 				],
-				"prs": [901]
+				"prs": [901],
+				"is_done": true
 			},
 			{
 				"sha": "8ab1e7c87fa52d7e96be91bc7244626929e2a060",
@@ -56487,7 +56499,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/221da3cca22f8dfd753ca596c411158d7af5b877"
 					}
 				],
-				"prs": [1283]
+				"prs": [1283],
+				"is_done": true
 			},
 			{
 				"sha": "a8f5d64852b91cd8a20ec32ecd14ca0942d3d795",
@@ -56727,7 +56740,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/3b1edebf846a8d1bd3b8049ac6303d2ffac74415"
 					}
 				],
-				"prs": [872]
+				"prs": [872],
+				"is_done": true
 			},
 			{
 				"sha": "ba0f70e313235aed1f7541804c6e10018acbc570",
@@ -56967,7 +56981,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/044acef9db3c5b0dea32942889e2f73e33e1f4c2"
 					}
 				],
-				"prs": [624]
+				"prs": [624],
+				"is_done": true
 			},
 			{
 				"sha": "52ba45f0f59285a347a6d5354021e420828ed2b8",
@@ -57047,7 +57062,8 @@
 						"html_url": "https://github.com/gear-tech/gear-js/commit/a86fdaea84fc13e186b5098b6e4cbebf6115c1fe"
 					}
 				],
-				"prs": [848]
+				"prs": [848],
+				"is_done": true
 			},
 			{
 				"sha": "2f2bf87f8c68c03e7a5398931271b485c54dde4c",
@@ -58570,7 +58586,8 @@
 						"html_url": "https://github.com/adaleks/anywhere-ui/commit/1459f261678f985f9f71ad3455c53c433033a2f6"
 					}
 				],
-				"prs": [21]
+				"prs": [21],
+				"is_done": true
 			},
 			{
 				"sha": "22044fb0bf1bb5084cebabdad7925c8ca1a09025",
@@ -58890,7 +58907,8 @@
 						"html_url": "https://github.com/adaleks/anywhere-ui/commit/c7cea03ef00f01b3483cfe53e8b6401ba78b9268"
 					}
 				],
-				"prs": [41]
+				"prs": [41],
+				"is_done": true
 			},
 			{
 				"sha": "68c5b44fcf6fe0480885886779f6a5deaa49bfd2",
@@ -59210,7 +59228,8 @@
 						"html_url": "https://github.com/adaleks/anywhere-ui/commit/5930f172a0b9e9718b09de9c1ff65df4008f0c55"
 					}
 				],
-				"prs": [60]
+				"prs": [60],
+				"is_done": true
 			}
 		],
 		"loveholidays/phrasebook": [
@@ -59372,7 +59391,8 @@
 						"html_url": "https://github.com/loveholidays/phrasebook/commit/e3f8ad5c0796b3b23af3eda789011b1ee29da627"
 					}
 				],
-				"prs": [17]
+				"prs": [17],
+				"is_done": true
 			},
 			{
 				"sha": "e3f8ad5c0796b3b23af3eda789011b1ee29da627",
@@ -60013,7 +60033,8 @@
 						"html_url": "https://github.com/Winter22SOFE2720/online-shopping-system/commit/ccb09a33d4d70d7701b6789c9765f1492d1178b4"
 					}
 				],
-				"prs": [4]
+				"prs": [4],
+				"is_done": true
 			}
 		],
 		"1Password/op-vscode": [
@@ -60408,7 +60429,8 @@
 						"html_url": "https://github.com/1Password/op-vscode/commit/8ecb85998a17aa12f5b823bdcc844fafde5fd31e"
 					}
 				],
-				"prs": [3]
+				"prs": [3],
+				"is_done": true
 			},
 			{
 				"sha": "bc35b2620681cbb35b23c33cffd5f74d80dd8540",
@@ -61048,7 +61070,8 @@
 						"html_url": "https://github.com/1Password/op-vscode/commit/7ca2dccca1c57a7967066cd34c73411f2f13feb2"
 					}
 				],
-				"prs": [3]
+				"prs": [3],
+				"is_done": true
 			}
 		],
 		"SkyZeroZx/API-NestJS-Sky-Calendar": [
@@ -61360,7 +61383,9 @@
 						"url": "https://api.github.com/repos/SkyZeroZx/API-NestJS-Sky-Calendar/commits/446a232a896ce10f1f1c452c2304dc76586453b3",
 						"html_url": "https://github.com/SkyZeroZx/API-NestJS-Sky-Calendar/commit/446a232a896ce10f1f1c452c2304dc76586453b3"
 					}
-				]
+				],
+				"is_marked": true,
+				"is_done": true
 			},
 			{
 				"sha": "446a232a896ce10f1f1c452c2304dc76586453b3",
@@ -61439,7 +61464,8 @@
 						"url": "https://api.github.com/repos/SkyZeroZx/API-NestJS-Sky-Calendar/commits/789300af4c7255d4dfa212426cdd841880b984fa",
 						"html_url": "https://github.com/SkyZeroZx/API-NestJS-Sky-Calendar/commit/789300af4c7255d4dfa212426cdd841880b984fa"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "32b18a4900631586361f196855fbdae2ffedea2f",
@@ -61597,7 +61623,8 @@
 						"url": "https://api.github.com/repos/SkyZeroZx/API-NestJS-Sky-Calendar/commits/2fb9bb05bf0438f5d09ab7866b1b208e46d49526",
 						"html_url": "https://github.com/SkyZeroZx/API-NestJS-Sky-Calendar/commit/2fb9bb05bf0438f5d09ab7866b1b208e46d49526"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "15b2e56e98408c97938165c7e2af058bc44ac8a4",
@@ -61755,7 +61782,8 @@
 						"url": "https://api.github.com/repos/SkyZeroZx/API-NestJS-Sky-Calendar/commits/fb3a22eb4b021e738a0d51f3e9ebbd201afc080b",
 						"html_url": "https://github.com/SkyZeroZx/API-NestJS-Sky-Calendar/commit/fb3a22eb4b021e738a0d51f3e9ebbd201afc080b"
 					}
-				]
+				],
+				"is_done": true
 			},
 			{
 				"sha": "789300af4c7255d4dfa212426cdd841880b984fa",
