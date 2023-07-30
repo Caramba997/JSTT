@@ -39,6 +39,8 @@
         const commit = commits[i],
               html = template.clone(true);
         if (filter === 'undone' && commit.is_done) continue;
+        if (filter === 'no_refactorings_selection' && !commit.in_selection) continue;
+        if (filter === 'test_refactor' && !(commit.commit.message && commit.commit.message.includes('test') && commit.commit.message.includes('refactor'))) continue;
         const refactorings = REFACTORINGS.refactorings[repo];
         if (refactorings && refactorings[commit.sha] && refactorings[commit.sha].length > 0) {
           const commitTrs = refactorings[commit.sha].filter(ref => ref.is_testability_refactoring);

@@ -20,21 +20,32 @@
 
 
   const commits = files.json('project', 'commits.json', ['version_1_new']);
-  const undone = [];
+  const testRefactor = [];
   Object.entries(commits.commits).forEach(([repo, commits]) => {
     let i = 0;
     commits.forEach(commit => {
-      if (!commit.is_done) undone.push({ repo, i });
+      if (commit.commit.message && commit.commit.message.includes('test') && commit.commit.message.includes('refactor')) testRefactor.push({ repo, i });
       i++;
     });
   });
-  // let rands = await random.get(20, 0, todos.without_tr.length - 1);
-  // rands = rands.split(',');
-  // todos.without_tr = todos.without_tr.filter((commit, index) => rands.includes('' + index));
-  // todos.without_tr.forEach(commit => {
-  //   commit.for_pavel = true;
-  //   commit.verification_tag = commit.verification_tag ? commit.verification_tag + ',no_tr' : 'no_tr';
+  console.log(testRefactor.length);
+
+  // const commits = files.json('project', 'commits.json', ['version_1_new']);
+  // const undone = [];
+  // Object.entries(commits.commits).forEach(([repo, commits]) => {
+  //   let i = 0;
+  //   commits.forEach(commit => {
+  //     if (!commit.is_done) undone.push({ repo, i });
+  //     i++;
+  //   });
   // });
+  // let rands = await random.get(Math.ceil(undone.length / 2), 0, undone.length - 1);
+  // rands = rands.split(',');
+  // rands.forEach(rand => {
+  //   const { repo, i } = undone[rand];
+  //   commits.commits[repo][i].in_selection = true;
+  // });
+  // files.write('project', 'commits.json', commits, ['version_1_new']);
 
   // const types = new Set();
   // const refactorings = files.json('project', 'refactorings.json', ['version_1_new']);
