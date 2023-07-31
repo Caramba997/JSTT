@@ -1603,7 +1603,8 @@
 						"html_url": "https://github.com/ForbesLindesay/throat/commit/cdf647733bb374efcfa3645ddf4de35b990018a4"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "f232b3e155209b454ed414158065c06c9f779473",
@@ -1974,7 +1975,8 @@
 						"html_url": "https://github.com/rtyler/Hubboard/commit/dede34a602c76c2ec360003d06de743841f56b96"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"npm/init-package-json": [
@@ -3340,7 +3342,8 @@
 						"html_url": "https://github.com/hoho/jquery-bem/commit/12cc06fa8b050bf0d66aa72d0108849888fa9bbe"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"auth0/node-saml": [
@@ -3423,7 +3426,8 @@
 					}
 				],
 				"prs": [78],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "6ad0243fe8c2f90d71d335500e9a9c8a2c436cb7",
@@ -3504,7 +3508,8 @@
 					}
 				],
 				"prs": [77],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "51170c91f5ddf9c31cb00b03fe5d8c513131e165",
@@ -3865,7 +3870,9 @@
 						"html_url": "https://github.com/auth0/node-saml/commit/82880352ea8338e8fe60be7f6512eb29c9c175e8"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_marked": true,
+				"is_done": true
 			},
 			{
 				"sha": "9c960791a35197bfaf5f50dc0950bff499d94efd",
@@ -4103,7 +4110,8 @@
 						"html_url": "https://github.com/auth0/node-saml/commit/a4f10579e502e2b3407e240869fa3b5c302a223f"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "dc313ebfc400ab4e20011ee56b58f5a79241a321",
@@ -4262,7 +4270,8 @@
 						"html_url": "https://github.com/auth0/node-saml/commit/403bedfa03c41730e6ca79395a4845ea8eb165c4"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "4cf1a0d862f7aaaa3c2d6cfb0af9757b2942df6a",
@@ -4421,7 +4430,8 @@
 						"html_url": "https://github.com/auth0/node-saml/commit/db48758b71afa74f1360d5b6fbc13ea776d1897d"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "db48758b71afa74f1360d5b6fbc13ea776d1897d",
@@ -4501,7 +4511,8 @@
 						"html_url": "https://github.com/auth0/node-saml/commit/0d7967ce1cd006faea3d7aff2e370cb993d2edeb"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "0d7967ce1cd006faea3d7aff2e370cb993d2edeb",
@@ -4575,7 +4586,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "de0e766f3fcb52913a93ff52cc1feefebf47eb00",
@@ -4779,7 +4791,8 @@
 					}
 				],
 				"prs": [25],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c09f9b28da461989cc58ebba549ceaa7ae162032",
@@ -4864,7 +4877,8 @@
 					}
 				],
 				"prs": [19],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "b6ffac8dee7e7fd2a59325164d77886e0d4dc796",
@@ -4907,7 +4921,8 @@
 					}
 				],
 				"prs": [18],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "63ed7aa76bc9390f812b9ebd03656a8726da86a3",
@@ -5109,7 +5124,8 @@
 					}
 				],
 				"prs": [1],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "8830a238d33e2e198acd81fb6d972583848bfe26",
@@ -5414,7 +5430,8 @@
 						"html_url": "https://github.com/pimterry/loglevel/commit/0a40f2900a1f0d3331dd68a0e52f1d95e4fee3aa"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "83c19b5a8b40e880dade0895ae9ddf2bcc6d1dbf",
@@ -5734,7 +5751,8 @@
 						"html_url": "https://github.com/pimterry/loglevel/commit/355ede6a8426fc903920ce6c41759c263ebffd21"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "f3c93d8ea7a820d6e03a521f7e099d6753f80585",
@@ -6056,7 +6074,8 @@
 					}
 				],
 				"prs": [50],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "25ef8edf9321ffa9702ec07366751f0f8b21d954",
@@ -6136,7 +6155,8 @@
 						"html_url": "https://github.com/pimterry/loglevel/commit/d02971057b4e0ff521424983a2ba3519c6afcbab"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d02971057b4e0ff521424983a2ba3519c6afcbab",
@@ -6216,7 +6236,8 @@
 						"html_url": "https://github.com/pimterry/loglevel/commit/5efa3f236d39d177f89fc8fc2f3a2c17207890b1"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "6d9b9dffc3464831118c91879f8535249637f52a",
@@ -6454,7 +6475,8 @@
 						"html_url": "https://github.com/pimterry/loglevel/commit/83c19b5a8b40e880dade0895ae9ddf2bcc6d1dbf"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "06236cac2eda793ac42633262fa6267d744f4a42",
@@ -6856,7 +6878,8 @@
 						"html_url": "https://github.com/pimterry/loglevel/commit/67bd1f1e4ac4d8f9a09e7a64f5340eeaefbf4122"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "af20d21b83fbb1ea366e3c0c7e456b1b4210186e",
@@ -7180,7 +7203,8 @@
 						"html_url": "https://github.com/nathanpeck/s3-upload-stream/commit/ab1e44b32eaed2867a01d7bcf0a3269bc0430f4d"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "eaae0fc208bcc7516bf18daa23c793740ec462aa",
@@ -7260,7 +7284,8 @@
 						"html_url": "https://github.com/nathanpeck/s3-upload-stream/commit/72fb52d24e9daa5af0b3b3338a408e48a3cd4a23"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "69292810f776fd8e3f433f27c71c28b4a08a8ef4",
@@ -7499,7 +7524,8 @@
 						"html_url": "https://github.com/nathanpeck/s3-upload-stream/commit/32972258c20bb9cb167c99a6558ede74cf0c3cf9"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"martinj/node-imagickal": [
@@ -7823,7 +7849,8 @@
 					}
 				],
 				"prs": [43],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "adbde5eefa81e403934bdb7f0c10278c6e767a4f",
@@ -7983,7 +8010,8 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/1a19d460d9ae5e19f54eba7a1f5d4d1062dd9cd6"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "3763beb0878ae003fdf8e7f378ed56664d06eb98",
@@ -8223,7 +8251,8 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/4b8eddd9665939c8a915bad638c7d681ea0a6fef"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "2df48e48fd34fa454007fa12a6f24ebd2a12043b",
@@ -8382,7 +8411,8 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/60772014744e4b01184068c9ad1b6b5c3fceebaa"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "0e99caf89d9edbfdd82953ff9403e1226aea2a12",
@@ -8462,7 +8492,8 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/7b87f13b0894d7532a2e04a0b3d75f4a51ca7fc3"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "2378608c942b13a15a071330cd247547511e7afd",
@@ -8536,7 +8567,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d1baf22814692049701c6f7fd1158764ec4c9754",
@@ -8698,7 +8730,8 @@
 					}
 				],
 				"prs": [8],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c1715aa3935345cc6f80b74549c297c435b06095",
@@ -8857,7 +8890,8 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/ce4cfac33e389378a810accc4f1fa230cf690ac7"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "8cb1fce2a347429c8bdd7c7a15de69ed4c0245f0",
@@ -9175,7 +9209,8 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/435ae539f2e5eea11ead788d66b27497393427b3"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "0a49237e02a03f78e9dac6c79075dba221b5aa72",
@@ -9255,7 +9290,8 @@
 						"html_url": "https://github.com/martinj/node-imagickal/commit/2378608c942b13a15a071330cd247547511e7afd"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"electron/node-minidump": [
@@ -9577,7 +9613,8 @@
 					}
 				],
 				"prs": [33],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "cc15fce2b21afb9b454b41b45ece5bf4a1ac2a0a",
@@ -9738,7 +9775,8 @@
 					}
 				],
 				"prs": [21],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "18ca1219df2393bcbd311cf4b716e19c857ad9b2",
@@ -9819,7 +9857,8 @@
 					}
 				],
 				"prs": [21],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"rrharvey/grunt-file-blocks": [
@@ -10065,7 +10104,8 @@
 						"html_url": "https://github.com/krispo/angular-nvd3/commit/a0420216f277e160d80d84ba19f7b34eeadc8861"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "9b1d4fba37e2771462fc23a7ed5dbd71be48aca5",
@@ -10145,7 +10185,8 @@
 						"html_url": "https://github.com/krispo/angular-nvd3/commit/653a5b67b9b3678802c7ceb6221389068f3033b4"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "653a5b67b9b3678802c7ceb6221389068f3033b4",
@@ -10545,7 +10586,8 @@
 						"html_url": "https://github.com/clubajax/HeadlessBrowser/commit/1be18e36fee26c0e3fe5ec7d7c3ca34b77395daa"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"mozilla/events.webmaker.org": [],
@@ -10771,7 +10813,8 @@
 					}
 				],
 				"prs": [902],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "062991588769f20bd9887a2913e8fdd22ac7eedb",
@@ -11216,7 +11259,8 @@
 					}
 				],
 				"prs": [1145],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "6e02c64da80e3c8b3b6399923b7268aaf957d2cb",
@@ -11922,7 +11966,8 @@
 					}
 				],
 				"prs": [896],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "ea73cfab047c751e1055d0c2ec58ef503f7dbe36",
@@ -11984,7 +12029,8 @@
 					}
 				],
 				"prs": [875],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "4584c9054befbc56661e2781a55df96fb9f94673",
@@ -12127,7 +12173,6 @@
 					}
 				],
 				"prs": [874],
-				"is_marked": true,
 				"is_done": true
 			},
 			{
@@ -12735,7 +12780,8 @@
 					}
 				],
 				"prs": [528],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "31c710337b2ecce01f21cfc15e800070385bb852",
@@ -12797,7 +12843,8 @@
 					}
 				],
 				"prs": [467],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "8cef1b64d7436cf63b17ed4ba8b52aa23713a9be",
@@ -12878,7 +12925,8 @@
 					}
 				],
 				"prs": [378],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "0aa2e8915d385f83fa1df9703d405626f4ea5828",
@@ -12959,7 +13007,8 @@
 					}
 				],
 				"prs": [27],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "0910ce00e45836c9003d1167ce698afc86e63d63",
@@ -13121,7 +13170,8 @@
 					}
 				],
 				"prs": [239],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "a6487c6cf69c54b5777bada7a573a0a376bb5095",
@@ -13283,7 +13333,8 @@
 					}
 				],
 				"prs": [221],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c779f68a1ba894b41994f345a7d95606d95d6ab0",
@@ -13847,7 +13898,8 @@
 					}
 				],
 				"prs": [565],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "8bdce5ad00c05850cf408fee0c3e3df84bfc1e01",
@@ -14008,7 +14060,8 @@
 					}
 				],
 				"prs": [546],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "b010c7ffe0f1723f28256a8182c79bb1d5a9f47b",
@@ -14975,7 +15028,8 @@
 					}
 				],
 				"prs": [13],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "ffd9ce0ceb3cdb1c971d1c6ad70a99b0a58c0bf3",
@@ -15377,7 +15431,8 @@
 					}
 				],
 				"prs": [464],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "4b69207db950a28fa727f25d0c4fef9e281e071b",
@@ -15538,7 +15593,8 @@
 					}
 				],
 				"prs": [43],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "a79eca8dfc542b4763a9264e33a0dbc0e8d1a212",
@@ -15619,7 +15675,8 @@
 					}
 				],
 				"prs": [27],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c22bd5a7c324877b200092416e16e1251427b291",
@@ -15700,7 +15757,8 @@
 					}
 				],
 				"prs": [531],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "5317ab5cca4ca3455c468e6b6e14479036bd024e",
@@ -16022,7 +16080,8 @@
 					}
 				],
 				"prs": [552],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "93a799d2c909ee149fa3aa085567aef20b9d353a",
@@ -16183,7 +16242,8 @@
 					}
 				],
 				"prs": [539],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "491082c485fe6bc3fca7a95cc42a02dcf57e41c9",
@@ -16425,7 +16485,8 @@
 					}
 				],
 				"prs": [560],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d952ea452a4e991bbbc5e913858c82928f004477",
@@ -16506,7 +16567,8 @@
 					}
 				],
 				"prs": [558],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "e934ff8aafff6e8860ad896c6784b2daa0a7f663",
@@ -16748,7 +16810,8 @@
 					}
 				],
 				"prs": [498],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "08b84052775f70956ce3dd490f0fa7c7d61ce567",
@@ -16910,7 +16973,8 @@
 					}
 				],
 				"prs": [409],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "05001590d3283011905a67b404cd209678ef2a80",
@@ -16991,7 +17055,8 @@
 					}
 				],
 				"prs": [409],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "6885c0bbd904d39ba9c5651f6739c5d850d3d149",
@@ -17393,7 +17458,8 @@
 					}
 				],
 				"prs": [27],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"amineeg/sessions-angularJs": [],
@@ -17477,7 +17543,8 @@
 					}
 				],
 				"prs": [90],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "578cb13895737d12ca792112c998f45df09d8276",
@@ -17557,7 +17624,8 @@
 						"html_url": "https://github.com/hunterloftis/jackrabbit/commit/fcc9939e2ed9e8544de9b3978731f91cd2b10819"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "1f4666f61a44bcbc9844153c79d768f8e5df4781",
@@ -17717,7 +17785,8 @@
 						"html_url": "https://github.com/hunterloftis/jackrabbit/commit/c260c6f911d0733df875e669d7c849fee0da8291"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "b08eebf4474e24bf42aceff9b8a9d6c6f358d574",
@@ -17798,7 +17867,8 @@
 					}
 				],
 				"prs": [37],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "1706cb9023aa1d7ae33f87eea7958a22841aa489",
@@ -17958,7 +18028,8 @@
 						"html_url": "https://github.com/hunterloftis/jackrabbit/commit/0ef48b2ea32c42dab375d5203cd839e6f23f9114"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "72022267a7c2c2ae9b0338ee0dac3f944214b285",
@@ -18324,7 +18395,8 @@
 						"html_url": "https://github.com/DubFriend/jquery.repeater/commit/abd1acfa6642f0a9bbc10a4cb82714a5c9bad47b"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "7dc4fea85d986e56753a1638e2b341b0ae5a7a05",
@@ -18805,7 +18877,8 @@
 					}
 				],
 				"prs": [16],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "2a20c42582e5431588b1b90196b714e2e234e884",
@@ -19609,7 +19682,8 @@
 					}
 				],
 				"prs": [378],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "2cf267628f2cc8cf784d77f9385d818efc3e3bbd",
@@ -19731,7 +19805,8 @@
 					}
 				],
 				"prs": [69],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "aa7dd4cabc327bfd4daebc72392f9faba7c11f4e",
@@ -20053,7 +20128,8 @@
 						"html_url": "https://github.com/kadirahq/flow-router/commit/3da331418bc5c0941d8200f810f3073cfc4db475"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "8f6842d6fdd4b3dfed012b9f8148cf169381af8a",
@@ -20133,7 +20209,8 @@
 						"html_url": "https://github.com/kadirahq/flow-router/commit/c2394865597f4e3e631184264a764bb5922f5c78"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "44709bae9d85bd1113662d368b8e8a5fbe6257b4",
@@ -20531,7 +20608,8 @@
 						"html_url": "https://github.com/andrepolischuk/typographic-numbers/commit/ad052921a86f27732577e5ed985a4c7d86304bfe"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d7467b55a7ba75583c199f94d68556a1313c7ba7",
@@ -20844,7 +20922,8 @@
 						"html_url": "https://github.com/css-modules/css-selector-tokenizer/commit/f27e548bde43533643462f4073df74937acd3496"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"focus-trap/focus-trap": [
@@ -21089,7 +21168,8 @@
 					}
 				],
 				"prs": [899],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "b0482aff20c2562648243299e6092b2a3c69b7c8",
@@ -21295,7 +21375,9 @@
 						"html_url": "https://github.com/BreakOutEvent/breakout-frontend/commit/8460a04b4f15dd154d86841ac60bfb3f9e23b4ac"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true,
+				"is_marked": true
 			}
 		],
 		"hharnisc/generate-service": [
@@ -21371,7 +21453,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"gregl83/expect-cookies": [
@@ -22342,7 +22425,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/db9ad91277954361dc624a133d2fbcb19670d412"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "12c0fdc423945f4ec4e0e94a51039cef241251f1",
@@ -22502,7 +22586,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/cded9e4e6b7f8164750fa7feb19eb91b7e38674d"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "9e2efb3c79863a549e02f514b8161f322a477686",
@@ -22582,7 +22667,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/229cb1547153e9fff3ae99ee1fdcf72ce9bc2749"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "79d1906b0df137796ca4c8ed91f9ea34f0173701",
@@ -22662,7 +22748,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/2d87d04cc53591bd2f60180278de4c7556a13f43"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "bf87e8fd8876a36ec9fb62784e00b8fc77e45ba0",
@@ -22742,7 +22829,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/4949ca0b0fd54bbcb9dc04f734081da699545f5d"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "a45c2828cc96029aa2dd07cbba76b48babb53b8d",
@@ -22822,7 +22910,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/2b238742882be05fd5cdcc38742e985bdbde29e0"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "2b238742882be05fd5cdcc38742e985bdbde29e0",
@@ -22982,7 +23071,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/3eff3c8034c51cbd443cb9a6f8fef8d8034efeae"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "5706408deca293f662be3a28ce813e9cffe09b00",
@@ -23697,7 +23787,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/a4d86f33ea47e067277a3a2936bc5d4ff95ccb9a"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "a7e224c6065164990bd50dffb252e3cdfdf52d83",
@@ -23857,7 +23948,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/bc3ce1749330ad5b6a0aa52582bfe549fe1ccff9"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "736992d00dcac5e1500756d6a12a334093b950da",
@@ -23937,7 +24029,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/e4c43674d1501acfd5dc3bb838a79d979910a310"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "e4c43674d1501acfd5dc3bb838a79d979910a310",
@@ -24333,7 +24426,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/441258f37336d7451d31a50987c19dbe0c626bc1"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "441258f37336d7451d31a50987c19dbe0c626bc1",
@@ -24413,7 +24507,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/e10862b2f17f84eb17aba47be41778b4413a809f"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "acc75b70e975a15475464ae176b2cff61d6f72d9",
@@ -24572,7 +24667,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/19cfe417dc032a7dcacf311475240d5592b2f5cb"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "830d051a9fcc019ad8f40c5b6727d4751b181e40",
@@ -24652,7 +24748,8 @@
 						"html_url": "https://github.com/mustardamus/lehm/commit/292ea5f2edee40ea9b5308f217d04be3b9a73d0a"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"mukeshsoni/frolic": [
@@ -24895,7 +24992,8 @@
 						"html_url": "https://github.com/axynos/STARK/commit/7cea505c80e8b2afc7d68d393f5047f424741ac2"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "158c6ca5a4d36ebb57086da160066df454389d65",
@@ -25051,7 +25149,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"LancerComet/lens.js": [],
@@ -25135,7 +25234,8 @@
 					}
 				],
 				"prs": [23],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "98245c3e67f9b4d84338f14d7fb18fd7dbe8463a",
@@ -25216,7 +25316,8 @@
 					}
 				],
 				"prs": [7],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "98e52621388b6983398cd2e02b19b9e4e3347b46",
@@ -25377,7 +25478,8 @@
 					}
 				],
 				"prs": [7],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "0456e29ca716c2105f6f78ce3c00b8f049676de2",
@@ -25458,7 +25560,8 @@
 					}
 				],
 				"prs": [7],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "8ea9bb1f05f5a62cfeadef1adaa12bc8b4b7dd1c",
@@ -25619,7 +25722,8 @@
 					}
 				],
 				"prs": [23],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "e5ae7cd82e995dda04f681a4003fda42d3502644",
@@ -25780,7 +25884,8 @@
 					}
 				],
 				"prs": [7],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "ebd324e245ac466ba7d2b13e1fd90d2385f2fb75",
@@ -26103,7 +26208,8 @@
 					}
 				],
 				"prs": [4],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "bd50f2ccd4fe39949592670eaac86895a23fc94a",
@@ -26184,7 +26290,8 @@
 					}
 				],
 				"prs": [3],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "2d7627df8a7dacccca606d6db6a80ecf4eabf75e",
@@ -26343,7 +26450,8 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/84c5ae302963d8e9a1604f84626419f212359a2d"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "6476a326a3313103435274d3bff397501e45266e",
@@ -26583,7 +26691,8 @@
 						"html_url": "https://github.com/DripEmail/drip-nodejs/commit/2d7627df8a7dacccca606d6db6a80ecf4eabf75e"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "49f0305138bdab52d3fef9c55559e466ef965acd",
@@ -26664,7 +26773,8 @@
 					}
 				],
 				"prs": [23],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "985c596d361d41081f46bd66679abf4be419a479",
@@ -27226,7 +27336,8 @@
 					}
 				],
 				"prs": [10],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "7b5f1694b4b9943ea4bf9e2d19af57059bccc2c6",
@@ -27468,7 +27579,8 @@
 					}
 				],
 				"prs": [5],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "2d8e9dd9cf0b817a4117c73e0cc61662eaa54514",
@@ -27629,7 +27741,8 @@
 					}
 				],
 				"prs": [5],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "250496932ea62747db1a8fb5a7f025bc5dae5952",
@@ -27790,7 +27903,8 @@
 					}
 				],
 				"prs": [7],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "b63217cd9ab1d5efaf5903f4e23b4bda7c293847",
@@ -28430,7 +28544,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"eleven-labs/codelabs": [
@@ -47173,7 +47288,8 @@
 						"html_url": "https://github.com/erukiti/easybooks/commit/b8f54573fbe2a13134b5a456799f006af102d7a3"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"m-ripper/vuex-multi-history": [
@@ -62305,11 +62421,11 @@
 		]
 	},
 	"stats": {
-		"list": [0,2,5,0,8,0,0,0,4,6,10,31,29,30,0,31,0,7,26,7,1,1,0,3,4,0,54,80,0,13,1,11,5,2,10,2,1,4,4,5,1,2,2,11,0,3,6,31,1,10,2,0,67,1,1,2,2,2,5,11,1,3,3,10,9,2,38,1,2,0,0,4,0,19,7,2,1,0,2,7,0,1,1,23,0,17,6,1,2,1,1,1,0,1,2,0,6,8,1,1,1,6,2,1,83,6,8,1,1,35,15,0,0,1,10,35,4,0,4,5,1,7,1,28,22,7,72,2,4,31,2,1,1,8,0,0,24,82,0,42,12,6,30,46,2],
-		"total": 1390,
-		"avg": 9.586206896551724,
+		"list": [0,2,2,0,8,0,0,0,4,6,5,3,15,27,0,21,0,7,22,7,1,1,0,3,4,0,26,61,0,10,1,11,4,2,9,1,1,4,2,5,1,1,2,4,0,2,3,30,1,3,1,0,39,1,1,1,2,1,4,1,1,1,2,4,8,1,19,1,2,0,0,4,0,10,1,2,1,0,1,4,0,1,1,10,0,8,2,1,1,1,1,1,0,1,2,0,6,4,1,1,1,6,2,1,5,5,6,1,1,21,9,0,0,1,2,29,1,0,2,4,1,7,1,24,13,7,35,1,4,24,1,1,1,6,0,0,18,39,0,10,8,2,13,10,2],
+		"total": 802,
+		"avg": 5.531034482758621,
 		"med": 2,
 		"min": 0,
-		"max": 83
+		"max": 61
 	}
 }

@@ -37751,7 +37751,6 @@
 				},
 				{
 					"tool": "manual",
-					"is_testability_refactoring": true,
 					"type": "_CHANGE_VARIABLE_TYPE",
 					"fileBefore": "jquery-bem.js",
 					"lineBefore": "108",
@@ -38008,7 +38007,34 @@
 					"tool": "jsdiffer"
 				}
 			],
-			"b124b6bfa0a40fc8818aba5bc41b5f423bab68f8": [],
+			"b124b6bfa0a40fc8818aba5bc41b5f423bab68f8": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_PARAMETER",
+					"fileBefore": "lib/saml11.js",
+					"lineBefore": "24",
+					"nameBefore": "create",
+					"parametersBefore": "options",
+					"fileAfter": "lib/saml11.js",
+					"lineAfter": "25",
+					"nameAfter": "create",
+					"parametersAfter": "options, callback"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_PARAMETER",
+					"fileBefore": "lib/saml20.js",
+					"lineBefore": "24",
+					"nameBefore": "create",
+					"parametersBefore": "options",
+					"fileAfter": "lib/saml20.js",
+					"lineAfter": "25",
+					"nameAfter": "create",
+					"parametersAfter": "options, callback"
+				}
+			],
 			"9c960791a35197bfaf5f50dc0950bff499d94efd": [],
 			"eeb8d20963db53ab6e0f20373702fab8514fd9dc": [],
 			"333f0d0e4704f773b129b370f29acbdc2dc40fac": [],
@@ -46577,8 +46603,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function startResolving at src/utils.js:271}\t{Function startResolving at src/utils.js:305})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function startResolving at src/utils.js:271}\t{Function startResolving at src/utils.js:305})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "EXTRACT",
@@ -46688,8 +46713,7 @@
 					"similarity": 0.9277340695368446,
 					"standardDescription": "EXTRACT\t{Function getWebpackImporter at src/utils.js:270}\t{Function getWebpackResolver at src/utils.js:299})",
 					"descriptionWithScore": "EXTRACT (score=0,928)\t{Function getWebpackImporter at src/utils.js:270}\t{Function getWebpackResolver at src/utils.js:299})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				}
 			],
 			"af5a072c5170f96f3d0643dec658248d98f65ff7": [
@@ -56021,7 +56045,47 @@
 			]
 		},
 		"BreakOutEvent/breakout-frontend": {
-			"1b78b5829628d86a900f7270d7e617e309e69252": []
+			"1b78b5829628d86a900f7270d7e617e309e69252": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_SET_TEST_ENVIRONMENT",
+					"fileBefore": "app.js",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "app.js",
+					"lineAfter": "38",
+					"nameAfter": "global.logger",
+					"parametersAfter": ""
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_SET_TEST_ENVIRONMENT",
+					"fileBefore": "app.js",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "app.js",
+					"lineAfter": "214",
+					"nameAfter": "throng",
+					"parametersAfter": ""
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_SET_TEST_ENVIRONMENT",
+					"fileBefore": "services/i18n.js",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "services/i18n.js",
+					"lineAfter": "30",
+					"nameAfter": "req.language",
+					"parametersAfter": ""
+				}
+			]
 		},
 		"hharnisc/generate-service": {
 			"0ffcd26475c66292d0073eb92c4f6a961e488f00": []
@@ -59966,7 +60030,22 @@
 			]
 		},
 		"mapbox/scroll-restorer": {
-			"6a46e93db34ae13f80b409ba11b746d7bddbd4e0": []
+			"6a46e93db34ae13f80b409ba11b746d7bddbd4e0": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_GETTER",
+					"fileBefore": "",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "util/get_window.js",
+					"lineAfter": "2",
+					"nameAfter": "getWindow",
+					"parametersAfter": "",
+					"comment": "Getter for window object to make it mockable in tests"
+				}
+			]
 		},
 		"humanmade/cf-to-tf": {
 			"c69ae11ea27dd8ff50716b072d07b69fd0b9a8c2": [],
@@ -90625,7 +90704,21 @@
 			"d683f2fb1efa0a7759fadfcc2b83f8896eb72b78": [],
 			"651fca20bf1399ffc08ec270cf11b48754242615": [],
 			"356778b55e28b4421520f97ab5374070dea9afef": [],
-			"992eff78e886533b74cbce3e3eeaf9af5301da5d": []
+			"992eff78e886533b74cbce3e3eeaf9af5301da5d": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_MOVE_CONFIG_TO_OBJECT",
+					"fileBefore": "src/build-book/index.ts",
+					"lineBefore": "66",
+					"nameBefore": "buildBook",
+					"parametersBefore": "configFilename, projectDir",
+					"fileAfter": "src/build-book/index.ts",
+					"lineAfter": "71",
+					"nameAfter": "buildBook",
+					"parametersAfter": "config, projectDir"
+				}
+			]
 		},
 		"m-ripper/vuex-multi-history": {
 			"e378ec040a26aeb4b16708275a3ef9876fc59e14": [],
