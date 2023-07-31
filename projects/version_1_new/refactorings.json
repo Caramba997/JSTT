@@ -1452,7 +1452,6 @@
 				},
 				{
 					"tool": "manual",
-					"is_testability_refactoring": true,
 					"type": "_WRAP",
 					"fileBefore": "js/mc.js",
 					"lineBefore": "",
@@ -1461,7 +1460,9 @@
 					"fileAfter": "js/mc.js",
 					"lineAfter": "1",
 					"nameAfter": "makeMC",
-					"parametersAfter": "version"
+					"parametersAfter": "version",
+					"comment": "Whole code is wrapped in a function to enable passing the version",
+					"is_testability_refactoring": true
 				}
 			],
 			"ef10b725814aa5cca6ec442f5d1bfa49c918c5eb": [],
@@ -60043,7 +60044,7 @@
 					"lineAfter": "2",
 					"nameAfter": "getWindow",
 					"parametersAfter": "",
-					"comment": "Getter for window object to make it mockable in tests"
+					"comment": "Getter for window object to make it mockable in tests, defined in extra file but used in index.js"
 				}
 			]
 		},
