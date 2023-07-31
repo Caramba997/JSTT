@@ -13,6 +13,12 @@
       REFACTORINGS = (await api.getPromise('refactorings', { id: id, repo: repo, sha: sha })).data,
       METRICS = (await api.getPromise('metrics', { id: id, repo: repo })).data;
   buildPage();
+  
+  const commentModal = $('[data-e="comment-modal"]');
+  const commentModalB = new bootstrap.Modal(commentModal, {
+    backdrop: 'static',
+    keyboard: false
+  });
 
   function buildPage() {
     const statsElement = $('[data-e="info"]');
@@ -56,8 +62,10 @@
       if (ref.is_testability_refactoring) isTRButton.removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
       html.find('[data-e="refactoring-index"]').text(i + 1);
       html.find('[data-e="refactoring-type"]').text(ref.type);
+      html.find('[data-a="edit_comment"]').attr('data-index', i);
       if (ref.comment) {
         html.find('[data-e="refactoring-type"]').attr('title', ref.comment);
+        html.find('[data-a="edit_comment"]').removeClass('btn-outline-warning').addClass('btn-warning');
       }
       html.find('[data-e="refactoring-tool"]').text(ref.tool || 'RefDiff');
       html.find('[data-e="refactoring-revision"]').text('BEFORE');
@@ -108,6 +116,14 @@
     $('[data-e="commit-git"]').on('click', (e) => {
       e.preventDefault();
       window.open(COMMIT.html_url, 'git', 'popup');
+    });
+  
+    $('[data-a="edit_comment"]').on('click', async (e) => {
+      const index = e.target.getAttribute('data-index');
+      const comment = REFACTORINGS[parseInt(index)].comment;
+      commentModal.find('[name="comment"]').val(comment || '')
+      commentModal.data('index', index);
+      commentModalB.show();
     });
 
     // Init tooltips
@@ -200,6 +216,22 @@
       comment: addModal.find('[name="comment"]').val()
     };
     REFACTORINGS.push(data);
+    await api.postPromise('refactorings', { id: id, repo: repo, sha: sha, data: REFACTORINGS });
+    buildPage();
+    progress.setProgress(1, 1);
+    progress.end();
+  });
+
+  $('[data-a="save_comment"]').on('click', async () => {
+    commentModalB.hide();
+    progress.init('Save edited comment', 1);
+    const newComment = commentModal.find('[name="comment"]').val();
+    if (newComment) {
+      REFACTORINGS[parseInt(commentModal.data('index'))].comment = newComment;
+    }
+    else {
+      delete REFACTORINGS[parseInt(commentModal.data('index'))].comment;
+    }
     await api.postPromise('refactorings', { id: id, repo: repo, sha: sha, data: REFACTORINGS });
     buildPage();
     progress.setProgress(1, 1);

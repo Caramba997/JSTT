@@ -93,26 +93,26 @@
       <tr>
         <th scope="row" rowspan="2"><button data-a="testability-refactoring" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></button></i></th>
         <th scope="row" data-e="refactoring-index" rowspan="2"></th>
-        <td data-e="refactoring-type" rowspan="2" data-bs-toggle="tooltip" data-bs-placement="top"></th>
-        <td data-e="refactoring-tool" rowspan="2"></th>
-        <td data-e="refactoring-revision"></th>
-        <td data-e="refactoring-location"></th>
-        <td data-e="refactoring-file"></th>
-        <td data-e="refactoring-test-file" data-bs-toggle="tooltip" data-bs-placement="top"></th>
-        <td data-e="refactoring-line"></th>
-        <td data-e="refactoring-simple-name"></th>
-        <td data-e="refactoring-local-name"></th>
-        <td data-e="refactoring-parameters"></th>
+        <td rowspan="2"><div class="d-flex flex-column align-items-center"><div data-e="refactoring-type" data-bs-toggle="tooltip" data-bs-placement="top"></div><button style="width:fit-content;" class="btn btn-outline-warning" data-a="edit_comment"><i class="fa-regular fa-comment" style="pointer-events: none;"></i></button></div></td>
+        <td data-e="refactoring-tool" rowspan="2"></td>
+        <td data-e="refactoring-revision"></td>
+        <td data-e="refactoring-location"></td>
+        <td data-e="refactoring-file"></td>
+        <td data-e="refactoring-test-file" data-bs-toggle="tooltip" data-bs-placement="top"></td>
+        <td data-e="refactoring-line"></td>
+        <td data-e="refactoring-simple-name"></td>
+        <td data-e="refactoring-local-name"></td>
+        <td data-e="refactoring-parameters"></td>
       </tr>
       <tr>
-        <td data-e="refactoring-revision-a"></th>
-        <td data-e="refactoring-location-a"></th>
-        <td data-e="refactoring-file-a"></th>
-        <td data-e="refactoring-test-file-a" data-bs-toggle="tooltip" data-bs-placement="top"></th>
-        <td data-e="refactoring-line-a"></th>
-        <td data-e="refactoring-simple-name-a"></th>
-        <td data-e="refactoring-local-name-a"></th>
-        <td data-e="refactoring-parameters-a"></th>
+        <td data-e="refactoring-revision-a"></td>
+        <td data-e="refactoring-location-a"></td>
+        <td data-e="refactoring-file-a"></td>
+        <td data-e="refactoring-test-file-a" data-bs-toggle="tooltip" data-bs-placement="top"></td>
+        <td data-e="refactoring-line-a"></td>
+        <td data-e="refactoring-simple-name-a"></td>
+        <td data-e="refactoring-local-name-a"></td>
+        <td data-e="refactoring-parameters-a"></td>
       </tr>
     </template>
 
@@ -243,6 +243,24 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-a="save">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-e="comment-modal" class="modal modal-xl fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit comment</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container d-flex align-items-center justify-content-center">
+              <textarea name="comment" cols="100" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-a="save_comment">Save</button>
           </div>
         </div>
       </div>
