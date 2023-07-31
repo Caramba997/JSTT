@@ -56,6 +56,9 @@
       if (ref.is_testability_refactoring) isTRButton.removeClass('btn-danger').addClass('btn-success').html('<i class="fa-solid fa-check"></i>');
       html.find('[data-e="refactoring-index"]').text(i + 1);
       html.find('[data-e="refactoring-type"]').text(ref.type);
+      if (ref.comment) {
+        html.find('[data-e="refactoring-type"]').attr('title', ref.comment);
+      }
       html.find('[data-e="refactoring-tool"]').text(ref.tool || 'RefDiff');
       html.find('[data-e="refactoring-revision"]').text('BEFORE');
       html.find('[data-e="refactoring-location"]').text(ref.tool === 'jsdiffer' ? '-' : ref.tool === 'manual' ? '-' : ref.nodeBefore.type);
@@ -193,7 +196,8 @@
       fileAfter: addModal.find('[name="file_after"]').val(),
       lineAfter: addModal.find('[name="line_after"]').val(),
       nameAfter: addModal.find('[name="name_after"]').val(),
-      parametersAfter: addModal.find('[name="parameters_after"]').val()
+      parametersAfter: addModal.find('[name="parameters_after"]').val(),
+      comment: addModal.find('[name="comment"]').val()
     };
     REFACTORINGS.push(data);
     await api.postPromise('refactorings', { id: id, repo: repo, sha: sha, data: REFACTORINGS });

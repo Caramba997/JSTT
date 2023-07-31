@@ -948,7 +948,7 @@ app.post('/api/prs', async (req, res) => {
       return success(res, data);
     }
     else {
-      files.write('project', 'prs.json', data, [id], true);
+      files.write('project', 'prs.json', data, [id], false);
     }
   }
   catch (e) {

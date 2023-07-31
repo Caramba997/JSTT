@@ -38,16 +38,23 @@
       for (let i = 0; i < commits.length; i++) {
         const commit = commits[i],
               html = template.clone(true);
+        if (filter === 'undone' && commit.is_done) continue;
+        if (filter === 'no_refactorings_selection' && !commit.in_selection) continue;
+        if (filter === 'test_refactor' && !(commit.commit.message && commit.commit.message.includes('test') && commit.commit.message.includes('refactor'))) continue;
         const refactorings = REFACTORINGS.refactorings[repo];
+        let backgroundSet = false;
         if (refactorings && refactorings[commit.sha] && refactorings[commit.sha].length > 0) {
           const commitTrs = refactorings[commit.sha].filter(ref => ref.is_testability_refactoring);
           if (commitTrs.length > 0) {
             commitsWithTrs++;
             trs += commitTrs.length;
+            backgroundSet = true;
+            html.css('background-color', 'red');
           }
         }
-        if (filter === 'refactorings' && refactorings && refactorings[commit.sha] && refactorings[commit.sha].length === 0) continue;
         if (filter === 'pavel' && !commit.for_pavel) continue;
+        if (filter === 'testability_refactorings' && !backgroundSet) continue;
+        if (filter === 'refactorings' && refactorings && refactorings[commit.sha] && refactorings[commit.sha].length === 0) continue;
         filteredCommits++;
         html.data('index', c);
         html.data('id', commit.sha);
@@ -58,11 +65,12 @@
         html.find('[data-e="commit-prs"]').text(commit.prs ? commit.prs.length : 0);
         html.find('[data-e="commit-refactorings"]').text(refactorings && refactorings[commit.sha] ? refactorings[commit.sha].length : 0);
         if (commit.is_marked) {
-          html.css('background-color', 'yellow');
+          backgroundSet ? html.css('background-color', 'orange') : html.css('background-color', 'yellow');
+          backgroundSet = true;
         }
         if (commit.is_done) {
           doneCommits++;
-          if (!commit.is_marked) html.css('background-color', 'lightgreen');
+          if (!backgroundSet) html.css('background-color', 'lightgreen');
           html.find('[data-e="commit-done"]').show();
         }
         else if (nextCommit === null) {

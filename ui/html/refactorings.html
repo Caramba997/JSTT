@@ -80,9 +80,23 @@
       <span>Filter </span>
       <select class="form-select form-select-sm" data-e="commit-filter">
         <option value="pavel">Verification</option>
+        <option value="no_refactorings_selection">Selection with no refactorings</option>
+        <option value="testability_refactorings">Testability Refactorings</option>
+        <option value="test_refactor">test + refactor in description</option>
         <option value="refactorings">Only with Refactorings</option>
+        <option value="undone">Undone</option>
         <option value="all">All</option>
       </select>
+    </div>
+    <div class="d-flex align-items-center p-3">
+      <div style="width: 1.5rem; height: 1.5rem; background-color: lightgreen;"></div>
+      <div class="mx-2">Done</div>
+      <div style="width: 1.5rem; height: 1.5rem; background-color: yellow;" class="ms-4"></div>
+      <div class="mx-2">Marked</div>
+      <div style="width: 1.5rem; height: 1.5rem; background-color: red;" class="ms-4"></div>
+      <div class="mx-2">Has Testability Refactorings</div>
+      <div style="width: 1.5rem; height: 1.5rem; background-color: orange;" class="ms-4"></div>
+      <div class="mx-2">Marked & Testability Refactorings</div>
     </div>
 
     <table class="table table-striped" data-e="commit-list">

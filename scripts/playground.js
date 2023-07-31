@@ -5,6 +5,7 @@
   const { Format } = require('../lib/format.js');
   const { Metrics } = require('../lib/metrics.js');
   const { NPM } = require('../lib/npm.js');
+  const { Random } = require('../lib/random.js');
   const fs = require('fs');
   const escomplex = require('typhonjs-escomplex');
   const Parser = require('@babel/parser');
@@ -12,7 +13,6 @@
   const Types = require('@babel/types');
   const axios = require('axios');
   const equal = require('deep-equal');
-
   const npm = new NPM();
   const files = new Files();
   const gitHub = new GitHub();

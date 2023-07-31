@@ -93,7 +93,7 @@
       <tr>
         <th scope="row" rowspan="2"><button data-a="testability-refactoring" class="btn btn-danger"><i class="fa-solid fa-xmark"></i></button></i></th>
         <th scope="row" data-e="refactoring-index" rowspan="2"></th>
-        <td data-e="refactoring-type" rowspan="2"></th>
+        <td data-e="refactoring-type" rowspan="2" data-bs-toggle="tooltip" data-bs-placement="top"></th>
         <td data-e="refactoring-tool" rowspan="2"></th>
         <td data-e="refactoring-revision"></th>
         <td data-e="refactoring-location"></th>
@@ -229,6 +229,15 @@
                 <div class="col">
                   <input type="text" class="form-control" name="parameters_after">
                 </div>
+              </div>
+              <div class="row py-2">
+                <div class="col">
+                  <label class="form-label">Comment</label>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" name="comment">
+                </div>
+                <div class="col"></div>
               </div>
             </div>
           </div>

@@ -37751,7 +37751,6 @@
 				},
 				{
 					"tool": "manual",
-					"is_testability_refactoring": true,
 					"type": "_CHANGE_VARIABLE_TYPE",
 					"fileBefore": "jquery-bem.js",
 					"lineBefore": "108",
@@ -38008,7 +38007,34 @@
 					"tool": "jsdiffer"
 				}
 			],
-			"b124b6bfa0a40fc8818aba5bc41b5f423bab68f8": [],
+			"b124b6bfa0a40fc8818aba5bc41b5f423bab68f8": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_PARAMETER",
+					"fileBefore": "lib/saml11.js",
+					"lineBefore": "24",
+					"nameBefore": "create",
+					"parametersBefore": "options",
+					"fileAfter": "lib/saml11.js",
+					"lineAfter": "25",
+					"nameAfter": "create",
+					"parametersAfter": "options, callback"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_PARAMETER",
+					"fileBefore": "lib/saml20.js",
+					"lineBefore": "24",
+					"nameBefore": "create",
+					"parametersBefore": "options",
+					"fileAfter": "lib/saml20.js",
+					"lineAfter": "25",
+					"nameAfter": "create",
+					"parametersAfter": "options, callback"
+				}
+			],
 			"9c960791a35197bfaf5f50dc0950bff499d94efd": [],
 			"eeb8d20963db53ab6e0f20373702fab8514fd9dc": [],
 			"333f0d0e4704f773b129b370f29acbdc2dc40fac": [],
@@ -46577,8 +46603,7 @@
 					"similarity": null,
 					"standardDescription": "INTERNAL_MOVE\t{Function startResolving at src/utils.js:271}\t{Function startResolving at src/utils.js:305})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function startResolving at src/utils.js:271}\t{Function startResolving at src/utils.js:305})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"type": "EXTRACT",
@@ -46688,8 +46713,7 @@
 					"similarity": 0.9277340695368446,
 					"standardDescription": "EXTRACT\t{Function getWebpackImporter at src/utils.js:270}\t{Function getWebpackResolver at src/utils.js:299})",
 					"descriptionWithScore": "EXTRACT (score=0,928)\t{Function getWebpackImporter at src/utils.js:270}\t{Function getWebpackResolver at src/utils.js:299})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				}
 			],
 			"af5a072c5170f96f3d0643dec658248d98f65ff7": [
@@ -56021,7 +56045,47 @@
 			]
 		},
 		"BreakOutEvent/breakout-frontend": {
-			"1b78b5829628d86a900f7270d7e617e309e69252": []
+			"1b78b5829628d86a900f7270d7e617e309e69252": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_SET_TEST_ENVIRONMENT",
+					"fileBefore": "app.js",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "app.js",
+					"lineAfter": "38",
+					"nameAfter": "global.logger",
+					"parametersAfter": ""
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_SET_TEST_ENVIRONMENT",
+					"fileBefore": "app.js",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "app.js",
+					"lineAfter": "214",
+					"nameAfter": "throng",
+					"parametersAfter": ""
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_SET_TEST_ENVIRONMENT",
+					"fileBefore": "services/i18n.js",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "services/i18n.js",
+					"lineAfter": "30",
+					"nameAfter": "req.language",
+					"parametersAfter": ""
+				}
+			]
 		},
 		"hharnisc/generate-service": {
 			"0ffcd26475c66292d0073eb92c4f6a961e488f00": []
@@ -59966,7 +60030,22 @@
 			]
 		},
 		"mapbox/scroll-restorer": {
-			"6a46e93db34ae13f80b409ba11b746d7bddbd4e0": []
+			"6a46e93db34ae13f80b409ba11b746d7bddbd4e0": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_GETTER",
+					"fileBefore": "",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "util/get_window.js",
+					"lineAfter": "2",
+					"nameAfter": "getWindow",
+					"parametersAfter": "",
+					"comment": "Getter for window object to make it mockable in tests"
+				}
+			]
 		},
 		"humanmade/cf-to-tf": {
 			"c69ae11ea27dd8ff50716b072d07b69fd0b9a8c2": [],
@@ -77470,7 +77549,8 @@
 					"similarity": 0.6566489573291359,
 					"standardDescription": "EXTRACT\t{Function createTable at config/gravity.js:1012}\t{Function makeQuestion at config/gravity.js:1011})",
 					"descriptionWithScore": "EXTRACT (score=0,657)\t{Function createTable at config/gravity.js:1012}\t{Function makeQuestion at config/gravity.js:1011})",
-					"refactoring": true
+					"refactoring": true,
+					"is_testability_refactoring": true
 				}
 			],
 			"56e6b3748ee6067ec078679d50396e0444b1b5ed": [],
@@ -77482,7 +77562,8 @@
 					"localNameAfter": "accountId",
 					"locationBefore": "",
 					"locationAfter": "config/gravity.js:29545-29554|(854,36)-(854,45)",
-					"tool": "jsdiffer"
+					"tool": "jsdiffer",
+					"is_testability_refactoring": true
 				},
 				{
 					"description": "Add Parameter\tjupServ in method Gravity.getBalance(address ,accountId ,jupServ) atconfig/gravity.js|Gravity.getBalance",
@@ -77491,7 +77572,8 @@
 					"localNameAfter": "jupServ",
 					"locationBefore": "",
 					"locationAfter": "config/gravity.js:29556-29591|(854,47)-(854,82)",
-					"tool": "jsdiffer"
+					"tool": "jsdiffer",
+					"is_testability_refactoring": true
 				}
 			],
 			"976d36a7e22683ba1af0898fd50e20b2e88afb3a": []
@@ -77666,6 +77748,19 @@
 					"standardDescription": "MOVE\t{Function useTranslation at src/utils/test-utils.js:9}\t{Function useTranslation at src/setupTests.js:11})",
 					"descriptionWithScore": "MOVE\t{Function useTranslation at src/utils/test-utils.js:9}\t{Function useTranslation at src/setupTests.js:11})",
 					"refactoring": true
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_ATTRIBUTE",
+					"fileBefore": "src/components/Loader.js",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "src/components/Loader.js",
+					"lineAfter": "9",
+					"nameAfter": "role",
+					"parametersAfter": "'alert'"
 				}
 			],
 			"520f18eb65e028b5cd04bb65667c71e379bcb4f8": [],
@@ -90609,7 +90704,21 @@
 			"d683f2fb1efa0a7759fadfcc2b83f8896eb72b78": [],
 			"651fca20bf1399ffc08ec270cf11b48754242615": [],
 			"356778b55e28b4421520f97ab5374070dea9afef": [],
-			"992eff78e886533b74cbce3e3eeaf9af5301da5d": []
+			"992eff78e886533b74cbce3e3eeaf9af5301da5d": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_MOVE_CONFIG_TO_OBJECT",
+					"fileBefore": "src/build-book/index.ts",
+					"lineBefore": "66",
+					"nameBefore": "buildBook",
+					"parametersBefore": "configFilename, projectDir",
+					"fileAfter": "src/build-book/index.ts",
+					"lineAfter": "71",
+					"nameAfter": "buildBook",
+					"parametersAfter": "config, projectDir"
+				}
+			]
 		},
 		"m-ripper/vuex-multi-history": {
 			"e378ec040a26aeb4b16708275a3ef9876fc59e14": [],
@@ -93754,6 +93863,19 @@
 					"standardDescription": "EXTRACT_MOVE\t{Function redo at src/HistoryPlugin.ts:129}\t{Function replaceState at src/VuexHistory.ts:123})",
 					"descriptionWithScore": "EXTRACT_MOVE (score=0,621)\t{Function redo at src/HistoryPlugin.ts:129}\t{Function replaceState at src/VuexHistory.ts:123})",
 					"refactoring": true
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_SPLIT_MODULE",
+					"fileBefore": "src/HistoryPlugin.ts",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "src/VuexHistory.ts,src/VuexHistoryPlugin.ts",
+					"lineAfter": "",
+					"nameAfter": "",
+					"parametersAfter": ""
 				}
 			],
 			"82baf17a4393aee308096a7f44d13bed3a5fae98": []
@@ -102653,6 +102775,19 @@
 					"locationBefore": "api/account-signin/index.ts:809-833|(20,10)-(20,34)",
 					"locationAfter": "api/account-signin/index.ts:810-828|(19,10)-(19,28)",
 					"tool": "jsdiffer"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "api/common/JwtGenerator.ts",
+					"lineBefore": "9",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "api/common/JwtGenerator.ts",
+					"lineAfter": "16",
+					"nameAfter": "fromBase64Key",
+					"parametersAfter": "key"
 				}
 			],
 			"d0ed70f04554f2ea6242a24e34b1937e061fe648": [
@@ -102675,6 +102810,19 @@
 					"locationBefore": "",
 					"locationAfter": "api/common/services/UserService.ts:3675-3687|(112,46)-(112,58)",
 					"tool": "jsdiffer"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "api/common/services/UserService.ts",
+					"lineBefore": "109",
+					"nameBefore": "getProfileImage",
+					"parametersBefore": "email, oauthPicture",
+					"fileAfter": "api/common/services/UserService.ts",
+					"lineAfter": "112",
+					"nameAfter": "getProfileImage",
+					"parametersAfter": "email, size, oauthPicture"
 				}
 			],
 			"a942c0255fad45ccd8fd3f466d3491050711f7dd": [],
@@ -103241,6 +103389,19 @@
 					"locationBefore": "app/src/sdk/BffApiClient.ts:7-1638|(1,7)-(57,1)",
 					"locationAfter": "app/src/sdk/BffApiClient.js:7-1590|(1,7)-(56,1)",
 					"tool": "jsdiffer"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_PARAMETER",
+					"fileBefore": "app/src/sdk/BffApiClient.ts",
+					"lineBefore": "5",
+					"nameBefore": "constructor",
+					"parametersBefore": "jwtToken",
+					"fileAfter": "app/src/sdk/BffApiClient.js",
+					"lineAfter": "3",
+					"nameAfter": "constructor",
+					"parametersAfter": "jwtToken, fetchFunc"
 				}
 			]
 		},
@@ -104660,7 +104821,8 @@
 					"similarity": 0.958825609393356,
 					"standardDescription": "EXTRACT\t{Function constructor at Code/src/classes/Product.ts:14}\t{Function setDetails at Code/src/classes/Product.ts:57})",
 					"descriptionWithScore": "EXTRACT (score=0,959)\t{Function constructor at Code/src/classes/Product.ts:14}\t{Function setDetails at Code/src/classes/Product.ts:57})",
-					"refactoring": true
+					"refactoring": true,
+					"is_testability_refactoring": true
 				},
 				{
 					"description": "Rename Method\tProduct.setQuantity(amount) renamed to Product.updateQuantity(amount) at Code/src/classes/Product.ts|Product.setQuantity",
@@ -104697,6 +104859,19 @@
 					"locationBefore": "Code/src/classes/Product.ts:329-1112|(14,4)-(32,5)",
 					"locationAfter": "Code/src/classes/Product.ts:1766-2037|(57,4)-(63,5)",
 					"tool": "jsdiffer"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_GETTER",
+					"fileBefore": "Code/src/classes/ShoppingCart.ts",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "Code/src/classes/ShoppingCart.ts",
+					"lineAfter": "17",
+					"nameAfter": "getItem",
+					"parametersAfter": "index"
 				}
 			]
 		},
@@ -104919,6 +105094,19 @@
 					"locationBefore": "src/user/user.controller.ts:1342-1613|(38,2)-(46,3)",
 					"locationAfter": "src/user/user.controller.ts:1423-1669|(40,2)-(46,3)",
 					"tool": "jsdiffer"
+				},
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "src/common/decorators/user.decorator.ts",
+					"lineBefore": "3",
+					"nameBefore": "User",
+					"parametersBefore": "data, ctx",
+					"fileAfter": "src/common/decorators/user.decorator.ts",
+					"lineAfter": "3",
+					"nameAfter": "User",
+					"parametersAfter": "data, ctx"
 				}
 			],
 			"446a232a896ce10f1f1c452c2304dc76586453b3": [

@@ -1,10 +1,15 @@
 {
 	"types": [
 		"_ADDITIONAL_NOT_IN_LIST",
+		"_ADD_ATTRIBUTE",
+		"_ADD_GETTER",
 		"_ADD_PARAMETER",
 		"_CHANGE_VARIABLE_TYPE",
 		"_EXPORT_FUNCTION",
 		"_EXTRACT",
+		"_MOVE_CONFIG_TO_OBJECT",
+		"_SET_TEST_ENVIRONMENT",
+		"_SPLIT_MODULE",
 		"_WRAP",
 		"Add Parameter",
 		"Change Variable Kind",

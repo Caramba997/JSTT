@@ -21,6 +21,9 @@
   "engines": {
     "node": "20.0.x"
   },
+  "engines": {
+    "node": "20.0.x"
+  },
   "author": "Finn Carstensen",
   "license": "ISC",
   "dependencies": {
