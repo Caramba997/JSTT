@@ -1,0 +1,251 @@
+{
+	"refactorings": {
+		"ForbesLindesay/throat": {
+			"8fd7a02dce52ce26743b368f62a33f8752c68a4e": [
+				{
+					"type": "EXTRACT",
+					"nodeBefore": {
+						"id": 3,
+						"type": "Function",
+						"location": {
+							"file": "index.js",
+							"begin": 109,
+							"end": 1775,
+							"line": 8,
+							"bodyBegin": 136,
+							"bodyEnd": 1774
+						},
+						"simpleName": "exports",
+						"localName": "exports",
+						"nodes": [
+							{
+								"id": 4,
+								"type": "Function",
+								"location": {
+									"file": "index.js",
+									"begin": 166,
+									"end": 706,
+									"line": 10,
+									"bodyBegin": 196,
+									"bodyEnd": 705
+								},
+								"simpleName": "run",
+								"localName": "run",
+								"nodes": [],
+								"stereotypes": [
+									"HAS_BODY"
+								],
+								"parameters": [
+									{
+										"name": "fn"
+									},
+									{
+										"name": "self"
+									},
+									{
+										"name": "args"
+									}
+								]
+							},
+							{
+								"id": 5,
+								"type": "Function",
+								"location": {
+									"file": "index.js",
+									"begin": 709,
+									"end": 826,
+									"line": 36,
+									"bodyBegin": 729,
+									"bodyEnd": 825
+								},
+								"simpleName": "release",
+								"localName": "release",
+								"nodes": [],
+								"stereotypes": [
+									"HAS_BODY"
+								],
+								"parameters": []
+							}
+						],
+						"stereotypes": [
+							"HAS_BODY"
+						],
+						"parameters": [
+							{
+								"name": "size"
+							},
+							{
+								"name": "fn"
+							}
+						]
+					},
+					"nodeAfter": {
+						"id": 8,
+						"type": "Function",
+						"location": {
+							"file": "index.js",
+							"begin": 919,
+							"end": 1181,
+							"line": 48,
+							"bodyBegin": 950,
+							"bodyEnd": 1180
+						},
+						"simpleName": "earlyBound",
+						"localName": "earlyBound",
+						"nodes": [],
+						"stereotypes": [
+							"HAS_BODY"
+						],
+						"parameters": [
+							{
+								"name": "size"
+							},
+							{
+								"name": "fn"
+							}
+						]
+					},
+					"similarity": 0.845775022950911,
+					"refactoring": true,
+					"standardDescription": "EXTRACT\t{Function exports at index.js:8}\t{Function earlyBound at index.js:48})",
+					"descriptionWithScore": "EXTRACT (score=0,846)\t{Function exports at index.js:8}\t{Function earlyBound at index.js:48})"
+				},
+				{
+					"type": "EXTRACT",
+					"nodeBefore": {
+						"id": 3,
+						"type": "Function",
+						"location": {
+							"file": "index.js",
+							"begin": 109,
+							"end": 1775,
+							"line": 8,
+							"bodyBegin": 136,
+							"bodyEnd": 1774
+						},
+						"simpleName": "exports",
+						"localName": "exports",
+						"nodes": [
+							{
+								"id": 4,
+								"type": "Function",
+								"location": {
+									"file": "index.js",
+									"begin": 166,
+									"end": 706,
+									"line": 10,
+									"bodyBegin": 196,
+									"bodyEnd": 705
+								},
+								"simpleName": "run",
+								"localName": "run",
+								"nodes": [],
+								"stereotypes": [
+									"HAS_BODY"
+								],
+								"parameters": [
+									{
+										"name": "fn"
+									},
+									{
+										"name": "self"
+									},
+									{
+										"name": "args"
+									}
+								]
+							},
+							{
+								"id": 5,
+								"type": "Function",
+								"location": {
+									"file": "index.js",
+									"begin": 709,
+									"end": 826,
+									"line": 36,
+									"bodyBegin": 729,
+									"bodyEnd": 825
+								},
+								"simpleName": "release",
+								"localName": "release",
+								"nodes": [],
+								"stereotypes": [
+									"HAS_BODY"
+								],
+								"parameters": []
+							}
+						],
+						"stereotypes": [
+							"HAS_BODY"
+						],
+						"parameters": [
+							{
+								"name": "size"
+							},
+							{
+								"name": "fn"
+							}
+						]
+					},
+					"nodeAfter": {
+						"id": 9,
+						"type": "Function",
+						"location": {
+							"file": "index.js",
+							"begin": 1182,
+							"end": 1594,
+							"line": 58,
+							"bodyBegin": 1208,
+							"bodyEnd": 1593
+						},
+						"simpleName": "lateBound",
+						"localName": "lateBound",
+						"nodes": [],
+						"stereotypes": [
+							"HAS_BODY"
+						],
+						"parameters": [
+							{
+								"name": "size"
+							}
+						]
+					},
+					"similarity": 0.8222715112605219,
+					"refactoring": true,
+					"standardDescription": "EXTRACT\t{Function exports at index.js:8}\t{Function lateBound at index.js:58})",
+					"descriptionWithScore": "EXTRACT (score=0,822)\t{Function exports at index.js:8}\t{Function lateBound at index.js:58})"
+				},
+				{
+					"description": "Extract Method\tlateBound(size) extracted from throat(size ,fn) in  index.js in file index.js",
+					"type": "Extract Method",
+					"localNameBefore": "throat",
+					"localNameAfter": "lateBound",
+					"locationBefore": "index.js:109-1775|(8,17)-(81,1)",
+					"locationAfter": "index.js:1182-1594|(58,0)-(72,1)",
+					"tool": "jsdiffer"
+				}
+			],
+			"600dc43cd7adef1528d8bfbfc4d6d298c776499e": []
+		},
+		"scalar-labs/scalardl-node-client-sdk": {
+			"a05e37e45740e154f0890678121668d1a7ee1432": []
+		},
+		"mapbox/martini": {
+			"374cd9ffe075f5a6d5f5e93876fc385f6d120fc8": [
+				{
+					"description": "Rename Variable\tgridSize to gridSize: size in Tile.getMesh(maxError) at index.js|Tile.getMesh",
+					"type": "Rename Variable",
+					"localNameBefore": "gridSize",
+					"localNameAfter": "gridSize: size",
+					"locationBefore": "index.js:3569-3602|(96,14)-(96,47)",
+					"locationAfter": "index.js:3555-3594|(96,14)-(96,53)",
+					"tool": "jsdiffer"
+				}
+			],
+			"5075152deb24a1c9237b995250eccd9c360d090e": []
+		},
+		"IronCoreLabs/recrypt-wasm-binding": {
+			"bd2b95c0f87ba3cdd8b14e7be13ef933c07adbe1": []
+		}
+	}
+}

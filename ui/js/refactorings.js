@@ -105,11 +105,13 @@
       const name = repo.full_name;
       if (!repo.has_tests) continue;
       const repoMetrics = metrics.repos[name];
+      // if (!repoMetrics.performanceConnections || repoMetrics.performanceConnections === {}) continue;
       if (!repoMetrics.testConnections || repoMetrics.testConnections === {}) continue;
       const commits = (await api.getPromise('commits', { id: id, repo: name })).data,
             prs = (await api.getPromise('prs', { id: id, repo: name })).data;
       const repoName = name.split('/')[1],
             repoOwner = name.split('/')[0];
+      // const connectionsArray = Array.from(Object.entries(repoMetrics.performanceConnections));
       const connectionsArray = Array.from(Object.entries(repoMetrics.testConnections));
       for (let t = 0; t < connectionsArray.length && progress.status === 1; t++) {
         const [ testFile, sourceFile ] = connectionsArray[t];
