@@ -1,5 +1,5 @@
 const config = {
-  port: 3000,
+  port: 80,
   logs: "all" //"error", "api", "all"
 }
 

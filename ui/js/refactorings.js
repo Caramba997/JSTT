@@ -42,8 +42,12 @@
         if (filter === 'no_refactorings_selection' && !commit.in_selection) continue;
         if (filter === 'test_refactor' && !(commit.commit.message && commit.commit.message.includes('test') && commit.commit.message.includes('refactor'))) continue;
         const refactorings = REFACTORINGS.refactorings[repo];
-        let backgroundSet = false;
+        if (filter === 'refactorings' && refactorings && refactorings[commit.sha] && refactorings[commit.sha].length === 0) continue;
+        let backgroundSet = false,
+            hasMinedRefactorings = false;
         if (refactorings && refactorings[commit.sha] && refactorings[commit.sha].length > 0) {
+          hasMinedRefactorings = refactorings[commit.sha].filter(ref => ref.tool !== 'manual').length > 0;
+          if (filter === 'mined_refactorings' && !hasMinedRefactorings) continue;
           const commitTrs = refactorings[commit.sha].filter(ref => ref.is_testability_refactoring);
           if (commitTrs.length > 0) {
             commitsWithTrs++;
@@ -52,8 +56,8 @@
             html.css('background-color', 'red');
           }
         }
+        if (filter === 'mined_refactorings' && !hasMinedRefactorings) continue;
         if (filter === 'testability_refactorings' && !backgroundSet) continue;
-        if (filter === 'refactorings' && refactorings && refactorings[commit.sha] && refactorings[commit.sha].length === 0) continue;
         filteredCommits++;
         html.data('index', c);
         html.data('id', commit.sha);

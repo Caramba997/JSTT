@@ -892,7 +892,8 @@
 					"standardDescription": "INTERNAL_MOVE\t{Function simulateEnchantmentsInternal at js/mc.js:81}\t{Function simulateEnchantmentsInternal at js/mc.js:106})",
 					"descriptionWithScore": "INTERNAL_MOVE\t{Function simulateEnchantmentsInternal at js/mc.js:81}\t{Function simulateEnchantmentsInternal at js/mc.js:106})",
 					"refactoring": true,
-					"is_testability_refactoring": true
+					"is_testability_refactoring": true,
+					"comment": "Goes together with _WRAP, internally moved function into makeMC"
 				},
 				{
 					"type": "INTERNAL_MOVE",
@@ -1428,7 +1429,8 @@
 					"locationBefore": "",
 					"locationAfter": "js/simulation.js:79-81|(3,36)-(3,38)",
 					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"is_testability_refactoring": true,
+					"comment": "To call methods on test object"
 				},
 				{
 					"description": "Add Parameter\tmc in method makeSim.byEnchantment(mc) atjs/simulation.js|makeSim.byEnchantment",
@@ -28491,7 +28493,8 @@
 					"standardDescription": "MOVE_RENAME\t{Function getMaterialId at js/page.js:153}\t{Function materialId at js/viewmodel.js:49})",
 					"descriptionWithScore": "MOVE_RENAME\t{Function getMaterialId at js/page.js:153}\t{Function materialId at js/viewmodel.js:49})",
 					"refactoring": true,
-					"is_testability_refactoring": true
+					"is_testability_refactoring": true,
+					"comment": "Moved to extra file to allow more modular testing in the context of mvvm design"
 				},
 				{
 					"type": "MOVE_RENAME",
@@ -28609,7 +28612,8 @@
 					"locationBefore": "",
 					"locationAfter": "js/storage.js:1069-1074|(53,19)-(53,24)",
 					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"is_testability_refactoring": true,
+					"comment": "Pass model to allow test context"
 				},
 				{
 					"description": "Add Parameter\tmodel in method makePage(storage ,tools ,model) atjs/page.js|makePage",
@@ -38020,7 +38024,8 @@
 					"fileAfter": "lib/saml11.js",
 					"lineAfter": "25",
 					"nameAfter": "create",
-					"parametersAfter": "options, callback"
+					"parametersAfter": "options, callback",
+					"comment": "Add callback for test validation"
 				},
 				{
 					"tool": "manual",
@@ -50581,7 +50586,8 @@
 					"fileAfter": "stream/address_extractor.js",
 					"lineAfter": "5",
 					"nameAfter": "hasValidAddress",
-					"parametersAfter": "item"
+					"parametersAfter": "item",
+					"comment": "Extract address validation and export it for use in tests"
 				}
 			],
 			"5b449f60e20adea1ac541c4a77d9cb9746bf3d3c": [],
@@ -50730,7 +50736,8 @@
 					"fileAfter": "stream/stats.js",
 					"lineAfter": "53",
 					"nameAfter": "_reset",
-					"parametersAfter": ""
+					"parametersAfter": "",
+					"comment": "Export a function to reset object for testing"
 				}
 			],
 			"b8d588cae3f83fa14a24f4b2fcab372d2222c07a": [],
@@ -56058,7 +56065,8 @@
 					"fileAfter": "app.js",
 					"lineAfter": "38",
 					"nameAfter": "global.logger",
-					"parametersAfter": ""
+					"parametersAfter": "",
+					"comment": "Use an environment variable to determine test and environment and set logger depending on it"
 				},
 				{
 					"tool": "manual",
@@ -56071,7 +56079,8 @@
 					"fileAfter": "app.js",
 					"lineAfter": "214",
 					"nameAfter": "throng",
-					"parametersAfter": ""
+					"parametersAfter": "",
+					"comment": "Call method only if not in test environment"
 				},
 				{
 					"tool": "manual",
@@ -56084,7 +56093,8 @@
 					"fileAfter": "services/i18n.js",
 					"lineAfter": "30",
 					"nameAfter": "req.language",
-					"parametersAfter": ""
+					"parametersAfter": "",
+					"comment": "Set language variable in test environment"
 				}
 			]
 		},
@@ -74801,7 +74811,22 @@
 			
 		},
 		"sheikhmishar/localhost-tunnel": {
-			"78fc1e356806c038c348335240cc770ac42a48e4": []
+			"78fc1e356806c038c348335240cc770ac42a48e4": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_RETURN_VALUE",
+					"fileBefore": "views/src/js/uiHelpers.js",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "views/src/js/uiHelpers.js",
+					"lineAfter": "71",
+					"nameAfter": "appendLog",
+					"parametersAfter": "newDomElement",
+					"comment": "Return created element to check it in test"
+				}
+			]
 		},
 		"Developerayo/unstack.africa": {
 			"cb47e0a23baf65d9f8ba2ee28656fa6bddb5d4ec": [],
@@ -77551,7 +77576,8 @@
 					"standardDescription": "EXTRACT\t{Function createTable at config/gravity.js:1012}\t{Function makeQuestion at config/gravity.js:1011})",
 					"descriptionWithScore": "EXTRACT (score=0,657)\t{Function createTable at config/gravity.js:1012}\t{Function makeQuestion at config/gravity.js:1011})",
 					"refactoring": true,
-					"is_testability_refactoring": true
+					"is_testability_refactoring": true,
+					"comment": "Extract makeQuestion to allow testing it more granular"
 				}
 			],
 			"56e6b3748ee6067ec078679d50396e0444b1b5ed": [],
@@ -77564,7 +77590,8 @@
 					"locationBefore": "",
 					"locationAfter": "config/gravity.js:29545-29554|(854,36)-(854,45)",
 					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"is_testability_refactoring": true,
+					"comment": "Add parameter to allow using another value for account id in tests"
 				},
 				{
 					"description": "Add Parameter\tjupServ in method Gravity.getBalance(address ,accountId ,jupServ) atconfig/gravity.js|Gravity.getBalance",
@@ -77574,10 +77601,26 @@
 					"locationBefore": "",
 					"locationAfter": "config/gravity.js:29556-29591|(854,47)-(854,82)",
 					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"is_testability_refactoring": true,
+					"comment": "Allow using a test jupyter server and pass it to method"
 				}
 			],
-			"976d36a7e22683ba1af0898fd50e20b2e88afb3a": []
+			"976d36a7e22683ba1af0898fd50e20b2e88afb3a": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "src/components/signup.jsx",
+					"lineBefore": "8",
+					"nameBefore": "SignupForm",
+					"parametersBefore": "",
+					"fileAfter": "src/components/signup.jsx",
+					"lineAfter": "8",
+					"nameAfter": "SignupForm",
+					"parametersAfter": "",
+					"comment": "Export class to use it in test"
+				}
+			]
 		},
 		"smswithoutborders/SMSWithoutBorders.com": {
 			"71f22cf443b4cfb2e18c3a66e1c9b5148a356ada": [
@@ -77761,7 +77804,8 @@
 					"fileAfter": "src/components/Loader.js",
 					"lineAfter": "9",
 					"nameAfter": "role",
-					"parametersAfter": "'alert'"
+					"parametersAfter": "'alert'",
+					"comment": "Add role attribute to identify and verify the UI element in the UI test"
 				}
 			],
 			"520f18eb65e028b5cd04bb65667c71e379bcb4f8": [],
@@ -82401,7 +82445,22 @@
 					"tool": "jsdiffer"
 				}
 			],
-			"77d25d915fb8c9a9a154c720be9f1cc8488bcbaf": [],
+			"77d25d915fb8c9a9a154c720be9f1cc8488bcbaf": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": false,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "src/utils/parseJson.ts",
+					"lineAfter": "27",
+					"nameAfter": "getLineAndColumnFromOffset",
+					"parametersAfter": "data, offset",
+					"comment": "Often, a function is created and exported and is only used in test cases. But it is often only a new feature and API extension that gets its own test cases"
+				}
+			],
 			"55004e897de14fa645017307e409e137c5099aa7": [
 				{
 					"description": "Add Parameter\tlanguage in method TemplateProviderBase.constructor(version ,projectPath ,language) atsrc/templates/TemplateProviderBase.ts|TemplateProviderBase.constructor",
@@ -85554,11 +85613,41 @@
 		},
 		"IronCoreLabs/recrypt-wasm-binding": {
 			"7246526099833b24f970bef6fee01c0c51ba21c3": [],
-			"9aec40d07f7863ac958c5bc3a6de7e36f10377ef": [],
+			"9aec40d07f7863ac958c5bc3a6de7e36f10377ef": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": false,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "lib/Api256Shim.ts",
+					"lineAfter": "287",
+					"nameAfter": "EncryptedSearch",
+					"parametersAfter": "",
+					"comment": "Class is exported and only used in tests, but still most probably a feature"
+				}
+			],
 			"196ad86e48f6154fa630fe273748b0a58cdf190d": [],
 			"4a8e3d0e5a6ac3132622c668751fa975ebd7bcac": [],
 			"e2d8ed95e560fe11d082d8991361f1818998fd56": [],
-			"f90cb1e8b5718612484ddc6f7ea083884d17cd41": [],
+			"f90cb1e8b5718612484ddc6f7ea083884d17cd41": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": false,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "lib/Api256Shim.ts",
+					"lineAfter": "225",
+					"nameAfter": "pbkdf2SHA256",
+					"parametersAfter": "salt, password, iterations",
+					"comment": "Export a wrapper for an existing function that is only used in tests, probably a feature"
+				}
+			],
 			"bd2b95c0f87ba3cdd8b14e7be13ef933c07adbe1": []
 		},
 		"baealex/BLEX": {
@@ -90717,7 +90806,8 @@
 					"fileAfter": "src/build-book/index.ts",
 					"lineAfter": "71",
 					"nameAfter": "buildBook",
-					"parametersAfter": "config, projectDir"
+					"parametersAfter": "config, projectDir",
+					"comment": "Change config loading from using a file at a specific path to using an object which is easier in test environments than creating a file only for that purpose"
 				}
 			]
 		},
@@ -93876,7 +93966,8 @@
 					"fileAfter": "src/VuexHistory.ts,src/VuexHistoryPlugin.ts",
 					"lineAfter": "",
 					"nameAfter": "",
-					"parametersAfter": ""
+					"parametersAfter": "",
+					"comment": "Split class HistoryPlugin into two seperate classes by responsibilies to allow seperate unit testing"
 				}
 			],
 			"82baf17a4393aee308096a7f44d13bed3a5fae98": []
@@ -96363,7 +96454,22 @@
 			"ab33b1227503fad4ccd238a702d1bc6610f728c6": []
 		},
 		"MarioArnt/azure-ad-jwt-lite": {
-			"b6e152930765df5959b27db36125de79870cf84b": [],
+			"b6e152930765df5959b27db36125de79870cf84b": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "src/index.ts",
+					"lineAfter": "230",
+					"nameAfter": "invalidateCache",
+					"parametersAfter": "",
+					"comment": "To reset cached values after each test run"
+				}
+			],
 			"8686d9fe551d383d7e8f1402fc140c9ee29c2b76": [
 				{
 					"description": "Rename Variable\tdiscoveryUrl to DISCOVERY_URL in index.ts() at null",
@@ -102788,7 +102894,8 @@
 					"fileAfter": "api/common/JwtGenerator.ts",
 					"lineAfter": "16",
 					"nameAfter": "fromBase64Key",
-					"parametersAfter": "key"
+					"parametersAfter": "key",
+					"comment": "Create new public class method that is only used in tests to create test context"
 				}
 			],
 			"d0ed70f04554f2ea6242a24e34b1937e061fe648": [
@@ -102823,7 +102930,8 @@
 					"fileAfter": "api/common/services/UserService.ts",
 					"lineAfter": "112",
 					"nameAfter": "getProfileImage",
-					"parametersAfter": "email, size, oauthPicture"
+					"parametersAfter": "email, size, oauthPicture",
+					"comment": "Make private method public to allow testing"
 				}
 			],
 			"a942c0255fad45ccd8fd3f466d3491050711f7dd": [],
@@ -103402,7 +103510,8 @@
 					"fileAfter": "app/src/sdk/BffApiClient.js",
 					"lineAfter": "3",
 					"nameAfter": "constructor",
-					"parametersAfter": "jwtToken, fetchFunc"
+					"parametersAfter": "jwtToken, fetchFunc",
+					"comment": "Add parameter to allow passing a mocked fetch function"
 				}
 			]
 		},
@@ -104822,8 +104931,7 @@
 					"similarity": 0.958825609393356,
 					"standardDescription": "EXTRACT\t{Function constructor at Code/src/classes/Product.ts:14}\t{Function setDetails at Code/src/classes/Product.ts:57})",
 					"descriptionWithScore": "EXTRACT (score=0,959)\t{Function constructor at Code/src/classes/Product.ts:14}\t{Function setDetails at Code/src/classes/Product.ts:57})",
-					"refactoring": true,
-					"is_testability_refactoring": true
+					"refactoring": true
 				},
 				{
 					"description": "Rename Method\tProduct.setQuantity(amount) renamed to Product.updateQuantity(amount) at Code/src/classes/Product.ts|Product.setQuantity",
@@ -104872,7 +104980,8 @@
 					"fileAfter": "Code/src/classes/ShoppingCart.ts",
 					"lineAfter": "17",
 					"nameAfter": "getItem",
-					"parametersAfter": "index"
+					"parametersAfter": "index",
+					"comment": "Add getter for cart item to allow getting it in tests"
 				}
 			]
 		},
@@ -105049,7 +105158,22 @@
 			"2e82e79839328bafefde3b1d7626993235eae6bd": [],
 			"3902254dacf52c259f2039aacad6e68384f48e5c": [],
 			"daa4b644d5b01655a47ad8160490ddb343b119b7": [],
-			"25a5e477b840ecf08a4d427f3e2075f75b90d929": [],
+			"25a5e477b840ecf08a4d427f3e2075f75b90d929": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_FUNCTION",
+					"fileBefore": "",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "src/secret-detection/parsers/index.ts",
+					"lineAfter": "42",
+					"nameAfter": "validValueIsolation",
+					"parametersAfter": "input, match",
+					"comment": "Created helper function to be used in tests"
+				}
+			],
 			"bd67ff16356b18575f08622f5de8209bd1183f08": [],
 			"8148c1b1b32faf6ce14add84e4c16de2d91aec42": [],
 			"43ccd263f323861c5abe3af46882bd964739f812": [
@@ -105107,7 +105231,8 @@
 					"fileAfter": "src/common/decorators/user.decorator.ts",
 					"lineAfter": "3",
 					"nameAfter": "User",
-					"parametersAfter": "data, ctx"
+					"parametersAfter": "data, ctx",
+					"comment": "Extract wrapped function/object to export it raw for use in tests"
 				}
 			],
 			"446a232a896ce10f1f1c452c2304dc76586453b3": [

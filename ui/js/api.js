@@ -1,6 +1,6 @@
 class API {
   constructor() {
-    this.url = 'http://localhost:3000';
+    this.url = 'http://localhost';
     this.routes = {
       checknpm: '/api/checknpm',
       project: '/api/project',

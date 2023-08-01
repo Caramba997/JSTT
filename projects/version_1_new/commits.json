@@ -28792,7 +28792,8 @@
 					}
 				],
 				"prs": [4],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"humanmade/cf-to-tf": [
@@ -28874,7 +28875,8 @@
 						"html_url": "https://github.com/humanmade/cf-to-tf/commit/198df54aa718a49539b7791d3d48e1385e5d389d"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "a5b34057973091484d20130cfc1fdaee619cfee3",
@@ -29027,7 +29029,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "31150761c055272980dc737b9323f5bbd2ec91e8",
@@ -29631,7 +29634,8 @@
 						"html_url": "https://github.com/heiseonline/embetty-server/commit/e532fef95f61023fa69bdff952b3fe9f9fccc403"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "12fb64de329b689629c092caaaf1581c3a482dd1",
@@ -29871,7 +29875,8 @@
 						"html_url": "https://github.com/igalarza/address-scrapper/commit/ad484554576c40403702b6de5b6340d8f1eaf836"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "40a61a3c0e42012957bf74220ec2449e423567b7",
@@ -29951,7 +29956,8 @@
 						"html_url": "https://github.com/igalarza/address-scrapper/commit/131c25bc2f747ade845794837abfc6128a6ff80c"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c48e192866a3eda0682c4dd7c9eefc5fe217a131",
@@ -30190,7 +30196,8 @@
 						"html_url": "https://github.com/igalarza/address-scrapper/commit/95b7c16c71829a02d52b46c6cd235a9cc7de0313"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "26923957e1118bf74ca8d654141d448956002e57",
@@ -30270,7 +30277,8 @@
 						"html_url": "https://github.com/igalarza/address-scrapper/commit/90a8f05217020e7d1112442d69a13a08342d5156"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "94ed53dabe0ca9ace5ad0c07ab60b4af77592876",
@@ -30919,7 +30927,8 @@
 					}
 				],
 				"prs": [13],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "83b5918362f9eafa9001a27a0b1774edc1897cdc",
@@ -31403,7 +31412,8 @@
 					}
 				],
 				"prs": [24],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d5bb11226bcc3ddfb2d6200f4b186c6b6da78a34",
@@ -31484,7 +31494,8 @@
 					}
 				],
 				"prs": [24],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "2c6980a50b812cb32437b8e4f07ef43a1e3a5713",
@@ -31565,7 +31576,8 @@
 					}
 				],
 				"prs": [24],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "88cedd674cedb563451546bf19ef0085d8c75bc1",
@@ -32124,7 +32136,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"cudbg/pae": [
@@ -32206,7 +32219,8 @@
 						"html_url": "https://github.com/cudbg/pae/commit/15692bc728db4a5d90f32818e405a2f4827c5da7"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "ce2b754ab805bd1d9951be9186fc2fe0043f5576",
@@ -32449,7 +32463,8 @@
 					}
 				],
 				"prs": [10],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "91c3ac2c33826055f59e0ede9f69ac51038d05df",
@@ -32767,7 +32782,8 @@
 					}
 				],
 				"prs": [55],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "0761e64611af5c8538db29f339cd92b1c2227da6",
@@ -33172,7 +33188,8 @@
 					}
 				],
 				"prs": [82],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d0501a27c06db08b580adcb74fac3bbd05edc076",
@@ -33253,7 +33270,8 @@
 					}
 				],
 				"prs": [20],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d9408d1505061503ff56c1d72e9e567363d06fd1",
@@ -33496,7 +33514,8 @@
 						"html_url": "https://github.com/mohamed-taman/Effective-Java-SE/commit/034ebc24252668e171a3bb4fa4d3e6aaf5e1d7ab"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"ABVanton200/critical-css-inliner": [
@@ -33578,7 +33597,8 @@
 						"html_url": "https://github.com/ABVanton200/critical-css-inliner/commit/224841b4f9c5555422496488398d2775cf422448"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "cd86687c147eb8a205a769cd5fdde8547503c061",
@@ -33733,7 +33753,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"mapbox/martini": [],
@@ -34384,7 +34405,8 @@
 					}
 				],
 				"prs": [48],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "3b1c855aafe50c2bf601f37c24e7663647b86d5c",
@@ -34546,7 +34568,8 @@
 					}
 				],
 				"prs": [35],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "f9c463caa904144c00062c2aa1e4ba675d65a63f",
@@ -35028,7 +35051,8 @@
 					}
 				],
 				"prs": [20],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "5b40189879a6cfb525f88f7850bcdb8e2b1a60b3",
@@ -35109,7 +35133,8 @@
 					}
 				],
 				"prs": [9],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"holochain-devcamp/learning-pathways": [],
@@ -35432,7 +35457,8 @@
 						"html_url": "https://github.com/jaydenseric/graphql-http-test/commit/8ae844cf48b468fb70e6a421602c7387e926183d"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d5cffcf506416155862a02471a2b3e04f1d29f89",
@@ -35752,7 +35778,8 @@
 						"html_url": "https://github.com/jaydenseric/graphql-http-test/commit/8c25fd7bfe12855c7877028d9b156a3bdaa3fff3"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"aquiladev/ddns-action": [
@@ -35916,7 +35943,8 @@
 					}
 				],
 				"prs": [16],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"nreoch25/nextjs-graphql-hooks-auth": [
@@ -36073,7 +36101,8 @@
 						"html_url": "https://github.com/AlvaroIsrael/hero-ngo-app/commit/e843a8459861145304305224750ed9b4ce30e037"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"mavi888/apigateway-auth0": [
@@ -36111,7 +36140,8 @@
 				"author": null,
 				"committer": null,
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"harshmons/material-table-with-graphql-using-remote-data-approach": [
@@ -36187,7 +36217,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"noisyneuron/inverse": [
@@ -36314,7 +36345,8 @@
 						"html_url": "https://github.com/sheikhmishar/localhost-tunnel/commit/d126d67e510301c854733dbdfef15f48495607a2"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"Developerayo/unstack.africa": [
@@ -36469,7 +36501,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"chompi2020/https-github.com-atralice-curso.prep.henry": [],
@@ -36632,7 +36665,8 @@
 						"html_url": "https://github.com/jupiter-project/gravity/commit/9620c4a94899d7d7cb416b071d2a5462f7ea84fd"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "9620c4a94899d7d7cb416b071d2a5462f7ea84fd",
@@ -36793,7 +36827,8 @@
 						"html_url": "https://github.com/jupiter-project/gravity/commit/1f6cde75ddd2047f1ec0b6b345b48692fc26cebb"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "1f6cde75ddd2047f1ec0b6b345b48692fc26cebb",
@@ -36953,7 +36988,8 @@
 						"html_url": "https://github.com/jupiter-project/gravity/commit/f1cc106dc48a0e73a64273d81b6b0f9e64fc5c60"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"smswithoutborders/SMSWithoutBorders.com": [
@@ -37198,7 +37234,8 @@
 					}
 				],
 				"prs": [64],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "6ef8fce4a9d06c23944176072b0169e11e3e855e",
@@ -37279,7 +37316,8 @@
 					}
 				],
 				"prs": [64],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"sametpalitci/yelp-clone": [
@@ -37679,7 +37717,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "e0feb83e468bdb2aaf929479e4506c88b85d2cf3",
@@ -37841,7 +37880,8 @@
 					}
 				],
 				"prs": [1],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c65983e30379cf99e8027e3e4a10b1e6d5d458a2",
@@ -38008,7 +38048,8 @@
 					}
 				],
 				"prs": [3],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "176b3fa4efb972e8494ef8cfd3f919eda08cd2d7",
@@ -38169,7 +38210,8 @@
 						"html_url": "https://github.com/AndresMorelos/Invoncify/commit/cc56bdfee5ed8192f4d27075bec33807a5878014"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "42fe56de46135329fe2afd193f7229813404e4c3",
@@ -38411,7 +38453,8 @@
 					}
 				],
 				"prs": [4],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "e4787016d4cb952994ad3e99d30caaed837f8c93",
@@ -38535,7 +38578,8 @@
 						"html_url": "https://github.com/mikec3/my_tutorials/commit/58cfaf11df2e10a328a481038184edc0a96d87a7"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "1ea43971a3faa63bce5cd5dd36e4ba62fea8f8cc",
@@ -38653,7 +38697,8 @@
 						"html_url": "https://github.com/mikec3/my_tutorials/commit/697920a39b8da12be1003eae6862f5ea4d1e98c4"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "58cfaf11df2e10a328a481038184edc0a96d87a7",
@@ -38937,7 +38982,8 @@
 					}
 				],
 				"prs": [8],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d81f7276008ac4c2f34a615fdc51e470a4e715ab",
@@ -39018,7 +39064,8 @@
 					}
 				],
 				"prs": [8],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c27fc0f4b289c6d05bd2965d2b50a6ffa4e68c2c",
@@ -39179,7 +39226,8 @@
 					}
 				],
 				"prs": [7],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"aendue/ioBroker.reolink": [
@@ -39535,7 +39583,8 @@
 					}
 				],
 				"prs": [1166],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "6e296d24aaf6aeed1dfb744c60e5dd2b56ac14a5",
@@ -39855,7 +39904,8 @@
 					}
 				],
 				"prs": [1510],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "4653f235931ec39db2ae36a81c6c491261737ce9",
@@ -40500,7 +40550,8 @@
 						"html_url": "https://github.com/fb55/htmlparser2/commit/2aefde2bc370f3866daf6e39217f68437fe0e769"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "87ca172f88765c0c2d1a694cc08ff426cce6c9ee",
@@ -40741,7 +40792,8 @@
 					}
 				],
 				"prs": [1460],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "78af88d7b480823a1f789c7d5a7e94573694ff65",
@@ -40822,7 +40874,8 @@
 					}
 				],
 				"prs": [927],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "21ee545a8c66f39e2ae43db0fa74078adbe6e4aa",
@@ -40982,7 +41035,8 @@
 					}
 				],
 				"prs": [515],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"mWater/ez-localize": [
@@ -41064,7 +41118,8 @@
 						"html_url": "https://github.com/mWater/ez-localize/commit/f236a8393932ab2b5c9658d568809fb269e5230f"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "7c049237876944df57f33ee02a64cab785d3eb01",
@@ -41303,7 +41358,8 @@
 						"html_url": "https://github.com/mWater/ez-localize/commit/a09230ea7318c44758e4f39d6f91d52e1dbef999"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "221f13218571c5fbfe928523dea4a2ba00f329da",
@@ -41861,7 +41917,8 @@
 					}
 				],
 				"prs": [89],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "ebd755e49323e0035bd2d34afa950c07f3f36d9f",
@@ -42104,7 +42161,8 @@
 					}
 				],
 				"prs": [3046],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d65ea09e537551ceedc819aaafd0817059342087",
@@ -42266,7 +42324,8 @@
 					}
 				],
 				"prs": [1875],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "2b918fc045e79aa8087a3b5ee8443045614126b7",
@@ -42409,7 +42468,8 @@
 					}
 				],
 				"prs": [2666],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "bdfbcd5f372a4d704412fbeece04fe54f7d1544a",
@@ -42490,7 +42550,8 @@
 					}
 				],
 				"prs": [2081],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "3f77a28c3136d1c0a9b24c7ad190da1b8cf695d5",
@@ -43055,7 +43116,8 @@
 					}
 				],
 				"prs": [1545],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "655a5c5ffa547bf3e0b0a1348397cf1f2d2135b0",
@@ -43298,7 +43360,8 @@
 					}
 				],
 				"prs": [2430],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "55004e897de14fa645017307e409e137c5099aa7",
@@ -43460,7 +43523,8 @@
 					}
 				],
 				"prs": [2860],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "9d9a73014c5edb17db523ba907ab017ff005dabb",
@@ -43703,7 +43767,8 @@
 					}
 				],
 				"prs": [3268],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "8a8daca8e6c530d92eb1bab84b9cde3c6ed5f262",
@@ -44349,7 +44414,8 @@
 				"author": null,
 				"committer": null,
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "69c7b5065ecc19082c36bb095cf29fa1cad92703",
@@ -44546,7 +44612,8 @@
 					}
 				],
 				"prs": [4],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "64bbfeca2f9876a31da4dc72190dccea751ecbbe",
@@ -44627,7 +44694,8 @@
 					}
 				],
 				"prs": [4],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "1f9d795cb3b1e901343d0b2658a5458721b37d61",
@@ -44790,7 +44858,8 @@
 						"html_url": "https://github.com/AngularFirebase/139-hold-to-delete-directive/commit/642eff0551cdf7c6c70bcfabda7abc5cc297dd24"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"IronCoreLabs/recrypt-wasm-binding": [
@@ -44873,7 +44942,8 @@
 					}
 				],
 				"prs": [45],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "9aec40d07f7863ac958c5bc3a6de7e36f10377ef",
@@ -44954,7 +45024,8 @@
 					}
 				],
 				"prs": [24],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "196ad86e48f6154fa630fe273748b0a58cdf190d",
@@ -45195,7 +45266,8 @@
 					}
 				],
 				"prs": [4],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "f90cb1e8b5718612484ddc6f7ea083884d17cd41",
@@ -45276,7 +45348,8 @@
 					}
 				],
 				"prs": [2],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "bd2b95c0f87ba3cdd8b14e7be13ef933c07adbe1",
@@ -45431,7 +45504,8 @@
 						"html_url": "https://github.com/baealex/BLEX/commit/16e0799f5ea4d057027f88ccce223279a04af5e7"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"erukiti/easybooks": [
@@ -46113,7 +46187,8 @@
 						"html_url": "https://github.com/erukiti/easybooks/commit/651fca20bf1399ffc08ec270cf11b48754242615"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "ca8bbc98f1273487bc8696cba54855f49eba5a73",
@@ -46193,7 +46268,8 @@
 						"html_url": "https://github.com/erukiti/easybooks/commit/a61ac7d6cb2f0a3c9562c643f05ba969147b297c"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "a61ac7d6cb2f0a3c9562c643f05ba969147b297c",
@@ -46273,7 +46349,8 @@
 						"html_url": "https://github.com/erukiti/easybooks/commit/9e46a7c53b6eb535ab148a0b643585df99f3a027"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "9e46a7c53b6eb535ab148a0b643585df99f3a027",
@@ -46432,7 +46509,8 @@
 						"html_url": "https://github.com/erukiti/easybooks/commit/a8763507a84e5afd2a70875f3237a56104571f1d"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "a8763507a84e5afd2a70875f3237a56104571f1d",
@@ -46474,7 +46552,8 @@
 						"html_url": "https://github.com/erukiti/easybooks/commit/ed36d1d87fdc1638e07b8b5fc07a93ecdfb5d501"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "f6c07159ab27f69301291bc39a1772ed50ad8ad6",
@@ -46555,7 +46634,8 @@
 					}
 				],
 				"prs": [11],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "b6b88197f8ffba13899cece84690f9be99eeb652",
@@ -46641,7 +46721,8 @@
 					}
 				],
 				"prs": [8],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "e4ae84fcc96c10161fa31da17f2687cba38fdf9a",
@@ -46727,7 +46808,8 @@
 					}
 				],
 				"prs": [9],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "670e80b01244024904b8604388cf5103f439161f",
@@ -46807,7 +46889,8 @@
 						"html_url": "https://github.com/erukiti/easybooks/commit/a75b955f55bb03542514dfefd627d92815c7871f"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "37f93333ed50c7136df6724ef23799e5d2d0c870",
@@ -46888,7 +46971,8 @@
 					}
 				],
 				"prs": [9],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "06cec3a57e5bb1b80c1d552c42301352fe210752",
@@ -47128,7 +47212,8 @@
 						"html_url": "https://github.com/erukiti/easybooks/commit/356778b55e28b4421520f97ab5374070dea9afef"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "356778b55e28b4421520f97ab5374070dea9afef",
@@ -47208,7 +47293,8 @@
 						"html_url": "https://github.com/erukiti/easybooks/commit/94745b74e5ece9d20477379b0c3b4c0b0f8b5009"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "992eff78e886533b74cbce3e3eeaf9af5301da5d",
@@ -48167,7 +48253,8 @@
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/06be931c5a2f5020c0f8cd30c0d5af8bb4f02e0a"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "150b492e459465fa917dd69b853dbf9489c40da5",
@@ -48327,7 +48414,8 @@
 						"html_url": "https://github.com/m-ripper/vuex-multi-history/commit/6ba1e5e659f3279ab5f8448407d49ba272a9ff6d"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"aws/constructs": [
@@ -48656,7 +48744,8 @@
 					}
 				],
 				"prs": [310],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c9b0726008dd9b5148c6efea5341a0f1c1f62715",
@@ -49016,7 +49105,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "a987e647942680d18353787ea0be467da5f7b4cf",
@@ -49177,7 +49267,8 @@
 					}
 				],
 				"prs": [4],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "349858bb7f2659e2199bb6e12a0d1ca49cf0f997",
@@ -49428,7 +49519,8 @@
 					}
 				],
 				"prs": [16],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "399503ace8542a8305daa8e8bff33ef985648e65",
@@ -49588,7 +49680,8 @@
 					}
 				],
 				"prs": [6],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "bec7855f008b48e32a9b9e813d90a332ebf14b3d",
@@ -49631,7 +49724,8 @@
 					}
 				],
 				"prs": [47],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "79875ef87189b897be51147cdbdc7f9ef0ddde5b",
@@ -49753,7 +49847,8 @@
 					}
 				],
 				"prs": [21],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "f666ad85e9294afa90b2eca4d37d2d4283ed2bb3",
@@ -49998,7 +50093,8 @@
 					}
 				],
 				"prs": [157],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "ca8942c742d5e7f1fa8f50967b6f8b12c7b82020",
@@ -50161,7 +50257,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/51b5d3e06fb3085a78290a404ae5d8c764f2b42d"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "86ae470e7e566ef79ee083cb8ca3e9282a652b11",
@@ -50242,7 +50339,8 @@
 					}
 				],
 				"prs": [35],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "f79bc922d428dc197cb25e623ae5796512654427",
@@ -50323,7 +50421,8 @@
 					}
 				],
 				"prs": [101],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "1d8af8eb0ba9c0e7c563fc66704e977fc52ee78d",
@@ -50563,7 +50662,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/bca20a557a5b68b907a697fbd352aa1e4342f766"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "a46a479ff71225f486b39e48752e675a2171cf86",
@@ -50643,7 +50743,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/e0f172bb663fff0044fdeefb4f6063777761a1cb"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c47f29e28a05b0c25305310faaadb04ecc1156f8",
@@ -50724,7 +50825,8 @@
 					}
 				],
 				"prs": [37],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "f405225ef36574db15e1364eb092930ef7125c47",
@@ -50804,7 +50906,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/f8563d4d5139b257981ae68de717275f0dd4fade"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "ce56130766c060cd8a80ff7bf87f8cb1077c39fe",
@@ -50890,7 +50993,8 @@
 					}
 				],
 				"prs": [10],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c2ef7fdd8d29d83db4aafa663178190da528548b",
@@ -51055,7 +51159,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/48acf8e0e9880eaa381256f61345beea20437677"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "5cdb33b0199bf19f3c0e64dccb8e62cb19217802",
@@ -51177,7 +51282,8 @@
 						"html_url": "https://github.com/lokalkauf/lokalkauf-frontend/commit/6cb6a536ea329de3217cd92e9e2e8597b409eae4"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"RStankov/FocusedTask": [
@@ -51341,7 +51447,8 @@
 					}
 				],
 				"prs": [27],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "8686d9fe551d383d7e8f1402fc140c9ee29c2b76",
@@ -51655,7 +51762,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/b6515dd6845e19c05bec09caf721e177ea47ef3b"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "40cc1367608c3f3797f4998fa2ec03dcba492fe0",
@@ -51735,7 +51843,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/ff8b92c3fd1a23be4efbb60c4a2a01fc85d40736"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "ff8b92c3fd1a23be4efbb60c4a2a01fc85d40736",
@@ -51894,7 +52003,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/62f61fff3616822ded901f92855a63b5ca22ff83"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "85119cd44d4522ab101645d0ce0d3ca9d1c8a9c6",
@@ -52053,7 +52163,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/190433f208f06f0525f8f8f69e0c0d2ae7525978"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "9bd5e6615aa4ca4c6195f285dab4b63d0a157c02",
@@ -52133,7 +52244,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/d499b43ce5161679826b2b7a1038b927810478f9"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "9ec6c22a2e0ddf3bcfff7e7e8b22164a5d4036b6",
@@ -52292,7 +52404,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/750741b89b2a5e6545e266c2164d10355cb75698"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "992aaf67e4af53ffbd8aee566f1567b6b2fa5018",
@@ -52451,7 +52564,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/5147a5d562adf7bca920b2ba711d21f5477569b8"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d797f143b2fee950e37d90da2c85b701af723b1e",
@@ -52610,7 +52724,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/98e5c59e9e9ef9809c1ff04f6573245ec7cd8d08"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "697ca7fee9f570b8a7171933cc233cd2a0b674f9",
@@ -52690,7 +52805,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/ddd023f85f4bad9b740d2a6d10f1e66a03e08fb5"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "ddd023f85f4bad9b740d2a6d10f1e66a03e08fb5",
@@ -52928,7 +53044,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/8efb17da3ff1bb31776bdad8a0112a6629855a1e"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "8efb17da3ff1bb31776bdad8a0112a6629855a1e",
@@ -53088,7 +53205,8 @@
 					}
 				],
 				"prs": [34],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "e2f3f7c9d2adc50ed5fc70d6955f237f8f58f7fb",
@@ -53484,7 +53602,8 @@
 						"html_url": "https://github.com/g-plane/typed-query-selector/commit/823e4b850280dab7192cd0468b8e97c196e9e8ec"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"juanm4/hexagonal-architecture-frontend": [
@@ -53807,7 +53926,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c6cfbcd8fd3dd57f40570feb1b63fa06bc1a51bd",
@@ -53887,7 +54007,8 @@
 						"html_url": "https://github.com/yoshi389111/github-profile-3d-contrib/commit/d8a1c40dd1982eec75eb7dc434539be47b6ae567"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "43fed54e847b5d3c59cb8f220be287b100893b63",
@@ -54205,7 +54326,8 @@
 						"html_url": "https://github.com/yoshi389111/github-profile-3d-contrib/commit/a66a607ad0a70e460e9e98930a3c1d3f4188a29f"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"Facepunch/sbox-vscode": [],
@@ -54531,7 +54653,8 @@
 					}
 				],
 				"prs": [58],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "f40d1ad5ca87f51ad62ac35bc1c359d55cbeab4e",
@@ -54612,7 +54735,8 @@
 					}
 				],
 				"prs": [32],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "fe8147ea9688a2b874205790497e2e6f6fd2ee69",
@@ -54773,7 +54897,8 @@
 					}
 				],
 				"prs": [7],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "81c2e02d5d04e9727a6bb69f6cb14122396c82d5",
@@ -54854,7 +54979,8 @@
 					}
 				],
 				"prs": [56],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "dd0c52890308a83bcbe700e0038c88e35903a672",
@@ -55498,7 +55624,8 @@
 					}
 				],
 				"prs": [18],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "79ba7590352b6c8359b03449ee1e46cc13f5bec3",
@@ -55823,7 +55950,8 @@
 					}
 				],
 				"prs": [1161],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "cd9e88432ce48c42ccf10e54cc013fca427d95f7",
@@ -56957,7 +57085,8 @@
 					}
 				],
 				"prs": [811],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "cb4b553c01535ef6f7f70ecf1841120f8270c0d3",
@@ -57038,7 +57167,8 @@
 					}
 				],
 				"prs": [1226],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d020d0576465d47e7fae55855aedfe60258cb22b",
@@ -57522,7 +57652,8 @@
 					}
 				],
 				"prs": [676],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "9be551f102d2fe9ca78a5c69cf118aef4d9dff06",
@@ -58083,7 +58214,8 @@
 					}
 				],
 				"prs": [566],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "9e6260169a1056a003c4a2953f19405df9da05f2",
@@ -58324,7 +58456,8 @@
 					}
 				],
 				"prs": [1029],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "21464be2f485ebac597b98435d62864ccc06447a",
@@ -58405,7 +58538,8 @@
 					}
 				],
 				"prs": [1026],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "c4adc6702a767ac0f5c20ef4eba139178cfb0ac1",
@@ -58566,7 +58700,8 @@
 					}
 				],
 				"prs": [984],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "2194bf0d763ccc6e37cbec7ff9a6660e9a683e37",
@@ -58727,7 +58862,8 @@
 					}
 				],
 				"prs": [557],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d21892aae8bca76e31a095ba6f89dea0cc39c958",
@@ -58808,7 +58944,8 @@
 					}
 				],
 				"prs": [280],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"fantasycalendar/obsidian-fantasy-calendar": [],
@@ -58892,7 +59029,8 @@
 					}
 				],
 				"prs": [6],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "a06ee9328f238d84ad01f27b8784154604ebc6f6",
@@ -59054,7 +59192,8 @@
 					}
 				],
 				"prs": [17],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "0236322b1cf522a3b42479b93542f6ec65d0ac13",
@@ -59135,7 +59274,8 @@
 					}
 				],
 				"prs": [42],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "fe91c752e82e3ac9047b5faaf628eb4d4e496f4c",
@@ -59457,7 +59597,8 @@
 					}
 				],
 				"prs": [22],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "82a27e1c9b38d185dfaa25319c91c597af04cebb",
@@ -59701,7 +59842,8 @@
 					}
 				],
 				"prs": [17],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d892d9836797220624d9527233c9517f68b17bd8",
@@ -60344,7 +60486,8 @@
 						"html_url": "https://github.com/Winter22SOFE2720/online-shopping-system/commit/c9a8020cf07ec8b5b133e4d3f02689709b1971c8"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "80b0958deb49e88b308b79fc9e2a5d345843a3cb",
@@ -60508,7 +60651,8 @@
 					}
 				],
 				"prs": [93],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "dacf33279415836ff690a60ab063ac100b36ee81",
@@ -60662,7 +60806,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "efd90c63243775e3faa19862f155b96a258e7879",
@@ -60984,7 +61129,8 @@
 					}
 				],
 				"prs": [87],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "3902254dacf52c259f2039aacad6e68384f48e5c",
@@ -61225,7 +61371,8 @@
 					}
 				],
 				"prs": [40],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "bd67ff16356b18575f08622f5de8209bd1183f08",
@@ -61542,7 +61689,8 @@
 					"site_admin": false
 				},
 				"parents": [],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "db48835b1ad2dfa4b5f54d8f6cd1e74888e9dfdd",
@@ -61622,7 +61770,8 @@
 						"html_url": "https://github.com/SkyZeroZx/API-NestJS-Sky-Calendar/commit/16a9c6b9b58e5326f30972476b0fc46cf9ad89b4"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "e981334cff86d715659075643baf093ef7b4c153",
@@ -62101,7 +62250,8 @@
 						"html_url": "https://github.com/SkyZeroZx/API-NestJS-Sky-Calendar/commit/becba5108acf3911fb1715077100a556771ad4e4"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "822d75d781353798bd5292a622b9ec3c09fe07f4",
@@ -62261,7 +62411,8 @@
 						"html_url": "https://github.com/SkyZeroZx/API-NestJS-Sky-Calendar/commit/822d75d781353798bd5292a622b9ec3c09fe07f4"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			}
 		],
 		"calvintwr/debug-next": [
@@ -62343,7 +62494,8 @@
 						"html_url": "https://github.com/calvintwr/debug-next/commit/e8d88a41d8188f35fb36818afe9556edc3d96096"
 					}
 				],
-				"in_selection": true
+				"in_selection": true,
+				"is_done": true
 			},
 			{
 				"sha": "d63f5fcff0847c6ab63e7881d45a60251131b3e8",
