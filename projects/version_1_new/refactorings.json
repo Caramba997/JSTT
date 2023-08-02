@@ -45569,7 +45569,22 @@
 			"653a5b67b9b3678802c7ceb6221389068f3033b4": []
 		},
 		"clubajax/HeadlessBrowser": {
-			"c2e275f037226cc6d745d2e9f1da8bf245d1d5e8": [],
+			"c2e275f037226cc6d745d2e9f1da8bf245d1d5e8": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_ADD_PARAMETER",
+					"fileBefore": "browser.js",
+					"lineBefore": "1",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "browser.js",
+					"lineAfter": "1",
+					"nameAfter": "",
+					"parametersAfter": "loadHtmlForTest",
+					"comment": "Load \"loadHtmlForTest\" file to load the test html in tests"
+				}
+			],
 			"8934141b655dfc9953c0436c4e25e8871de937c4": [
 				{
 					"type": "INTERNAL_MOVE",
@@ -77812,7 +77827,22 @@
 			"6ef8fce4a9d06c23944176072b0169e11e3e855e": []
 		},
 		"sametpalitci/yelp-clone": {
-			"1881cd447fd5b2bdc86844b5428dc74f217fcbf7": []
+			"1881cd447fd5b2bdc86844b5428dc74f217fcbf7": [
+				{
+					"tool": "manual",
+					"is_testability_refactoring": true,
+					"type": "_EXPORT_OBJECT",
+					"fileBefore": "",
+					"lineBefore": "",
+					"nameBefore": "",
+					"parametersBefore": "",
+					"fileAfter": "server/app.js",
+					"lineAfter": "28",
+					"nameAfter": "app",
+					"parametersAfter": "",
+					"comment": "Export app instance for use in tests"
+				}
+			]
 		},
 		"Jaybhade/covid19Tracker": {
 			"5c2f645f1874c0791703b4a54575c911dcf19f5d": []

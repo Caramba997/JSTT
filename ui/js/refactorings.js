@@ -40,7 +40,8 @@
               html = template.clone(true);
         if (filter === 'undone' && commit.is_done) continue;
         if (filter === 'no_refactorings_selection' && !commit.in_selection) continue;
-        if (filter === 'test_refactor' && !(commit.commit.message && commit.commit.message.includes('test') && commit.commit.message.includes('refactor'))) continue;
+        if (filter === 'rest' && commit.in_selection) continue;
+        if (filter === 'test_refactor' && !(commit.commit.message && commit.commit.message.toLowerCase().includes('test') && commit.commit.message.toLowerCase().includes('refactor'))) continue;
         const refactorings = REFACTORINGS.refactorings[repo];
         if (filter === 'refactorings' && refactorings && refactorings[commit.sha] && refactorings[commit.sha].length === 0) continue;
         let backgroundSet = false,
@@ -48,6 +49,7 @@
         if (refactorings && refactorings[commit.sha] && refactorings[commit.sha].length > 0) {
           hasMinedRefactorings = refactorings[commit.sha].filter(ref => ref.tool !== 'manual').length > 0;
           if (filter === 'mined_refactorings' && !hasMinedRefactorings) continue;
+          if (filter === 'rest' && hasMinedRefactorings) continue;
           const commitTrs = refactorings[commit.sha].filter(ref => ref.is_testability_refactoring);
           if (commitTrs.length > 0) {
             commitsWithTrs++;
@@ -57,6 +59,7 @@
           }
         }
         if (filter === 'mined_refactorings' && !hasMinedRefactorings) continue;
+        if (filter === 'rest' && hasMinedRefactorings) continue;
         if (filter === 'testability_refactorings' && !backgroundSet) continue;
         filteredCommits++;
         html.data('index', c);
