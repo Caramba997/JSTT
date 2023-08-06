@@ -10,6 +10,52 @@
       PRS = (await api.getPromise('prs', { id: id })).data,
       REFACTORINGS = (await api.getPromise('refactorings', { id: id })).data;
   buildPage();
+  buildPrs();
+
+  function buildPrs() {
+    const tbody = $('[data-e="tr-list"] tbody'),
+          template = $($('[data-t="tr-list-item"]').html());
+    tbody.html('');
+    const trs = {};
+    Object.entries(REFACTORINGS.refactorings).forEach(([repo, commits]) => {
+      Object.entries(commits).forEach(([sha, refactorings]) => {
+        refactorings.forEach(ref => {
+          if (ref.is_testability_refactoring) {
+            trs[ref.type] = trs[ref.type] || [];
+            const refClone = JSON.parse(JSON.stringify(ref));
+            refClone.repo = repo;
+            refClone.sha = sha;
+            trs[ref.type].push(refClone);
+          }
+        });
+      });
+    });
+    console.log(trs, Array.from(trs));
+    const trsSorted = Object.entries(trs).sort((a, b) => b[1].length - a[1].length);
+    console.log(trsSorted);
+    let index = 0;
+    trsSorted.forEach(([type, refactorings]) => {
+      // console.log(type, refactorings);
+      for (let i = 0; i < refactorings.length; i++) {
+        const html = template.clone(true);
+        html.find('[data-e="tr-index"]').text(++index);
+        if (i === 0) {
+          html.find('[data-e="tr-total"]').text(refactorings.length).attr('rowspan', refactorings.length);
+          html.find('[data-e="tr-type"]').text(type).attr('rowspan', refactorings.length);
+        }
+        else {
+          html.find('[data-e="tr-total"]').remove();
+          html.find('[data-e="tr-type"]').remove();
+        }
+        html.find('[data-e="tr-tool"]').text(refactorings[i].tool || 'RefDiff');
+        html.find('[data-e="tr-repo"]').text(refactorings[i].repo).attr('href', `/ui/commit?id=${id}&sha=${refactorings[i].sha}&repo=${refactorings[i].repo}`);
+        html.find('[data-e="tr-description"]').text(refactorings[i].comment);
+        const commit = COMMITS.commits[refactorings[i].repo].find(com => com.sha === refactorings[i].sha);
+        html.find('[data-e="tr-git"]').attr('href', commit.html_url);
+        tbody.append(html);
+      }
+    });
+  }
 
   function buildPage() {
     const statsElement = $('[data-e="info"]');
@@ -29,12 +75,14 @@
     let filteredCommits = 0,
         doneCommits = 0,
         commitsWithTrs = 0,
+        reposWithTrs = 0,
         trs = 0,
         refactoringCount = 0,
         nextCommit = null,
         c = 0;
     const filter = $('[data-e="commit-filter').val();
     Object.entries(COMMITS.commits).forEach(([repo, commits]) => {
+      let repoHasTrs = false;
       for (let i = 0; i < commits.length; i++) {
         const commit = commits[i],
               html = template.clone(true);
@@ -53,6 +101,7 @@
           const commitTrs = refactorings[commit.sha].filter(ref => ref.is_testability_refactoring);
           if (commitTrs.length > 0) {
             commitsWithTrs++;
+            repoHasTrs = true;
             trs += commitTrs.length;
             backgroundSet = true;
             html.css('background-color', 'red');
@@ -87,12 +136,14 @@
         c++;
         if (REFACTORINGS.refactorings[repo] && REFACTORINGS.refactorings[repo][commit.sha]) refactoringCount += REFACTORINGS.refactorings[repo][commit.sha].length;
       }
+      if (repoHasTrs) reposWithTrs++;
     });
     if (COMMITS.stats) statsElement.find(`[data-e="info-progress"]`).text(`${Math.floor(doneCommits / filteredCommits * 100)}% (${doneCommits}/${filteredCommits})`);
     if (refactoringCount) statsElement.find(`[data-e="info-refactorings"]`).text(refactoringCount);
     if (nextCommit) nextCommit[0].scrollIntoView({ behavior: 'instant', block: 'center' });
     statsElement.find(`[data-e="info-trs"]`).text(trs);
     statsElement.find(`[data-e="info-ctrs"]`).text(commitsWithTrs);
+    statsElement.find(`[data-e="info-rtrs"]`).text(reposWithTrs);
   }
 
   async function getCommitsAndPrs() {

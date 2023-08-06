@@ -28632,8 +28632,7 @@
 					"localNameAfter": "model",
 					"locationBefore": "js/iterator.js:83-87|(3,23)-(3,27)",
 					"locationAfter": "js/iterator.js:83-88|(3,23)-(3,28)",
-					"tool": "jsdiffer",
-					"is_testability_refactoring": true
+					"tool": "jsdiffer"
 				}
 			]
 		},
@@ -77592,7 +77591,7 @@
 					"descriptionWithScore": "EXTRACT (score=0,657)\t{Function createTable at config/gravity.js:1012}\t{Function makeQuestion at config/gravity.js:1011})",
 					"refactoring": true,
 					"is_testability_refactoring": true,
-					"comment": "Extract makeQuestion to allow testing it more granular"
+					"comment": "Extract makeQuestion to allow mocking it in tests"
 				}
 			],
 			"56e6b3748ee6067ec078679d50396e0444b1b5ed": [],
@@ -105191,7 +105190,6 @@
 			"25a5e477b840ecf08a4d427f3e2075f75b90d929": [
 				{
 					"tool": "manual",
-					"is_testability_refactoring": true,
 					"type": "_EXPORT_FUNCTION",
 					"fileBefore": "",
 					"lineBefore": "",
@@ -105253,7 +105251,7 @@
 				{
 					"tool": "manual",
 					"is_testability_refactoring": true,
-					"type": "_EXPORT_FUNCTION",
+					"type": "_EXTRACT",
 					"fileBefore": "src/common/decorators/user.decorator.ts",
 					"lineBefore": "3",
 					"nameBefore": "User",
