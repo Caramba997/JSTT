@@ -46508,7 +46508,11 @@
 		"individual": 100,
 		"maxstars": 34429,
 		"minstars": 5,
-		"frontend": 0,
-		"backend": 0
+		"frontend": 81,
+		"backend": 56,
+		"withJs": 148,
+		"npm": 139,
+		"commits": 31124,
+		"prs": 12180
 	}
 }

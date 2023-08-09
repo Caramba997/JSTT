@@ -1,0 +1,25 @@
+
+1059 & Move File & JsDiffer & 31 \\
+528 & Rename Variable & JsDiffer & 74 \\
+377 & Move Class & JsDiffer & 12 \\
+254 & Rename File & JsDiffer & 32 \\
+148 & Rename Method & JsDiffer & 41 \\
+146 & INTERNAL\_MOVE & RefDiff & 18 \\
+123 & Rename Parameter & JsDiffer & 24 \\
+122 & RENAME & RefDiff & 54 \\
+122 & MOVE & RefDiff & 29 \\
+94 & Add Parameter & JsDiffer & 38 \\
+94 & Remove Parameter & JsDiffer & 16 \\
+69 & Move And Rename File & JsDiffer & 10 \\
+68 & Move Method & JsDiffer & 6 \\
+48 & EXTRACT & RefDiff & 25 \\
+32 & MOVE\_RENAME & RefDiff & 17 \\
+29 & Move And Rename Class & JsDiffer & 10 \\
+18 & EXTRACT\_MOVE & RefDiff & 8 \\
+17 & Extract Method & JsDiffer & 11 \\
+10 & Rename Class & JsDiffer & 5 \\
+10 & Inline Method & JsDiffer & 2 \\
+7 & INLINE & RefDiff & 5 \\
+2 & Change Variable Kind & JsDiffer & 2 \\
+1 & INTERNAL\_MOVE\_RENAME & RefDiff & 1 \\
+1 & Extract And Move Method & JsDiffer & 1 \\
