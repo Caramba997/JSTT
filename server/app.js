@@ -1101,6 +1101,38 @@ app.get('/api/refactoringTypes', async (req, res) => {
   }
 });
 
+app.get('/api/level', async (req, res) => {
+  const id = req.query.id;
+  if (!id) return error(res, 400, 'Id missing');
+  try {
+    const exists = files.exists('project', 'level.json', [id]);
+    let result;
+    if (exists) {
+      result = files.json('project', 'level.json', [id]);
+    }
+    else {
+      result = {};
+    }
+    return success(res, result);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
+app.post('/api/level', async (req, res) => {
+  const id = req.body.id,
+        data = req.body.data;
+  if (!id || !data) return error(res, 400, 'Param missing');
+  try {
+    files.write('project', 'level.json', data, [id]);
+    return success(res, 'Saved changes');
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
 app.listen(config.port, () => {
   console.log(`API listening on port ${config.port}`);
 });

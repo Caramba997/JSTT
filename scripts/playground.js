@@ -18,40 +18,53 @@
   const metrics = new Metrics();
   const random = new Random();
 
-  const refactorings = files.json('project', 'refactorings.json', ['version_1_new']);
-  const result = {};
-  Object.entries(refactorings.refactorings).forEach(([repo, commits]) => {
-    Object.values(commits).forEach(refs => {
-      if (refs && refs.length > 0) {
-        const commitTypes = new Set();
-        refs.forEach(ref => {
-          if (ref.tool !== 'manual') {
-            if (result[ref.type]) {
-              result[ref.type].total++;
-              if (!commitTypes.has(ref.type)) result[ref.type].commits++;
-              commitTypes.add(ref.type);
-            }
-            else {
-              result[ref.type] = {
-                total: 1,
-                commits: 1,
-                tool: ref.tool || 'RefDiff',
-                type: ref.type
-              }
-              commitTypes.add(ref.type);
-            }
-          }
-        });
+
+  const correlations = files.json('project', 'evaluation.json', ['version_1_new']);
+  const sourceMetrics = new Set();
+  Object.entries(correlations.correlations.test).forEach(([tmetric, smetrics]) => {
+    Object.entries(smetrics).forEach(([smetric, value]) => {
+      if (Math.abs(value.rho) >= 0.5) {
+        if (Math.abs(value.p) < 0.05) {
+          sourceMetrics.add(smetric);
+        }
       }
     });
   });
-  const arr = Array.from(Object.values(result)).sort((a, b) => b.total - a.total);
-  let text = arr.reduce((prev, curr) => {
-    return `${prev}\n${curr.total} & ${curr.type.replaceAll('_', '\\_')} & ${curr.tool.replace('jsdiffer', 'JsDiffer')} & ${curr.commits} \\\\`;
-  }, '');
-  files.write('project', 'table.txt', text, ['version_1_new']);
-  console.log('JsDiffer', arr.reduce((prev, curr) => curr.tool === 'jsdiffer' ? prev + curr.total : prev, 0));
-  console.log('RefDiff', arr.reduce((prev, curr) => curr.tool !== 'jsdiffer' ? prev + curr.total : prev, 0));
+
+  // const refactorings = files.json('project', 'refactorings.json', ['version_1_new']);
+  // const result = {};
+  // Object.entries(refactorings.refactorings).forEach(([repo, commits]) => {
+  //   Object.values(commits).forEach(refs => {
+  //     if (refs && refs.length > 0) {
+  //       const commitTypes = new Set();
+  //       refs.forEach(ref => {
+  //         if (ref.tool !== 'manual') {
+  //           if (result[ref.type]) {
+  //             result[ref.type].total++;
+  //             if (!commitTypes.has(ref.type)) result[ref.type].commits++;
+  //             commitTypes.add(ref.type);
+  //           }
+  //           else {
+  //             result[ref.type] = {
+  //               total: 1,
+  //               commits: 1,
+  //               tool: ref.tool || 'RefDiff',
+  //               type: ref.type
+  //             }
+  //             commitTypes.add(ref.type);
+  //           }
+  //         }
+  //       });
+  //     }
+  //   });
+  // });
+  // const arr = Array.from(Object.values(result)).sort((a, b) => b.total - a.total);
+  // let text = arr.reduce((prev, curr) => {
+  //   return `${prev}\n${curr.total} & ${curr.type.replaceAll('_', '\\_')} & ${curr.tool.replace('jsdiffer', 'JsDiffer')} & ${curr.commits} \\\\`;
+  // }, '');
+  // files.write('project', 'table.txt', text, ['version_1_new']);
+  // console.log('JsDiffer', arr.reduce((prev, curr) => curr.tool === 'jsdiffer' ? prev + curr.total : prev, 0));
+  // console.log('RefDiff', arr.reduce((prev, curr) => curr.tool !== 'jsdiffer' ? prev + curr.total : prev, 0));
 
   // const refactorings = files.json('project', 'refactorings.json', ['version_1_new']);
   // let total = 0;

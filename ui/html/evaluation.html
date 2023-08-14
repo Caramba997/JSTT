@@ -33,35 +33,116 @@
           <li class="nav-item mx-1">
             <button data-a="calc-correlations" type="button" class="btn btn-outline-primary btn-sm">Calc correlations</button>
           </li>
+          <li class="nav-item mx-1">
+            <button data-a="calc-levels" type="button" class="btn btn-outline-primary btn-sm">Calc levels</button>
+          </li>
         </ul>
       </div>
     </nav>
-    <div class="Correlations">
-      <table data-e="correlations-test" class="table table-striped">
-        <thead></thead>
-        <tbody></tbody>
-      </table>
+    <div class="accordion m-2" id="sections">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#matrix-content" aria-expanded="false" aria-controls="matrix-content">
+            Correlation matrix
+          </button>
+        </h2>
+        <div id="matrix-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <div class="Correlations">
+              <table data-e="correlations-test" class="table table-striped">
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#strong-content" aria-expanded="false" aria-controls="strong-content">
+            Strong correlations
+          </button>
+        </h2>
+        <div id="strong-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <table data-e="correlations-test-summary" class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Test metric</th>
+                <th scope="col">Source metric</th>
+                <th scope="col">Correlation</th>
+                <th scope="col">p-Value</th>
+                <th scope="col">n</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#perf-matrix-content" aria-expanded="false" aria-controls="perf-matrix-content">
+            Performance correlation matrix
+          </button>
+        </h2>
+        <div id="perf-matrix-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <div class="Correlations">
+              <table data-e="correlations-perf" class="table table-striped">
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ranks-content" aria-expanded="false" aria-controls="ranks-content">
+            Module ranks
+          </button>
+        </h2>
+        <div id="ranks-content" class="accordion-collapse collapse" data-bs-parent="#sections">
+          <div class="accordion-body">
+            <div class="d-flex align-items-center" style="gap: 5px;">
+              <span>Page </span>
+              <select name="rank_page" class="form-select form-select-sm" style="width: 5rem;"></select>
+              <span> of </span>
+              <span data-e="total-files">?</span>
+            </div>
+            <table data-e="file-ranks" class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Normalized rank</th>
+                  <th scope="col">Average rank</th>
+                  <th scope="col">File</th>
+                  <th scope="col">Repo</th>
+                  <th scope="col">GitHub</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <template data-t="file-ranks-row">
+              <tr>
+                <td data-e="file-ranks-rank"></td>
+                <td data-e="file-ranks-normal"></td>
+                <td data-e="file-ranks-avg"></td>
+                <td data-e="file-ranks-file" style="max-width: 25vw; overflow: hidden;"></td>
+                <td data-e="file-ranks-repo"></td>
+                <td>
+                  <a data-e="file-ranks-git" href="" target="_blank">
+                    <i class="fa-solid fa-globe"></i>
+                  </a>
+                </td>
+              </tr>
+            </template>
+          </div>
+        </div>
+      </div>
     </div>
-    <br>
-    <table data-e="correlations-test-summary" class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Test metric</th>
-          <th scope="col">Source metric</th>
-          <th scope="col">Correlation</th>
-          <th scope="col">p-Value</th>
-          <th scope="col">n</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-    <br><br>
-    <div class="Correlations">
-      <table data-e="correlations-perf" class="table table-striped">
-        <thead></thead>
-        <tbody></tbody>
-      </table>
-    </div>
+    
     <div data-e="error" class="alert alert-danger" style="display:none;" role="alert">
       Error
     </div>

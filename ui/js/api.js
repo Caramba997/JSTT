@@ -40,7 +40,8 @@ class API {
       refactorings: '/api/refactorings',
       findRefactorings: '/api/findRefactorings',
       findRefactoringsJsDiffer: '/api/findRefactoringsJsDiffer',
-      refactoringTypes: '/api/refactoringTypes'
+      refactoringTypes: '/api/refactoringTypes',
+      level: '/api/level'
     };
   }
 
