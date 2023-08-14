@@ -11,7 +11,7 @@
 
   function buildPage() {
     console.log(data);
-    if (data.correlations) {
+    if (data.correlations && data.correlations.test.locM) {
       // Test
       const tdata = data.correlations.test;
       const tTable = $('[data-e="correlations-test"]');
