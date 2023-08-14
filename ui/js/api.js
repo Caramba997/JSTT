@@ -213,4 +213,6 @@ class API {
   }
 }
 
-window.api = new API();
+// window.api = new API();
+
+module.exports = API;

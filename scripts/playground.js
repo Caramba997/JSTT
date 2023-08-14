@@ -19,38 +19,41 @@
   const random = new Random();
 
   
-  const API = require('../ui/js/api.js');
-  const api = new API();
-  const repos = files.json('project', 'repos.json', ['version_1']);
   const repoMetrics = files.json('project', 'metrics.json', ['version_1']);
-  const id = 'version_1';
-  console.log('Starting...');
-  for (let i = 0; i < repos.repos.length; i++) {
-    console.log(`${i + 1}/${repos.repos.length}`);
-    const repo = repos.repos[i];
-    if (repoMetrics.repos[repo.full_name]) {
-      repo.has_metrics = true;
-      continue;
-    }
-    const response = await api.postPromise('calcmetrics', {
-      id: id,
-      repo: repo.full_name
-    });
-    const responseMetrics = response.data;
-    const newMetrics = {};
-    Object.entries(responseMetrics).forEach(([type, paths]) => {
-      Object.entries(paths).forEach(([path, mtrcs]) => {
-        newMetrics[type] = newMetrics[type] || {};
-        newMetrics[type][path] = mtrcs;
-      });
-    });
-    repoMetrics.repos[repo.full_name] = newMetrics;
-    repo.has_metrics = true;
-  }
-  console.log('Saving...');
-  files.write('project', 'repos.json', repos, ['version_1']);
   files.write('project', 'metrics.json', repoMetrics, ['version_1']);
-  console.log('Done');
+
+  // const API = require('../ui/js/api.js');
+  // const api = new API();
+  // const repos = files.json('project', 'repos.json', ['version_1']);
+  // const repoMetrics = files.json('project', 'metrics.json', ['version_1']);
+  // const id = 'version_1';
+  // console.log('Starting...');
+  // for (let i = 0; i < repos.repos.length; i++) {
+  //   console.log(`${i + 1}/${repos.repos.length}`);
+  //   const repo = repos.repos[i];
+  //   if (repoMetrics.repos[repo.full_name]) {
+  //     repo.has_metrics = true;
+  //     continue;
+  //   }
+  //   const response = await api.postPromise('calcmetrics', {
+  //     id: id,
+  //     repo: repo.full_name
+  //   });
+  //   const responseMetrics = response.data;
+  //   const newMetrics = {};
+  //   Object.entries(responseMetrics).forEach(([type, paths]) => {
+  //     Object.entries(paths).forEach(([path, mtrcs]) => {
+  //       newMetrics[type] = newMetrics[type] || {};
+  //       newMetrics[type][path] = mtrcs;
+  //     });
+  //   });
+  //   repoMetrics.repos[repo.full_name] = newMetrics;
+  //   repo.has_metrics = true;
+  // }
+  // console.log('Saving...');
+  // files.write('project', 'repos.json', repos, ['version_1']);
+  // files.write('project', 'metrics.json', repoMetrics, ['version_1']);
+  // console.log('Done');
 
   // const correlations = files.json('project', 'evaluation.json', ['version_1_new']);
   // const sourceMetrics = new Set();
