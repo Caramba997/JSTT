@@ -10,6 +10,7 @@
   let data, level, repos;
 
   function buildPage() {
+    console.log(data);
     if (data.correlations) {
       // Test
       const tdata = data.correlations.test;
@@ -122,7 +123,7 @@
       html += `<option value="${i}">${ i + 1}</option>`;
     }
     selector.html(html);
-    $('[data-e="total-files"]').text(pages);
+    $('[data-e="total-pages"]').text(pages);
   }
 
   function buildLevel() {
@@ -131,8 +132,9 @@
           page = parseInt($('[name="rank_page"]').val());
     tbody.html('');
     for (let i = 0; i < 100; i++) {
-      const index = page * 100 + i,
-            fileData = level.list[index],
+      const index = page * 100 + i;
+      if (index >= level.list.length) continue;
+      const fileData = level.list[index],
             html = template.clone();
       const formatNum = (num) => {
         return Math.round(num * 1000) / 1000;
@@ -141,17 +143,21 @@
       html.find('[data-e="file-ranks-normal"]').text(formatNum(fileData.normalizedRank));
       html.find('[data-e="file-ranks-avg"]').text(formatNum(fileData.accumulatedRank));
       html.find('[data-e="file-ranks-repo"]').text(fileData.repo);
-      const findRepo = (name) => {
-        for (let i = 0; i < repos.repos.length; i++) {
-          if (repos.repos[i].full_name === name) return repos.repos[i];
-        }
-      }
       const repo = findRepo(fileData.repo),
             fileFixed = fileData.file.split('/files/')[1].replace(/[^\/]*\//, '');
       html.find('[data-e="file-ranks-file"]').text(fileFixed);
       html.find('[data-e="file-ranks-git"]').attr('href', `${repo.html_url}/blob/${repo.default_branch}/${fileFixed}`);
       tbody.append(html);
     }
+    $('[data-e="total-files"]').text(level.list.length);
+  }
+
+  
+  function findRepo(name) {
+    for (let i = 0; i < repos.repos.length; i++) {
+      if (repos.repos[i].full_name === name) return repos.repos[i];
+    }
+    return null;
   }
 
   api.get('evaluation', {
@@ -168,6 +174,7 @@
     id: id
   }, async (response) => {
     level = response.data;
+    console.log(level);
     if (!level || Object.keys(level).length === 0) return;
     $('[name="rank_page"]').on('change', buildLevel);
     initPageSelector();
@@ -298,11 +305,12 @@
       });
     });
     moduleRanks = Array.from(moduleRanks).sort((a, b) => a - b);
+    console.log(moduleRanks);
     const maxRank = moduleRanks[moduleRanks.length - 1];
     Object.values(levels).forEach(files => {
       Object.values(files).forEach(fileData => {
-        fileData.rank = moduleRanks.indexOf(fileData.accumulatedRank);
-        fileData.normalizedRank = fileData.accumulatedRank / maxRank * 100;
+        fileData.rank = moduleRanks.indexOf(fileData.accumulatedRank) + 1;
+        fileData.normalizedRank = 100 - (fileData.accumulatedRank - 1) / (maxRank - 1) * 100;
       });
     });
     console.log(levels);
@@ -317,15 +325,50 @@
           accumulatedRank: fileData.accumulatedRank,
           normalizedRank: fileData.normalizedRank
         });
-        fileData.rank = moduleRanks.indexOf(fileData.accumulatedRank + 1);
-        fileData.normalizedRank = fileData.accumulatedRank / maxRank * 100;
       });
     });
     list.sort((a, b) => a.rank - b.rank);
+    // 8. Categories, frameworks, repos
+    const categoryRanks = {};
+    const frameworkRanks = {};
+    const repoRanks = {};
+    list.forEach(entry => {
+      const repo = findRepo(entry.repo);
+      repo.categories.forEach(category => {
+        categoryRanks[category] = categoryRanks[category] || [];
+        categoryRanks[category].push(entry.normalizedRank);
+      });
+      repo.test_frameworks.forEach(framework => {
+        frameworkRanks[framework] = frameworkRanks[framework] || [];
+        frameworkRanks[framework].push(entry.normalizedRank);
+      });
+      repoRanks[entry.repo] = repoRanks[entry.repo] || [];
+      repoRanks[entry.repo].push(entry.normalizedRank);
+    });
+    const outputRanks = (rankObject) => {
+      Object.entries(rankObject).forEach(([name, values]) => {
+        const aggregated = {
+          count: values.length,
+          rank: values.reduce((prev, curr) => prev + curr, 0) / values.length
+        }
+        rankObject[name] = aggregated;
+      });
+      const result = Array.from(Object.entries(rankObject)).sort((a, b) => b[1].rank - a[1].rank);
+      console.log(result);
+      return result;
+    };
     await api.postPromise('level', {
       id: id,
-      data: { repos: levels, list: list }
+      data: { 
+        repos: levels,
+        list: list,
+        perCategory: outputRanks(categoryRanks),
+        perFramework: outputRanks(frameworkRanks),
+        perRepo: outputRanks(repoRanks)
+      }
     });
+    initPageSelector();
+    buildLevel();
     progress.end();
   });
 

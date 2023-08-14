@@ -105,17 +105,26 @@
         </h2>
         <div id="ranks-content" class="accordion-collapse collapse" data-bs-parent="#sections">
           <div class="accordion-body">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-row">
+                  <div class="pe-2">Total files: </div>
+                  <div data-e="total-files"></div>
+                </div>
+              </div>
+            </div>
+            <br>
             <div class="d-flex align-items-center" style="gap: 5px;">
               <span>Page </span>
               <select name="rank_page" class="form-select form-select-sm" style="width: 5rem;"></select>
               <span> of </span>
-              <span data-e="total-files">?</span>
+              <span data-e="total-pages">?</span>
             </div>
             <table data-e="file-ranks" class="table table-striped">
               <thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">Normalized rank</th>
+                  <th scope="col">Testability index</th>
                   <th scope="col">Average rank</th>
                   <th scope="col">File</th>
                   <th scope="col">Repo</th>
