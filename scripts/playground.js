@@ -18,19 +18,30 @@
   const metrics = new Metrics();
   const random = new Random();
 
-  
-  const data = files.json('project', 'evaluation.json', ['version_1_new']);
-  const sourceMetrics = new Set();
-  Object.values(data.correlations.test).forEach(smetrics => {
-    Object.entries(smetrics).forEach(([smetric, value]) => {
-      if (Math.abs(value.rho) >= 0.5) {
-        if (Math.abs(value.p) < 0.05) {
-          sourceMetrics.add(smetric);
-        }
-      }
-    });
-  });
-  files.write('knowledge', 'scoremetrics.json', { metrics: Array.from(sourceMetrics) });
+  const name = 'perFileType';
+  const data = files.json('project', 'level.json', ['version_1']);
+  let text = '';
+  const formatNum = (num) => {
+    return Math.round(num * 1000) / 1000;
+  };
+  for (let i = 0; i < data[name].length; i++) {
+    const cat = data[name][i];
+    text += `${i + 1} & ${cat[0]} & ${formatNum(cat[1].rank)} & ${cat[1].count} & ${cat[1].repos} \\\\\n`;
+  }
+  files.write('project', name + '.txt', text, ['version_1']);
+
+  // const data = files.json('project', 'evaluation.json', ['version_1_new']);
+  // const sourceMetrics = new Set();
+  // Object.values(data.correlations.test).forEach(smetrics => {
+  //   Object.entries(smetrics).forEach(([smetric, value]) => {
+  //     if (Math.abs(value.rho) >= 0.5) {
+  //       if (Math.abs(value.p) < 0.05) {
+  //         sourceMetrics.add(smetric);
+  //       }
+  //     }
+  //   });
+  // });
+  // files.write('knowledge', 'scoremetrics.json', { metrics: Array.from(sourceMetrics) });
 
   // const API = require('../ui/js/api.js');
   // const api = new API();

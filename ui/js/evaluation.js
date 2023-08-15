@@ -323,29 +323,46 @@
       });
     });
     list.sort((a, b) => a.rank - b.rank);
-    // 8. Categories, frameworks, repos
+    // 8. Categories, frameworks, repos, file types
     const categoryRanks = {};
     const frameworkRanks = {};
     const repoRanks = {};
+    const fileTypeRanks = {};
+    const executionEnvironmentRanks = { frontend: { ranks: [] }, backend: { ranks: [] }};
     list.forEach(entry => {
       const repo = findRepo(entry.repo);
       repo.categories.forEach(category => {
-        categoryRanks[category] = categoryRanks[category] || [];
-        categoryRanks[category].push(entry.normalizedRank);
+        categoryRanks[category] = categoryRanks[category] || { ranks: [], repos: new Set() };
+        categoryRanks[category].ranks.push(entry.normalizedRank);
+        categoryRanks[category].repos.add(entry.repo);
       });
       repo.test_frameworks.forEach(framework => {
-        frameworkRanks[framework] = frameworkRanks[framework] || [];
-        frameworkRanks[framework].push(entry.normalizedRank);
+        frameworkRanks[framework] = frameworkRanks[framework] || { ranks: [], repos: new Set() };
+        frameworkRanks[framework].ranks.push(entry.normalizedRank);
+        frameworkRanks[framework].repos.add(entry.repo);
       });
-      repoRanks[entry.repo] = repoRanks[entry.repo] || [];
-      repoRanks[entry.repo].push(entry.normalizedRank);
+      repoRanks[entry.repo] = repoRanks[entry.repo] || { ranks: [] };
+      repoRanks[entry.repo].ranks.push(entry.normalizedRank);
+      const fileType = entry.file.match(/(?<=\.)(d\.)?\w+$/);
+      if (fileType) {
+        fileTypeRanks[fileType[0]] = fileTypeRanks[fileType[0]] || { ranks: [], repos: new Set() };
+        fileTypeRanks[fileType[0]].ranks.push(entry.normalizedRank);
+        fileTypeRanks[fileType[0]].repos.add(entry.repo);
+      }
+      if (repo.has_frontend) {
+        executionEnvironmentRanks.frontend.ranks.push(entry.normalizedRank);
+      }
+      if (repo.has_backend) {
+        executionEnvironmentRanks.backend.ranks.push(entry.normalizedRank);
+      }
     });
     const outputRanks = (rankObject) => {
       Object.entries(rankObject).forEach(([name, values]) => {
         const aggregated = {
-          count: values.length,
-          rank: values.reduce((prev, curr) => prev + curr, 0) / values.length
+          count: values.ranks.length,
+          rank: values.ranks.reduce((prev, curr) => prev + curr, 0) / values.ranks.length
         }
+        if (values.repos) aggregated.repos = values.repos.size;
         rankObject[name] = aggregated;
       });
       const result = Array.from(Object.entries(rankObject)).sort((a, b) => b[1].rank - a[1].rank);
@@ -357,7 +374,9 @@
       list: list,
       perCategory: outputRanks(categoryRanks),
       perFramework: outputRanks(frameworkRanks),
-      perRepo: outputRanks(repoRanks)
+      perRepo: outputRanks(repoRanks),
+      perFileType: outputRanks(fileTypeRanks),
+      perExecutionEnvironment: outputRanks(executionEnvironmentRanks)
     };
     await api.postPromise('level', {
       id: id,
