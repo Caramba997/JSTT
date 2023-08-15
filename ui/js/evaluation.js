@@ -175,14 +175,15 @@
   }, async (response) => {
     level = response.data;
     console.log(level);
-    if (!level || Object.keys(level).length === 0) return;
-    $('[name="rank_page"]').on('change', buildLevel);
-    initPageSelector();
+    if (level && Object.keys(level).length > 0) {
+      $('[name="rank_page"]').on('change', buildLevel);
+      initPageSelector();
+    }
     api.get('repos', {
       id: id
     }, async (response2) => {
       repos = response2.data;
-      buildLevel();
+      if (level && Object.keys(level).length > 0) buildLevel();
     }, (error) => {
       console.warn(error);
       $('[data-e="error"]').show();
@@ -209,23 +210,16 @@
 
   $('[data-a="calc-levels"]').on('click', async () => {
     progress.init('Calc testability levels', 1);
-    // 1. Find significant source metrics
-    const sourceMetrics = new Set();
-    Object.values(data.correlations.test).forEach(smetrics => {
-      Object.entries(smetrics).forEach(([smetric, value]) => {
-        if (Math.abs(value.rho) >= 0.5) {
-          if (Math.abs(value.p) < 0.05) {
-            sourceMetrics.add(smetric);
-          }
-        }
-      });
-    });
+    // 1. Retrieve significant source metrics
+    const scoreMetrics = await api.getPromise('scoremetrics');
+    const sourceMetrics = new Set(scoreMetrics.data.metrics);
     // 2. Collect ranks
     const metrics = await api.getPromise('metrics', {
       id: id
     });
     const ranks = {};
-    Object.values(metrics.data.repos).forEach(types => {
+    Object.entries(metrics.data.repos).forEach(([repo, types]) => {
+      if (JSON.stringify(types) === '{}' || !types.source) return;
       Object.values(types.source).forEach(fileMetrics => {
         Object.entries(fileMetrics).forEach(([metric, value]) => {
           if (value instanceof Object) {
@@ -258,6 +252,7 @@
     // 4. Calc ranks for metrics
     const levels = {};
     Object.entries(metrics.data.repos).forEach(([repo, types]) => {
+      if (JSON.stringify(types) === '{}' || !types.source) return;
       levels[repo] = {};
       Object.entries(types.source).forEach(([file, fileMetrics]) => {
         levels[repo][file] = {
@@ -357,16 +352,18 @@
       console.log(result);
       return result;
     };
+    const newLevel = { 
+      repos: levels,
+      list: list,
+      perCategory: outputRanks(categoryRanks),
+      perFramework: outputRanks(frameworkRanks),
+      perRepo: outputRanks(repoRanks)
+    };
     await api.postPromise('level', {
       id: id,
-      data: { 
-        repos: levels,
-        list: list,
-        perCategory: outputRanks(categoryRanks),
-        perFramework: outputRanks(frameworkRanks),
-        perRepo: outputRanks(repoRanks)
-      }
+      data: newLevel
     });
+    level = newLevel;
     initPageSelector();
     buildLevel();
     progress.end();

@@ -41,7 +41,8 @@ class API {
       findRefactorings: '/api/findRefactorings',
       findRefactoringsJsDiffer: '/api/findRefactoringsJsDiffer',
       refactoringTypes: '/api/refactoringTypes',
-      level: '/api/level'
+      level: '/api/level',
+      scoremetrics: '/api/scoremetrics'
     };
   }
 
@@ -213,6 +214,4 @@ class API {
   }
 }
 
-// window.api = new API();
-
-module.exports = API;
+window.api = new API();

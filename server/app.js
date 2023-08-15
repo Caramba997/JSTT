@@ -1133,6 +1133,20 @@ app.post('/api/level', async (req, res) => {
   }
 });
 
+app.get('/api/scoremetrics', async (req, res) => {
+  try {
+    const exists = files.exists('knowledge', 'scoremetrics.json');
+    if (!exists) {
+      return error(res, 404, 'Score metrics not found');
+    }
+    const metrics = files.json('knowledge', 'scoremetrics.json');
+    return success(res, metrics);
+  }
+  catch (e) {
+    return error(res, 500, 'Something went wrong');
+  }
+});
+
 app.listen(config.port, () => {
   console.log(`API listening on port ${config.port}`);
 });

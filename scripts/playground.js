@@ -19,8 +19,18 @@
   const random = new Random();
 
   
-  const repoMetrics = files.json('project', 'metrics.json', ['version_1']);
-  files.write('project', 'metrics.json', repoMetrics, ['version_1']);
+  const data = files.json('project', 'evaluation.json', ['version_1_new']);
+  const sourceMetrics = new Set();
+  Object.values(data.correlations.test).forEach(smetrics => {
+    Object.entries(smetrics).forEach(([smetric, value]) => {
+      if (Math.abs(value.rho) >= 0.5) {
+        if (Math.abs(value.p) < 0.05) {
+          sourceMetrics.add(smetric);
+        }
+      }
+    });
+  });
+  files.write('knowledge', 'scoremetrics.json', { metrics: Array.from(sourceMetrics) });
 
   // const API = require('../ui/js/api.js');
   // const api = new API();
