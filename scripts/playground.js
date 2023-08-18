@@ -18,17 +18,90 @@
   const metrics = new Metrics();
   const random = new Random();
 
-  const name = 'perFileType';
-  const data = files.json('project', 'level.json', ['version_1']);
-  let text = '';
-  const formatNum = (num) => {
-    return Math.round(num * 1000) / 1000;
+  const PRS = files.json('project', 'prs.json', ['version_1_new']);
+  const result = {
+    testrefactor: {
+      keywords: ['test', 'refactor'],
+      prs: 0,
+      title: 0,
+      body: 0,
+      urls: []
+    },
+    testability: {
+      keywords: ['testability'],
+      prs: 0,
+      title: 0,
+      body: 0,
+      urls: []
+    },
+    testable: {
+      keywords: ['testable'],
+      prs: 0,
+      title: 0,
+      body: 0,
+      urls: []
+    }
   };
-  for (let i = 0; i < data[name].length; i++) {
-    const cat = data[name][i];
-    text += `${i + 1} & ${cat[0]} & ${formatNum(cat[1].rank)} & ${cat[1].count} & ${cat[1].repos} \\\\\n`;
-  }
-  files.write('project', name + '.txt', text, ['version_1']);
+  Object.values(PRS.prs).forEach(repoPrs => {
+    repoPrs.forEach(pr => {
+      Object.entries(result).forEach(([name, props]) => {
+        let inTitle = true,
+            inBody = true;
+        props.keywords.forEach(keyword => {
+          if (!pr.title.toLowerCase().includes(keyword)) inTitle = false;
+          if (!pr.body || !pr.body.toLowerCase().includes(keyword)) inBody = false;
+        });
+        if (inTitle || inBody) {
+          props.prs++;
+          props.urls.push(pr.html_url);
+        }
+        if (inTitle) props.title++;
+        if (inBody) props.body++;
+      });
+    });
+  });
+  console.log(result);
+
+  // const REFACTORINGS = files.json('project', 'refactorings.json', ['version_1_new']);
+  // const trs = {};
+  // Object.entries(REFACTORINGS.refactorings).forEach(([repo, commits]) => {
+  //   Object.entries(commits).forEach(([sha, refactorings]) => {
+  //     refactorings.forEach(ref => {
+  //       if (ref.is_testability_refactoring) {
+  //         ref.type = ref.type.replace('_ADD_PARAMETER', 'Add Parameter').replace('_EXTRACT', 'EXTRACT');
+  //         trs[ref.type] = trs[ref.type] || [];
+  //         const refClone = JSON.parse(JSON.stringify(ref));
+  //         refClone.repo = repo;
+  //         refClone.sha = sha;
+  //         trs[ref.type].push(refClone);
+  //       }
+  //     });
+  //   });
+  // });
+  // const trsSorted = Object.entries(trs).sort((a, b) => b[1].length - a[1].length);
+  // let text = '';
+  // trsSorted.forEach(([type, refactorings]) => {
+  //   const commitSet = new Set();
+  //   const repoSet = new Set();
+  //   refactorings.forEach(occ => {
+  //     commitSet.add(occ.sha);
+  //     repoSet.add(occ.repo);
+  //   });
+  //   text += `${refactorings.length} & ${type} & ${commitSet.size} & ${repoSet.size} \\\\\n`;
+  // });
+  // files.write('project', 'table.txt', text, ['version_1_new']);
+
+  // const name = 'perFileType';
+  // const data = files.json('project', 'level.json', ['version_1']);
+  // let text = '';
+  // const formatNum = (num) => {
+  //   return Math.round(num * 1000) / 1000;
+  // };
+  // for (let i = 0; i < data[name].length; i++) {
+  //   const cat = data[name][i];
+  //   text += `${i + 1} & ${cat[0]} & ${formatNum(cat[1].rank)} & ${cat[1].count} & ${cat[1].repos} \\\\\n`;
+  // }
+  // files.write('project', name + '.txt', text, ['version_1']);
 
   // const data = files.json('project', 'evaluation.json', ['version_1_new']);
   // const sourceMetrics = new Set();

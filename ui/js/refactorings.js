@@ -10,9 +10,9 @@
       PRS = (await api.getPromise('prs', { id: id })).data,
       REFACTORINGS = (await api.getPromise('refactorings', { id: id })).data;
   buildPage();
-  buildPrs();
+  buildTrs();
 
-  function buildPrs() {
+  function buildTrs() {
     const tbody = $('[data-e="tr-list"] tbody'),
           template = $($('[data-t="tr-list-item"]').html());
     tbody.html('');
