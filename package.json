@@ -1,21 +1,13 @@
 {
-  "name": "npm-crawler",
+  "name": "jstt",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A tool to study testability in GitHub repositories",
+  "main": "server/app.js",
   "scripts": {
-    "find-packages": "node scripts/find-packages.js",
-    "get-repositories": "node scripts/get-repositories.js",
-    "filter-pull-requests": "node scripts/filter-pull-requests.js",
-    "count-github-repositories": "node scripts/count-github-repositories.js",
-    "get-randoms": "node scripts/get-randoms.js",
-    "get-random-repositories": "node scripts/get-random-repositories.js",
-    "get-commits": "node scripts/get-commits.js",
-    "find-test-cases": "node scripts/find-test-cases.js",
     "playground": "node scripts/playground.js",
     "debug": "nodemon server/app.js",
     "py-debug": "flask --app ./server/correlation run --debug",
-    "app": "node server/app.js"
+    "start": "node server/app.js"
   },
   "engines": {
     "node": "20.0.x"

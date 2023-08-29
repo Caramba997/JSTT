@@ -18,49 +18,147 @@
   const metrics = new Metrics();
   const random = new Random();
 
-  const PRS = files.json('project', 'prs.json', ['version_1_new']);
-  const result = {
-    testrefactor: {
-      keywords: ['test', 'refactor'],
-      prs: 0,
-      title: 0,
-      body: 0,
-      urls: []
-    },
-    testability: {
-      keywords: ['testability'],
-      prs: 0,
-      title: 0,
-      body: 0,
-      urls: []
-    },
-    testable: {
-      keywords: ['testable'],
-      prs: 0,
-      title: 0,
-      body: 0,
-      urls: []
-    }
-  };
-  Object.values(PRS.prs).forEach(repoPrs => {
-    repoPrs.forEach(pr => {
-      Object.entries(result).forEach(([name, props]) => {
-        let inTitle = true,
-            inBody = true;
-        props.keywords.forEach(keyword => {
-          if (!pr.title.toLowerCase().includes(keyword)) inTitle = false;
-          if (!pr.body || !pr.body.toLowerCase().includes(keyword)) inBody = false;
-        });
-        if (inTitle || inBody) {
-          props.prs++;
-          props.urls.push(pr.html_url);
+  const REFACTORINGS = files.json('project', 'refactorings.json', ['version_1_new']);
+  const trs = {};
+  Object.entries(REFACTORINGS.refactorings).forEach(([repo, commits]) => {
+    Object.entries(commits).forEach(([sha, refactorings]) => {
+      refactorings.forEach(ref => {
+        if (ref.is_testability_refactoring) {
+          trs[ref.type] = trs[ref.type] || [];
+          const refClone = JSON.parse(JSON.stringify(ref));
+          refClone.repo = repo;
+          refClone.sha = sha;
+          trs[ref.type].push(refClone);
         }
-        if (inTitle) props.title++;
-        if (inBody) props.body++;
       });
     });
   });
-  console.log(result);
+  const trsSorted = Object.entries(trs).sort((a, b) => b[1].length - a[1].length);
+  let text = '';
+  trsSorted.forEach(([type, refactorings]) => {
+    let descriptionCache = '';
+    for (let i = 0; i < refactorings.length; i++) {
+      const typeF = type.replace('INTERNAL_MOVE', 'Internal move').replace('Add Parameter', 'Add parameter').replace('_EXPORT_FUNCTION', 'Export function').replace('_ADD_PARAMETER', 'Add parameter').replace('_SET_TEST_ENVIRONMENT', 'Set test environment').replace('MOVE_RENAME', 'Move rename').replace('_EXTRACT', 'Extract').replace('_ADD_GETTER', 'Add getter').replace('_WRAP', 'Wrap').replace('_ADD_RETURN_VALUE', 'Add return value').replace('EXTRACT', 'Extract').replace('_ADD_ATTRIBUTE', 'Add attribute').replace('_EXPORT_OBJECT', 'Export object').replace('_MOVE_CONFIG_TO_OBJECT', 'Move config to object').replace('_SPLIT_MODULE', 'Split module');
+      const ref = refactorings[i];
+      const fileBefore = ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[0] : ref.tool === 'manual' ? ref.fileBefore : ref.nodeBefore.location.file;
+      const fileAfter = ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[0] : ref.tool === 'manual' ? ref.fileAfter : ref.nodeAfter.location.file;
+      const linesBefore = ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[1] : ref.tool === 'manual' ? ref.lineBefore : ref.nodeBefore.location.line;
+      const linesAfter = ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[1] : ref.tool === 'manual' ? ref.lineAfter : ref.nodeAfter.location.line;
+      text += `${typeF} & \\repo{${ref.repo}} : \\hash{${ref.sha}} & BEFORE: \\filepath{${fileBefore}} ${linesBefore ? ':' : ''} ${linesBefore} \\newline AFTER: \\filepath{${fileAfter}} ${linesAfter ? ':' : ''} ${linesAfter} \\\\\n`;
+      text += '\\hline\n';
+      if (ref.comment) descriptionCache = ref.comment;
+    }
+  });
+  text = text.replaceAll('_', '\\_');
+  files.write('project', 'tab.txt', text, ['version_1_new']);
+  
+  // const REPOS = files.json('project', 'repos.json', ['version_1']),
+  //       LEVEL = files.json('project', 'level.json', ['version_1']);
+  // const ranks = [],
+  //       stars = [];
+  // REPOS.repos.forEach(repo => {
+  //   const level = LEVEL.repos[repo.full_name];
+  //   if (!level) return;
+  //   Object.values(level).forEach(file => {
+  //     ranks.push(file.normalizedRank);
+  //     stars.push(repo.stargazers_count);
+  //   });
+  // });
+  // const response = await axios.post('http://localhost:5000/correlation', {
+  //   x: ranks,
+  //   y: stars
+  // }, {
+  //   headers: {'Content-Type': 'application/json'}
+  // });
+  // console.log(response.data);
+
+
+  // const REPOS = files.json('project', 'repos.json', ['version_1']),
+  //       LEVEL = files.json('project', 'level.json', ['version_1']);
+  //       let errors = '';
+  // const data = [];
+  // REPOS.repos.forEach(repo => {
+  //   if (repo.stargazers_count < 30000) return;
+  //   const level = LEVEL.repos[repo.full_name];
+  //   if (!level) return;
+  //   Object.values(level).forEach(file => {
+  //     data.push({ rank: file.normalizedRank, stars: repo.stargazers_count });
+  //   });
+  // });
+  // data.sort((a, b) => a.rank - b.rank)
+  // let text = 'rank,stars\n';
+  // data.forEach(repo => {
+  //   text += `${repo.rank},${repo.stars}\n`;
+  // });
+  // console.log(errors);
+  // files.write('project', 'rank_stars_top.csv', text, ['version_1']);
+
+  // const REPOS = files.json('project', 'repos.json', ['version_1']),
+  //       LEVEL = files.json('project', 'level.json', ['version_1']);
+  //       let errors = '';
+  // const findLevel = (repoName) => {
+  //   for (let i = 0; i < LEVEL.perRepo.length; i++) {
+  //     if (LEVEL.perRepo[i][0] === repoName) return LEVEL.perRepo[i][1].rank;
+  //   }
+  //   errors += repoName + ',';
+  //   return false;
+  // }
+  // const data = [];
+  // REPOS.repos.forEach(repo => {
+  //   const rank = findLevel(repo.full_name);
+  //   if (rank && repo.stargazers_count < 300) data.push({ rank: rank, stars: repo.stargazers_count });
+  // });
+  // data.sort((a, b) => a.rank - b.rank)
+  // let text = 'rank-stars\n';
+  // data.forEach(repo => {
+  //   text += `${`${repo.rank}`.replace('.', ',')}-${repo.stars}\n`;
+  // });
+  // console.log(errors);
+  // files.write('project', 'rank_stars.csv', text, ['version_1']);
+
+  // const PRS = files.json('project', 'prs.json', ['version_1_new']);
+  // const result = {
+  //   testrefactor: {
+  //     keywords: ['test', 'refactor'],
+  //     prs: 0,
+  //     title: 0,
+  //     body: 0,
+  //     urls: []
+  //   },
+  //   testability: {
+  //     keywords: ['testability'],
+  //     prs: 0,
+  //     title: 0,
+  //     body: 0,
+  //     urls: []
+  //   },
+  //   testable: {
+  //     keywords: ['testable'],
+  //     prs: 0,
+  //     title: 0,
+  //     body: 0,
+  //     urls: []
+  //   }
+  // };
+  // Object.values(PRS.prs).forEach(repoPrs => {
+  //   repoPrs.forEach(pr => {
+  //     Object.entries(result).forEach(([name, props]) => {
+  //       let inTitle = true,
+  //           inBody = true;
+  //       props.keywords.forEach(keyword => {
+  //         if (!pr.title.toLowerCase().includes(keyword)) inTitle = false;
+  //         if (!pr.body || !pr.body.toLowerCase().includes(keyword)) inBody = false;
+  //       });
+  //       if (inTitle || inBody) {
+  //         props.prs++;
+  //         props.urls.push(pr.html_url);
+  //       }
+  //       if (inTitle) props.title++;
+  //       if (inBody) props.body++;
+  //     });
+  //   });
+  // });
+  // console.log(result);
 
   // const REFACTORINGS = files.json('project', 'refactorings.json', ['version_1_new']);
   // const trs = {};
@@ -354,9 +452,11 @@
   // console.log(c, p, s);
 
   
-  // let arr = [], js = [], ts = [];
+  // const data = files.json('project', 'repos.json', ['version_1']);
+  // let arr = [], js = [], ts = [], total = 0;
   // data.repos.forEach(repo => {
-  //   if (repo.no_javascript) return;
+  //   if (repo.no_javascript || repo.stargazers_count > 30000) return;
+  //   total++;
   //   arr.push(repo.stargazers_count);
   //   if (repo.language === 'JavaScript') {
   //     js.push(repo.stargazers_count);
@@ -368,7 +468,8 @@
   // const js_cr = metrics.valuesFromArr(arr);
   // const js_pr = metrics.valuesFromArr(js);
   // const ts_cr = metrics.valuesFromArr(ts);
-  // console.log(js_cr);
+  // console.log(total);
+  // console.log(js_cr, js_cr.values.length);
   // console.log(js_pr);
   // console.log(ts_cr);
 
