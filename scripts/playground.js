@@ -18,39 +18,53 @@
   const metrics = new Metrics();
   const random = new Random();
 
-  const REFACTORINGS = files.json('project', 'refactorings.json', ['version_1_new']);
-  const trs = {};
-  Object.entries(REFACTORINGS.refactorings).forEach(([repo, commits]) => {
-    Object.entries(commits).forEach(([sha, refactorings]) => {
-      refactorings.forEach(ref => {
-        if (ref.is_testability_refactoring) {
-          trs[ref.type] = trs[ref.type] || [];
-          const refClone = JSON.parse(JSON.stringify(ref));
-          refClone.repo = repo;
-          refClone.sha = sha;
-          trs[ref.type].push(refClone);
-        }
-      });
+  const REPOS = files.json('project', 'repos.json', ['version_1']),
+        LEVEL = files.json('project', 'level.json', ['version_1']);
+  const tested = [], untested = [];
+  REPOS.repos.forEach(repo => {
+    const level = LEVEL.repos[repo.full_name];
+    if (!level) return;
+    Object.values(level).forEach(file => {
+      const target = repo.has_tests ? tested : untested;
+      target.push(file.score);
     });
   });
-  const trsSorted = Object.entries(trs).sort((a, b) => b[1].length - a[1].length);
-  let text = '';
-  trsSorted.forEach(([type, refactorings]) => {
-    let descriptionCache = '';
-    for (let i = 0; i < refactorings.length; i++) {
-      const typeF = type.replace('INTERNAL_MOVE', 'Internal move').replace('Add Parameter', 'Add parameter').replace('_EXPORT_FUNCTION', 'Export function').replace('_ADD_PARAMETER', 'Add parameter').replace('_SET_TEST_ENVIRONMENT', 'Set test environment').replace('MOVE_RENAME', 'Move rename').replace('_EXTRACT', 'Extract').replace('_ADD_GETTER', 'Add getter').replace('_WRAP', 'Wrap').replace('_ADD_RETURN_VALUE', 'Add return value').replace('EXTRACT', 'Extract').replace('_ADD_ATTRIBUTE', 'Add attribute').replace('_EXPORT_OBJECT', 'Export object').replace('_MOVE_CONFIG_TO_OBJECT', 'Move config to object').replace('_SPLIT_MODULE', 'Split module');
-      const ref = refactorings[i];
-      const fileBefore = ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[0] : ref.tool === 'manual' ? ref.fileBefore : ref.nodeBefore.location.file;
-      const fileAfter = ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[0] : ref.tool === 'manual' ? ref.fileAfter : ref.nodeAfter.location.file;
-      const linesBefore = ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[1] : ref.tool === 'manual' ? ref.lineBefore : ref.nodeBefore.location.line;
-      const linesAfter = ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[1] : ref.tool === 'manual' ? ref.lineAfter : ref.nodeAfter.location.line;
-      text += `${typeF} & \\repo{${ref.repo}} : \\hash{${ref.sha}} & BEFORE: \\filepath{${fileBefore}} ${linesBefore ? ':' : ''} ${linesBefore} \\newline AFTER: \\filepath{${fileAfter}} ${linesAfter ? ':' : ''} ${linesAfter} \\\\\n`;
-      text += '\\hline\n';
-      if (ref.comment) descriptionCache = ref.comment;
-    }
-  });
-  text = text.replaceAll('_', '\\_');
-  files.write('project', 'tab.txt', text, ['version_1_new']);
+  console.log('TESTED: ', tested.reduce((prev, curr) => prev + curr, 0) / tested.length);
+  console.log('UNTESTED: ', untested.reduce((prev, curr) => prev + curr, 0) / untested.length);
+
+  // const REFACTORINGS = files.json('project', 'refactorings.json', ['version_1_new']);
+  // const trs = {};
+  // Object.entries(REFACTORINGS.refactorings).forEach(([repo, commits]) => {
+  //   Object.entries(commits).forEach(([sha, refactorings]) => {
+  //     refactorings.forEach(ref => {
+  //       if (ref.is_testability_refactoring) {
+  //         trs[ref.type] = trs[ref.type] || [];
+  //         const refClone = JSON.parse(JSON.stringify(ref));
+  //         refClone.repo = repo;
+  //         refClone.sha = sha;
+  //         trs[ref.type].push(refClone);
+  //       }
+  //     });
+  //   });
+  // });
+  // const trsSorted = Object.entries(trs).sort((a, b) => b[1].length - a[1].length);
+  // let text = '';
+  // trsSorted.forEach(([type, refactorings]) => {
+  //   let descriptionCache = '';
+  //   for (let i = 0; i < refactorings.length; i++) {
+  //     const typeF = type.replace('INTERNAL_MOVE', 'Internal move').replace('Add Parameter', 'Add parameter').replace('_EXPORT_FUNCTION', 'Export function').replace('_ADD_PARAMETER', 'Add parameter').replace('_SET_TEST_ENVIRONMENT', 'Set test environment').replace('MOVE_RENAME', 'Move rename').replace('_EXTRACT', 'Extract').replace('_ADD_GETTER', 'Add getter').replace('_WRAP', 'Wrap').replace('_ADD_RETURN_VALUE', 'Add return value').replace('EXTRACT', 'Extract').replace('_ADD_ATTRIBUTE', 'Add attribute').replace('_EXPORT_OBJECT', 'Export object').replace('_MOVE_CONFIG_TO_OBJECT', 'Move config to object').replace('_SPLIT_MODULE', 'Split module');
+  //     const ref = refactorings[i];
+  //     const fileBefore = ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[0] : ref.tool === 'manual' ? ref.fileBefore : ref.nodeBefore.location.file;
+  //     const fileAfter = ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[0] : ref.tool === 'manual' ? ref.fileAfter : ref.nodeAfter.location.file;
+  //     const linesBefore = ref.tool === 'jsdiffer' ? ref.locationBefore.split(':')[1] : ref.tool === 'manual' ? ref.lineBefore : ref.nodeBefore.location.line;
+  //     const linesAfter = ref.tool === 'jsdiffer' ? ref.locationAfter.split(':')[1] : ref.tool === 'manual' ? ref.lineAfter : ref.nodeAfter.location.line;
+  //     text += `${typeF} & \\repo{${ref.repo}} : \\hash{${ref.sha}} & BEFORE: \\filepath{${fileBefore}} ${linesBefore ? ':' : ''} ${linesBefore} \\newline AFTER: \\filepath{${fileAfter}} ${linesAfter ? ':' : ''} ${linesAfter} \\\\\n`;
+  //     text += '\\hline\n';
+  //     if (ref.comment) descriptionCache = ref.comment;
+  //   }
+  // });
+  // text = text.replaceAll('_', '\\_');
+  // files.write('project', 'tab.txt', text, ['version_1_new']);
   
   // const REPOS = files.json('project', 'repos.json', ['version_1']),
   //       LEVEL = files.json('project', 'level.json', ['version_1']);
@@ -60,7 +74,7 @@
   //   const level = LEVEL.repos[repo.full_name];
   //   if (!level) return;
   //   Object.values(level).forEach(file => {
-  //     ranks.push(file.normalizedRank);
+  //     ranks.push(file.score);
   //     stars.push(repo.stargazers_count);
   //   });
   // });
@@ -82,11 +96,11 @@
   //   const level = LEVEL.repos[repo.full_name];
   //   if (!level) return;
   //   Object.values(level).forEach(file => {
-  //     data.push({ rank: file.normalizedRank, stars: repo.stargazers_count });
+  //     data.push({ rank: file.score, stars: repo.stargazers_count });
   //   });
   // });
   // data.sort((a, b) => a.rank - b.rank)
-  // let text = 'rank,stars\n';
+  // let text = '';
   // data.forEach(repo => {
   //   text += `${repo.rank},${repo.stars}\n`;
   // });
@@ -189,7 +203,7 @@
   // });
   // files.write('project', 'table.txt', text, ['version_1_new']);
 
-  // const name = 'perFileType';
+  // const name = 'perCategory';
   // const data = files.json('project', 'level.json', ['version_1']);
   // let text = '';
   // const formatNum = (num) => {

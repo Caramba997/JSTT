@@ -1,2 +1,2 @@
-# GitHub Data Collector
- Scripts to collect data using GitHub and other APIs
+# JSTT - JavaScript Testability Tool
+This app was developed to perform tasks and visualize data during a master's thesis.

@@ -140,8 +140,8 @@
         return Math.round(num * 1000) / 1000;
       };
       html.find('[data-e="file-ranks-rank"]').text(fileData.rank);
-      html.find('[data-e="file-ranks-normal"]').text(formatNum(fileData.normalizedRank));
-      html.find('[data-e="file-ranks-avg"]').text(formatNum(fileData.accumulatedRank));
+      html.find('[data-e="file-ranks-normal"]').text(formatNum(fileData.score));
+      html.find('[data-e="file-ranks-avg"]').text(formatNum(fileData.relativeRank));
       html.find('[data-e="file-ranks-repo"]').text(fileData.repo);
       const repo = findRepo(fileData.repo),
             fileFixed = fileData.file.split('/files/')[1].replace(/[^\/]*\//, '');
@@ -265,7 +265,8 @@
               levels[repo][file].ranks.push({
                 metric: `${metric}_${aggr}`,
                 value: aggrValue,
-                rank: ranks[metric][aggr].indexOf(aggrValue) + 1
+                rank: ranks[metric][aggr].indexOf(aggrValue) + 1,
+                normalizedRank: (ranks[metric][aggr].indexOf(aggrValue) + 1) / ranks[metric][aggr].length * 100
               });
             });
           }
@@ -274,7 +275,8 @@
             levels[repo][file].ranks.push({
               metric: metric,
               value: value,
-              rank: ranks[metric].indexOf(value) + 1
+              rank: ranks[metric].indexOf(value) + 1,
+              normalizedRank: (ranks[metric].indexOf(value) + 1) / ranks[metric].length * 100
             });
           }
         });
@@ -286,7 +288,7 @@
         let rankAcc = 0,
             total = 0;
         fileData.ranks.forEach(rankInfo => {
-          rankAcc += rankInfo.rank;
+          rankAcc += rankInfo.normalizedRank;
           total++;
         });
         fileData.accumulatedRank = rankAcc / total;
@@ -301,11 +303,12 @@
     });
     moduleRanks = Array.from(moduleRanks).sort((a, b) => a - b);
     console.log(moduleRanks);
-    const maxRank = moduleRanks[moduleRanks.length - 1];
+    const relativeMaxRank = moduleRanks[moduleRanks.length - 1] - moduleRanks[0];
     Object.values(levels).forEach(files => {
       Object.values(files).forEach(fileData => {
         fileData.rank = moduleRanks.indexOf(fileData.accumulatedRank) + 1;
-        fileData.normalizedRank = 100 - (fileData.accumulatedRank - 1) / (maxRank - 1) * 100;
+        fileData.relativeRank = 100 - (fileData.accumulatedRank - moduleRanks[0]) / relativeMaxRank * 100;
+        fileData.score = 100 - fileData.accumulatedRank;
       });
     });
     console.log(levels);
@@ -318,7 +321,8 @@
           file: file,
           rank: fileData.rank,
           accumulatedRank: fileData.accumulatedRank,
-          normalizedRank: fileData.normalizedRank
+          relativeRank: fileData.relativeRank,
+          score: fileData.score
         });
       });
     });
@@ -333,27 +337,27 @@
       const repo = findRepo(entry.repo);
       repo.categories.forEach(category => {
         categoryRanks[category] = categoryRanks[category] || { ranks: [], repos: new Set() };
-        categoryRanks[category].ranks.push(entry.normalizedRank);
+        categoryRanks[category].ranks.push(entry.score);
         categoryRanks[category].repos.add(entry.repo);
       });
       repo.test_frameworks.forEach(framework => {
         frameworkRanks[framework] = frameworkRanks[framework] || { ranks: [], repos: new Set() };
-        frameworkRanks[framework].ranks.push(entry.normalizedRank);
+        frameworkRanks[framework].ranks.push(entry.score);
         frameworkRanks[framework].repos.add(entry.repo);
       });
       repoRanks[entry.repo] = repoRanks[entry.repo] || { ranks: [] };
-      repoRanks[entry.repo].ranks.push(entry.normalizedRank);
+      repoRanks[entry.repo].ranks.push(entry.score);
       const fileType = entry.file.match(/(?<=\.)(d\.)?\w+$/);
       if (fileType) {
         fileTypeRanks[fileType[0]] = fileTypeRanks[fileType[0]] || { ranks: [], repos: new Set() };
-        fileTypeRanks[fileType[0]].ranks.push(entry.normalizedRank);
+        fileTypeRanks[fileType[0]].ranks.push(entry.score);
         fileTypeRanks[fileType[0]].repos.add(entry.repo);
       }
       if (repo.has_frontend) {
-        executionEnvironmentRanks.frontend.ranks.push(entry.normalizedRank);
+        executionEnvironmentRanks.frontend.ranks.push(entry.score);
       }
       if (repo.has_backend) {
-        executionEnvironmentRanks.backend.ranks.push(entry.normalizedRank);
+        executionEnvironmentRanks.backend.ranks.push(entry.score);
       }
     });
     const outputRanks = (rankObject) => {
