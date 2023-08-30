@@ -7,7 +7,8 @@
     "playground": "node scripts/playground.js",
     "debug": "nodemon server/app.js",
     "py-debug": "flask --app ./server/correlation run --debug",
-    "start": "node server/app.js"
+    "start": "node server/app.js",
+    "py-start": "flask --app ./server/correlation run"
   },
   "engines": {
     "node": "20.0.x"
