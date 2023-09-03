@@ -63,3 +63,29 @@ Examples:
 - /templates: configuration templates for test frameworks that were used in the process of collection dynamic metrics in the repositories
 - /ui: HTML, CSS, JS and fonts that are used for the UI
 - .env: Environment variables
+
+## Relevant data collected for the thesis
+All data that is collected within the work of the thesis is stored in JSON files in the /projects directory. While all projects in this folder were established and used at some point, two are of special relevance to the final results of the thesis. The projects are:
+- `version_1`: The complete dataset with 384 repositories. It is used to classify repositories regarding the presence of tests and other meta data, as well as the calculation of testability scores
+- `version_1_new`: Repositories from version_1 that contain test cases. The project was created to make working with the data more clear and comprehensible. It is used for metric collection and the search for testability refactorings
+
+The other projects had the following purposes:
+- `active_projects`: Exploration, the dataset includes only projects that had activity within one year until the creation date of the dataset
+- `npm`: A random selection of projects on NPM, retrieved by randomly choosing entries from the NPM registry. A complete list of entries from the registry can be found in `knowledge/npmall.json`
+- `unrestricted`: No query restrictions used (no minimum number of stars)
+- `version_1_new_performance`: Repositories from version_1 that contain performance test cases. The project was created to make working with the data more clear and comprehensible
+
+### Files for collected data
+It is explained where to find which data within the project folders:
+- `commits.json`: A list of commit data for commits that modify pairs of test and source code files
+- `counts.json`: Numbers of repositories per language and timeframe
+- `dependencies.json`: Aggregated usage statistics of dependencies from all repositories
+- `evaluation.json`: Correlation analysis results
+- `level.json`: Testability scores for repositories, files, test frameworks, categories, file types and execution environments
+- `metrics.json`: Collected metrics for files in repositories
+- `project.json`: General information about the dataset
+- `prs.json`: Pull requests associated to stored commits
+- `randoms.txt`: Random numbers used for dataset creation
+- `refactorings.json`: Data for all refactorings found automatically and manually in commits with labeling for testability refactorings
+- `repos.json`: Data for all repositories in the dataset
+- `/evaluation` directory: Jupyter notebooks for visualization of data during evaluation
